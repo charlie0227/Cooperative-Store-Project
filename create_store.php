@@ -174,7 +174,8 @@ function my_reset() {
 		</tr>
 		<tr>
 		<td>
-			<input class = "abutton" type="submit" value="Submit" >
+			
+			<input class = "abutton" type="submit" value="Submit" name="submit" > 
 		</td>
 		</tr>	
 		

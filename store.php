@@ -11,6 +11,7 @@ $temp = $result;
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link href="store.css" rel="stylesheet" type="text/css" />
     <title>Geocoding</title>
 	<script src="jquery-1.12.4.min.js"></script>
 	<script src="contract.js"></script>
@@ -20,7 +21,8 @@ $temp = $result;
         type="text/javascript"></script>
 
     <script type="text/javascript">
-	$(document).ready(function(){
+	
+
 		 $("#address").blur(function(){
 			 alert("test");
 		 });
@@ -188,11 +190,15 @@ $temp = $result;
 			
 			<?php
 			while($img_result = $sth_img->fetch()){
-				echo '<img style="width:400px; height:300px;"src="data:'.$img_result['image_type'].';base64,'.$img_result['image'].'" heigh="500px" width="300px"/>';
+				?><img onclick="window.open('http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $img_result['image']?>')" src="<?echo $img_result['image']?>" style="width: 30%;height: 30%;"/><?
 			}
 			?>
-			<div id="map" style="width: 400px; height: 300px;"></div>
-			
+			<img id="map_icon" src="images/googlemap.jpg"/>
+			<div id="map_window" class="window">
+				<div class="window_content">
+					<div id="map" style="width: 400px; height: 300px;"></div>
+				</div>
+			</div>
 		<?}
 		else{?>
 		</table><?

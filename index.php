@@ -83,9 +83,12 @@ $_SESSION['type']='2';
 						});
 						
 						$('#create_ajaxForm').ajaxForm({ 
-							dataType: 'text',
-							success:function(data){
-								manage_store(data,1);
+							dataType: 'json',
+							success:function(data){ 
+								if(data.error)
+									alert(data.error);
+								else
+									manage_store(data.p,1);
 							}
 						}); 
 						

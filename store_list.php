@@ -3,6 +3,7 @@ require_once "sysconfig.php";
 $sql = "SELECT * FROM `jangsc27_cs_project`.`store` WHERE `id`= ?";
 $sth = $db->prepare($sql);
 $sth->execute(array($_GET['store_id']));
+ob_clean();
 ?>
 
 
@@ -97,7 +98,7 @@ $sth->execute(array($_GET['store_id']));
 				<?
 						while($img_result = $sth_img->fetch()){
 							$ttt=$_GET['gtype'];
-							echo '<img onclick="manage_store('.$result->id.','.$ttt.')" src="data:'.$img_result['image_type'].';base64,'.$img_result['image'].'" heigh="150" width="150"/>';
+							?><img onclick="manage_store(<?echo $result->id.','.$ttt?>)" src="<?echo $img_result['image']?>" style="heigh:150;width:150"/><?
 						}
 						echo '</td></tr>';
 					}
@@ -120,7 +121,7 @@ $sth->execute(array($_GET['store_id']));
 				<?
 				while($img_result = $sth_img->fetch()){
 					$ttt=$_GET['gtype'];
-					echo '<img onclick="manage_store('.$result->id.','.$ttt.')" src="data:'.$img_result['image_type'].';base64,'.$img_result['image'].'" heigh="150" width="150"/>';
+					?><img onclick="manage_store(<?echo $result->id.','.$ttt?>)" src="<?echo $img_result['image']?>" style="heigh:150;width:150;"/><?
 				}
 				echo '</td></tr>';
 			}
