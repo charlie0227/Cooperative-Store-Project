@@ -40,7 +40,7 @@ function showAddress(address){
 			function(point){
 				if (!point) 
 				{
-					alert(address + " not found");
+					;//alert(address + " not found");
 				} 
 				else 
 				{

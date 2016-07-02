@@ -164,7 +164,7 @@ $(document).ready(function(){
 		<div id="img">
 		<?
 		while($img_result = $sth_img->fetch()){
-			echo '<img src="data:'.$img_result['image_type'].';base64,'.$img_result['image'].'" heigh="150" width="150"/>';
+			?><img onclick="window.open('http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $img_result['image']?>')" src="<?echo $img_result['image']?>" style="width: 30%;height: 30%;"/><?
 		}
 		?>
 		</div>
