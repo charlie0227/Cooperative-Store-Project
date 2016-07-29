@@ -11,6 +11,7 @@ $temp = $result;
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link href="store.css" rel="stylesheet" type="text/css" />
     <title>Geocoding</title>
 	<script src="jquery-1.12.4.min.js"></script>
 	<script src="contract.js"></script>
