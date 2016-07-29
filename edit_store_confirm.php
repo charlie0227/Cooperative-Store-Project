@@ -49,7 +49,7 @@ if($_FILES["files"]["name"]!=NULL){
 		$uploadOk = 1;
 	}
 	// Check file size
-	if ($_FILES["files"]["size"] > 500000) {
+	if ($_FILES["files"]["size"] > 5000000) {
 		$data->error=$data->error."Sorry, your file is too large.";
 		$uploadOk = 0;
 	}
@@ -71,7 +71,7 @@ if($_FILES["files"]["name"]!=NULL){
 		$sth = $db->prepare($sql);
 		
 		$sth->bindParam(1, $type);
-		$sth->bindParam(2, $imgfp,);
+		$sth->bindParam(2, $imgfp);
 		$sth->bindParam(3, $size);
 		$sth->bindParam(4, $name);
 	//$sth->bindParam(5, $store_id);
