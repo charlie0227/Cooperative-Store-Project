@@ -18,9 +18,10 @@ $_SESSION['type']='2';
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script src="jquery-tablepage-1.0.js"></script>
 		<script type="text/javascript"></script>
-    <script src="http://malsup.github.com/jquery.form.js"></script>
-		
-		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="http://malsup.github.com/jquery.form.js"></script>
+		<script type="text/javascript" src="jquery-an-showbox.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery-an-showbox.css">
+		<link rel="stylesheet" href="style.css">
 		<script>
             $(document).ready( function() {
                     $("#tbl").tablepage($("#table_page"), 5);

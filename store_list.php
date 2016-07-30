@@ -19,7 +19,7 @@ ob_clean();
 		<script src="jquery-1.12.4.min.js"></script>
 		<script src="jquery-tablepage-1.0.js"></script>
 		<script type="text/javascript"></script>
-		<link rel="stylesheet" href="/resources/demos/style.css">
+		<link rel="stylesheet" href="style.css">
 <style>
 
 </style>
@@ -33,7 +33,7 @@ ob_clean();
 </head>
 <body>
 
-		<table id='tbl'>
+		<table class='bordered' id='tbl'>
 		<thead>
 		<tr>
 		<th style = "width: 240px;">NAME</th>

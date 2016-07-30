@@ -17,8 +17,8 @@ JSG.imgUploader = function(config) {
   //default config
  	var defConfig = {
     fileLimits: 1,                  //圖檔數量的限制 (-1 是不限制)
-    actionUrl: null,                //圖檔上傳的處理程式
-    fileInputName: 'myfile',        //檔案輸入框的名稱
+    actionUrl: 'demo_upload.php',                //圖檔上傳的處理程式
+    fileInputName: 'files',        //檔案輸入框的名稱
     inputContainer: null,           //檔案輸入框的放置位置
     previewContainer: null,         //預覽圖檔的放置位置
     hideInputIfReachLimits: true,   //達到檔案數量限制時是否隱藏輸入框，若否，則採用 disable
@@ -128,21 +128,26 @@ JSG.imgUploader = function(config) {
   }
 
   (function generateNewInput() {
+	  
     var uploadHandler = function() {
+		alert('1011');
       files.push({
         available: true,
         ready: false,
         filename: ''
       });
-
+	
       var _seqid = parseInt($(this).attr('seqid'), 10);
-      var handleUploadSuccess = function(data) {
+      //var handleUploadSuccess = function(data) {
+		function handleUploadSuccess(responseText){
+			alert('responseText: \n' + responseText ); 
+			//alert(data.success);
         var fileseq = _seqid - 1;
         var elmId = config.elementPrefix + config.uniqueId + '_preview' + _seqid;
         files[fileseq].ready = true;
-
         //error
         if ('error' in data || !('success' in data)) {
+			
           if ('error' in data)
             alert(data.error);
           else
@@ -154,8 +159,9 @@ JSG.imgUploader = function(config) {
           toggleInputLimits();
           return;
         }
-
+		
         files[fileseq].filename = data.success;
+		alert(files[fileseq].filename);
         var $deleteIcon = $('<div style="position: absolute; right: 0; top: 0; cursor: pointer"><img src="' + config.deleteIcon + '" /></div>')
           .click(function() {
             if (confirm(config.confirmDeleteMsg)) {
@@ -170,9 +176,12 @@ JSG.imgUploader = function(config) {
           .css('backgroundImage', 'url(' + data.success + ')')
           .append($deleteIcon);
       }; //end of handleUploadSuccess
-
-      $(this).parent().ajaxSubmit({success: handleUploadSuccess, dataType: 'json'});
-      ++currentFileCount;
+	alert('hi123');
+	
+      $(this).parent().ajaxSubmit({beforeSubmit: showRequest(),success: handleUploadSuccess()});
+      
+      alert('hi');
+	  ++currentFileCount;
       generatePreview(currentFormCount);
       generateNewInput();
       toggleInputLimits();
@@ -187,13 +196,19 @@ JSG.imgUploader = function(config) {
     var $fileInput = $('<input type="file" id="' + currentInputId + '" name="' + config.fileInputName + '" />')
       .change(uploadHandler)
       .attr('seqid', currentFormCount);
-
+	alert(config.actionUrl);
     $('<form id="' + currentFormId + '" action="' + config.actionUrl + '" method="POST" enctype="multipart/form-data" style="margin: 0 3px 0; display: inline"></form>')
       .append($fileInput)
       .appendTo(config.inputContainer);
     toggleInputLimits();
   }());
+  
+  function showRequest() { 
+ 
+    alert('About to submit: \n\n'); 
 
+} 
+	
   //public functions
   return {
     isReady: function() {
