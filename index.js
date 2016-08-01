@@ -1,3 +1,6 @@
+$(document).ready( function() {
+	$("#tbl").tablepage($("#table_page"), 5);
+})
 $(document).ready(function(){
 	news();
 });

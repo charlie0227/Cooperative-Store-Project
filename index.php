@@ -10,13 +10,16 @@ $_SESSION['type']='2';
 		<meta charset="utf-8" />
 		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA7kv2J21zjjZ6-_0abHxjqRTlRgz5vSA1MZbuL2l0P1cs_mO7FRT360m_w5W8HA98LDNckSGFAzJMBg"
         type="text/javascript"></script>
+		<script src="googleAPI.js"></script>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<script src="jquery-1.12.4.min.js"></script>
 		<script src="contract.js"></script>
-		<script src="store.js"></script>
+		<script src="./store/store.js"></script>
 		<script src="account.js"></script>
-		<script src="company.js"></script>
+		<script src="./company/company.js"></script>
 		<script src="index.js"></script>
+		<script src="fbapi.js"></script>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script src="jquery-tablepage-1.0.js"></script>
 		<script type="text/javascript"></script>
@@ -24,12 +27,6 @@ $_SESSION['type']='2';
 		<script type="text/javascript" src="jquery-an-showbox.js"></script>
 		<link rel="stylesheet" type="text/css" href="jquery-an-showbox.css">
 		<link rel="stylesheet" href="style.css">
-		<script>
-            $(document).ready( function() {
-                    $("#tbl").tablepage($("#table_page"), 5);
-            })
-        </script>
-		
 		<?
 			$sql = "SELECT name FROM `jangsc27_cs_project`.`store` ";
 			$sth = $db->prepare($sql);
@@ -394,61 +391,6 @@ function func_for_register(){
 				);
 			});
 		</script>
-
-		<style>
-			
-		</style>
-		<!--change content-->
-		<script type="text/javascript" language="javascript">
-		
-		
-		
-		
-		$(document).ready(function(){
-			//$('#login').ajaxForm({ 
-			//	dataType: 'text',
-			//	success:function(data){
-			//	var aaa="login fail!!";
-			//		if(data==aaa)
-			//			alert("啊");
-			//		alert(data);
-			//	}
-			//});
-			
-			$("#show_store").click(function(){ //3
-				$("#div_show_all_store").show();
-				$("#show_one_store_for_store_list").hide();
-				$("#stores").show();
-				$("#new").hide();
-				$("#membership").hide();
-				$("#please_login").hide();
-				document.getElementById("my_member").innerHTML="";
-				document.getElementById("div_show_all_store").innerHTML="";
-				//session_change_value("3");
-			});
-			$("#show_news").click(function(){ //1
-				$("#new").show();
-				$("#stores").hide();
-				$("#membership").hide();
-				$("#please_login").hide();
-				//session_change_value("1");
-			});
-			$("#show_member").click(function(){ //2
-				$("#membership").show();
-				$("#new").hide();
-				$("#stores").hide();
-				$("#please_login").show();
-				document.getElementById("my_member").innerHTML="";
-				document.getElementById("div_show_all_store").innerHTML = "";
-				//session_change_value("2");
-			});
-			
-		});
-		
-		
-		
-		
-		</script>
 		<!--mem func-->
 		<script>
 		$(document).ready(function(){
@@ -649,7 +591,7 @@ function func_for_register(){
 		};
 		</script>
 	</head>
-	<body>
+	<body onload="initialize()">
 		<!--<div style = "width:600px; margin:0 auto; font-size:13px;" id="sitebody">-->
 　		<div style = "border-radius: 10px;" id="the_header"><h1>Home</h1></div>
 　		<div style = "width:100%;">
@@ -657,23 +599,25 @@ function func_for_register(){
 				<!--login status-->
 				<?if($_SESSION['name']){?>
 					<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
-					<input class = "abutton" style = "width: 90%;" type="button" value="logout" onclick="location.href='logout.php';">
+					<input class = "abutton" style = "width: 90%;" type="button" value="logout" onclick="fblogout();location.href='logout.php';">
 				<?}else{?>
 					<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">會員登入</h3>
 					<input style = "margin-bottom: 5px;" id="username" type="text" name="username" placeholder="Account">
 					<input style = "margin-bottom: 5px;" id="password" type="password" name="password" placeholder="Password">
 					<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">
 					<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">
+					
 				<?}?>
+				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 				<a href="#qt1" class = "sidebar" id = "show_news" onclick="news()">最新消息</a>
 				<a href="#qt2" class = "sidebar" id = "show_member">會員專區</a>
-				<a href="#qt3" class = "sidebar" id = "show_store" onclick="searchforstore(2)">商店列表</a>
+				<a href="#qt3" class = "sidebar" id = "show_store" onclick="store_list()">商店列表</a>
 				<a href="#qt4" class = "sidebar" id = "show_company" onclick="company_list()">企業列表</a>
 			</div>
-			<div id="content">
-				
+			<div id="content" >
 				
 			</div>
+			
 		</div>
 		<div style='clear:both;'></div>		
 　		<div id="footer">footer</div>

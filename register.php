@@ -3,10 +3,48 @@ require_once "sysconfig.php";
 ?>
 <html>
 <head>
-
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
 <script src="assets/js/main.js"></script>
-<script type="text/javascript">
+
+<script type="text/javascript" language="JavaScript">
+	var rval;
+		function checkEmail() {
+			var remail = $("#email").val();
+			var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+			if (remail.search(emailRule)!=-1) {
+				$.post("send_auth.php",
+				{
+				  datatype:'text',
+				  remail:remail
+				  
+				},
+				function(data){
+					rval = data;
+					//alert(rval);
+				});
+				document.getElementById("text1").innerHTML = 'Please check your e-mail >_<';
+				document.getElementById("send").value = 'Send again 0.0';
+			}
+			else {
+				alert("False");
+				//$("#form").focus();
+			}
+		}
+		function check_rval(){
+			var c = $("#check_num").val();
+			var result = rval.replace(/\r\n|\n/g,"");
+			result = result.replace(/\s+/g, "");
+			if(result==c){
+				alert("Correct");
+			}
+			else{
+				alert("Wrong");
+			}
+		}
+</script>
+
+<script type="text/javascript" language="JavaScript">
 
 <?
 $sql = "SELECT account FROM `jangsc27_cs_project`.`member`";
@@ -14,8 +52,13 @@ $sth = $db->prepare($sql);
 $sth->execute();
 $result = $sth->fetchAll(PDO::FETCH_COLUMN,0);
 ?>
+
+
+/*
 $(document).ready(function(){
-    $(".valid").hide();
+	
+    
+	$(".valid").hide();
 	$("input").focus(function(){
         $(this).css("background-color", "#cccccc");
     });
@@ -82,8 +125,10 @@ $(document).ready(function(){
 		else $("#valid6").hide();
 	});
 });
+*/
 </script>
 </head>
+
 <body>
 <form style="display:inline;" action="register_account.php" method="POST">
 <table>
@@ -354,10 +399,20 @@ Email Address
 		
 <tr>
 <td>
-	<input type="text" id="email" name="email">
+	<input type="text" id="email" name="email" size="15">
+	<input id="send" type="button" value="Send Captcha" onClick="checkEmail()">
+	<div id="text1"></div>
 	<div class="star" id="star5">*</div>
 	<div class="valid"id="valid5">do not type space</div>
 </td>		
+</tr>
+<tr>
+<td>
+	<div id="form">
+		驗證碼：<input type="text" id="check_num" name="rval" size="15">
+		<input type="button" value="check" onClick="check_rval()">
+	</div>
+</td>
 </tr>		
 <tr>
 <td>
