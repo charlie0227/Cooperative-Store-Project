@@ -15,6 +15,8 @@ $_SESSION['type']='2';
 		<script src="contract.js"></script>
 		<script src="store.js"></script>
 		<script src="account.js"></script>
+		<script src="company.js"></script>
+		<script src="index.js"></script>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script src="jquery-tablepage-1.0.js"></script>
 		<script type="text/javascript"></script>
@@ -663,79 +665,13 @@ function func_for_register(){
 					<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">
 					<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">
 				<?}?>
-				<a href="#qt1" class = "sidebar" id = "show_news">最新消息</a>
+				<a href="#qt1" class = "sidebar" id = "show_news" onclick="news()">最新消息</a>
 				<a href="#qt2" class = "sidebar" id = "show_member">會員專區</a>
 				<a href="#qt3" class = "sidebar" id = "show_store" onclick="searchforstore(2)">商店列表</a>
+				<a href="#qt4" class = "sidebar" id = "show_company" onclick="company_list()">企業列表</a>
 			</div>
 			<div id="content">
-				<div id = "new" name="qt1">
-					<h2>最新消息</h2>
-					<ul>
-					  <li>替補軍團狂轟45分勇士勝騎士拔頭籌LYS<2016/6/3></li>
-					  <li>金鶯七轟打紅襪 釀酒人近十戰七勝<2016/6/3></li>
-					  <li>蛋白質攝取過量 恐傷腎病變<2016/6/3></li>
-					</ul>
-				</div>
-				<!--memeber func-->
-				<div hidden id="please_login">	
-					<?if(!$_SESSION['name']){?>
-						<p><-----------</p>
-						<p>Please Login first</p>
-					<?}?>
-				</div>
-				<div hidden id = "membership" name="qt2">
-					
-					<?if($_SESSION['name']){?>
-						<h2>會員專區</h2>
-						<table>
-						<tr>
-						 <td><input class="abutton" id = "show_add_store"  type="button" value="add new store" onclick="add_store()"></td>
-						 <td><input class="abutton" type="button" value="manage store" onclick="chage_store(1,1)"></td>
-						 <td><input class="abutton" type="button" value="manage contract" onclick="contract_list()"></td>
-						 <td><input class="abutton" type="button" value="edit personal information" onclick="edit_personal()"></td>
-						 <td><input class="abutton" type="button" value="edit password" onclick="edit_password()"></td>
-						</tr>
-						</table>	
-					<?}?>
-					
-					<div id="my_member">
-						
-					</div>
-					<div id='show_one_store_for_my_member'></div>
-				</div>
-				<!--storelist-->
-				<div hidden id = "stores" name="qt3">
-					
-					<table width = "100%">
-						<div id="search_box">
-						<tr>
-						<form action="index.php" method="POST">
-						<td style = "height:30px;">Choose</td>
-						<td style = "height:30px;">
-						<select name="search_type" id="search_type">
-							<option value="1">ID</option>
-							<option value="2">NAME</option>
-							<option value="3">PHONE</option>
-							<option value="4">ADDRESS</option>
-							<option value="5">CONTENT</option>
-						 </select>
-						</td>
-						<td style = "height:30px;"><input type="text" name="searchfor" id="searchfor" placeholder="Search"></td>
-						<td style = "height:30px;"><input class = "abutton" type="button" name="search_btn" value="search" onclick="searchforstore(2)"></td>
-						</form>
-						<?
-						if($_SESSION['id']){?>
-							<td style = "height:30px;"><input class = "abutton" type="button" id="store_list_change_store" value="My Store" onclick="chage_store(2,2)"></td>
-						<?}?>
-						<td style = "height:30px;"><input id ="add1" type="button" value="add store" onclick="window.open('create_store.php','Add','width=700,height=300')"></td>
-						</tr>
-						</div>
-					</table>
-					<!--Show all store-->
-					<div id='div_show_all_store'></div>
-					
-					<div id='show_one_store_for_store_list'></div>
-				</div>
+				
 				
 			</div>
 		</div>

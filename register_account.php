@@ -6,7 +6,7 @@ function check_mamber($db,$account,$password,$phone,$email,$name,$gender){
 		//echo '<h1>Vacant Input</h1>';
 		return false;
 	}
-	if(strstr($account,' ') || strstr($password,' ') || strstr($phone,' ') || strstr($email,' ') || strstr($name,' ')){
+	if(strstr($account,' ') || strstr($password,' ') || strstr($phone,' ') || strstr($email,' ') ){
 		echo '<h1>Contain whitespace</h1>';
 		return false;
 	}

@@ -1,27 +1,16 @@
 //go to register.php
 function go_register(){
-	var str = "5";
-	if (str == "") {
-		return;
-	} else { 
-		if (window.XMLHttpRequest) {
-			// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-		} else {
-			// code for IE6, IE5
-			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
+			$("#content").fadeIn(500);
 		}
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-				document.getElementById("my_member").innerHTML = xmlhttp.responseText;
-				func_for_register();
-
-			}
-		};
-		xmlhttp.open("GET","register.php?nothing="+str,true);
-		xmlhttp.send();
-		
-	}
+	};
+	xhttp.open("GET", "register.php", true);
+	xhttp.send();
 }
 
 //edit password
@@ -124,30 +113,6 @@ function edit_personal(){
 			}
 		};
 		xmlhttp.open("GET","edit_personal_information.php?nothing="+str,true);
-		xmlhttp.send();
-		
-	}
-}
-function go_register(){
-	var str = "5";
-	if (str == "") {
-		return;
-	} else { 
-		if (window.XMLHttpRequest) {
-			// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-		} else {
-			// code for IE6, IE5
-			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-				document.getElementById("my_member").innerHTML = xmlhttp.responseText;
-				func_for_register();
-
-			}
-		};
-		xmlhttp.open("GET","register.php?nothing="+str,true);
 		xmlhttp.send();
 		
 	}

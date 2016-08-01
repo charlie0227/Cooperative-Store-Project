@@ -22,11 +22,9 @@ echo '<table>
 			</tr>
 		</thead>
 		<tbody>
-		';
-while($result = $sth->fetchObject()){
-	echo '<tr><td>'.$result->name.'</td><td>'.$result->phone.'</td><td>'.$result->address.'</td></tr>';
-}
-	echo 
-	'</tbody>
-	</table>';
-?>
+		';?>
+<?while($result = $sth->fetchObject()){?>
+	<tr><td><a onclick="view_company(<?echo $result->id?>)" ><?echo $result->name?></a></td><td><?echo $result->phone?></td><td><?echo $result->address?></td></tr>
+<?}?> 
+	</tbody>
+</table>

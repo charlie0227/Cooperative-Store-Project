@@ -2,22 +2,31 @@
 require_once "sysconfig.php";
 ?>
 <html>
-<head>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<head>
-<body>
-<?if($_SESSION['name']){?>
-		Hello  <?echo $_SESSION['name']?>  
-		<input type="button" value="logout" onclick="location.href='logout.php';"><br>
-		<input type="button" value="add your new store" onclick="location.href='create_store.php'"><br>
-		<input type="button" value="manage your store" ><br>
-		<input type="button" value="manage your contract" ><br>
-		<input type="button" value="edit your personal information" onclick="location.href=('edit_personal_information.php')"><br>
-		<input type="button" value="edit your password" onclick="location.href=('edit_password.php')"><br>
+	<!--memeber func-->
+	<div hidden id="please_login">	
+		<?if(!$_SESSION['name']){?>
+			<p><-----------</p>
+			<p>Please Login first</p>
+		<?}?>
+	</div>
+	<div hidden id = "membership" name="qt2">
 		
-	<?}else{?>
-		<p><-----------</p>
-		<p>Please Login first</p>
-	<?}?>
-</body>
+		<?if($_SESSION['name']){?>
+			<h2>會員專區</h2>
+			<table>
+			<tr>
+			 <td><input class="abutton" id = "show_add_store"  type="button" value="add new store" onclick="add_store()"></td>
+			 <td><input class="abutton" type="button" value="manage store" onclick="chage_store(1,1)"></td>
+			 <td><input class="abutton" type="button" value="manage contract" onclick="contract_list()"></td>
+			 <td><input class="abutton" type="button" value="edit personal information" onclick="edit_personal()"></td>
+			 <td><input class="abutton" type="button" value="edit password" onclick="edit_password()"></td>
+			</tr>
+			</table>	
+		<?}?>
+		
+		<div id="my_member">
+			
+		</div>
+		<div id='show_one_store_for_my_member'></div>
+	</div>
 </html>

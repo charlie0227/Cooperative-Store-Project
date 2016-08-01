@@ -16,9 +16,7 @@ $sth = $db->prepare($sql);
 $sth->execute(array($_SESSION['id'],$_GET['company_id']));
 if($sth->fetchObject())
 	$situation= 2;#belong
-
 ?>
-<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -37,16 +35,16 @@ if($sth->fetchObject())
 			<td><?echo $result->name?></td>
 			<td><?echo $result->phone?></td>
 			<td><?echo $result->address?></td>
-			<td><?echo $result->email?></td>';
+			<td><?echo $result->email?></td>
 			</tr>
 		<?}?>
-	</table><?
-	if($situation==0)
-		echo '<input type="button" value="¥[¤J¦¹¹ÎÅé" onclick="apply('.$_SESSION['id'].','.$_GET['company_id'].')">';
-	if($situation==1)
-		echo '<p>µ¥«Ý¼f®Ö¤¤...</p>';
-	if($situation==2)
-		echo '<input type="button" value="°h¥X¦¹¹ÎÅé" onclick="quit('.$_SESSION['id'].','.$_GET['company_id'].')">';
-	?>
+	</table>
+	<?if($situation==0){?>
+		<input type="button" value="åŠ å…¥æ­¤åœ˜é«”" onclick="apply(<?echo $_SESSION['id']?>,<?echo$_GET['company_id']?>)">
+	<?}if($situation==1){?>
+		<p>ç­‰å¾…å¯©æ ¸ä¸­...</p>
+	<?}if($situation==2){?>
+		<input type="button" value="é€€å‡ºæ­¤åœ˜é«”" onclick="quit(<?echo $_SESSION['id']?>,<?echo$_GET['company_id']?>)">
+	<?}?>
 	</body>
 </html>
