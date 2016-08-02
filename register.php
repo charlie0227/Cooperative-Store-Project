@@ -3,49 +3,9 @@ require_once "sysconfig.php";
 ?>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
-<script src="assets/js/main.js"></script>
-
-<script type="text/javascript" language="JavaScript">
-	var rval;
-		function checkEmail() {
-			var remail = $("#email").val();
-			var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-			if (remail.search(emailRule)!=-1) {
-				$.post("send_auth.php",
-				{
-				  datatype:'text',
-				  remail:remail
-				  
-				},
-				function(data){
-					rval = data;
-					//alert(rval);
-				});
-				document.getElementById("text1").innerHTML = 'Please check your e-mail >_<';
-				document.getElementById("send").value = 'Send again 0.0';
-			}
-			else {
-				alert("False");
-				//$("#form").focus();
-			}
-		}
-		function check_rval(){
-			var c = $("#check_num").val();
-			var result = rval.replace(/\r\n|\n/g,"");
-			result = result.replace(/\s+/g, "");
-			if(result==c){
-				alert("Correct");
-			}
-			else{
-				alert("Wrong");
-			}
-		}
-</script>
-
-<script type="text/javascript" language="JavaScript">
-
+<!--<script src="assets/js/main.js"></script>-->
 <?
 $sql = "SELECT account FROM `jangsc27_cs_project`.`member`";
 $sth = $db->prepare($sql);
@@ -53,11 +13,47 @@ $sth->execute();
 $result = $sth->fetchAll(PDO::FETCH_COLUMN,0);
 ?>
 
+<script type="text/javascript" language="JavaScript">
+/*$(document).ready(function(){
+	//js for captcha		
+	alert("QQ");
 
-/*
-$(document).ready(function(){
+	var rval;
+	$("#send").click(function(){
+		var remail = $("#email").val();
+		var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+		if (remail.search(emailRule)!=-1) {
+			$.post("send_auth.php",
+			{
+			  datatype:'text',
+			  remail:remail
+			  
+			},
+			function(data){
+				rval = data;
+				//alert(rval);
+			});
+			document.getElementById("text1").innerHTML = 'Please check your e-mail >_<';
+			document.getElementById("send").value = 'Send again 0.0';
+		}
+		else {
+			alert("False");
+			//$("#form").focus();
+		}		
+	});
+	$("#check_rval").click(function(){
+        var c = $("#check_num").val();
+		var result = rval.replace(/\r\n|\n/g,"");
+		result = result.replace(/\s+/g, "");
+		if(result==c){
+			alert("Correct");
+		}
+		else{
+			alert("Wrong");
+		}
+    });
 	
-    
+	
 	$(".valid").hide();
 	$("input").focus(function(){
         $(this).css("background-color", "#cccccc");
@@ -124,8 +120,9 @@ $(document).ready(function(){
 			$("#valid6").show();
 		else $("#valid6").hide();
 	});
+	*/
 });
-*/
+
 </script>
 </head>
 
@@ -416,7 +413,7 @@ Email Address
 </tr>		
 <tr>
 <td>
-	<input class = "abutton" style = "width: 100px;"type="submit" value="OK" >	
+	<input class = "abutton" id="Done" style = "width: 100px;"type="submit" value="Done" disabled>	
 	<input class = "abutton" style = "width: 100px;" type="button" value="reset" onclick="reset();return false;">	
 </td>		
 </tr>	

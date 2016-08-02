@@ -12,9 +12,7 @@ function show_company_list(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			$("#show_search_company").hide();
 			document.getElementById("show_search_company").innerHTML = xhttp.responseText;
-			$("#show_search_company").fadeIn(500);
 		}
 	};
 	var q = $("#search_for").val();
@@ -29,10 +27,15 @@ function company_list(){
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			document.getElementById("content").innerHTML = xhttp.responseText;
+			$("#show_search_company").hide();
 			show_company_list();
+			$("#show_search_company").fadeIn(500);
 			search_com = setInterval(function () {
 				if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue && $("#search_word").val() != "") ){
+					$("#show_search_company").hide();
 					show_company_list();
+					$("#show_search_company").fadeIn(500);
+			
 					}
 			}, 500);
 		}
@@ -58,4 +61,48 @@ function view_company(id){
 function back_to_company_list(){
 	$("#into_company").hide();
 	$("#company_bar").fadeIn(500);
+}
+
+function add_new_company(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			$("#company_bar").hide();
+			$("#into_company").hide();
+			document.getElementById("into_company").innerHTML = xhttp.responseText;
+			$("#into_company").fadeIn(500);
+		}
+	};
+	xhttp.open("GET", "./company/create_company.php", true);
+	xhttp.send();
+}
+
+function company_submit(){
+	$('#company_ajaxForm').submit(function() { 
+	 // 提交表单
+    $(this).ajaxSubmit(function(data){
+		show_company_list();
+		view_company(data);
+	});
+    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
+   
+		alert("Thank you for your comment!"); 
+		 return false;
+	}); 
+}
+
+function view_company(id){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			$("#company_bar").hide();
+			$("#into_company").hide();
+			document.getElementById("into_company").innerHTML = xhttp.responseText;
+			$("#into_company").fadeIn(500);
+		}
+	};
+	xhttp.open("GET", "./company/company.php?company_id="+id, true);
+	xhttp.send();
 }

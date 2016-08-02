@@ -28,7 +28,7 @@ showAddress('<?echo $temp->address?>')
 		{?>
 			<p>店名 <?echo $result->name?></p>
 			<?if($result_img){?>
-			<a href="http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->imgfp?>"><img src="../<?echo $result_img->imgfp?>" style="width: 30%;height: 30%;"/></a>
+			<a href="http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image?>"><img src="<?echo $result_img->image?>" style="width: 30%;height: 30%;"/></a>
 			<?}?>
 			<p>電話 <?echo $result->phone?></p>
 			<p>地址 <?echo $result->address?></p>

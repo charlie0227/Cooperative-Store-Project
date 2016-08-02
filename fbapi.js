@@ -9,7 +9,6 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       FB_login();
-	  alert('1');
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
 	  alert('2');
@@ -28,47 +27,22 @@
       statusChangeCallback(response);
     });
   }
-
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '1135310903195562',
-    cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.5' // use graph api version 2.5
-  });
   
-
-
-  // Now that we've initialized the JavaScript SDK, we call 
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
-
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1135310903195562',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
   };
 
-  // Load the SDK asynchronously
-  (function(d){
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement('script'); js.id = id; js.async = true;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        ref.parentNode.insertBefore(js, ref);
-        }(document));
-  
-
-
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   //check account is registered
@@ -87,7 +61,7 @@
 				FB_register();
 			}
 			else{
-				;
+				window.location.reload();
 			}
 		}
 		);
@@ -113,17 +87,23 @@
 		  email:response.email
 		},
 		function(){
-			;
+			window.location.reload();
 		}
 		);
       });
   }
 
 function fblogout() {
-	alert('fuck');
-        FB.logout(function (response) {
+	FB.getLoginStatus(function(response) {
+		if (response.status === 'connected') {
+		  FB.logout(function (response) {
             //Do what ever you want here when logged out like reloading the page
 			alert('logout');
             window.location.reload();
         });
+		}
+    });
+	
+	
+        
 }

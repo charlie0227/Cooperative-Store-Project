@@ -3,20 +3,11 @@ require_once "../sysconfig.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-TW">
-<link href="style.css" rel="stylesheet" type="text/css" />
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script type="text/javascript">
-//jquery ui autocomplete https://dotblogs.com.tw/a802216/2013/09/19/119070
-</script>
+
 </head>
 	<body>
 	<!--Add new store  add.php-->
-	<form action="./store/add.php" method="post" enctype="multipart/form-data" id="create_ajaxForm">
+	<form id="store_ajaxForm">
 	<table>
 	<tr><td>Store Name</td></tr>
 	<tr>
@@ -48,8 +39,7 @@ require_once "../sysconfig.php";
 			</div>
 			</td>
 			<td><input name="files" type="file" id="files" class="upl"></td>
-		<tr><td><input class = "abutton" type="submit" value="Submit" name="submit" ></td></tr>	
-		
+		<tr><td><input class = "abutton" type="button" value="Submit" onclick="store_submmit()"></td></tr>		 
 	</table>
 	</form>
 	

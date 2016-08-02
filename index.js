@@ -17,3 +17,40 @@ function news(){
 	xhttp.open("GET", "news.php", true);
 	xhttp.send();
 }
+
+//js for captcha
+var rval;
+function checkEmail() {
+	var remail = $("#email").val();
+	emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+	if (remail.search(emailRule)!=-1) {
+		$.post("send_auth.php",
+		{
+		  datatype:'text',
+		  remail:remail
+		  
+		},
+		function(data){
+			rval = data;
+			//alert(rval);
+		});
+		document.getElementById("text1").innerHTML = 'Please check your e-mail >_<';
+		document.getElementById("send").value = 'Send again 0.0';
+	}
+	else {
+		alert("False");
+		//$("#form").focus();
+	}
+}
+function check_rval(){
+	var c = $("#check_num").val();
+	var result = rval.replace(/\r\n|\n/g,"");
+	result = result.replace(/\s+/g, "");
+	if(result==c){
+		alert("Correct");
+		document.getElementById('Done').disabled = false;
+	}
+	else{
+		alert("Wrong");
+	}
+}
