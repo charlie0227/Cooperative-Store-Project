@@ -7,7 +7,7 @@ require_once "../sysconfig.php";
 </head>
 	<body>
 	<!--Add new store  add.php-->
-	<form id="store_ajaxForm">
+	<form action="./store/add.php" method="post" enctype="multipart/form-data" id="store_ajaxForm">
 	<table>
 	<tr><td>Store Name</td></tr>
 	<tr>
@@ -39,7 +39,8 @@ require_once "../sysconfig.php";
 			</div>
 			</td>
 			<td><input name="files" type="file" id="files" class="upl"></td>
-		<tr><td><input class = "abutton" type="button" value="Submit" onclick="store_submmit()"></td></tr>		 
+		<tr><td><input class = "abutton" type="submit" name="submit" value="Submit" onclick="store_submit()"></td></tr>
+	
 	</table>
 	</form>
 	

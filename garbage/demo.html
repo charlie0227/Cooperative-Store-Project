@@ -1,54 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
+<!-- 
+ * Markup for jQuery Reveal Plugin 1.0
+ * www.ZURB.com/playground
+ * Copyright 2010, ZURB
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ -->
+	<head>
+		<meta charset="utf-8" />
+		<title>Reveal Demo</title>
+		
+		<!-- Attach our CSS -->
+	  	<link rel="stylesheet" href="reveal.css">	
+	  	
+		<!-- Attach necessary scripts -->
+		<!-- <script type="text/javascript" src="jquery-1.4.4.min.js"></script> -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="jquery.reveal.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		
+		
+		
+	</head>
+	<body>
 
-var map;
-var geocoder;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 17
-  });
-  geocoder = new google.maps.Geocoder();
-  var address = '台北市內湖區民權東路6段180巷14號';
-  geocodeAddress(address);
-}
+		<script type="text/javascript">
+		function test(){
+			alert('1');
+			var xhttp;
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					alert('2');
+					document.getElementById("test").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "register.php", true);
+			xhttp.send();
+		}
 
-function geocodeAddress(address) {
-  //var address = document.getElementById('address').value; //填入address
-  
-  geocoder.geocode({'address': address}, function(results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
-}
+		$(document).ready(function(){
+			test();
+		});
+		</script>
 
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI&callback=initMap"
-        async defer></script>
-  </body>
+		<a href="#" class="big-link" data-reveal-id="test">
+			Fade and Pop
+		</a>	
+		
+		<a href="#" class="big-link" data-reveal-id="test" data-animation="fade">
+			Fade
+		</a>
+		
+		<a href="#" class="big-link" data-reveal-id="test" data-animation="none">
+			None
+		</a>
+
+		<div id="test" class="reveal-modal">
+			<h1>Reveal Modal Goodness</h1>
+			<p>This is a default modal in all its glory, but any of the styles here can easily be changed in the CSS.</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+			
+	</body>
 </html>

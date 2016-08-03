@@ -33,6 +33,10 @@
 	font-weight:bold;  
 	float:left;
 }
+#list{
+	height: 900px;
+	overflow: scroll;
+}
 #footer{
 	width: 100%;
 	height: 80px;
@@ -45,6 +49,7 @@
 	background-position: 50% 50%;
 	background-size: 100%;
 	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/lohp_streams_header_bg_v4.png);
+	border-radius: 10px;
 }
 .abutton{
 	width: 100%; 
@@ -87,9 +92,12 @@ img{
 	display:block; 
 	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/lohp_streams_header_bg_v4.png);
 	margin-bottom: 5px; 
+	margin-top: 5px; 
 	text-decoration: none;
 	color: #FFFFFF;
 	height: 50px;
+	border: hidden;
+    width: 100%;
 }
 
 /*  滑入時變換底色樣式 */  
@@ -99,6 +107,7 @@ img{
 } 
 
 .bordered {
+	
     border: solid #ccc 1px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -203,4 +212,31 @@ box-sizing: border-box;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	padding: 5px;
+}
+
+.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/lohp_streams_header_bg_v4.png);
+	border-radius: 10px;
+}
+
+.menu_bar {
+    float: left;
+}
+
+.menu_bar #dropdown {
+    display: inline-block;
+}
+.menu_bar  a, #dropbtn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }

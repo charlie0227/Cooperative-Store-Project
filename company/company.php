@@ -22,7 +22,7 @@ if($sth->fetchObject())
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<script src="jquery-1.12.4.min.js"></script>
 	<script src="jquery-tablepage-1.0.js"></script>
-	<script src="jquery-1.12.4.min.js"></script>
+
 	<table id="tb1"><tr>
 		<th>NAME</th>
 		<th>PHONE</th>
@@ -39,9 +39,17 @@ if($sth->fetchObject())
 			</tr>
 		<?}?>
 	</table>
+	
+		
+	<div id="apply_company" class="reveal-modal">
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	
 	<span id="table_page"></span>
 	<?if($situation==0){?>
+		<a href="#" class="big-link" data-reveal-id="apply_company">
 		<input type="button" value="加入此團體" onclick="apply(<?echo $_SESSION['id']?>,<?echo$_GET['company_id']?>)">
+		</a>
 	<?}if($situation==1){?>
 		<p>等待審核中...</p>
 	<?}if($situation==2){?>

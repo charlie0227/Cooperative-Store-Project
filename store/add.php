@@ -78,8 +78,8 @@ if($_FILES["files"]["name"]!=NULL){
 		$data->error=$data->error."Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
-		if (move_uploaded_file($_FILES["files"]["tmp_name"], $target_file)) {
-			chmod($target_file, 0644); 
+		if (move_uploaded_file($_FILES["files"]["tmp_name"],$root_dir.$target_file)) {
+			chmod($root_dir.$target_file,0755); 
 			$data->message="The file ". basename( $_FILES["files"]["name"]). " has been uploaded.";
 		} else {
 			$data->error=$data->error."Sorry, there was an error uploading your file.";

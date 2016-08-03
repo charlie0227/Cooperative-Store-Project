@@ -11,6 +11,7 @@ $result=$sth->fetchObject();
 ?>
 </head>
 <body>
+<form action="./member/edit_personal_ok.php" method="post" enctype="multipart/form-data" id="edit_personal_ajaxForm">
 <table>
 	<tr>
 	<td>
@@ -29,10 +30,9 @@ $result=$sth->fetchObject();
 	</tr>	
 	<tr>
 	<td>
-		<div class="edit_input">
-		<input type="text" name="name" value="<?echo $result->name?>">
-		<p hidden>*</p>
-		</div>
+	<div class="edit_input" style="display:inline-flex">
+		<input type="text" name="name" value="<?echo $result->name?>"><div style="display:none;color:red">*</div>
+	</div>
 	</td>
 	</tr>
 	<tr>
@@ -42,16 +42,11 @@ $result=$sth->fetchObject();
 	</tr>	
 	<tr>
 	<td>
-		<input type="text" id="phone"name="phone" value="<?echo $result->phone?>">
-		<div class="star" id="star3">*</div>
+	<div class="edit_input" style="display:inline-flex">
+		<input type="text" name="phone" value="<?echo $result->phone?>"><div style="display:none;color:red">*</div>
+	</div>
 	</td>
 	</tr>	
-	<tr>
-	<td>
-		<div class="valid"id="valid3">do not type space</div>	
-	</td>
-	</tr>
-	   
 	<tr>
 	<td>
 		Gender
@@ -59,11 +54,10 @@ $result=$sth->fetchObject();
 	</tr>
 	<tr>
 	<td>
-		<input type="radio" id="male" name="gender" value="1" class="gender"<?if($result->gender==1) echo ' checked="checked" '?>>
+		<input type="radio" name="gender" value="1" class="gender"<?if($result->gender==1) echo ' checked="checked" '?>>
 		<label for "male">Male</label>
-		<input type="radio" id="female" name="gender" value="0" class="gender"<?if($result->gender==0) echo ' checked="checked" '?>>
+		<input type="radio" name="gender" value="0" class="gender"<?if($result->gender==0) echo ' checked="checked" '?>>
 		<label for "female">Female</label>
-		<div class="star" id="star4">*</div>
 	</td>
 	</tr>
 
@@ -257,18 +251,18 @@ $result=$sth->fetchObject();
 		
 	<tr>
 	<td>
-		<input type="text"id="email" name="email" value="<?echo $result->email?>">
-		<div class="star" id="star5">*</div>
-		<div class="valid"id="valid5">do not type space</div>
+	<div class="edit_input" style="display:inline-flex">
+		<input type="text" name="email" value="<?echo $result->email?>"><div style="display:none;color:red">*</div>
+	</div>
 	</td>
 	</tr>	
 		
 	<tr>
 	<td>
-		<input class = "abutton" style = "width: 100px;"type="button" value="OK" onclick="func_edit_confirm()">
+		<input class = "abutton" style = "width: 100px;"type="submit" value="OK" onclick="edit_personal_submit()">
 	</td>
 	</tr>
-		
+</form>	
 </table>	
 </body>
 </html>

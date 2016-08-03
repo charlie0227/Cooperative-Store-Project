@@ -8,11 +8,15 @@ $_SESSION['type']='2';
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+		<link rel="stylesheet" href="reveal.css">
 		<!--<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA7kv2J21zjjZ6-_0abHxjqRTlRgz5vSA1MZbuL2l0P1cs_mO7FRT360m_w5W8HA98LDNckSGFAzJMBg"></script>-->
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI"async defer></script>
 		<script src="googleAPI.js"></script>
 		<script type="text/javascript" src="http://connect.facebook.net/zh_TW/all.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+		<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+		<script type="text/javascript" src="jquery.reveal.js"></script>
 		<script src="jquery-1.12.4.min.js"></script>
 		<script src="contract.js"></script>
 		<script src="./store/store.js"></script>
@@ -55,7 +59,14 @@ $_SESSION['type']='2';
 	</head>
 	<body>  
 		<!--<div style = "width:600px; margin:0 auto; font-size:13px;" id="sitebody">-->
-　		<div style = "border-radius: 10px;" id="the_header"><h1>Home</h1></div>
+		<ul class="header">
+			<li class="menu_bar"><a href="#">Home</a></li>
+			<li class="menu_bar"><a href="#">News</a></li>
+			<li class="menu_bar" id="dropdown">
+				<a href="#" id="dropbtn">Notice</a>
+			</li>
+		</ul>
+
 　		<div style = "width:100%;">
 			<div id="sidebar">
 				<!--login status-->
@@ -68,7 +79,7 @@ $_SESSION['type']='2';
 					<input style = "margin-bottom: 5px;" id="password" type="password" name="password" placeholder="Password">
 					<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">
 					<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">
-					<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+					<fb:login-button size="medium" length="long" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 				<?}?>
 				
 				

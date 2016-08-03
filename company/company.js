@@ -106,3 +106,29 @@ function view_company(id){
 	xhttp.open("GET", "./company/company.php?company_id="+id, true);
 	xhttp.send();
 }
+
+function apply(member_id,company_id){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("apply_company").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "./company/application_form.php?company_id="+company_id+"&member_id="+member_id, true);
+	xhttp.send();
+}
+
+function application_submit(){
+	$('#application_ajaxForm').submit(function() { 
+	 // 提交表单
+    $(this).ajaxSubmit(function(data){
+		if(data==='ok')
+			alert("Thank you for your comment!"); 
+	});
+    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
+   
+
+		 return false;
+	}); 
+}

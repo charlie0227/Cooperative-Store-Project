@@ -17,14 +17,12 @@ $result_img = $sth2->fetchObject();
 ?>	
 <html>
 <script>
-initialize();
-showAddress('<?echo $temp->address?>')
 </script>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<script src="jquery-1.12.4.min.js"></script>
 	<script src="jquery-tablepage-1.0.js"></script>
 		<?php
-		if($result)
+		if($result) 
 		{?>
 			<p>店名 <?echo $result->name?></p>
 			<?if($result_img){?>
@@ -32,7 +30,7 @@ showAddress('<?echo $temp->address?>')
 			<?}?>
 			<p>電話 <?echo $result->phone?></p>
 			<p>地址 <?echo $result->address?></p>
-			<div id="map" style="width:500px; height:500px;display:inline-block;" ></div>
+			<div id="store_map" style="width:500px; height:500px;display:inline-block;" ></div>
 			<p>Email <?echo $result->email?></p>
 			<p>合作企業 <?
 				while($result_company = $sth1->fetchObject()){

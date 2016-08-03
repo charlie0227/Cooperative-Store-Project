@@ -27,14 +27,19 @@
       statusChangeCallback(response);
     });
   }
-  
-  window.fbAsyncInit = function() {
+
+	window.fbAsyncInit = function() {
     FB.init({
       appId      : '1135310903195562',
       xfbml      : true,
+	  status     : true, 
+      cookie     : true,
+	  oauth      : true,
       version    : 'v2.7'
     });
-  };
+  }; 
+ 
+  
 
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -92,6 +97,7 @@
 		);
       });
   }
+  
 
 function fblogout() {
 	FB.getLoginStatus(function(response) {
