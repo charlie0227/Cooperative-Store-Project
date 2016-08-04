@@ -1,8 +1,5 @@
 <?php
 require_once "sysconfig.php";
-
-$_SESSION['type']='2';
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -10,7 +7,6 @@ $_SESSION['type']='2';
 		<meta charset="utf-8" />
 		<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
 		<link rel="stylesheet" href="reveal.css">
-		<!--<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA7kv2J21zjjZ6-_0abHxjqRTlRgz5vSA1MZbuL2l0P1cs_mO7FRT360m_w5W8HA98LDNckSGFAzJMBg"></script>-->
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI"async defer></script>
 		<script src="googleAPI.js"></script>
 		<script type="text/javascript" src="http://connect.facebook.net/zh_TW/all.js"></script>
@@ -18,44 +14,15 @@ $_SESSION['type']='2';
 		<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
 		<script type="text/javascript" src="jquery.reveal.js"></script>
 		<script src="jquery-1.12.4.min.js"></script>
-		<script src="contract.js"></script>
 		<script src="./store/store.js"></script>
-		<script src="account.js"></script>
 		<script src="./company/company.js"></script>
 		<script src="./member/member.js"></script>
 		<script src="index.js"></script>
 		<script src="fbapi.js"></script>
 		<link href="style.css" rel="stylesheet" type="text/css" />
-		<script src="jquery-tablepage-1.0.js"></script>
-		<script type="text/javascript"></script>
 		<script src="http://malsup.github.com/jquery.form.js"></script>
 		<script type="text/javascript" src="jquery-an-showbox.js"></script>
 		<link rel="stylesheet" type="text/css" href="jquery-an-showbox.css">
-		<link rel="stylesheet" href="style.css">
-		<?
-			$sql = "SELECT name FROM `jangsc27_cs_project`.`store` ";
-			$sth = $db->prepare($sql);
-			$sth->execute();
-			$result = $sth->fetchAll(PDO::FETCH_COLUMN,0);
-			
-			$sql = "SELECT account FROM `jangsc27_cs_project`.`member`";
-			$sth = $db->prepare($sql);
-			$sth->execute();
-			$register_result = $sth->fetchAll(PDO::FETCH_COLUMN,0);
-		?>
-		<!--change color of block-->
-		<script language="javascript">
-			$(function(){
-				//當滑鼠滑入時將div的class換成divOver
-				$('.sidebar').hover(function(){
-						$(this).addClass('sidebar_over');		
-					},function(){
-						//滑開時移除divOver樣式
-						$(this).removeClass('sidebar_over');	
-					}
-				);
-			});
-		</script>
 	</head>
 	<body>  
 		<!--<div style = "width:600px; margin:0 auto; font-size:13px;" id="sitebody">-->
@@ -65,6 +32,8 @@ $_SESSION['type']='2';
 			<li class="menu_bar" id="dropdown">
 				<a href="#" id="dropbtn">Notice</a>
 			</li>
+			<li class="menu_bar_search" ><input class = "abutton" type="button" value="Search" onclick=""></li>
+			<li class="menu_bar_search" ><input id="search_bar" type="text" name="search_bar"></li>
 		</ul>
 
 　		<div style = "width:100%;">
@@ -81,19 +50,45 @@ $_SESSION['type']='2';
 					<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">
 					<fb:login-button size="medium" length="long" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 				<?}?>
-				
-				
-				
+
 				<input type="button" class = "sidebar" id = "show_news" onclick="news()" value="最新消息">
 				<input type="button" class = "sidebar" id = "show_member" onclick="member()" value="會員專區">
 				<input type="button" class = "sidebar" id = "show_store" onclick="store_list()" value="商店列表">
 				<input type="button" class = "sidebar" id = "show_company" onclick="company_list()" value="企業列表">
 			</div>
 			<div id="content" >
+				<h2>最新消息</h2>
+				<h1>Infinite Scrolling, Demo 2</h1>
+				<ul id="posts">
+					<li>
+						<article>
+							<header>
+								<h1>Lateset News</h1>
+							</header>
+							<p>asiagodton</p>
+
+							<p>kill</p>
+
+							<p>by</p>
+
+							<p>police</p>
+
+							<p>haha</p>
+
+							<p>help</p>
+
+							<p>QQ</p>
+						</article>
+					</li>
+				</ul>
+				<p id="loading">
+					<img src="images/loading.gif" alt="Loading…" />
+				</p>
 			</div>
 			
 		</div>
 		<div style='clear:both;'></div>		
 　		<div id="footer">footer</div>
+		<div id="show_box" class="reveal-modal"><a class="close-reveal-modal"></a></div>
 	</body>
 </html>

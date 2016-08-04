@@ -1,6 +1,14 @@
 $(document).ready( function() {
-	$("#tbl").tablepage($("#table_page"), 5);
+	//當滑鼠滑入時將div的class換成divOver
+	$('.sidebar').hover(function(){
+			$(this).addClass('sidebar_over');		
+		},function(){
+			//滑開時移除divOver樣式
+			$(this).removeClass('sidebar_over');	
+		}
+	);
 })
+
 $(document).ready(function(){
 	news();
 });
@@ -86,3 +94,70 @@ function hideMenu(){
 function shownotice(){
 	
 }
+function show_box_close(){
+	$('.reveal-modal-bg').css({'display' : 'none'});      
+	$('#show_box').css({
+		'visibility' : 'hidden', 
+		'top' : '0px'
+	});	
+}
+//js for news
+$(document).ready(function() {
+    var win = $(window);
+
+    // Each time the user scrolls
+    win.scroll(function() {
+        // End of the document reached?
+        if ($(document).height() - win.height() == win.scrollTop()) {
+            $('#loading').show();
+
+            // Uncomment this AJAX call to test it
+            /*
+            $.ajax({
+                url: 'get-post.php',
+                dataType: 'html',
+                success: function(html) {
+                    $('#posts').append(html);
+                    $('#loading').hide();
+                }
+            });
+            */
+
+            $('#posts').append(randomPost());
+            $('#loading').hide();
+        }
+    });
+});
+
+// Generate a random post
+function randomPost() {
+    // Paragraphs that will appear in the post
+    var paragraphs = [
+        '<p>Shyan-Ming Yuan Taiwan No.1</p>',
+        '<p>分散式系統、容錯計算 CSCW、電腦輔助教學</p>',
+        '<p>1.Cloud storage 2.Cloud based IP Surveillance 3.GPU computing</p>',
+        '<p>CEO, Save&Safe Technology, Taiwan, 2001 - 2002 Absence for industry </p>',
+        '<p>Professor, CIS Department, National Chiao Tung University, Taiwan, 1995 - Present</p>',
+        '<p>Member of Technical Staff, ATC, CCL, ITRI, Taiwan, 1989-1990</p>'
+    ];
+
+    // Shuffle the paragraphs
+    for (var i = paragraphs.length - 1; !!i; --i) {
+        var j = Math.floor(Math.random() * i);
+        var p = paragraphs[i];
+        paragraphs[i] = paragraphs[j];
+        paragraphs[j] = p;
+    }
+
+    // Generate the post
+    var post = '<li>';
+    post += '<article>';
+    post += '<header><h1>Breaking news!</h1></header>';
+    post += paragraphs.join('');	//join: array to string
+    post += '</article>';
+    post += '</li>';
+
+    return post;
+}
+
+	

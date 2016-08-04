@@ -39,6 +39,7 @@ $result_img = $sth2->fetchObject();
 			</p>
 		<?}?>
 	<input type="button" value="與店家合作" onclick="">
+	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" value="我是店長" onclick="owner_show_store(<?echo $result->id?>)"></a>
 	<input type="button" value="返回" onclick="back_to_store_list()">
 
 </html>

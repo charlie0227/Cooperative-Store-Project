@@ -15,7 +15,7 @@ if($sth->fetchObject()){
 	if($new1_password==$new2_password){
 		if($new1_password=='' || strstr($new1_password,' ')){
 			//echo '<script>alert("New password contain space!");history.go(-1);</script>';
-			$data->result ="New password contain space!";
+			$data ="New password contain space!";
 		}
 		else{
 			$new1_password=hash_password($new1_password);
@@ -26,18 +26,18 @@ if($sth->fetchObject()){
 			unset($_SESSION['name']);
 			unset($_SESSION['id']);
 			//echo '<script>alert("Edit Success!\nPlease login again!");location.href="member.php"; </script>';
-			$data->result ="Edit Success!\nPlease login again!";
+			$data ="Edit Success!\nPlease login again!";
 		}
 	}
 	else{
 		//echo '<script>alert("Please type same password!");history.go(-1);</script>';	
-		$data->result ="Please type same password!";		
+		$data ="Please type same password!";		
 	}
 }
 else{
 	//echo '<script>alert("Wrong password!");history.go(-1);</script>';
-	$data->result ="Wrong password!";		
+	$data ="Wrong password!";		
 }
 
-echo json_encode($data);
+echo $data;
 ?>

@@ -13,7 +13,8 @@ function show_store_list(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("show_search_store").innerHTML = xhttp.responseText;
+			if ($("#show_search_store") != null)
+				document.getElementById("show_search_store").innerHTML = xhttp.responseText;
 		}
 	};
 	var q = $("#search_for").val();
@@ -31,12 +32,14 @@ function store_list(){
 			$("#show_search_store").hide();
 			show_store_list();
 			$("#show_search_store").fadeIn(500);
-			search_com = setInterval(function () {
-				if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue && $("#search_word").val() != "") ){
-					$("#show_search_store").hide();
-					show_store_list();
-					$("#show_search_store").fadeIn(500);					}
-				}, 500);
+			if ($("#search_word") != null){
+				setInterval(function () {
+					if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue && $("#search_word").val() != "") ){
+						$("#show_search_store").hide();
+						show_store_list();
+						$("#show_search_store").fadeIn(500);					}
+					}, 500);
+			}
 		}
 	};
 	xhttp.open("GET", "./store/store_list.html", true);

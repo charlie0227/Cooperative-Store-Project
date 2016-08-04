@@ -5,15 +5,19 @@
 </header>
 
 <div id="company_bar">
-	查詢項目<form action="">
-		<select id="search_for" name="search_for">
+	<table>
+	<tr>
+	<td>查詢項目<form action=""></td>
+	<td><select style="width:100%;"id="search_for" name="search_for">
 		<option value="name">名稱</option>
 		<option value="phone">電話</option>
 		<option value="address">地址</option>
-		</select>
-		<input id="search_word" type="text" name="search_word"></input>
-	</form>
-	<input class = "abutton" type="button" value="登入新公司" onclick="add_new_company()">
+		</select></td>
+	<td><input id="search_word" type="text" name="search_word"></input></form></td>
+	<td></td>
+	</tr>
+	</table>
+	<input style="width:20%;"class = "abutton" type="button" value="登入新公司" onclick="add_new_company()">
 	<div id="show_search_company"></div>
 </div>
 <div id="into_company"></div>

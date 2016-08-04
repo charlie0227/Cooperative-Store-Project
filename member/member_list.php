@@ -17,7 +17,9 @@ require_once "../sysconfig.php";
 			<td><input class="abutton" type="button" value="修改密碼" onclick="edit_password()"></td>
 		</tr>
 		</table>	
+		
+	
 	<?}?>
-	</div>
 	<div id="my_member"></div>
+	</div>
 </html>
