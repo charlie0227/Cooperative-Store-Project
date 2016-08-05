@@ -10,24 +10,15 @@
 								<h1>This Is an Article</h1>
 							</header>
 							<p>Lorem</p>
-
 							<p>In</p>
-
 							<p>Lorem ipsum</p>
-
 							<p>Integer</p>
-
 							<p>Donec</p>
-
 							<p>Nulla</p>
-
 							<p>Quisque</p>
 						</article>
 					</li>
 				</ul>
-				<p id="loading">
-					<img src="images/loading.gif" alt="Loading…" />
-				</p>
 		
 </div>
 

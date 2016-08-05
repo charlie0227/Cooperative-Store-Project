@@ -15,7 +15,7 @@ if($result){
 	$_SESSION['name']=$result->name;
 	$_SESSION['account']=$result->account;
 	$_SESSION['id']=$result->id;
-	
+	$data->id=$result->id;
 	$data->message="Hello ".$result->name." Welcome !!";
 }
 else

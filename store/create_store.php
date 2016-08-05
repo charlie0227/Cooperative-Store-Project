@@ -2,50 +2,66 @@
 require_once "../sysconfig.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-TW">
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-	<body>
-	<!--Add new store  add.php-->
-	<form action="./store/add.php" method="post" enctype="multipart/form-data" id="store_ajaxForm">
-	<table>
-	<tr><td>Store Name</td></tr>
+<body>
+<!--Add new store  add.php-->
+<form action="./store/add.php" method="post" enctype="multipart/form-data" id="store_ajaxForm">
+<table>
+	<tr>
+		<td>店家名稱</td>
+	</tr>
 	<tr>
 		<td>
-		<input name="name" type="text" id="name1"><div class="star" id="star1" style="display:inline;">*</div>
+			<div class="edit_input" style="display:inline-flex">
+			<input type="text" name="name">
+			<div style="color:red">*</div>
 		</td>
+		<td><div id="auto"></div></td>
+	</tr>
+	<tr>
+		<td>電話</td>
+	</tr>
+	<tr>
 		<td>
-			<input class = "abutton" style="width:auto;" id="m1" type="button" value="match" ><div style = "display: inline; margin: 10px;" class="valid" id="repeat_acc">Reapted Account</div>
+			<div class="edit_input" style="display:inline-flex">
+			<input type="text" name="phone">
+			<div style="color:red">*</div>
 		</td>
 	</tr>
-	</table>
-	<table id="add1">
-		<tr><td>Phone</td></tr>
-		<tr><td>
-			<input type="text" name="phone" id="phone"><div style="display:inline;">*</div>
-			</td></tr>
-		<tr><td>Address</td></tr>
-		<tr>
-			<td>
-			<input type="text" name="address" id="address"><div class="star" id="star3" style="display:inline;">*</div>
-			</td></tr>	
-		<tr>
-		<td>Content</td></tr>
-		<tr><td><textarea name="content" id="add_content" style="width:90%;height:150%;"></textarea></td></tr>	
-		<tr><td>Images</td></tr>
-		<tr><td><div>
-				<img class="preview" style="max-width: 500px; max-height: 500px;">
-				<div class="size"></div>
-			</div>
-			</td>
-			<td><input name="files" type="file" id="files" class="upl"></td>
-		<tr><td><input class = "abutton" type="submit" name="submit" value="Submit" onclick="store_submit()"></td></tr>
-	
-	</table>
-	</form>
-	
-	</body>
+	<tr>
+		<td>地址</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="edit_input" style="display:inline-flex">
+			<input type="text" name="address">
+			<div style="color:red">*</div>
+		</td>
+	</tr>	
+	<tr>
+		<td>網址</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="url"><div></div></td>
+	</tr>	
+	<tr>
+		<td>商標圖片</td>
+	</tr>
+	<tr>
+		<td>
+		<div>
+			<img class="preview" style="max-width: 500px; max-height: 500px;">
+			<div class="size"></div>
+		</div>
+		</td>
+		<td><input name="files" type="file" id="files" class="upl"><div></div></td>
+	</tr>
+	<tr>
+		<td><input class = "abutton" type="submit" value="送出" name="submit" onclick="store_submit()"></td>
+	</tr>	
+</table>
+</form>
+</body>
 </html>
-
-
-

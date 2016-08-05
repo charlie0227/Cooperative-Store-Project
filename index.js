@@ -12,6 +12,38 @@ $(document).ready( function() {
 $(document).ready(function(){
 	news();
 });
+$(document).ready(function(){
+	$.post("search_bar.php",
+	{
+	  datatype:'json'
+	},
+	function(data){
+		var temp='{"list":'+data+'}';
+		var obj=JSON.parse(temp);
+		var availableTags=[];
+		var arr = new Array();
+		for(var i=0;i<obj.list.length;i++){
+			var obj_tmp = new Object;
+			obj_tmp.value = obj.list[i].name;
+			obj_tmp.address = obj.list[i].address;
+			obj_tmp.id = obj.list[i].id
+			obj_tmp.label = obj.list[i].name;
+			obj_tmp.type = obj.list[i].type;
+			arr = arr.concat(obj_tmp);
+		}
+		$( "#search_bar" ).autocomplete({
+		  source: arr,
+		  select: function( event, ui ) {
+				alert('type'+ui.item.type +'id:'+ui.item.id);
+			}
+		}).data("ui-autocomplete")._renderItem = function (ul, item) {
+         return $("<li></li>")
+             .data("item.autocomplete", item)
+             .append("<a href=#>" + item.label + "</a></br>" + item.address)
+             .appendTo(ul);
+     };
+	  });
+});
 function news(){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
@@ -90,9 +122,20 @@ function hideMenu(){
 	VisibleMenu = '';
 }
 
-// 顯示通知內容
-function shownotice(){
+// 顯示通知內容 (登入後才執行 放在login裡面)
+function shownotice(id){
+	$.post("./member/check_application.php",
+	{
+	  datatype:'json',
+	  member_id:id
+	},
+	function(data){
+		var temp='{"list":'+data+'}';
+		var obj=JSON.parse(temp);
+		alert(obj.list[0].id);
+	}
 	
+	);
 }
 function show_box_close(){
 	$('.reveal-modal-bg').css({'display' : 'none'});      
@@ -158,6 +201,23 @@ function randomPost() {
     post += '</li>';
 
     return post;
+}
+
+function check_login(){
+	$.post("check_login.php",
+		{
+		  datatype:'json',
+		  username:document.getElementById("username").value,
+		  password:document.getElementById("password").value
+		},
+		function(data){
+			var obj=JSON.parse(data);
+			location.reload();
+			alert(obj.id);
+			alert(obj.message);
+		}
+		
+		);
 }
 
 	

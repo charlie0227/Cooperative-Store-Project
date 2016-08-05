@@ -34,7 +34,7 @@ function store_list(){
 			$("#show_search_store").fadeIn(500);
 			if ($("#search_word") != null){
 				setInterval(function () {
-					if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue && $("#search_word").val() != "") ){
+					if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ) ){
 						$("#show_search_store").hide();
 						show_store_list();
 						$("#show_search_store").fadeIn(500);					}
@@ -78,16 +78,6 @@ function back_to_store_list(){
 	$("#into_store").hide();
 	$("#store_bar").fadeIn(500);
 }
-/*
-$(document).ready(function(){
-	$('#store_ajaxForm').ajaxForm({ 
-		dataType: 'json',
-		function(data){	
-			show_store_list();
-			view_store(data.p);
-			}
-	}); 
-});*/
 function add_new_store(){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
@@ -96,25 +86,34 @@ function add_new_store(){
 			$("#store_bar").hide();
 			$("#into_store").hide();
 			document.getElementById("into_store").innerHTML = xhttp.responseText;
+			add_store_ready();
 			$("#into_store").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "./store/create_store.php", true);
 	xhttp.send();
 }
-
+function add_store_ready(){
+	$(".edit_input input").change(function(){
+		if($(this).val()==""){
+			var c=$(this).next();
+			c.show();
+		}
+		else{
+			var c=$(this).next();
+			c.hide();
+		}
+	});
+}
 function store_submit(){
 	$('#store_ajaxForm').submit(function() {
-		
-	 // 提交表单
-    $(this).ajaxSubmit(function(data){
-		var obj=JSON.parse(data);
-		show_store_list();
-		view_store(obj.p);
-	});
-    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
-   
-		alert("Thank you for your comment!"); 
+		$(this).ajaxSubmit(function(data){
+			var obj=JSON.parse(data);
+			if(obj.error)
+				alert(obj.error);
+			show_store_list();
+			view_store(obj.p,'store_map');
+		});
 		 return false;
 	}); 
 }

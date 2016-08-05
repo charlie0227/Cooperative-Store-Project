@@ -5,38 +5,63 @@ require_once "../sysconfig.php";
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
-	<body>
-	<!--Add new company  add.php-->
-	<form action="./company/add.php" method="post" enctype="multipart/form-data" id="company_ajaxForm">
-	<tr><td>Company Name</td></tr>
+<body>
+<!--Add new company  add.php-->
+<form action="./company/add.php" method="post" enctype="multipart/form-data" id="company_ajaxForm">
+<table>
+	<tr>
+		<td>企業名稱</td>
+	</tr>
 	<tr>
 		<td>
-		<input name="name" type="text" id="company_name"><div class="star" id="star1" style="display:inline;">*</div>
+			<div class="edit_input" style="display:inline-flex">
+			<input type="text" name="name">
+			<div style="color:red">*</div>
 		</td>
+		<td><div id="auto"></div></td>
+	</tr>
+	<tr>
+		<td>電話</td>
+	</tr>
+	<tr>
 		<td>
-			<input class = "abutton" style="width:auto;" id="company_match" type="button" value="match" ><div style = "display: inline; margin: 10px;" class="valid" id="repeat_acc">Reapted Account</div>
+			<div class="edit_input" style="display:inline-flex">
+			<input type="text" name="phone">
+			<div style="color:red">*</div>
 		</td>
 	</tr>
-
-
-		<tr><td>Phone</td></tr>
-		<tr><td>
-			<input type="text" name="phone" id="company_phone"><div style="display:inline;">*</div>
-			</td></tr>
-		<tr><td>Address</td></tr>
-		<tr>
-			<td>
-			<input type="text" name="address" id="company_address"><div class="star" id="star3" style="display:inline;">*</div>
-			</td></tr>	
-		<tr>
-		<td>Email</td></tr>
-		<tr><td><input type="text" name="email" id="company_email"><div class="star" id="star3" style="display:inline;">*</div></td></tr>	
-		<tr><td><input class = "abutton" type="submit" value="Submit" name="submit" onclick="company_submit()"></td></tr>	
-	
-	</form>
-	
-	</body>
+	<tr>
+		<td>地址</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="edit_input" style="display:inline-flex">
+			<input type="text" name="address">
+			<div style="color:red">*</div>
+		</td>
+	</tr>	
+	<tr>
+		<td>網址</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="url"><div></div></td>
+	</tr>	
+	<tr>
+		<td>商標圖片</td>
+	</tr>
+	<tr>
+		<td>
+		<div>
+			<img class="preview" style="max-width: 500px; max-height: 500px;">
+			<div class="size"></div>
+		</div>
+		</td>
+		<td><input name="files" type="file" id="files" class="upl"><div></div></td>
+	</tr>
+	<tr>
+		<td><input class = "abutton" type="submit" value="送出" name="submit" onclick="company_submit()"></td>
+	</tr>	
+</table>
+</form>
+</body>
 </html>
-
-
-

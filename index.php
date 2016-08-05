@@ -23,21 +23,25 @@ require_once "sysconfig.php";
 		<script src="http://malsup.github.com/jquery.form.js"></script>
 		<script type="text/javascript" src="jquery-an-showbox.js"></script>
 		<link rel="stylesheet" type="text/css" href="jquery-an-showbox.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 	</head>
 	<body>  
 		<!--<div style = "width:600px; margin:0 auto; font-size:13px;" id="sitebody">-->
 		<ul class="header">
 			<li class="menu_bar"><a href="#">Home</a></li>
 			<li class="menu_bar"><a href="#">News</a></li>
-			<li class="menu_bar" id="dropdown">
+			<li class="menu_bar" id="dropdown" onclick="shownotice(<?echo $_SESSION['id']?>)">
 				<a href="#" id="dropbtn">Notice</a>
 			</li>
 			<li class="menu_bar_search" ><input class = "abutton" type="button" value="Search" onclick=""></li>
-			<li class="menu_bar_search" ><input id="search_bar" type="text" name="search_bar"></li>
+			<li class="menu_bar_search" ><input id="search_bar" type="text" name="search_bar" ></li>
 		</ul>
 
 　		<div style = "width:100%;">
 			<div id="sidebar">
+				<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="test" onclick="shownotice(<?echo $_SESSION['id']?>)">
 				<!--login status-->
 				<?if($_SESSION['name']){?>
 					<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
@@ -58,6 +62,7 @@ require_once "sysconfig.php";
 			</div>
 			<div id="content" >
 				<h2>最新消息</h2>
+				<!--
 				<h1>Infinite Scrolling, Demo 2</h1>
 				<ul id="posts">
 					<li>
@@ -81,9 +86,7 @@ require_once "sysconfig.php";
 						</article>
 					</li>
 				</ul>
-				<p id="loading">
-					<img src="images/loading.gif" alt="Loading…" />
-				</p>
+				-->
 			</div>
 			
 		</div>

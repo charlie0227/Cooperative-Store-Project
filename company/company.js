@@ -71,23 +71,34 @@ function add_new_company(){
 			$("#company_bar").hide();
 			$("#into_company").hide();
 			document.getElementById("into_company").innerHTML = xhttp.responseText;
+			add_company_ready();
 			$("#into_company").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "./company/create_company.php", true);
 	xhttp.send();
 }
-
-function company_submit(){
-	$('#company_ajaxForm').submit(function() { 
-	 // 提交表单
-    $(this).ajaxSubmit(function(data){
-		show_company_list();
-		view_company(data);
+function add_company_ready(){
+	$(".edit_input input").change(function(){
+		if($(this).val()==""){
+			var c=$(this).next();
+			c.show();
+		}
+		else{
+			var c=$(this).next();
+			c.hide();
+		}
 	});
-    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
-   
-		alert("Thank you for your comment!"); 
+}
+function company_submit(){
+	$('#company_ajaxForm').submit(function() {
+		$(this).ajaxSubmit(function(data){
+			var obj=JSON.parse(data);
+			if(obj.error)
+				alert(obj.error);
+			show_company_list();
+			view_company(obj.p);
+		});
 		 return false;
 	}); 
 }
@@ -112,7 +123,7 @@ function apply(member_id,company_id){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("apply_company").innerHTML = xhttp.responseText;
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
 		}
 	};
 	xhttp.open("GET", "./company/application_form.php?company_id="+company_id+"&member_id="+member_id, true);
@@ -120,11 +131,13 @@ function apply(member_id,company_id){
 }
 
 function application_submit(){
+	show_box_close();
 	$('#application_ajaxForm').submit(function() { 
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
-		if(data==='ok')
-			alert("Thank you for your comment!"); 
+		if(data)
+			alert("Thank you for your comment!已送出"); 
+			view_company(data);
 	});
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
    
