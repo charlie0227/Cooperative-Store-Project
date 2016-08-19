@@ -17,7 +17,7 @@ function show_company_list(){
 	};
 	var q = $("#search_for").val();
 	var word = $("#search_word").val();
-	xhttp.open("GET", "./company/company_search.php?q="+q+"&word="+word, true);
+	xhttp.open("GET", "company/company_search.php?q="+q+"&word="+word, true);
 	xhttp.send();
 }
 
@@ -40,7 +40,7 @@ function company_list(){
 			}, 500);
 		}
 	};
-	xhttp.open("GET", "./company/company_list.html", true);
+	xhttp.open("GET", "company/company_list.html", true);
 	xhttp.send();
 }
 
@@ -55,7 +55,7 @@ function view_company(id){
 			$("#into_company").fadeIn(500);
 		}
 	};
-	xhttp.open("GET", "./company/company.php?company_id="+id, true);
+	xhttp.open("GET", "company/company.php?company_id="+id, true);
 	xhttp.send();
 	}
 function back_to_company_list(){
@@ -64,6 +64,7 @@ function back_to_company_list(){
 }
 
 function add_new_company(){
+	company_list();
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -75,7 +76,7 @@ function add_new_company(){
 			$("#into_company").fadeIn(500);
 		}
 	};
-	xhttp.open("GET", "./company/create_company.php", true);
+	xhttp.open("GET", "company/create_company.php", true);
 	xhttp.send();
 }
 function add_company_ready(){
@@ -114,7 +115,7 @@ function view_company(id){
 			$("#into_company").fadeIn(500);
 		}
 	};
-	xhttp.open("GET", "./company/company.php?company_id="+id, true);
+	xhttp.open("GET", "company/company.php?company_id="+id, true);
 	xhttp.send();
 }
 
@@ -126,7 +127,7 @@ function apply(member_id,company_id){
 			document.getElementById("show_box").innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("GET", "./company/application_form.php?company_id="+company_id+"&member_id="+member_id, true);
+	xhttp.open("GET", "company/application_form.php?company_id="+company_id+"&member_id="+member_id, true);
 	xhttp.send();
 }
 

@@ -7,8 +7,8 @@ $sth->execute(array($_SESSION['id']));
 echo '<table>';
 while($result=$sth->fetchObject()){?>
 	<tr><td><?echo $result->name?></td>
-	<td><a href="#" class="big-link" data-reveal-id="store_info" onclick="show_own_company_content(<?echo $result->store_id?>)">管理</a></td>
+	<td><a href="#" class="big-link" data-reveal-id="store_info" onclick="show_own_company_content(<?echo $result->company_id?>)">管理</a></td>
 	</tr>
 <?}
-echo '</table>';
+echo '</table>';	
 ?>

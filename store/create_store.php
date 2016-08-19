@@ -7,7 +7,7 @@ require_once "../sysconfig.php";
 </head>
 <body>
 <!--Add new store  add.php-->
-<form action="./store/add.php" method="post" enctype="multipart/form-data" id="store_ajaxForm">
+<form action="store/add.php" method="post" enctype="multipart/form-data" id="store_ajaxForm">
 <table>
 	<tr>
 		<td>店家名稱</td>

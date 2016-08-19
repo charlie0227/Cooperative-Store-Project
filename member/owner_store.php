@@ -31,7 +31,7 @@ $result_img = $sth2->fetchObject();
 			<?}?>
 			<p>電話 <?echo $result->phone?></p>
 			<p>地址 <?echo $result->address?></p>
-			<div id="store_map" ></div>
+			<div id="owner_map" ></div>
 			<p>網站 <?echo $result->url?></p>
 			<p>合作企業 <?
 				while($result_company = $sth1->fetchObject()){
@@ -39,8 +39,7 @@ $result_img = $sth2->fetchObject();
 				}?>
 			</p>
 		<?}?>
-	<input type="button" class="abutton" style="width:auto;" value="與店家合作" onclick="">
-	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="abutton" style="width:auto;" value="我是店長" onclick="owner_show_store(<?echo $result->id?>)"></a>
+	<input type="button" class="abutton" style="width:auto;" value="edit" onclick="owner_store_edit(<?echo $_GET['store_id']?>)">
 	<input type="button" class="abutton" style="width:auto;" value="返回" onclick="back_to_store_list()">
 
 </html>

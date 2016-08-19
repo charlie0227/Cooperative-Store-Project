@@ -3,13 +3,9 @@ require_once "../sysconfig.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-TW">
-<link href="style.css" rel="stylesheet" type="text/css" />
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<link rel="stylesheet" href="/resources/demos/style.css">
+
   <?
 $sql = "SELECT name FROM `jangsc27_cs_project`.`store` ";
 $sth = $db->prepare($sql);
@@ -21,16 +17,15 @@ $sth_edit = $db->prepare($sql_edit);
 $sth_edit->execute(array($_GET['edit_id']));
 $result_object = $sth_edit->fetchObject();
 
-$sql_img = "SELECT * FROM `jangsc27_cs_project`.`image` where `store_id` = ?";
+$sql_img = "SELECT * FROM `jangsc27_cs_project`.`store_image` where `store_id` = ?";
 $sth_img = $db->prepare($sql_img);
 $sth_img->execute(array($_GET['edit_id']));
 ?>
 
 </head>
 	<body>
-	
 	<!--show original store-->
-	<form  action="edit_store_confirm.php" method="POST" enctype="multipart/form-data" id="edit_store_form">
+	<form  action="member/edit_store_confirm.php" method="POST" enctype="multipart/form-data" id="edit_store_form">
 	<table>
 	<tr>
 	<td>
@@ -67,12 +62,12 @@ $sth_img->execute(array($_GET['edit_id']));
 	</td>
 	<tr>
 	<td>
-		Content
+		URL
 	</td>
 	</tr>
 	<tr>
 	<td style = "width: 60%;">
-		<textarea name="content" id="edit_store_content" style="width:100%;height:150px; "><?echo $result_object->content?></textarea>
+			<input type="text" name="url" id="edit_store_url" value="<?echo $result_object->url?>"><div class="star" id="star3" style="display:inline;">*</div>
 	</td>
 	</tr>
 	<tr>
@@ -103,11 +98,11 @@ $sth_img->execute(array($_GET['edit_id']));
 	</tr>
 	<tr>
 	<td>
-		<input class = "abutton" type="submit" value="Edit" id="edit_btn" >
+		<input class = "abutton" type="submit" value="Edit" id="edit_btn" onclick="edit_store_submit()">
 	</td>
 	
 	<td>
-		<input type="hidden" id="edit_store_id" name="edit_id" value="<?echo $_GET['edit_id']?>">	
+		<input type="hidden" name="store_id" value="<?echo $_GET['edit_id']?>">	
 	</td>
 	</tr>
 	<tr>

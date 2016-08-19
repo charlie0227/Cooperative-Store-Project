@@ -1,6 +1,6 @@
-
 <html>
 <head>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script type="text/javascript" language="JavaScript">
 	var rval;
@@ -9,7 +9,7 @@
 			emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 			if (remail.search(emailRule)!=-1) {
 			
-				$.post("send_auth.php",
+				$.post("function/send_auth.php",
 				{
 				  datatype:'text',
 				  remail:remail

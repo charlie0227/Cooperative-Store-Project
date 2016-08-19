@@ -11,7 +11,7 @@ $result=$sth->fetchObject();
 ?>
 </head>
 <body>
-<form action="./member/edit_personal_ok.php" method="post" enctype="multipart/form-data" id="edit_personal_ajaxForm">
+<form action="member/edit_personal_ok.php" method="post" enctype="multipart/form-data" id="edit_personal_ajaxForm">
 <table>
 	<tr>
 	<td>

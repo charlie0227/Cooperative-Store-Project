@@ -61,7 +61,7 @@ window.fbAsyncInit = function(){
 		{
 		  datatype:'json',
 		  username:response.id, //account
-		  type:'facebook'
+		  password:'facebook'
 		},
 		function(data){
 		var obj=JSON.parse(data);
@@ -87,7 +87,7 @@ window.fbAsyncInit = function(){
 		{
 		  datatype:'json',
 		  account:response.id,
-		  type:'facebook',
+		  password:'facebook',
 		  name:response.name,
 		  phone:response.id,
 		  gender:b,

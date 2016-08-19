@@ -19,7 +19,7 @@ function show_store_list(){
 	};
 	var q = $("#search_for").val();
 	var word = $("#search_word").val();
-	xhttp.open("GET", "./store/store_search.php?q="+q+"&word="+word, true);
+	xhttp.open("GET", "store/store_search.php?q="+q+"&word="+word, true);
 	xhttp.send();
 }
 
@@ -42,11 +42,11 @@ function store_list(){
 			}
 		}
 	};
-	xhttp.open("GET", "./store/store_list.html", true);
+	xhttp.open("GET", "store/store_list.html", true);
 	xhttp.send();
 }
 function find_address(id){
-	$.post("./store/check_store.php",
+	$.post("store/check_store.php",
 		{
 		  datatype:'text',
 		  store_id:id
@@ -71,7 +71,7 @@ function view_store(id,map_id){
 			$("#into_store").fadeIn(500);
 		}
 	};
-	xhttp.open("GET", "./store/store.php?store_id="+id, true);
+	xhttp.open("GET", "store/store.php?store_id="+id, true);
 	xhttp.send();
 }
 function back_to_store_list(){
@@ -90,7 +90,7 @@ function add_new_store(){
 			$("#into_store").fadeIn(500);
 		}
 	};
-	xhttp.open("GET", "./store/create_store.php", true);
+	xhttp.open("GET", "store/create_store.php", true);
 	xhttp.send();
 }
 function add_store_ready(){

@@ -12,10 +12,12 @@
 	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
 }
 #sidebar{
-	border-radius: 10px; 
-	width:15%; 
+	position: fixed;
+	top: 55px;
+	left: 0%;
+	width:111px; 
 	float:left; 
-	height:1080px; 
+	height:100%; 
 	text-align:center; 
 	line-height:50px; 
 	font-size:15px; 
@@ -24,7 +26,11 @@
 	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png); 
 }
 #content{
-	width:75%; 
+	position: relative;
+    left: 120px;
+    top: 50px;
+	z-index:0;
+	width: 100%; 
 	height: auto;
 	text-align:left; 
 	line-height:30px; 
@@ -79,7 +85,7 @@
 	height: 120px;
 }
 img{
-	border-radius:10px;
+	border-radius:2px;
 	width:expression(this.width>600?:this.width);
 	overflow: hidden;
 	height: 120px
@@ -215,35 +221,44 @@ box-sizing: border-box;
 }
 
 .header {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	z-index: 1;
+	height: 55px;
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     overflow: hidden;
 	background-repeat: repeat;
 	background-position: 50% 50%;
 	background-size: 100%;
 	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
-	border-radius: 10px;
 }
 
 .menu_bar {
     float: left;
 }
+
 .menu_bar_search {
-	float: right;
+	float: left;
+	width: 40%;
 	padding-top:14px; 
 	padding-bottom: 14px;
 	padding-right: 16px;
+	padding-left: 16px;
 }
-.menu_bar #dropdown {
-    display: inline-block;
-}
-.menu_bar  a, #dropbtn{
-    display: inline-block;
+.menu_bar  a{
+	display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 18px 36px;
     text-decoration: none;
+}
+.menu_bar  a:hover{
+	color: #5599FF;
+	background:#FFFFFF;
 }
 #store_img,#company_img{
 	position: relative;
@@ -251,12 +266,38 @@ box-sizing: border-box;
 	height: 300px;
 }
 #store_map{
-	width:500px;
-	height: 450px;
-	display: inline-block;
-	left: 600px;
-	top: 140px;
+	width: 330px;
+    height: 300px;
+    display: inline-block;
+    left: 310px;
+    top: 60px;
 	position: absolute;
 	overflow: hidden;
 	background-color: rgb(229, 227, 223);
+}
+body{
+	background: #e9ebee;
+	overflow-x:hidden;
+}
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #E0E0E0;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
 }

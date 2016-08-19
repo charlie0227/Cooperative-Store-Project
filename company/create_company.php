@@ -7,7 +7,7 @@ require_once "../sysconfig.php";
 </head>
 <body>
 <!--Add new company  add.php-->
-<form action="./company/add.php" method="post" enctype="multipart/form-data" id="company_ajaxForm">
+<form action="company/add.php" method="post" enctype="multipart/form-data" id="company_ajaxForm">
 <table>
 	<tr>
 		<td>企業名稱</td>

@@ -1,3 +1,4 @@
+var current_page = 0;
 $(document).ready( function() {
 	//當滑鼠滑入時將div的class換成divOver
 	$('.sidebar').hover(function(){
@@ -8,12 +9,11 @@ $(document).ready( function() {
 		}
 	);
 })
-
 $(document).ready(function(){
 	news();
 });
 $(document).ready(function(){
-	$.post("search_bar.php",
+	$.post("function/search_bar.php",
 	{
 	  datatype:'json'
 	},
@@ -29,17 +29,26 @@ $(document).ready(function(){
 			obj_tmp.id = obj.list[i].id
 			obj_tmp.label = obj.list[i].name;
 			obj_tmp.type = obj.list[i].type;
+			obj_tmp.img_url = obj.list[i].image_url;
 			arr = arr.concat(obj_tmp);
 		}
+		
 		$( "#search_bar" ).autocomplete({
 		  source: arr,
 		  select: function( event, ui ) {
-				alert('type'+ui.item.type +'id:'+ui.item.id);
+				if(ui.item.type==0){
+					store_list();
+					view_store(ui.item.id,'store_map');
+				}
+				else{
+					company_list();
+					view_company(ui.item.id);
+				}
 			}
 		}).data("ui-autocomplete")._renderItem = function (ul, item) {
          return $("<li></li>")
              .data("item.autocomplete", item)
-             .append("<a href=#>" + item.label + "</a></br>" + item.address)
+			 .append('<div style="float:left;width:94%;height:70px"><div style="float:left;width:20%;height:100%"> <img id="store_img" style="width:70px;height:70px;" src="'+item.img_url+ '"/></div><div style="width:80%;height:100%">' + item.label + "</br>" + item.address + '</div></div>')
              .appendTo(ul);
      };
 	  });
@@ -51,10 +60,12 @@ function news(){
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			$("#content").hide();
 			document.getElementById("content").innerHTML = xhttp.responseText;
+			current_page = 0;
+			console.log(current_page);
 			$("#content").fadeIn(500);
 		}
 	};
-	xhttp.open("GET", "news.php", true);
+	xhttp.open("GET", "function/news.php", true);
 	xhttp.send();
 }
 
@@ -64,7 +75,7 @@ function checkEmail() {
 	var remail = $("#email").val();
 	emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 	if (remail.search(emailRule)!=-1) {
-		$.post("send_auth.php",
+		$.post("function/send_auth.php",
 		{
 		  datatype:'text',
 		  remail:remail
@@ -124,7 +135,7 @@ function hideMenu(){
 
 // 顯示通知內容 (登入後才執行 放在login裡面)
 function shownotice(id){
-	$.post("./member/check_application.php",
+	$.post("member/check_application.php",
 	{
 	  datatype:'json',
 	  member_id:id
@@ -145,66 +156,51 @@ function show_box_close(){
 	});	
 }
 //js for news
-$(document).ready(function() {
-    var win = $(window);
-
-    // Each time the user scrolls
-    win.scroll(function() {
-        // End of the document reached?
-        if ($(document).height() - win.height() == win.scrollTop()) {
-            $('#loading').show();
-
-            // Uncomment this AJAX call to test it
-            /*
-            $.ajax({
-                url: 'get-post.php',
-                dataType: 'html',
-                success: function(html) {
-                    $('#posts').append(html);
-                    $('#loading').hide();
-                }
-            });
-            */
-
-            $('#posts').append(randomPost());
-            $('#loading').hide();
-        }
-    });
+var news_id = 0;
+$(document).scroll(function() {
+	var win = $(window);
+	var doc_h = $(document).height();
+	var win_h = win.height();
+	var h = $(document).height() - win.height();
+	
+	console.log("doc_h "+doc_h);
+	console.log("win_h "+win_h);
+	console.log("win_top "+win.scrollTop());
+	console.log("doc-win "+h);
+	console.log(news_id);
+	
+	var win_top = win.scrollTop();	
+	Math.floor(win_top);
+	//var test = 2.1;
+	//Math.floor(test);
+	//console.log("test "+Math.floor(2.1));
+	//console.log("win_top2 "+win_top);
+	if ($(document).height() - win.height() == win_top) {
+		news_id = news_id+1;
+		//find news
+		//$.post("xxxxx.php",
+		//	{
+		//		datatype:'text',
+		//		news_id: news_id
+		//	},
+		//	function(data){
+				$( "#news_content" ).append( "<p>NEWS"+news_id+"</p>");
+		//	});
+		
+	}
+	
 });
-
-// Generate a random post
-function randomPost() {
-    // Paragraphs that will appear in the post
-    var paragraphs = [
-        '<p>Shyan-Ming Yuan Taiwan No.1</p>',
-        '<p>分散式系統、容錯計算 CSCW、電腦輔助教學</p>',
-        '<p>1.Cloud storage 2.Cloud based IP Surveillance 3.GPU computing</p>',
-        '<p>CEO, Save&Safe Technology, Taiwan, 2001 - 2002 Absence for industry </p>',
-        '<p>Professor, CIS Department, National Chiao Tung University, Taiwan, 1995 - Present</p>',
-        '<p>Member of Technical Staff, ATC, CCL, ITRI, Taiwan, 1989-1990</p>'
-    ];
-
-    // Shuffle the paragraphs
-    for (var i = paragraphs.length - 1; !!i; --i) {
-        var j = Math.floor(Math.random() * i);
-        var p = paragraphs[i];
-        paragraphs[i] = paragraphs[j];
-        paragraphs[j] = p;
-    }
-
-    // Generate the post
-    var post = '<li>';
-    post += '<article>';
-    post += '<header><h1>Breaking news!</h1></header>';
-    post += paragraphs.join('');	//join: array to string
-    post += '</article>';
-    post += '</li>';
-
-    return post;
-}
+//get news
+//$(document).ready(function(){
+//	get_news();
+//});
+//function get_news(){
+//	
+//}
+//
 
 function check_login(){
-	$.post("check_login.php",
+	$.post("function/check_login.php",
 		{
 		  datatype:'json',
 		  username:document.getElementById("username").value,
@@ -220,4 +216,48 @@ function check_login(){
 		);
 }
 
-	
+function go_register(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
+			register_ready();
+			$("#content").fadeIn(500);
+		}
+	};
+	xhttp.open("GET", "function/register.php", true);
+	xhttp.send();
+}
+
+function register_ready(){
+	//var no_space = [^\s]; 
+	var reg_acc = $("#register_account").val();
+	if(reg_acc.search("\s")==-1){
+		$("#valid1").show();
+	}
+	else{
+		$("#valid1").hide();
+	}
+	$(".gender_input input").change(function(){
+		
+		if($(this).val()==""){
+			$("#g_star").show();
+		}
+		else{
+			$("#g_star").hide();
+		}
+	});
+	$(".register_input input").change(function(){
+		
+		if($(this).val()==""){
+			var c=$(this).next();
+			c.show();
+		}
+		else{
+			var c=$(this).next();
+			c.hide();
+		}
+	});
+}

@@ -38,30 +38,20 @@ if($sth->fetchObject())
 		<?php
 		if($result) 
 		{?>
-			<p>公司名 <?echo $result->name?></p>
+			<p>���q�W <?echo $result->name?></p>
 			<?if($result_img){?>
 			<img id="company_img" onclick=" var newwin = window.open();newwin.location='http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image_url?>';" src="<?echo $result_img->image_url?>"/>
 			<?}?>
-			<p>電話 <?echo $result->phone?></p>
-			<p>地址 <?echo $result->address?></p>
-			<p>網站 <?echo $result->url?></p>
-			<p>合作店家 <?
+			<p>�q�� <?echo $result->phone?></p>
+			<p>�a�} <?echo $result->address?></p>
+			<p>���� <?echo $result->url?></p>
+			<p>�X�@���a <?
 				while($result_store = $sth1->fetchObject()){
 					echo $result_store->name.'</p><p>';
 				}?>
 			</p>
 		<?}?>
-	<?
-	if($_SESSION['id']){
-		if($situation==0){?>
-			<a href="#" class="big-link" data-reveal-id="show_box">
-			<input type="button" class="abutton" style="width:auto;" value="加入此團體" onclick="apply(<?echo $_SESSION['id']?>,<?echo$_GET['company_id']?>)"></a>
-		<?}if($situation==1){?>
-			<p>等待審核中...</p>
-		<?}if($situation==2){?>
-			<input type="button" class="abutton" style="width:auto;" value="退出此團體" onclick="quit(<?echo $_SESSION['id']?>,<?echo$_GET['company_id']?>)">
-		<?}
-	}?>
-	<input type="button" class="abutton" style="width:auto;" value="返回" onclick="back_to_company_list()">
+	<input type="button" class="abutton" style="width:auto;" value="edit" onclick="owner_company_edit(<?echo $_GET['company_id']?>)">
+	<input type="button" class="abutton" style="width:auto;" value="��^" onclick="back_to_company_list()">
 
 </html>

@@ -1,12 +1,14 @@
 <?php
-require_once "sysconfig.php";
-unset($_SESSION['way']);
+require_once "../sysconfig.php";
 $data = new stdClass();
 function hash_password($password){
 	return crypt($password,'$1$eSlWcNyAr');
 }
 $name=$_POST['username'];
-$pass=hash_password($_POST['password']);
+if(isset($_POST['password']))
+	$pass=hash_password($_POST['password']);
+else if($_POST['type']=='facebook')
+	$pass=hash_password($_POST['username']);
 $sql = "SELECT * FROM `jangsc27_cs_project`.`member`"." WHERE `account` = ? AND `password` = ?";
 $sth = $db->prepare($sql);
 $sth->execute(array($name,$pass));
