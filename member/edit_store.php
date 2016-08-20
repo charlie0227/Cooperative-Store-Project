@@ -17,9 +17,10 @@ $sth_edit = $db->prepare($sql_edit);
 $sth_edit->execute(array($_GET['edit_id']));
 $result_object = $sth_edit->fetchObject();
 
-$sql_img = "SELECT * FROM `jangsc27_cs_project`.`store_image` where `store_id` = ?";
-$sth_img = $db->prepare($sql_img);
-$sth_img->execute(array($_GET['edit_id']));
+$sql = "SELECT * FROM `jangsc27_cs_project`.`store_image` WHERE `store_id`= ?";
+$sth2 = $db->prepare($sql);
+$sth2->execute(array($_GET['edit_id']));
+$result_img = $sth2->fetchObject();
 ?>
 
 </head>
@@ -84,11 +85,9 @@ $sth_img->execute(array($_GET['edit_id']));
 	</td>
 	<td>
 		<div id="img">
-		<?
-		while($img_result = $sth_img->fetch()){
-			?><img onclick="window.open('http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $img_result['image']?>')" src="<?echo $img_result['image']?>" style="width: 30%;height: 30%;"/><?
-		}
-		?>
+		<?if($result_img){?>
+			<img id="store_img" onclick=" var newwin = window.open();newwin.location='http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image_url?>';" src="<?echo $result_img->image_url?>"/>
+			<?}?>
 		</div>
 	</td>
 	

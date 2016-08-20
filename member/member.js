@@ -1,4 +1,5 @@
 var lastStore;
+var lastCompany
 function member(){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
@@ -283,7 +284,7 @@ function owner_create_company(){
 			$("#search_company_result").fadeIn(500);
 			if ($(".owner_search_company input") != null){
 				setInterval(function () {
-					if ($(".owner_search_company input").val() != lastStore && $(".owner_search_company input").val() != ""){
+					if ($(".owner_search_company input").val() != lastCompany && $(".owner_search_company input").val() != ""){
 						$("#search_company_result").hide();
 						owner_create_company_search();
 						$("#search_company_result").fadeIn(500);					
@@ -296,7 +297,7 @@ function owner_create_company(){
 	xhttp.send();
 }
 function owner_create_company_search(){
-	lastStore = $(".owner_search_company input").val();
+	lastCompany = $(".owner_search_company input").val();
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -359,7 +360,7 @@ function show_own_company_content(id){
 	xhttp.send();
 	
 }
-
+/*
 function owner_store_edit(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
@@ -370,4 +371,42 @@ function owner_store_edit(id){
 	};
 	xhttp.open("GET", "member/edit_store.php?edit_id="+id, true);
 	xhttp.send();
+}
+*/
+function show_application(id){ //id for company
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "member/check_one_application.php?company_id="+id, true);
+	xhttp.send();
+}
+
+function application_confirm(member_id,company_id,type){
+	$.post("member/application_confirm.php",
+	{
+		datatype:'json',
+		member_id:member_id,
+		company_id:company_id,
+		type:type
+		
+	},
+	function(){
+		show_application(company_id);
+	});
+}
+
+function show_discount(id){//company id
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("div_r").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "member/show_discount.php?company_id="+id, true);
+	xhttp.send();	
 }

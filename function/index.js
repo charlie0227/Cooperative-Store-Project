@@ -1,4 +1,5 @@
 var current_page = 0;
+var drop_show = 0;
 $(document).ready( function() {
 	//當滑鼠滑入時將div的class換成divOver
 	$('.sidebar').hover(function(){
@@ -8,7 +9,84 @@ $(document).ready( function() {
 			$(this).removeClass('sidebar_over');	
 		}
 	);
+	
+	//click outside the button
+	$(window).click(function() {
+	//Hide the menus if visible
+		if(!$(event.target).closest('#dropbtn').length&&!$(event.target).closest('#dropdown-content').length){
+			if(drop_show==1){
+				//console.log("Hide");
+				$('#dropbtn').removeClass('choose_menu');
+				$("#dropbtn").css("color","white");
+				$('#dropdown-content').removeClass('dropdown-content1');
+				drop_show = 0;
+			}
+		}
+		
+	});
+	$('#dropbtn').click(function(event){
+		if(drop_show==0){
+			//console.log("Show");
+			$('#dropbtn').addClass('choose_menu');
+			$("#dropbtn").css("color","#5599FF");
+			$('#dropdown-content').addClass('dropdown-content1');
+			drop_show = 1;
+		}
+		else{
+			$('#dropbtn').removeClass('choose_menu');
+			$("#dropbtn").css("color","white");
+			$('#dropdown-content').removeClass('dropdown-content1');
+			drop_show = 0;
+		}
+		
+	});
+	//$('#dropdown').hover(	
+	//   function () {
+	//   }, 
+	
+	//   function () {
+	//		$('#dropdown-content').removeClass('dropdown-content1');
+			//$(this).css({"background-color":"blue"});
+	//   }
+	//);
+	/*$("#dropdown").blur(function () {
+		alert('hu');
+            $('#dropdown-content').removeClass('dropdown-content1');
+    });*/
 })
+
+//show_dropbox
+//function show_dropbox(){
+//	$('#dropdown-content').addClass('dropdown-content1');
+//	drop_show = 1;
+//}
+
+//min sidebar
+var m = 0;
+function min_sidebar(){
+	if(m==0){
+		$('#sidebar').toggle('fast');
+		$('#close_side').hide();
+		$('#close_side').removeClass('close_left');	
+		$('#close_side').addClass('close_right');	
+		$('#close_side').fadeIn(500);	
+			
+		
+		m = 1;
+	}
+	else{
+		$('#sidebar').toggle('normal');
+		$('#close_side').hide();
+		$('#close_side').removeClass('close_right');
+		$('#close_side').addClass('close_left');	
+		$('#close_side').fadeIn(500);
+		m = 0;
+	}
+}
+
+
+
+
 $(document).ready(function(){
 	news();
 });
@@ -61,7 +139,6 @@ function news(){
 			$("#content").hide();
 			document.getElementById("content").innerHTML = xhttp.responseText;
 			current_page = 0;
-			console.log(current_page);
 			$("#content").fadeIn(500);
 		}
 	};
@@ -149,7 +226,8 @@ function shownotice(id){
 	);
 }
 function show_box_close(){
-	$('.reveal-modal-bg').css({'display' : 'none'});      
+	document.getElementById('show_box').innerHTML = "";
+	$('.reveal-modal-bg').css({'display' : 'none'});     
 	$('#show_box').css({
 		'visibility' : 'hidden', 
 		'top' : '0px'
@@ -163,30 +241,22 @@ $(document).scroll(function() {
 	var win_h = win.height();
 	var h = $(document).height() - win.height();
 	
-	console.log("doc_h "+doc_h);
-	console.log("win_h "+win_h);
-	console.log("win_top "+win.scrollTop());
-	console.log("doc-win "+h);
-	console.log(news_id);
-	
 	var win_top = win.scrollTop();	
 	Math.floor(win_top);
-	//var test = 2.1;
-	//Math.floor(test);
-	//console.log("test "+Math.floor(2.1));
-	//console.log("win_top2 "+win_top);
 	if ($(document).height() - win.height() == win_top) {
 		news_id = news_id+1;
 		//find news
-		//$.post("xxxxx.php",
-		//	{
-		//		datatype:'text',
-		//		news_id: news_id
-		//	},
-		//	function(data){
-				$( "#news_content" ).append( "<p>NEWS"+news_id+"</p>");
-		//	});
-		
+		$.post("function/get_news.php",
+			{
+				datatype:'text',
+				news_id: news_id
+			},
+			function(data){
+				if(data!=''){
+					$( "#news_content" ).append( "<p>NEWS "+data+"</p>");
+				}
+				
+			});
 	}
 	
 });

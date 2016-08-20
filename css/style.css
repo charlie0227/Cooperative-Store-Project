@@ -15,7 +15,7 @@
 	position: fixed;
 	top: 55px;
 	left: 0%;
-	width:111px; 
+	width:200px; 
 	float:left; 
 	height:100%; 
 	text-align:center; 
@@ -23,14 +23,15 @@
 	font-size:15px; 
 	color:#ffffff; 
 	font-weight:bold; 
-	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png); 
+	background: grey;
+	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png); 
 }
 #content{
 	position: relative;
-    left: 120px;
-    top: 50px;
+    left: 250px;
+    top: 70px;
 	z-index:0;
-	width: 100%; 
+	min-width: 1000px; 
 	height: auto;
 	text-align:left; 
 	line-height:30px; 
@@ -58,14 +59,15 @@
 	border-radius: 10px;
 }
 .abutton{
-	width: 100%; 
+	width: auto; 
 	border: 1px solid #ccc; 
 	border-radius:4px; 
 	padding:5px;
-	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/500xGray.png);
-	background-repeat: repeat;
-	background-position: 50% 50%;
-	background-size: 100%;
+	background:white;
+	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/500xGray.png);
+	//background-repeat: repeat;
+	//background-position: 50% 50%;
+	//background-size: 100%;
 }
 #m1{
 	width: 100%; 
@@ -95,36 +97,42 @@ img{
 }
 
 .sidebar{ 
-	display:block; 
-	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
-	margin-bottom: 5px; 
-	margin-top: 5px; 
+	font-size: 120%;
+	display:block;
+	border-right:hidden;
+	border-left:hidden;
+	border-top: hidden;
+	border-bottom: 2px solid white;
+    //border-radius: 5px;
+	background:grey;
+	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
+	//margin-bottom: 5px; 
+	//margin-top: 5px; 
 	text-decoration: none;
 	color: #FFFFFF;
 	height: 50px;
-	border: hidden;
     width: 100%;
 }
 
 /*  滑入時變換底色樣式 */  
 .sidebar_over{
-	color: #5599FF;
+	color: #9ad3de;
 	background:#FFFFFF;
 } 
-
+/*table*/
 .bordered {
 	
-    border: solid #ccc 1px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: 0 1px 1px #ccc; 
-    -moz-box-shadow: 0 1px 1px #ccc; 
-    box-shadow: 0 1px 1px #ccc;         
+    //border: solid #ccc 1px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    //-webkit-box-shadow: 0 1px 1px #ccc; 
+    //-moz-box-shadow: 0 1px 1px #ccc; 
+    //box-shadow: 0 1px 1px #ccc;         
 }
 
 .bordered tr:hover {
-    background: #fbf8e9;
+    background: #9ad3de;
     -o-transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -133,20 +141,14 @@ img{
 }    
     
 .bordered td, .bordered th {
-    border-left: 1px solid #ccc;
-    border-top: 1px solid #ccc;
+    //border-left: 1px solid #ccc;
+    //border-top: 1px solid #ccc;
     padding: 10px;
     text-align: left;    
 }
 
 .bordered th {
-    background-color: #dce9f9;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
-    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
-    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    background-color: #89bdd3;
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
     -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
     box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
@@ -154,40 +156,19 @@ img{
     text-shadow: 0 1px 0 rgba(255,255,255,.5); 
 }
 
-.bordered td:first-child, .bordered th:first-child {
-    border-left: none;
+.member_option {
+	width: 200px;
+    height: 40px;
+    color: white;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    background: #c9c9c9;
 }
-
-.bordered th:first-child {
-    -moz-border-radius: 6px 0 0 0;
-    -webkit-border-radius: 6px 0 0 0;
-    border-radius: 6px 0 0 0;
+.member_option:hover {
+	background: white;
+	color: #89bdd3;
 }
-
-.bordered th:last-child {
-    -moz-border-radius: 0 6px 0 0;
-    -webkit-border-radius: 0 6px 0 0;
-    border-radius: 0 6px 0 0;
-}
-
-.bordered th:only-child{
-    -moz-border-radius: 6px 6px 0 0;
-    -webkit-border-radius: 6px 6px 0 0;
-    border-radius: 6px 6px 0 0;
-}
-
-.bordered tr:last-child td:first-child {
-    -moz-border-radius: 0 0 0 6px;
-    -webkit-border-radius: 0 0 0 6px;
-    border-radius: 0 0 0 6px;
-}
-
-.bordered tr:last-child td:last-child {
-    -moz-border-radius: 0 0 6px 0;
-    -webkit-border-radius: 0 0 6px 0;
-    border-radius: 0 0 6px 0;
-}
-
 input[type=text], select {
 width: 90%;
 padding: 5px 5px;
@@ -230,20 +211,22 @@ box-sizing: border-box;
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
+	background:#89bdd3;
     overflow: hidden;
-	background-repeat: repeat;
-	background-position: 50% 50%;
-	background-size: 100%;
-	background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
+	//background-repeat: repeat;
+	//background-position: 50% 50%;
+	//background-size: 100%;
+	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
 }
 
 .menu_bar {
     float: left;
+	max-width: 300px;
 }
 
 .menu_bar_search {
 	float: left;
-	width: 40%;
+	min-width: 400px;
 	padding-top:14px; 
 	padding-bottom: 14px;
 	padding-right: 16px;
@@ -256,7 +239,8 @@ box-sizing: border-box;
     padding: 18px 36px;
     text-decoration: none;
 }
-.menu_bar  a:hover{
+
+.choose_menu{
 	color: #5599FF;
 	background:#FFFFFF;
 }
@@ -276,12 +260,13 @@ box-sizing: border-box;
 	background-color: rgb(229, 227, 223);
 }
 body{
-	background: #e9ebee;
+	background: #e3e3e3;
 	overflow-x:hidden;
 }
-/* Let's get this party started */
+/* Let's get this party started width: 12px;*/
 ::-webkit-scrollbar {
-    width: 12px;
+	display: none;
+    
 }
  
 /* Track */
@@ -300,4 +285,41 @@ body{
 }
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(255,0,0,0.4); 
+}
+
+.close_left{
+	position: fixed; top: 70px; left: 210px;
+	background: #e3e3e3;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 15px 10px 0;
+	border-color: transparent #c9c9c9 transparent transparent;
+}
+.close_right{
+	position: fixed; top: 70px; left: 10px;
+	background: #e3e3e3;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 0 10px 15px;
+	border-color: transparent transparent transparent #c9c9c9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+.dropdown-content1 {
+    display: block;
 }

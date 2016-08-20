@@ -10,8 +10,8 @@ $sth->execute();
 echo '<div id = "list"><table class="bordered">
 		<tbody>';
 if(!$sth->fetchObject()){
-	echo '<tr><td>зфдгиьзAк║е°╖~</td></tr>';
-	echo '<tr><td><input type="button" onclick="add_new_company()" value="лeй╣╖s╝W"></td></tr>';
+	echo '<tr><td>цЙ╛ф╕НхИ░ф╜ачЪДф╝Бцен</td></tr>';
+	echo '<tr><td><input type="button" onclick="add_new_company()" value="хЙНх╛АцЦ░хвЮ"></td></tr>';
 }
 while($result = $sth->fetchObject()){?>
 	<tr><td onclick="owner_show_company(<?echo $result->id?>)"><a href="#" class="big-link" data-reveal-id="show_box"><?echo $result->name?></a></td></tr>

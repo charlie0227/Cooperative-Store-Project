@@ -14,19 +14,19 @@ $sth1->execute(array($_GET['company_id']));
 	<?php
 	if($result) 
 	{?>
-		<p>©±¦W <?echo $result->name?></p>
+		<p>åº—å <?echo $result->name?></p>
 		<?if($result_img){?>
 		<a href="http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image?>"><img src="<?echo $result_img->image?>" style="width: 30%;height: 30%;"/></a>
 		<?}?>
-		<p>¹q¸Ü <?echo $result->phone?></p>
-		<p>¦a§} <?echo $result->address?></p>
+		<p>é›»è©± <?echo $result->phone?></p>
+		<p>åœ°å€ <?echo $result->address?></p>
 		<p>Email <?echo $result->email?></p>
-		<p>¦X§@¥ø·~ <?
+		<p>åˆä½œä¼æ¥­ <?
 			while($result_company = $sth1->fetchObject()){
 				echo $result_company->name.'</p><p>';
 			}?>
 		</p>
 	<?}?>
-	<input type="button" value="¹ï¡A§Ú¬O¥ø·~ªø" onclick="owner_verify_company(<?echo $result->id?>)">
+	<input type="button" value="å°ï¼Œæˆ‘æ˜¯ä¼æ¥­é•·" onclick="owner_verify_company(<?echo $result->id?>)">
 
 </html>

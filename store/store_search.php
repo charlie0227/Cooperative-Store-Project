@@ -16,9 +16,9 @@ $sth->execute();
 echo '<table class = "bordered">
 		<thead>
 			<tr>
-			<th style = "width: 120px;">NAME</th>
-			<th style = "width: 150px;">PHONE</th>
-			<th style = "width: 400px;">ADDRESS</th>
+			<th style = "width: 200px;">NAME</th>
+			<th style = "width: 200px;">PHONE</th>
+			<th style = "width: 500px;">ADDRESS</th>
 			</tr>
 		</thead>
 		</table>
@@ -27,7 +27,7 @@ echo '<table class = "bordered">
 		<tbody>
 		';?>
 <?while($result = $sth->fetchObject()){?>
-	<tr onclick="view_store(<?echo $result->id?>,'store_map')"><td style = "width: 120px;"><?echo $result->name?></td><td style = "width: 150px;"><?echo $result->phone?></td><td style = "width: 400px;"><?echo $result->address?></td></tr>
+	<tr onclick="view_store(<?echo $result->id?>,'store_map')"><td style = "width: 200px;"><?echo $result->name?></td><td style = "width: 200px;"><?echo $result->phone?></td><td style = "width: 500px;"><?echo $result->address?></td></tr>
 <?}?> 
 	</tbody>
 </table></div>

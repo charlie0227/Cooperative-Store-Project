@@ -38,20 +38,21 @@ if($sth->fetchObject())
 		<?php
 		if($result) 
 		{?>
-			<p>¤½¥q¦W <?echo $result->name?></p>
+			<p>å…¬å¸å <?echo $result->name?></p>
 			<?if($result_img){?>
 			<img id="company_img" onclick=" var newwin = window.open();newwin.location='http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image_url?>';" src="<?echo $result_img->image_url?>"/>
 			<?}?>
-			<p>¹q¸Ü <?echo $result->phone?></p>
-			<p>¦a§} <?echo $result->address?></p>
-			<p>ºô¯¸ <?echo $result->url?></p>
-			<p>¦X§@©±®a <?
+			<p>é›»è©± <?echo $result->phone?></p>
+			<p>åœ°å€ <?echo $result->address?></p>
+			<p>ç¶²ç«™ <?echo $result->url?></p>
+			<p>åˆä½œåº—å®¶ <?
 				while($result_store = $sth1->fetchObject()){
 					echo $result_store->name.'</p><p>';
 				}?>
 			</p>
 		<?}?>
 	<input type="button" class="abutton" style="width:auto;" value="edit" onclick="owner_company_edit(<?echo $_GET['company_id']?>)">
-	<input type="button" class="abutton" style="width:auto;" value="ªð¦^" onclick="back_to_company_list()">
+	<a type="button" href="#" class="big-link" data-reveal-id="show_box" onclick="show_application(<?echo $_GET['company_id']?>)">æŸ¥çœ‹ç”³è«‹</a>
+	<input type="button" class="abutton" style="width:auto;" value="è¿”å›ž" onclick="my_store_company_list()">
 
 </html>

@@ -6,7 +6,7 @@ $sth = $db->prepare($sql);
 $sth->execute(array($_SESSION['id']));
 echo '<table>';
 while($result=$sth->fetchObject()){?>
-	<tr onclick="show_belong_store(<?echo $result->id?>)"><td><?echo $result->name?></td></tr>
+	<tr onclick="show_discount(<?echo $result->id?>)"><td><?echo $result->name?></td></tr>
 <?}
 echo '</table>';
 ?>

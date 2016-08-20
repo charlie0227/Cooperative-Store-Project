@@ -1,8 +1,8 @@
 var lastwordValue = '';
 var lastforValue = '';
 var search_com;
-function clear(){
-	clearInterval(search_com);
+var clear_interval =function (interval){
+	clearInterval(interval);
 }
 function show_company_list(){
 	lastwordValue = $("#search_word").val();
@@ -30,13 +30,15 @@ function company_list(){
 			$("#show_search_company").hide();
 			show_company_list();
 			$("#show_search_company").fadeIn(500);
-			search_com = setInterval(function () {
+			search_com=setInterval(function () {
 				if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue && $("#search_word").val() != "") ){
 					$("#show_search_company").hide();
 					show_company_list();
 					$("#show_search_company").fadeIn(500);
-			
-					}
+				}
+				if(document.getElementById("company_bar")== null){
+					clear_interval(search_com);
+				}
 			}, 500);
 		}
 	};
@@ -130,7 +132,19 @@ function apply(member_id,company_id){
 	xhttp.open("GET", "company/application_form.php?company_id="+company_id+"&member_id="+member_id, true);
 	xhttp.send();
 }
-
+function apply_cancel(member_id,company_id,type){
+	$.post("member/application_confirm.php",
+	{
+		datatype:'json',
+		member_id:member_id,
+		company_id:company_id,
+		type:type
+		
+	},
+	function(){
+		view_company(company_id);
+	});
+}
 function application_submit(){
 	show_box_close();
 	$('#application_ajaxForm').submit(function() { 
