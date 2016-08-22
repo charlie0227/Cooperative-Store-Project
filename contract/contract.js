@@ -1,56 +1,56 @@
 function contract_ready(){
 	var d = new Date();
-	document.getElementById("start").value=d.toLocaleDateString();
+	document.getElementById("date_sta").value=d.toLocaleDateString();
 	document.getElementById("now_date").innerHTML=d.getFullYear()-1911+'  年  '+(d.getMonth()+1)+'  月  '+d.getDate()+'  日';
 	
 	d.setFullYear(d.getFullYear()+1);
 	d.setDate(d.getDate()-1);
-	document.getElementById("end").value=d.toLocaleDateString();
+	document.getElementById("date_end").value=d.toLocaleDateString();
 	
-	function startChange() {
-		var startDate = start.value(),
-		endDate = end.value();
+	function date_staChange() {
+		var date_staDate = date_sta.value(),
+		endDate = date_end.value();
 
-		if (startDate) {
-			startDate = new Date(startDate);
-			startDate.setDate(startDate.getDate());
-			end.min(startDate);
+		if (date_staDate) {
+			date_staDate = new Date(date_staDate);
+			date_staDate.setDate(date_staDate.getDate());
+			date_end.min(date_staDate);
 		} else if (endDate) {
-			start.max(new Date(endDate));
+			date_sta.max(new Date(endDate));
 		} else {
 			endDate = new Date();
-			start.max(endDate);
-			end.min(endDate);
+			date_sta.max(endDate);
+			date_end.min(endDate);
 		}
 	}
 
 	function endChange() {
-		var endDate = end.value(),
-		startDate = start.value();
+		var endDate = date_end.value(),
+		date_staDate = date_sta.value();
 
 		if (endDate) {
 			endDate = new Date(endDate);
 			endDate.setDate(endDate.getDate());
-			start.max(endDate);
-		} else if (startDate) {
-			end.min(new Date(startDate));
+			date_sta.max(endDate);
+		} else if (date_staDate) {
+			date_end.min(new Date(date_staDate));
 		} else {
 			endDate = new Date();
-			start.max(endDate);
-			end.min(endDate);
+			date_sta.max(endDate);
+			date_end.min(endDate);
 		}
 	}
 
-	var start = $("#start").kendoDatePicker({
-		change: startChange
+	var date_sta = $("#date_sta").kendoDatePicker({
+		change: date_staChange
 	}).data("kendoDatePicker");
 
-	var end = $("#end").kendoDatePicker({
+	var date_end = $("#date_end").kendoDatePicker({
 		change: endChange
 	}).data("kendoDatePicker");
 
-	start.max(end.value());
-	end.min(start.value());
+	date_sta.max(date_end.value());
+	date_end.min(date_sta.value());
 	
 }
 function select_store(company_id){
@@ -107,17 +107,19 @@ function contract_make(store_id,company_id,who){
 					document.getElementById("s_owner").innerHTML ='<input type="text" id="store_owner"/>';
 					document.getElementById("s_address").innerHTML ='<input type="text" id="store_address"/>';
 					document.getElementById("s_phone").innerHTML ='<input type="text" id="store_phone"/>';
-					document.getElementById("fill_store").innerHTML ='<input type="button" onclick="fill('+store_id+','+company_id+",'"+who+"'"+')" value="填入"/>';
-					document.getElementById("back_to_where").innerHTML ='<input type="button" value="返回" onclick="back_to_company()"/>';
+					document.getElementById("fill_store").innerHTML ='<input type="button" class="k-button" style="margin: 2px;" onclick="fill('+store_id+','+company_id+",'"+who+"'"+')" value="填入"/>';
+					document.getElementById("back_to_where").innerHTML ='<input type="button" class="k-button" value="返回" onclick="back_to_company()"/>';
 				}
 				if(obj.who=='company'){
-					document.getElementById("c_owner").innerHTML ='<input type="text" id="company_owner"/>';
-					document.getElementById("c_address").innerHTML ='<input type="text" id="company_address"/>';
-					document.getElementById("c_phone").innerHTML ='<input type="text" id="company_phone"/>';
-					document.getElementById("fill_company").innerHTML ='<input type="button" onclick="fill('+store_id+','+company_id+",'"+who+"'"+')" value="填入"/>';
-					document.getElementById("back_to_where").innerHTML ='<input type="button" value="返回" onclick="back_to_store()"/>';
+					document.getElementById("c_owner").innerHTML ='<input type="text" class="k-textbox" id="company_owner"/>';
+					document.getElementById("c_address").innerHTML ='<input type="text"class="k-textbox" id="company_address"/>';
+					document.getElementById("c_phone").innerHTML ='<input type="text" class="k-textbox" id="company_phone"/>';
+					document.getElementById("fill_company").innerHTML ='<input type="button" class="k-button" style="margin: 2px;" onclick="fill('+store_id+','+company_id+",'"+who+"'"+')" value="填入"/>';
+					document.getElementById("back_to_where").innerHTML ='<input type="button" class="k-button" value="返回" onclick="back_to_store()"/>';
 				}
-				
+				document.getElementById("store_id").value = store_id;
+				document.getElementById("company_id").value = company_id;
+				discount_content();
 			});
 		}
 	};
@@ -153,4 +155,35 @@ function fill(store_id,company_id,who){
 			
 		}
 	});
+}
+
+function discount_content(){
+	$("#tabstrip").kendoTabStrip({
+		animation:  {
+			open: {
+				effects: "fadeIn"
+			}
+		}
+	});
+}
+function send_contract(){
+	$.post("contract/contract_create.php",
+			{
+				status:0,
+				date_sta:document.getElementById("date_sta").value,
+				date_end:document.getElementById("date_end").value,
+				content:document.getElementById("date_end").value,
+				store_id:document.getElementById("store_id").value,
+				store_owner:document.getElementById("store_owner").value,
+				store_address:document.getElementById("store_address").value,
+				store_phone:document.getElementById("store_phone").value,
+				company_id:document.getElementById("company_id").value,
+				company_owner:document.getElementById("store_owner").value,
+				company_address:document.getElementById("store_address").value,
+				company_phone:document.getElementById("store_phone").value,
+			    datatype:'json'
+			},function(data){
+				
+		});
+	
 }

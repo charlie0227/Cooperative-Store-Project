@@ -1,13 +1,58 @@
+<html>
+	<meta charset="utf-8" />
 <style>
 span{
 	color:red;
 }
 </style>
+<script>
+	$(document).ready(function() {
+		$("#tabstrip").kendoTabStrip({
+			animation:  {
+				open: {
+					effects: "fadeIn"
+				}
+			}
+		});
+	});
+</script>
 <div style="border-style:double;width:800px;">
 <p>特約商店合約書</p>
 <span id="store_name1"></span>（以下簡稱甲方），同意成為<span id="company_name1" style="color:red"></span>（以下簡稱乙方）之特約商店，雙方同意如下：<br>
-一、凡乙方員工，憑員工服務證或退休證向甲方消費，均享有以下優惠，優惠內容如下：<br>
-二、有效日期：本合約自<input id="start" style="width:200px"/>起至<input id="end" style="width:200px"/>止，如雙方欲中止本合約，應以書面於1個月前通知對方。<br>
+一、凡乙方員工，憑員工服務證或退休證向甲方消費，均享有以下優惠，優惠內容如下87：<br>
+
+<div class="demo-section k-content">
+	<div id="tabstrip">
+		<ul>
+			<li class="k-state-active">
+				總累積人次
+			</li>
+			<li>
+				月累積人次
+			</li>
+			<li>
+				季累積人次
+			</li>
+			<li>
+				年累積人次
+			</li>
+			<li>
+				固定折數
+			</li>
+		</ul>
+		<div>
+			
+		</div>
+		<div>
+			<p>Golf is a precision club and ball sport, in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a golf course using the fewest number of strokes. It is one of the few ball games that does not require a standardized playing area. Instead, the game is played on golf courses, each of which features a unique design, although courses typically consist of either nine or 18 holes. Golf is defined, in the rules of golf, as playing a ball with a club from the teeing ground into the hole by a stroke or successive strokes in accordance with the Rules.</p>
+		</div>
+		<div>
+			<p>Swimming has been recorded since prehistoric times; the earliest recording of swimming dates back to Stone Age paintings from around 7,000 years ago. Written references date from 2000 BC. Some of the earliest references to swimming include the Gilgamesh, the Iliad, the Odyssey, the Bible, Beowulf, and other sagas. In 1578, Nikolaus Wynmann, a German professor of languages, wrote the first swimming book, The Swimmer or A Dialogue on the Art of Swimming. Competitive swimming in Europe started around 1800, mostly using breaststroke.</p>
+		</div>
+	</div>
+</div>
+				
+二、有效日期：本合約自<input id="date_sta" style="width:200px"/>起至<input id="date_end" style="width:200px"/>止，如雙方欲中止本合約，應以書面於1個月前通知對方。<br>
 三、甲乙雙方本誠信互惠原則，訂定本合約，於合約有效期限內，如欲取消或更改合約辦法，應經雙方協商同意。<br>
 四、乙方應於合約生效時，提供乙方所發之員工識別證樣本給甲方，以便甲方識別之。<br>
 五、乙方員工消費購物或申請入會時，若未帶員工識別證，不能享有本合約雙方同意之優待辦法。<br>
@@ -29,4 +74,6 @@ span{
 </div>
 <input type="button" value="送出" onclick="send_contract()"/>
 <span id="back_to_where"></span>
-
+<input type="hidden" id="store_id"/>
+<input type="hidden" id="company_id"/>
+</html>

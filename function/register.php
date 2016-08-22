@@ -20,7 +20,7 @@
 <tr>
 <td>
 	<div class="register_input" style="display:inline-flex">
-		<input type="text" id="register_account" name="account" value=""><div style="color:red;">*</div>
+		<input type="text" class="k-textbox" id="register_account" name="account" value=""><div style="color:red;">*</div>
 	</div>
 	
 	<div hidden id="valid1" style="display:none; color:red;">Don't type space</div>
@@ -36,7 +36,7 @@
 <tr>
 <td>
 	<div class="register_input" style="display:inline-flex">
-		<input type="password" id="register_password" name="password" value=""><div style="color:red;">*</div>
+		<input class="k-textbox" type="password" id="register_password" name="password" value=""><div style="color:red;">*</div>
 	</div>
 	<div class="valid"id="valid2">do not type space</div>
 </td>
@@ -51,7 +51,7 @@
 <tr>
 <td>
 	<div class="register_input" style="display:inline-flex">
-		<input type="text" id="name" name="name" value=""><div style="color:red;">*</div>
+		<input class="k-textbox" type="text" id="name" name="name" value=""><div style="color:red;">*</div>
 	</div>
 	<div class="valid"id="valid6">do not type space</div>
 </td>
@@ -66,7 +66,7 @@
 <tr>
 <td>
 	<div class="register_input" style="display:inline-flex">
-		<input type="text" id="phone" name="phone" value=""><div style="color:red;">*</div>
+		<input class="k-textbox" type="text" id="phone" name="phone" value=""><div style="color:red;">*</div>
 	</div>
 	<div class="valid"id="valid3">do not type space</div>
 </td>
@@ -103,7 +103,7 @@
 <tr>
 <td>
 	Year:
-	<select name="year">
+	<select class="k-select" name="year">
 		  <option value="1911">1911</option>
 			<option value="1912">1912</option>
 			<option value="1913">1913</option>

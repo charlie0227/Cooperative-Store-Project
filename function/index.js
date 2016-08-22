@@ -40,6 +40,8 @@ $(document).ready( function() {
 		}
 		
 	});
+	
+	
 	//$('#dropdown').hover(	
 	//   function () {
 	//   }, 
@@ -67,19 +69,23 @@ function min_sidebar(){
 	if(m==0){
 		$('#sidebar').toggle('fast');
 		$('#close_side').hide();
+		$('#content').hide();
 		$('#close_side').removeClass('close_left');	
 		$('#close_side').addClass('close_right');	
-		$('#close_side').fadeIn(500);	
-			
-		
+		$('#close_side').fadeIn(500);
+		$('#content').fadeIn(500);
+		$("#content").css("left","50px");	
 		m = 1;
 	}
 	else{
 		$('#sidebar').toggle('normal');
 		$('#close_side').hide();
+		$('#content').hide();
 		$('#close_side').removeClass('close_right');
 		$('#close_side').addClass('close_left');	
 		$('#close_side').fadeIn(500);
+		$('#content').fadeIn(500);
+		$("#content").css("left","250px");
 		m = 0;
 	}
 }
@@ -102,7 +108,7 @@ $(document).ready(function(){
 		var arr = new Array();
 		for(var i=0;i<obj.list.length;i++){
 			var obj_tmp = new Object;
-			obj_tmp.value = obj.list[i].name;
+			obj_tmp.name = obj.list[i].name;
 			obj_tmp.address = obj.list[i].address;
 			obj_tmp.id = obj.list[i].id
 			obj_tmp.label = obj.list[i].name;
@@ -111,7 +117,38 @@ $(document).ready(function(){
 			arr = arr.concat(obj_tmp);
 		}
 		
-		$( "#search_bar" ).autocomplete({
+			
+			var autocomplete = $("#search_bar").kendoAutoComplete({
+				minLength: 1,
+				dataTextField: "name",
+				headerTemplate: '<div class="dropdown-header k-widget k-header">' +
+						'<span>Photo</span>' +
+						'<span>Contact info</span>' +
+					'</div>',
+				template: '<span class="k-state-default" style="background-image: url(\'#:data.img_url#\')"></span>' +
+						  '<span class="k-state-default"><h3>#: data.name #</h3><p>#: data.address #</p></span>',
+				dataSource: arr,
+				height: 400,
+				select:function(e){
+					var dataItem = this.dataItem(e.item.index());
+					var obj=JSON.parse(kendo.stringify(dataItem));
+					if(obj.type==0){
+						store_list();
+						view_store(obj.id,'store_map');
+					}
+					else{
+						company_list();
+						view_company(obj.id);
+					}
+				}
+			}).data("kendoAutoComplete");
+		
+		
+		
+		/*
+		<img id="store_img" style="width:70px;height:70px;" src="http://people.cs.nctu.edu.tw/~cwchen05030530/#: data.img_url #"
+		
+		$( "#search_bar" ).kendoAutoComplete({
 		  source: arr,
 		  select: function( event, ui ) {
 				if(ui.item.type==0){
@@ -129,6 +166,8 @@ $(document).ready(function(){
 			 .append('<div style="float:left;width:94%;height:70px"><div style="float:left;width:20%;height:100%"> <img id="store_img" style="width:70px;height:70px;" src="'+item.img_url+ '"/></div><div style="width:80%;height:100%">' + item.label + "</br>" + item.address + '</div></div>')
              .appendTo(ul);
      };
+	 
+	 */
 	  });
 });
 function news(){
@@ -330,4 +369,16 @@ function register_ready(){
 			c.hide();
 		}
 	});
+}
+
+function login(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "function/login_form.html", true);
+	xhttp.send();
 }

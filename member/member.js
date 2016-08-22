@@ -28,6 +28,15 @@ function edit_personal(){
 	xhttp.send();
 }
 function edit_personal_ready(){
+	$("#year").kendoDropDownList({
+		optionLabel: "--Year--"
+	});
+	$("#month").kendoDropDownList({
+		optionLabel: "--Month--"
+	});
+	$("#date").kendoDropDownList({
+		optionLabel: "--Date--"
+	});
 	$(".edit_input input").change(function(){
 		if($(this).val()==""){
 			var c=$(this).next();
@@ -410,3 +419,13 @@ function show_discount(id){//company id
 	xhttp.open("GET", "member/show_discount.php?company_id="+id, true);
 	xhttp.send();	
 }
+
+//kendo dropdown select
+function dropselect(){
+	$("#year").kendoDropDownList({
+		optionLabel: "--Start time--"
+	});
+}
+
+
+

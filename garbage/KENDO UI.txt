@@ -1,0 +1,13 @@
+DATA MANAGEMENT
+http://demos.telerik.com/kendo-ui/scrollview/index
+EDITORS
+http://demos.telerik.com/kendo-ui/autocomplete/index O
+http://demos.telerik.com/kendo-ui/datepicker/index O
+http://demos.telerik.com/kendo-ui/upload/async
+http://demos.telerik.com/kendo-ui/validator/index
+BARCODES
+http://demos.telerik.com/kendo-ui/qrcode/index
+FRAMEWORK
+http://demos.telerik.com/kendo-ui/pdf-export/index
+LAYOUT
+http://demos.telerik.com/kendo-ui/notification/index

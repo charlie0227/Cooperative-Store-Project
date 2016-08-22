@@ -5,6 +5,9 @@ var clear_interval =function (interval){
 	clearInterval(interval);
 }
 function show_store_list(){
+	$("#search_for").kendoDropDownList({
+		optionLabel: "--項目--"
+	});
 	lastwordValue = $("#search_word").val();
 	lastforValue = $("#search_for").val();
 	
@@ -12,7 +15,8 @@ function show_store_list(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("show_search_store").innerHTML = xhttp.responseText;
+			if(document.getElementById("store_bar")!= null)
+				document.getElementById("show_search_store").innerHTML = xhttp.responseText;
 		}
 	};
 	var q = $("#search_for").val();
@@ -31,14 +35,15 @@ function store_list(){
 			show_store_list();
 			$("#show_search_store").fadeIn(500);
 			search_sto=setInterval(function () {
-				if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ) ){
+				if(document.getElementById("store_bar")== null){
+					clear_interval(search_sto);
+				}
+				else if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ) ){
 					$("#show_search_store").hide();
 					show_store_list();
 					$("#show_search_store").fadeIn(500);	
 				}
-				if(document.getElementById("store_bar")== null){
-					clear_interval(search_sto);
-				}
+				
 			}, 500);
 		}
 	};

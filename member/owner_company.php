@@ -35,6 +35,13 @@ if($sth->fetchObject())
 
 </style>
 	</head>	
+		<table>
+		<tr>
+		<td><div class="member_option" style="width:auto;  padding: 1px 6px 1px 6px;"><a type="button" style="text-decoration: none; display: block; color:white; font-weight: bold;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_application(<?echo $_GET['company_id']?>)">Application</a></div></td>
+		<td><input type="button" class="member_option" style="width:auto;" value="Edit" onclick="owner_company_edit(<?echo $_GET['company_id']?>)"></td>
+		<td><input type="button" class="member_option" style="width:auto;" value="Back" onclick="my_store_company_list()"></td>
+		</tr>
+		</table>
 		<?php
 		if($result) 
 		{?>
@@ -51,8 +58,6 @@ if($sth->fetchObject())
 				}?>
 			</p>
 		<?}?>
-	<input type="button" class="abutton" style="width:auto;" value="edit" onclick="owner_company_edit(<?echo $_GET['company_id']?>)">
-	<a type="button" href="#" class="big-link" data-reveal-id="show_box" onclick="show_application(<?echo $_GET['company_id']?>)">查看申請</a>
-	<input type="button" class="abutton" style="width:auto;" value="返回" onclick="my_store_company_list()">
+	
 
 </html>

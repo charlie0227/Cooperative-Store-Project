@@ -23,7 +23,7 @@
 	font-size:15px; 
 	color:#ffffff; 
 	font-weight:bold; 
-	background: grey;
+	background: #7D7E75;
 	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png); 
 }
 #content{
@@ -104,7 +104,7 @@ img{
 	border-top: hidden;
 	border-bottom: 2px solid white;
     //border-radius: 5px;
-	background:grey;
+	background:#7D7E75;
 	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
 	//margin-bottom: 5px; 
 	//margin-top: 5px; 
@@ -116,7 +116,7 @@ img{
 
 /*  滑入時變換底色樣式 */  
 .sidebar_over{
-	color: #9ad3de;
+	color: #2A2E45;
 	background:#FFFFFF;
 } 
 /*table*/
@@ -132,7 +132,7 @@ img{
 }
 
 .bordered tr:hover {
-    background: #9ad3de;
+    background: #D6E5E3;
     -o-transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -148,7 +148,7 @@ img{
 }
 
 .bordered th {
-    background-color: #89bdd3;
+    background-color: #7D98A1;
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
     -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
     box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
@@ -163,28 +163,14 @@ img{
     border: none;
     font-size: large;
     font-weight: bold;
-    background: #c9c9c9;
+    background: #A4A59A;
 }
 .member_option:hover {
 	background: white;
-	color: #89bdd3;
+	color: #29335C;
+	border: #29335C;
 }
-input[type=text], select {
-width: 90%;
-padding: 5px 5px;
-display: inline-block;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
-}
-input[type=password], select {
-width: 90%;
-padding: 5px 5px;
-display: inline-block;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
-}
+
 #edit_button{
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -211,7 +197,7 @@ box-sizing: border-box;
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
-	background:#89bdd3;
+	background:#2A2E45;
     overflow: hidden;
 	//background-repeat: repeat;
 	//background-position: 50% 50%;
@@ -260,7 +246,7 @@ box-sizing: border-box;
 	background-color: rgb(229, 227, 223);
 }
 body{
-	background: #e3e3e3;
+	background: #F2F2F2;
 	overflow-x:hidden;
 }
 /* Let's get this party started width: 12px;*/
@@ -289,7 +275,7 @@ body{
 
 .close_left{
 	position: fixed; top: 70px; left: 210px;
-	background: #e3e3e3;
+	background: #F2F2F2;
 	width: 0;
 	height: 0;
 	border-style: solid;
@@ -298,7 +284,7 @@ body{
 }
 .close_right{
 	position: fixed; top: 70px; left: 10px;
-	background: #e3e3e3;
+	background: #F2F2F2;
 	width: 0;
 	height: 0;
 	border-style: solid;

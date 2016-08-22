@@ -31,7 +31,7 @@ $result=$sth->fetchObject();
 	<tr>
 	<td>
 	<div class="edit_input" style="display:inline-flex">
-		<input type="text" name="name" value="<?echo $result->name?>"><div style="display:none;color:red">*</div>
+		<input class="k-textbox" style="margin: 0 5px 5px 0;" type="text" name="name" value="<?echo $result->name?>"><div style="display:none;color:red">*</div>
 	</div>
 	</td>
 	</tr>
@@ -43,7 +43,7 @@ $result=$sth->fetchObject();
 	<tr>
 	<td>
 	<div class="edit_input" style="display:inline-flex">
-		<input type="text" name="phone" value="<?echo $result->phone?>"><div style="display:none;color:red">*</div>
+		<input class="k-textbox" style="margin: 0 5px 5px 0;" type="text" name="phone" value="<?echo $result->phone?>"><div style="display:none;color:red">*</div>
 	</div>
 	</td>
 	</tr>	
@@ -252,7 +252,7 @@ $result=$sth->fetchObject();
 	<tr>
 	<td>
 	<div class="edit_input" style="display:inline-flex">
-		<input type="text" name="email" value="<?echo $result->email?>"><div style="display:none;color:red">*</div>
+		<input class="k-textbox" style="margin: 0 5px 5px 0;" type="text" name="email" value="<?echo $result->email?>"><div style="display:none;color:red">*</div>
 	</div>
 	</td>
 	</tr>	
