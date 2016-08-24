@@ -121,6 +121,8 @@ require_once "sysconfig.php";
 					<input type="button" class = "sidebar" id = "show_member" onclick="member()" value="Member">
 					<input type="button" class = "sidebar" id = "show_store" onclick="store_list()" value="Store">
 					<input type="button" class = "sidebar" id = "show_company" onclick="company_list()" value="Company">
+					
+					
 				</div>
 			</div>
 			<div>

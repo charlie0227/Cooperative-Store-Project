@@ -6,7 +6,47 @@ function contract_ready(){
 	d.setFullYear(d.getFullYear()+1);
 	d.setDate(d.getDate()-1);
 	document.getElementById("date_end").value=d.toLocaleDateString();
+	//choose three method caculate contract
+	$('.dynamic_discount input[type=radio]').on('change',function(){
+		if($('input[name=dyn_big]').is(':checked')&&$('input[name=dyn_people]').is(':checked')&&$('input[name=dyn_small]').is(':checked'))
+			caculate_dycontract();
+	});
+	//click on text then choose radio
+	$('.dynamic_discount input[type=text]').on('click',function(){
+		$(this).siblings('input[type=radio]').prop('checked', false);
+		$(this).parent().prev().prop('checked', true);
+	});
+	//numeric test
+	$('.dynamic_discount input[type=text]').on('focusout',function(){
+		if(!$.isNumeric($(this).val()) && $(this).val()!=''){
+			$(this).next().html('請輸入數字');
+			$(this).val('');
+		}
+		else
+			$(this).next().html('');
+	});
 	
+	function caculate_dycontract(){
+		var manual=new Array();
+		var result = '';
+		manual[0]=document.getElementById("big_4_num").value;
+		manual[1]=document.getElementById("people_5_num").value;
+		manual[2]=document.getElementById("small_4_num").value;
+		
+		var big  = $('input[id=big_1]').is(':checked')?95:
+				   $('input[id=big_2]').is(':checked')?90:
+				   $('input[id=big_3]').is(':checked')?85:
+				   manual[0]<10?manual[0]*10:manual[0];
+		
+		var small= $('input[id=small_1]').is(':checked')?90:
+				   $('input[id=small_2]').is(':checked')?85:
+				   $('input[id=small_3]').is(':checked')?80:
+				   manual[2]<10?manual[2]*10:manual[2];
+				   
+		if(big<small)
+			document.getElementById("show_discount").innerHTML = 'big'+big+'small'+small;
+	
+	}
 	function date_staChange() {
 		var date_staDate = date_sta.value(),
 		endDate = date_end.value();
@@ -53,6 +93,7 @@ function contract_ready(){
 	date_end.min(date_sta.value());
 	
 }
+
 function select_store(company_id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
@@ -158,7 +199,7 @@ function fill(store_id,company_id,who){
 }
 
 function discount_content(){
-	$("#tabstrip").kendoTabStrip({
+	$(".tabstrip").kendoTabStrip({
 		animation:  {
 			open: {
 				effects: "fadeIn"
