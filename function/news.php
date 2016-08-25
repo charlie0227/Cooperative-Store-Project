@@ -1,32 +1,14 @@
-
-
+<?
+require_once "../sysconfig.php";
+?>
 <div id = "new" name="qt1">
-	<h2>Latest News</h2>
-		<h1>Infinite Scrolling, Demo 2</h1>
-		<ul id="posts">
-			<li>
-				<article id="news_content">
-					<header>
-						<h1>News Title</h1>
-					</header>
-					<p>Lorem</p>
-					<p>In</p>
-					<p>Lorem ipsum</p>
-					<p>Integer</p>
-					<p>Donec</p>
-					<p>Nulla</p>
-					<p>Quisque</p>
-					<p>Lorem</p>
-					<p>In</p>
-					<p>Lorem ipsum</p>
-					<p>Integer</p>
-					<p>Donec</p>
-					<p>Nulla</p>
-					<p>Quisque</p>
-				</article>
-			</li>
-		</ul>
-		
+	<h1>Latest News</h1>
+	<?if($_SESSION['id']==22||$_SESSION['id']==23||$_SESSION['id']==24){?>
+	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="Add news" onclick="add_news()"/></a>
+	<?}?>	
+	<article id="news_content">
+			
+		</article>	
 </div>
 
 

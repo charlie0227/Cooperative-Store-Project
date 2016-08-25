@@ -7,17 +7,17 @@ require_once "../sysconfig.php";
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <?
-$sql = "SELECT name FROM `jangsc27_cs_project`.`store` ";
+$sql = "SELECT name FROM `jangsc27_cs_project`.`company` ";
 $sth = $db->prepare($sql);
 $sth->execute();
 $result = $sth->fetchAll(PDO::FETCH_COLUMN,0);
 
-$sql_edit = "SELECT * FROM `jangsc27_cs_project`.`store` WHERE `id` =?";
+$sql_edit = "SELECT * FROM `jangsc27_cs_project`.`company` WHERE `id` =?";
 $sth_edit = $db->prepare($sql_edit);
 $sth_edit->execute(array($_GET['edit_id']));
 $result_object = $sth_edit->fetchObject();
 
-$sql = "SELECT * FROM `jangsc27_cs_project`.`store_image` WHERE `store_id`= ?";
+$sql = "SELECT * FROM `jangsc27_cs_project`.`company_image` WHERE `company_id`= ?";
 $sth2 = $db->prepare($sql);
 $sth2->execute(array($_GET['edit_id']));
 $result_img = $sth2->fetchObject();
@@ -26,11 +26,11 @@ $result_img = $sth2->fetchObject();
 </head>
 	<body>
 	<!--show original store-->
-	<form  action="member/edit_store_confirm.php" method="POST" enctype="multipart/form-data" id="edit_store_form">
+	<form  action="member/edit_company_confirm.php" method="POST" enctype="multipart/form-data" id="edit_company_form">
 	<table>
 	<tr>
 	<td>
-		Store Name
+		Company Name
 	</td>
 	</tr>
 	<tr>
@@ -97,7 +97,7 @@ $result_img = $sth2->fetchObject();
 	</tr>
 	<tr>
 	<td>
-		<input class = "abutton" type="submit" value="Edit" id="edit_btn" onclick="edit_store_submit()">
+		<input class = "abutton" type="submit" value="Edit" id="edit_btn" onclick="edit_company_submit()">
 	</td>
 	
 	<td>
@@ -106,7 +106,7 @@ $result_img = $sth2->fetchObject();
 	</tr>
 	<tr>
 	<td>	
-		<input class = "abutton" type="button" value="back" onclick="show_own_store_content(<?echo $_GET['edit_id']?>)">
+		<input class = "abutton" type="button" value="back" onclick="show_own_company_content(<?echo $_GET['edit_id']?>)">
 	</td>		
 	</tr>		
 			

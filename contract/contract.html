@@ -7,24 +7,20 @@ span{
 .k-radio-label{
 	line-height:1.5em;
 }
-	</style>
-<script>
-	$(document).ready(function() {
-		$(".tabstrip").kendoTabStrip({
-			animation:  {
-				open: {
-					effects: "fadeIn"
-				}
-			}
-		});
-	});
-</script>
+#show_discount{
+	width:170px;
+}
+.show_content{
+	width:610px;
+}
+</style>
+
 <div style="border-style:double;width:800px;">
 <p>特約商店合約書</p>
 <p><span id="store_name1"></span>（以下簡稱甲方），同意成為<span id="company_name1" style="color:red"></span>（以下簡稱乙方）之特約商店，雙方同意如下：</p>
 <p>一、凡乙方員工，憑員工服務證或退休證向甲方消費，均享有以下優惠，優惠內容如下：</p>
 <div style="height:200px;">
-	<div class="tabstrip" >
+	<div class="tabstrip">
 		<ul>
 			<li class="k-state-active">
 				固定折扣
@@ -43,13 +39,13 @@ span{
 			</li>
 		</ul>
 		<div>
-			<input type="radio" name="sta_dis" id="dis_1" class="k-radio" checked="checked"/>
+			<input type="radio" name="sta_dis" id="dis_1" class="k-radio" value="95"/>
 			<label class="k-radio-label" for="dis_1">95折</label></br>
-			<input type="radio" name="sta_dis" id="dis_2" class="k-radio"/>
+			<input type="radio" name="sta_dis" id="dis_2" class="k-radio" value="90"/>
 			<label class="k-radio-label" for="dis_2">9折</label></br>
-			<input type="radio" name="sta_dis" id="dis_3" class="k-radio"/>
+			<input type="radio" name="sta_dis" id="dis_3" class="k-radio" value="85"/>
 			<label class="k-radio-label" for="dis_3">85折</label></br>
-			<input type="radio" name="sta_dis" id="dis_4" class="k-radio"/>	
+			<input type="radio" name="sta_dis" id="dis_4" class="k-radio" value="80"/>	
 			<label class="k-radio-label" for="dis_4">8折</label></br>
 			<input type="radio" name="sta_dis" id="dis_5" class="k-radio"/>		
 			<label class="k-radio-label" for="dis_5"><input type="text" id="disney_num" style="width:20px">折</label>
@@ -58,41 +54,49 @@ span{
 			<div class="dynamic_discount" style="line-height:1px;display:-webkit-inline-box;">
 				<div style="width:180px">
 					<p>基本折扣</p>
-					<input type="radio" name="dyn_big" id="big_1" class="k-radio"/>
+					<input type="radio" name="dyn_big" id="big_1" class="k-radio" value="95"/>
 					<label class="k-radio-label" for="big_1">95折</label></br>
-					<input type="radio" name="dyn_big" id="big_2" class="k-radio"/>
+					<input type="radio" name="dyn_big" id="big_2" class="k-radio" value="90"/>
 					<label class="k-radio-label" for="big_2"> 9折</label></br>
-					<input type="radio" name="dyn_big" id="big_3" class="k-radio"/>
+					<input type="radio" name="dyn_big" id="big_3" class="k-radio" value="85"/>
 					<label class="k-radio-label" for="big_3">85折</label></br>
 					<input type="radio" name="dyn_big" id="big_4" class="k-radio"/>
 					<label class="k-radio-label" for="big_4">
 					<input type="text" id="big_4_num" style="width:20px">折<span></span></label>
 				</div>
 				<div style="width:280px">
-					<input type="radio" name="dyn_people" id="people_1" class="k-radio"/>
+					<input type="radio" name="dyn_people" id="people_1" class="k-radio" value="10"/>
 					<label class="k-radio-label" for="people_1">每10人再折扣1%</label></br>
-					<input type="radio" name="dyn_people" id="people_2" class="k-radio"/>
+					<input type="radio" name="dyn_people" id="people_2" class="k-radio" value="20"/>
 					<label class="k-radio-label" for="people_2">每20人再折扣1%</label></br>
-					<input type="radio" name="dyn_people" id="people_3" class="k-radio"/>
+					<input type="radio" name="dyn_people" id="people_3" class="k-radio" value="50"/>
 					<label class="k-radio-label" for="people_3">每50人再折扣1%</label></br>
-					<input type="radio" name="dyn_people" id="people_4" class="k-radio"/>	
+					<input type="radio" name="dyn_people" id="people_4" class="k-radio" value="100"/>	
 					<label class="k-radio-label" for="people_4">每100人再折扣1%</label></br>
 					<input type="radio" name="dyn_people" id="people_5" class="k-radio"/>		
 					<label class="k-radio-label" for="people_5">每<input type="text" id="people_5_num" style="width:30px">人再折扣1%<span></span></label>
 				</div>
 				<div style="width:150px">
 					<p>最低折扣</p>
-					<input type="radio" name="dyn_small" id="small_1" class="k-radio"/>
+					<input type="radio" name="dyn_small" id="small_1" class="k-radio" value="90"/>
 					<label class="k-radio-label" for="small_1">9折</label></br>
-					<input type="radio" name="dyn_small" id="small_2" class="k-radio"/>
+					<input type="radio" name="dyn_small" id="small_2" class="k-radio" value="85"/>
 					<label class="k-radio-label" for="small_2">85折</label></br>
-					<input type="radio" name="dyn_small" id="small_3" class="k-radio"/>
+					<input type="radio" name="dyn_small" id="small_3" class="k-radio" value="80"/>
 					<label class="k-radio-label" for="small_3">8折</label></br>
 					<input type="radio" name="dyn_small" id="small_4" class="k-radio"/>		
 					<label class="k-radio-label" for="small_4"><input type="text" id="small_4_num" style="width:20px">折<span></span></label>
 				</div>
 				<div style="width:150px">
-					<div id="show_discount"></div>
+					<p>計算時間</p>
+					<input type="radio" name="dyn_time" id="time_1" class="k-radio" selected="selected"/>
+					<label class="k-radio-label" for="time_1">直到合約結束</label></br>
+					<input type="radio" name="dyn_time" id="time_2" class="k-radio"/>
+					<label class="k-radio-label" for="time_2">每年重新計算</label></br>
+					<input type="radio" name="dyn_time" id="time_3" class="k-radio"/>
+					<label class="k-radio-label" for="time_3">半年重新計算</label></br>
+					<input type="radio" name="dyn_time" id="time_4" class="k-radio"/>
+					<label class="k-radio-label" for="time_4">每月重新計算</label></br>
 				</div>
 			</div>
 		</div>
@@ -107,9 +111,12 @@ span{
 		</div>
 	</div>
 </div>
-<div style="text-align:center">
-內容
-<textarea id="contract_content" class="k-textbox" style="width: 500px;"></textarea>
+<div style="display: -webkit-box;">
+	<div class="show_content">
+	<p>內容</p>
+	<textarea id="contract_content" class="k-textbox" style="width: 600px;height:120px;"></textarea>
+	</div>
+	<div id="show_discount"></div>
 </div>
 <p>二、有效日期：本合約自<input id="date_sta" style="width:200px"/>起至<input id="date_end" style="width:200px"/>止，如雙方欲中止本合約，應以書面於1個月前通知對方。</p>
 <p>三、甲乙雙方本誠信互惠原則，訂定本合約，於合約有效期限內，如欲取消或更改合約辦法，應經雙方協商同意。</p>

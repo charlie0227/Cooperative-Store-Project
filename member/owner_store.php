@@ -40,6 +40,7 @@ $result_img = $sth2->fetchObject();
 			</p>
 		<?}?>
 	<input type="button" class="abutton" style="width:auto;" value="edit" onclick="owner_store_edit(<?echo $_GET['store_id']?>)">
+	<input type="button" class="abutton" style="width:auto;" value="分析" onclick="show_own_store_analysis(<?echo $_GET['store_id']?>)">
 	<input type="button" class="abutton" style="width:auto;" value="返回" onclick="my_store_company_list()">
 
 </html>

@@ -179,6 +179,8 @@ function news(){
 			document.getElementById("content").innerHTML = xhttp.responseText;
 			current_page = 0;
 			$("#content").fadeIn(500);
+			get_news_ready();
+			get_n();
 		}
 	};
 	xhttp.open("GET", "function/news.php", true);
@@ -272,33 +274,56 @@ function show_box_close(){
 		'top' : '0px'
 	});	
 }
-//js for news
-var news_id = 0;
-$(document).scroll(function() {
-	var win = $(window);
-	var doc_h = $(document).height();
-	var win_h = win.height();
-	var h = $(document).height() - win.height();
-	
-	var win_top = win.scrollTop();	
-	Math.floor(win_top);
-	if ($(document).height() - win.height() == win_top) {
+//rgb
+//gyg
+////
+//get news ready
+function get_news_ready(){
+	var news_id = 0;
+	while(news_id<6){
 		news_id = news_id+1;
-		//find news
 		$.post("function/get_news.php",
-			{
-				datatype:'text',
-				news_id: news_id
-			},
-			function(data){
-				if(data!=''){
-					$( "#news_content" ).append( "<p>NEWS "+data+"</p>");
-				}
-				
-			});
+		{
+			datatype:'text',
+			news_id: news_id
+		},
+		function(data){
+			if(data!=''){
+				$( "#news_content" ).append( "<p>Ready "+data+"</p>");
+			}	
+		});
 	}
-	
-});
+}
+function get_n(){
+	//js for news
+	var news_id = 5;
+	$(document).scroll(function() {
+		var win = $(window);
+		var doc_h = $(document).height();
+		var win_h = win.height();
+		var h = $(document).height() - win.height();
+		
+		var win_top = win.scrollTop();	
+		Math.floor(win_top);
+		if ($(document).height() - win.height() == win_top) {
+			news_id = news_id+1;
+			//find news
+			$.post("function/get_news.php",
+				{
+					datatype:'text',
+					news_id: news_id
+				},
+				function(data){
+					if(data!=''){
+						$( "#news_content" ).append("<p>NEWS "+data+"</p>");
+					}
+					
+				});
+		}
+		
+	});
+}
+
 //get news
 //$(document).ready(function(){
 //	get_news();
@@ -381,4 +406,30 @@ function login(){
 	};
 	xhttp.open("GET", "function/login_form.html", true);
 	xhttp.send();
+}
+
+//delete news
+function delete_news(news_id){
+	$.post("function/delete_news.php",
+		{
+			datatype:'text',
+			news_id: news_id
+		},
+		function(data){
+			console.log(data);
+			news();
+		});
+}
+
+//add news
+function add_news(){
+	$.post("function/add_news.php",
+		{
+			datatype:'text',
+			news_id: news_id
+		},
+		function(data){
+			//console.log(data);
+			//news();
+		});
 }

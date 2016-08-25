@@ -259,7 +259,7 @@ $result=$sth->fetchObject();
 		
 	<tr>
 	<td>
-		<input class = "abutton" style = "width: 100px;"type="submit" value="OK" onclick="edit_personal_submit()">
+		<input class = "k-button" style = "width: 100px;"type="submit" value="OK" onclick="edit_personal_submit()">
 	</td>
 	</tr>
 </form>	

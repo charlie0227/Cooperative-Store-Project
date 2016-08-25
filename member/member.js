@@ -369,8 +369,8 @@ function show_own_company_content(id){
 	xhttp.send();
 	
 }
-/*
-function owner_store_edit(id){
+
+function owner_company_edit(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -378,10 +378,10 @@ function owner_store_edit(id){
 			document.getElementById("my_member").innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("GET", "member/edit_store.php?edit_id="+id, true);
+	xhttp.open("GET", "member/edit_company.php?edit_id="+id, true);
 	xhttp.send();
 }
-*/
+
 function show_application(id){ //id for company
 	var xhttp;
 	xhttp = new XMLHttpRequest();
@@ -427,5 +427,53 @@ function dropselect(){
 	});
 }
 
+function show_own_store_analysis(id){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("my_member") != null) {
+			document.getElementById("my_member").innerHTML = xhttp.responseText;
+			createChart();
+		}
+	};
+	xhttp.open("GET", "member/owner_store_analysis.php?store_id="+id, true);
+	xhttp.send();
+	
+}
 
+function createChart() {
+        $("#chart").kendoChart({
+            title: {
+                text: "Site Visitors Stats /thousands/"
+            },
+            legend: {
+                position: "bottom"
+            },
+            seriesDefaults: {
+                type: "column"
+            },
+            series: [{
+                name: "Total Visits",
+                data: [56000, 63000, 74000, 91000, 117000, 138000]
+            }, {
+                name: "Unique visitors",
+                data: [52000, 34000, 23000, 48000, 67000, 83000]
+            }],
+            valueAxis: {
+                line: {
+                    visible: false
+                }
+            },
+            categoryAxis: {
+                categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                majorGridLines: {
+                    visible: false
+                }
+            },
+            tooltip: {
+                visible: true,
+                format: "{0}"
+            }
+        });
+    }
 

@@ -107,13 +107,13 @@ require_once "sysconfig.php";
 					<!--login status-->
 					<?if($_SESSION['name']){?>
 						<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
-						<input class = "abutton" style = "width: 90%; margin-bottom: 10px;" type="button" value="logout" onclick="fblogout();location.href='./function/logout.php';">
+						<input class = "k-button" style = "width: 90%; margin-bottom: 10px;" type="button" value="logout" onclick="fblogout();location.href='./function/logout.php';">
 					<?}else{?>
 						<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Login</h3>
 						<input style = "margin-bottom: 5px;" class="k-textbox" id="username" type="text" name="username" placeholder="Account">
 						<input style = "margin-bottom: 5px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password">
-						<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">
-						<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">
+						<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">
+						<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">
 						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 					<?}?>
 					
