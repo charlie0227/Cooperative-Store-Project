@@ -89,16 +89,16 @@ function contract_ready(){
 							 $('input[id=time_3]').is(':checked')?'半年重新計算':
 							 $('input[id=time_4]').is(':checked')?'每月重新計算':'';
 					var num=(big%10==0)?big/10:big;
-					content=content+'基本折扣:'+num+'折，';
-					content=content+'每'+people+'人消費，可再享折扣1%';
+					content=content+'基本折扣: '+num+'折<br>';
+					content=content+'每 '+people+' 人消費，可再享折扣 1%<br>';
 					num=(small%10==0)?small/10:small;
-					content=content+'，最低折扣至'+num+'折';
-					content=content+'，人數統計'+time;
+					content=content+'最低折扣至'+num+'折<br>';
+					content=content+'人數統計'+time;
 				}
 			}
 			document.getElementById("show_discount").innerHTML = result;
 			$('#show_discount').fadeIn(500);
-			document.getElementById("contract_content").value = content;
+			document.getElementById("contract_content").innerHTML = content;
 		}
 		
 	}

@@ -1,7 +1,12 @@
 <?
 require_once "../sysconfig.php";
-//$sql = "INSERT INTO `jangsc27_cs_project`.`member_application` (`member_id`, `company_id`, `content`) VALUES (?, ?, ?)";
-//$sth = $db->prepare($sql);
-//$sth->execute(array($_POST['member_id'],$_POST['company_id'],$_POST['content']));
-//echo $_POST['company_id'];
+//$time = date("h:i:s");
+date_default_timezone_set("Asia/Taipei");
+$dt = new DateTime();
+$time = $dt->format('Y-m-d H:i:s');
+$sql = "INSERT INTO `jangsc27_cs_project`.`news` (`time`, `title`, `content`) VALUES (?, ?, ?)";
+$sth = $db->prepare($sql);
+$sth->execute(array($time,$_POST['title'],$_POST['content']));
+echo $_POST['title'];
+echo $time;
 ?>

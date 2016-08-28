@@ -6,12 +6,11 @@ require_once "../sysconfig.php";
 </head>
 <meta charset="utf-8" />
 <body>
-<form style="display:inline;" action="company/application_join.php" method="POST" id="application_ajaxForm">
-<h3>Fill reason why you want to join</h3></br>
-<input type="hidden" name="member_id" value="<?echo $_GET['member_id']?>">
-<input type="hidden" name="company_id" value="<?echo $_GET['company_id']?>">
-<textarea name="content" id="company_content" style="width:90%;height:150%;"></textarea></br>
-<input class = "abutton" style="width: auto;" type="submit" value="Submit" name="submit" onclick="application_submit()">
+<form style="display:inline;" action="function/add_news.php" method="POST" id="add_news_ajaxForm">
+<h3>Add news</h3></br>
+Title<input name="title" id="news_title" style="width:300px;"></br>
+Content<textarea name="content" id="news_content" style="width:90%;height:150%;"></textarea></br>
+<input class = "k-button" style="width: auto;" type="submit" value="Submit" name="submit" onclick="add_news_submit()">
 </form>
 
 </body>
