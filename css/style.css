@@ -309,3 +309,32 @@ body{
 .dropdown-content1 {
     display: block;
 }
+
+#news_content p{
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+	width:450px;
+}
+
+.news_div{
+	    border: solid 1px rgba(51,51,51,0.12);
+    width: 600px;
+    padding: 10px;
+    margin: 5px 0px 5px 0px;
+    background: #f5f2f0;
+    box-shadow: 1px 1px 1px rgba(51,51,51,0.12);
+    border-radius: 2px;
+}
+
+h1 { 
+	color: black; 
+	font-family: 'Righteous', cursive; 
+	font-size: 65px; 
+	font-weight: normal; 
+	line-height: 60px; 
+	margin: 10px 0 20px; 
+	text-transform: uppercase; 
+	text-shadow: 2px 2px 0 #000, margin: 10px 0 24px; 
+	text-align: left; }
+

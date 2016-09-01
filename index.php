@@ -67,6 +67,10 @@ require_once "sysconfig.php";
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
+				#news_map{
+        width: 500px;
+		height: 500px;
+      }
 
 </style>
 

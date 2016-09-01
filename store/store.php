@@ -17,7 +17,7 @@ $result_img = $sth2->fetchObject();
 ?>	
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
 <style>
 
 </style>

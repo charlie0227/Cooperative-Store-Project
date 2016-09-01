@@ -7,4 +7,5 @@ $sth->bindValue(2, (int) $_POST['num'],PDO::PARAM_INT);
 $sth->execute();
 $result = $sth->fetchAll();
 echo json_encode($result);
+
 ?>

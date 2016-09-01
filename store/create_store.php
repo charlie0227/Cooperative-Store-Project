@@ -15,7 +15,7 @@ require_once "../sysconfig.php";
 	<tr>
 		<td>
 			<div class="edit_input" style="display:inline-flex">
-			<input type="text" name="name">
+			<input class="k-textbox" type="text" name="name">
 			<div style="color:red">*</div>
 		</td>
 		<td><div id="auto"></div></td>
@@ -26,7 +26,7 @@ require_once "../sysconfig.php";
 	<tr>
 		<td>
 			<div class="edit_input" style="display:inline-flex">
-			<input type="text" name="phone">
+			<input class="k-textbox" type="text" name="phone">
 			<div style="color:red">*</div>
 		</td>
 	</tr>
@@ -36,7 +36,7 @@ require_once "../sysconfig.php";
 	<tr>
 		<td>
 			<div class="edit_input" style="display:inline-flex">
-			<input type="text" name="address">
+			<input class="k-textbox" type="text" name="address">
 			<div style="color:red">*</div>
 		</td>
 	</tr>	
@@ -44,7 +44,7 @@ require_once "../sysconfig.php";
 		<td>網址</td>
 	</tr>
 	<tr>
-		<td><input type="text" name="url"><div></div></td>
+		<td><input class="k-textbox" type="text" name="url"><div></div></td>
 	</tr>	
 	<tr>
 		<td>商標圖片</td>
@@ -59,7 +59,7 @@ require_once "../sysconfig.php";
 		<td><input name="files" type="file" id="files" class="upl"><div></div></td>
 	</tr>
 	<tr>
-		<td><input class = "abutton" type="submit" value="送出" name="submit" onclick="store_submit()"></td>
+		<td><input class = "k-button" type="submit" value="送出" name="submit" onclick="store_submit()"></td>
 	</tr>	
 </table>
 </form>

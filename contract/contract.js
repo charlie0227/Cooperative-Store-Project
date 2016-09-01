@@ -1,7 +1,9 @@
+var static_num;
+var big=0,small=0,people=0,time='';
+var method='';
 function contract_ready(){
 	var d = new Date();
 	var manual=new Array();
-	var big,small,people;
 	document.getElementById("date_sta").value=d.toLocaleDateString();
 	document.getElementById("now_date").innerHTML=d.getFullYear()-1911+'  年  '+(d.getMonth()+1)+'  月  '+d.getDate()+'  日';
 	
@@ -16,20 +18,34 @@ function contract_ready(){
 			}
 		}
 	});
-	//choose three method caculate contract
-	$('.dynamic_discount input[type=radio]').on('change',function(){
-			get_dynum();
-			caculate_dycontract();
-	});
 	//click on text then choose radio
 	$('.tabstrip input[type=text]').on('click',function(){
 		$(this).siblings('input[type=radio]').prop('checked', false);
 		$(this).parent().prev().prop('checked', true);
 	});
+	//calculate number
+	$('.static_discount input[type=radio]').on('change',function(){
+			get_stnum();
+			caculate_stcontract();
+	});
+	$('.dynamic_discount input[type=radio]').on('change',function(){
+			get_dynum();
+			caculate_dycontract();
+	});
 	//numeric test
-	$('.tabstrip input[type=text]').on('focusout',function(){
-		if(!$.isNumeric($(this).val()) && $(this).val()!=''){
-			$(this).next().html('請輸入數字');
+	$('.static_discount input[type=text]').on('focusout',function(){
+		if(!Number.isInteger(parseFloat($(this).val())) && $(this).val()!=''){
+			$(this).next().html('請輸入整數');
+			$(this).val('');
+		}
+		else
+			$(this).next().html('');
+		get_stnum();
+		caculate_stcontract();
+	});
+	$('.dynamic_discount input[type=text]').on('focusout',function(){
+		if(!Number.isInteger(parseFloat($(this).val())) && $(this).val()!=''){
+			$(this).next().html('請輸入整數');
 			$(this).val('');
 		}
 		else
@@ -41,6 +57,34 @@ function contract_ready(){
 	$('.dynamic_discount input[name=dyn_big]').on('change',function(){
 		disable_small();
 	});
+	function disable_small(){
+		$('.dynamic_discount input[name=dyn_small][type=radio]').each(function(){
+			if($(this).val()>=big){
+				$(this).prop('checked', false);	
+				$(this).prop('disabled', true);	
+			}
+			else
+				$(this).prop('disabled', false);
+			$('#big_4').prop('disabled', false);
+			$('#small_4').prop('disabled', false);
+		});
+	}
+	//tab change clear radio
+	$('.static_discount input[type=radio]').on('change',function(){
+		$('.dynamic_discount').find('input[type=radio]').prop('checked', false);
+		
+	});	
+	$('.dynamic_discount input[type=radio]').on('change',function(){
+		$('.static_discount').find('input[type=radio]').prop('checked', false);
+	});
+	function get_stnum(){
+		var stma=document.getElementById("dis_5_num").value;
+		static_num =$('input[id=dis_1]').is(':checked')?$('input[id=dis_1]').val():
+					$('input[id=dis_2]').is(':checked')?$('input[id=dis_2]').val():
+					$('input[id=dis_3]').is(':checked')?$('input[id=dis_3]').val():
+					$('input[id=dis_4]').is(':checked')?$('input[id=dis_4]').val():
+					stma<10?stma*10:stma;
+	}
 	function get_dynum(){
 		manual[0]=document.getElementById("big_4_num").value;
 		manual[1]=document.getElementById("people_5_num").value;
@@ -57,21 +101,28 @@ function contract_ready(){
 				$('input[id=people_2]').is(':checked')?$('input[id=people_2]').val():
 				$('input[id=people_3]').is(':checked')?$('input[id=people_3]').val():
 				$('input[id=people_4]').is(':checked')?$('input[id=people_4]').val():manual[1];
+		time  =$('input[id=time_1]').is(':checked')?'直到合約結束':
+			   $('input[id=time_2]').is(':checked')?'每年重新計算':
+			   $('input[id=time_3]').is(':checked')?'半年重新計算':
+			   $('input[id=time_4]').is(':checked')?'每月重新計算':'';
 	}
-	function disable_small(){
-		$('.dynamic_discount input[name=dyn_small][type=radio]').each(function(){
-			if($(this).val()>big)
-				$(this).prop('disabled', true);
-			else
-				$(this).prop('disabled', false);
-			$('#big_4').prop('disabled', false);
-			$('#small_4').prop('disabled', false);
-		});
+	
+	function caculate_stcontract(){
+		var content = '';
+		content=content+'基本折扣: ';
+		if($('input[name=sta_dis]').is(':checked')){
+			var num=(static_num%10==0)?static_num/10:static_num;
+			if(num)
+				content=content+num+'折';
+		}
+		document.getElementById("show_discount").innerHTML = '';
+		document.getElementById("contract_content").innerHTML = content;
+		$('.auto_calculate').fadeIn(500);
+		method='static';
 	}
 	function caculate_dycontract(){
 		var result = '';
-		var content = '';
-		if($('input[name=dyn_big]').is(':checked')&&$('input[name=dyn_people]').is(':checked')&&$('input[name=dyn_small]').is(':checked')){
+		if(big&&people&&small){
 			if(big-1<small)
 				result=result+'請輸入基本折扣>最低折扣';
 			else{
@@ -83,24 +134,34 @@ function contract_ready(){
 				}
 				var x=(small%10==0)?small/10:small;
 				result=result+'相當於達'+people*(big-small)+'人享'+x+'折<br>';
-				if($('input[name=dyn_time]').is(':checked')){
-					var time=$('input[id=time_1]').is(':checked')?'直到合約結束':
-							 $('input[id=time_2]').is(':checked')?'每年重新計算':
-							 $('input[id=time_3]').is(':checked')?'半年重新計算':
-							 $('input[id=time_4]').is(':checked')?'每月重新計算':'';
-					var num=(big%10==0)?big/10:big;
-					content=content+'基本折扣: '+num+'折<br>';
-					content=content+'每 '+people+' 人消費，可再享折扣 1%<br>';
-					num=(small%10==0)?small/10:small;
-					content=content+'最低折扣至'+num+'折<br>';
-					content=content+'人數統計'+time;
-				}
 			}
-			document.getElementById("show_discount").innerHTML = result;
-			$('#show_discount').fadeIn(500);
-			document.getElementById("contract_content").innerHTML = content;
 		}
-		
+		var content = '';	
+		content=content+'基本折扣: ';
+		if($('input[name=dyn_big]').is(':checked')){
+			var num=(big%10==0)?big/10:big;
+			if(num)
+				content=content+num+'折';
+		}
+		content=content+'<br>人數累積: ';
+		if($('input[name=dyn_people]').is(':checked')){
+			if(people)
+				content=content+'每 '+people+' 人消費，可再享折扣 1%';
+		}
+		content=content+'<br>最低折扣: ';
+		if($('input[name=dyn_small]').is(':checked')){
+			var num=(small%10==0)?small/10:small;
+			if(num)
+				content=content+num+'折';
+		}
+		content=content+'<br>統計時間: ';
+		if($('input[name=dyn_time]').is(':checked')){
+			content=content+time;
+		}
+		document.getElementById("show_discount").innerHTML = result;
+		document.getElementById("contract_content").innerHTML = content;
+		$('.auto_calculate').fadeIn(500);
+		method='dynamic';
 	}
 	function date_staChange() {
 		var date_staDate = date_sta.value(),
@@ -146,6 +207,7 @@ function contract_ready(){
 
 	date_sta.max(date_end.value());
 	date_end.min(date_sta.value());
+	
 }
 
 function select_store(company_id){
@@ -267,23 +329,47 @@ function discount_content(){
 	});
 }
 function send_contract(){
-	$.post("contract/contract_create.php",
+		var content = 
+			(method=='static')?
+			{
+				method:method,
+				discount:static_num,
+				remark:document.getElementById("contract_remark").value
+			}:
+			(method=='dynamic')?
+			{
+				method:method,
+				big:big,
+				people:people,
+				small:small,
+				time:time,
+				remark:document.getElementById("contract_remark").value
+			}:'';
+			//alert(JSON.stringify(content));
+		var store_owner=document.getElementById("store_owner")!=null?document.getElementById("store_owner").value:'';
+		var store_address=document.getElementById("store_address")!=null?document.getElementById("store_address").value:'';
+		var store_phone=document.getElementById("store_phone")!=null?document.getElementById("store_phone").value:'';
+		var company_owner=document.getElementById("company_owner")!=null?document.getElementById("company_owner").value:'';
+		var company_address=document.getElementById("company_address")!=null?document.getElementById("company_address").value:'';
+		var company_phone=document.getElementById("company_phone")!=null?document.getElementById("company_phone").value:'';
+		
+		$.post("contract/contract_create.php",
 			{
 				status:0,
 				date_sta:document.getElementById("date_sta").value,
 				date_end:document.getElementById("date_end").value,
-				content:document.getElementById("date_end").value,
+				content:JSON.stringify(content),
 				store_id:document.getElementById("store_id").value,
-				store_owner:document.getElementById("store_owner").value,
-				store_address:document.getElementById("store_address").value,
-				store_phone:document.getElementById("store_phone").value,
+				store_owner:store_owner,
+				store_address:store_address,
+				store_phone:store_phone,
 				company_id:document.getElementById("company_id").value,
-				company_owner:document.getElementById("store_owner").value,
-				company_address:document.getElementById("store_address").value,
-				company_phone:document.getElementById("store_phone").value,
-			    datatype:'json'
+				company_owner:company_owner,
+				company_address:company_address,
+				company_phone:company_phone,
+				datatype:'json'
 			},function(data){
-				
-		});
-	
-}
+				alert(data);
+			}
+		);
+	}

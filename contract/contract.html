@@ -25,30 +25,24 @@ span{
 			<li class="k-state-active">
 				固定折扣
 			</li>
-			<li>
+			<li>				
 				變動折扣
-			</li>
-			<li>
-				方案一
-			</li>
-			<li>
-				依季累積人次
-			</li>
-			<li>
-				依月累積人次
 			</li>
 		</ul>
 		<div>
-			<input type="radio" name="sta_dis" id="dis_1" class="k-radio" value="95"/>
-			<label class="k-radio-label" for="dis_1">95折</label></br>
-			<input type="radio" name="sta_dis" id="dis_2" class="k-radio" value="90"/>
-			<label class="k-radio-label" for="dis_2">9折</label></br>
-			<input type="radio" name="sta_dis" id="dis_3" class="k-radio" value="85"/>
-			<label class="k-radio-label" for="dis_3">85折</label></br>
-			<input type="radio" name="sta_dis" id="dis_4" class="k-radio" value="80"/>	
-			<label class="k-radio-label" for="dis_4">8折</label></br>
-			<input type="radio" name="sta_dis" id="dis_5" class="k-radio"/>		
-			<label class="k-radio-label" for="dis_5"><input type="text" id="disney_num" style="width:20px">折</label>
+			<div class="static_discount">
+				<input type="radio" name="sta_dis" id="dis_1" class="k-radio" value="95"/>
+				<label class="k-radio-label" for="dis_1">95折</label></br>
+				<input type="radio" name="sta_dis" id="dis_2" class="k-radio" value="90"/>
+				<label class="k-radio-label" for="dis_2">9折</label></br>
+				<input type="radio" name="sta_dis" id="dis_3" class="k-radio" value="85"/>
+				<label class="k-radio-label" for="dis_3">85折</label></br>
+				<input type="radio" name="sta_dis" id="dis_4" class="k-radio" value="80"/>	
+				<label class="k-radio-label" for="dis_4">8折</label></br>
+				<input type="radio" name="sta_dis" id="dis_5" class="k-radio"/>		
+				<label class="k-radio-label" for="dis_5">
+				<input type="text" id="dis_5_num" style="width:20px">折<span></span></label>
+			</div>
 		</div>
 		<div>
 			<div class="dynamic_discount" style="line-height:1px;display:-webkit-inline-box;">
@@ -100,25 +94,15 @@ span{
 				</div>
 			</div>
 		</div>
-		<div>
-			
-		</div>
-		<div>
-			
-		</div>
-		<div>
-			傑生偷念書
-		</div>
 	</div>
 </div>
-<div style="display: -webkit-box;">
-	<div class="fieldlist"> 
-	<p id="contract_content"></p>
-	<p>備註</p>
-	<textarea  class="k-textbox" style="width: 600px;height:120px;"></textarea>
-	</div>
-	<div id="show_discount"></div>
+<div class="auto_calculate" style="height:180px;width=:100%;display:-webkit-box;"> 
+	<div style="width:50%;line-height:40px;" id="contract_content"></div>
+	<div style="width:50%" id="show_discount"></div>
 </div>
+<p>備註</p>
+<textarea id="contract_remark" class="k-textbox" style="width: 600px;height:120px;"></textarea>
+
 <p>二、有效日期：本合約自<input id="date_sta" style="width:200px"/>起至<input id="date_end" style="width:200px"/>止，如雙方欲中止本合約，應以書面於1個月前通知對方。</p>
 <p>三、甲乙雙方本誠信互惠原則，訂定本合約，於合約有效期限內，如欲取消或更改合約辦法，應經雙方協商同意。</p>
 <p>四、乙方應於合約生效時，提供乙方所發之員工識別證樣本給甲方，以便甲方識別之。</p>

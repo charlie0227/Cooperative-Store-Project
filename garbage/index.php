@@ -17,33 +17,40 @@ require_once "../sysconfig.php";
     <script src="http://kendo.cdn.telerik.com/2016.2.714/js/kendo.all.min.js"></script>
 </head>
 <body>
-<?if($_SESSION['name']){?>
-<a onclick="fblogout();location.href='./function/logout.php';" ><div class="title">logout</div></a>
-<?}else{?>
-<a href="#" class="big-link" data-reveal-id="show_box"><div class="title" onclick="login()">login</div></a>
-
-<?}?>
-
-  
-<?if($_SESSION['id']){?>
-<input type="button" value="確認" onclick="ttt(<?$_GET['store_id']?>)">
-<?}else{?>
-;
-<?}?>
+<div id="map" style="float:left;width:70%; height:100%"></div>
+<div id="directionsPanel" style="float:right;width:30%;height 100%"></div>
 
 <script>
-    function ttt(store_id){
-	$.post("test.php",
-	{
-		datatype:'text',
-		store_id:store_id
-		
-	},
-	function(data){
-		alert(data);Z
-	});
-	
-	}
+    var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+
+function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+  var mapOptions = {
+    zoom:7,
+    center: chicago
+  }
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+}
+
+function calcRoute() {
+  var start = document.getElementById("start").value;
+  var end = document.getElementById("end").value;
+  var request = {
+    origin:start,
+    destination:end,
+    travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
 </script>
 </body>
 </html>

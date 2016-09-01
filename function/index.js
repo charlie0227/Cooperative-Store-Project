@@ -1,5 +1,7 @@
 var current_page = 0;
 var drop_show = 0;
+var ka = 5;
+var scroll_switch = 1;
 $(document).ready( function() {
 	//當滑鼠滑入時將div的class換成divOver
 	$('.sidebar').hover(function(){
@@ -95,6 +97,7 @@ function min_sidebar(){
 
 $(document).ready(function(){
 	news();
+	get_n();
 });
 $(document).ready(function(){
 	$.post("function/search_bar.php",
@@ -178,9 +181,11 @@ function news(){
 			$("#content").hide();
 			document.getElementById("content").innerHTML = xhttp.responseText;
 			current_page = 0;
+			ka = 5;
 			get_news_ready();
 			$("#content").fadeIn(500);
-			get_n();
+			scroll_switch = 1;
+			
 			//console.log("HERE");
 		}
 	};
@@ -288,46 +293,74 @@ function get_news_ready(){
 		num:5
 	},
 	function(data){
-		alert(data);
+		//alert(data);
+		//var temp='{"list":'+data+'}';
 		var obj=JSON.parse(data);
-		$( "#news_content" ).append( "<p>Title "+obj.title+"</p>");
-		$( "#news_content" ).append( "<p>Time  "+obj.time+"</p>");
-		$( "#news_content" ).append( "<p>Content "+obj.content+"</p>");
-		if(obj.del_but)
-		$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+obj.del_but+')">');
+		//alert(obj[1].title);
+		//alert(obj.length);
+		for(var i=0; i<obj.length; i++){
+			//alert(obj[0].id);
+			var news_id = obj[i].id;
+			$( "#news_content" ).append("<div class="+"news_div"+"><h2>"+obj[i].title+"</h2><p>Time  "+obj[i].time+"</p></div>");
+			//$( "#news_content" ).append("<div id="+news_id+"></div>");
+			//$( "#news_content" ).append( "<p>Title_o "+obj[i].title+"</p>");
+			//$( "#news_content" ).append( "<p>Time  "+obj[i].time+"</p>");
+			//$( "#news_content" ).append( "<p>Content "+obj[i].content+"</p>");
+			$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
+		}
+		//console.log(obj.title);
+		//$( "#news_content" ).append( "<p>Title "+obj.title+"</p>");
+		//$( "#news_content" ).append( "<p>Time  "+obj.time+"</p>");
+		//$( "#news_content" ).append( "<p>Content "+obj.content+"</p>");
+		//if(obj.del_but)
+		//	$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+obj.del_but+')">');
 		
 	});
 }
 function get_n(){
 	//js for news
-	var news_id = 5;
+	//ka = 5;
 	$(document).scroll(function() {
-		if(document.getElementById("news_content")== null)
-			return false; 
-		var win = $(window);
-		var doc_h = $(document).height();
-		var win_h = win.height();
-		var h = $(document).height() - win.height();
-		
-		var win_top = win.scrollTop();	
-		Math.floor(win_top);
-		if ($(document).height() - win.height() == win_top) {
-			news_id = news_id+1;
-			//find news
-			console.log(news_id);
-			$.post("function/get_news.php",
-				{
-					datatype:'text',
-					news_id: news_id
-				},
-				function(data){
-					if(data!=''){
-						console.log(news_id);
-						$( "#news_content" ).append("<p>NEWS "+data+"</p>");
-					}
-					
-				});
+		if(scroll_switch==1){
+			if(document.getElementById("news_content")== null)
+				return false; 
+			var win = $(window);
+			var doc_h = $(document).height();
+			var win_h = win.height();
+			var h = $(document).height() - win.height();
+			var win_top = win.scrollTop();	
+			
+			Math.floor(win_top);
+			
+			if ($(document).height() - win.height() == win_top) {
+				//find news
+				$.post("function/get_news.php",
+					{
+						datatype:'json',
+						first:ka,
+						num:1
+					},
+					function(data){
+						var obj=JSON.parse(data);
+						if(obj.length==0){
+							ka = 5;
+							scroll_switch = 0;
+							//alert("end"+ka);
+						}
+						else{
+							var news_id = obj[0].id;
+							//$( "#news_content" ).append("<div id="+news_id+"></div>");
+							$( "#news_content" ).append( "<p>Title "+obj[0].title+"</p>");
+							$( "#news_content" ).append( "<p>Time  "+obj[0].time+"</p>");
+							$( "#news_content" ).append( "<p>Content "+obj[0].content+"</p><a>more</a>");
+							$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
+							ka++;
+						}
+						
+					});
+			}
 		}
+		
 		
 	});
 }
