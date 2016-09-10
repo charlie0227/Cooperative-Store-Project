@@ -1,8 +1,7 @@
 <?
 require_once "../sysconfig.php";
 ?>
-<div id="news_map" ></div><br>
-	<input type="button" onclick="show_store_near()" value="test">
+
 <div id = "new" name="qt1">
 	<h1>Latest News</h1>
 	<?if($_SESSION['id']==22||$_SESSION['id']==23||$_SESSION['id']==24){?>

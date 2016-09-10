@@ -76,7 +76,7 @@ function min_sidebar(){
 		$('#close_side').addClass('close_right');	
 		$('#close_side').fadeIn(500);
 		$('#content').fadeIn(500);
-		$("#content").css("left","50px");	
+		$("#content").css("left","250px");	
 		m = 1;
 	}
 	else{
@@ -87,7 +87,7 @@ function min_sidebar(){
 		$('#close_side').addClass('close_left');	
 		$('#close_side').fadeIn(500);
 		$('#content').fadeIn(500);
-		$("#content").css("left","250px");
+		$("#content").css("left","400px");
 		m = 0;
 	}
 }
@@ -124,14 +124,13 @@ $(document).ready(function(){
 			var autocomplete = $("#search_bar").kendoAutoComplete({
 				minLength: 1,
 				dataTextField: "name",
-				headerTemplate: '<div class="dropdown-header k-widget k-header">' +
-						'<span>Photo</span>' +
-						'<span>Contact info</span>' +
-					'</div>',
 				template: '<span class="k-state-default" style="background-image: url(\'#:data.img_url#\')"></span>' +
 						  '<span class="k-state-default"><h3>#: data.name #</h3><p>#: data.address #</p></span>',
+				virtual: {
+					itemHeight: 110
+				},
 				dataSource: arr,
-				height: 400,
+				height: 440,
 				select:function(e){
 					var dataItem = this.dataItem(e.item.index());
 					var obj=JSON.parse(kendo.stringify(dataItem));
@@ -145,7 +144,10 @@ $(document).ready(function(){
 					}
 				}
 			}).data("kendoAutoComplete");
-		
+			$("#search_bar").on('focus',function(){
+				autocomplete.search($("#search_bar").val());
+				
+			});
 		
 		
 		/*
@@ -296,22 +298,15 @@ function get_news_ready(){
 		//alert(data);
 		//var temp='{"list":'+data+'}';
 		var obj=JSON.parse(data);
-		//alert(obj[1].title);
-		//alert(obj.length);
-		for(var i=0; i<obj.length; i++){
+		//obj[obj.length] 判斷管理員id
+		for(var i=0; i<obj.length-1; i++){
 			//alert(obj[0].id);
 			var news_id = obj[i].id;
-			$( "#news_content" ).append("<div class="+"news_div"+"><h2>"+obj[i].title+"</h2><p>Time  "+obj[i].time+"</p></div>");
+			$( "#news_content" ).append("<a href="+"#"+" "+"class="+"big-link"+" "+"style="+"text-decoration:none;display:block;width:600px;color:black;"+" "+"data-reveal-id="+"show_box"+">"+"<div class="+"news_div"+" "+"onclick="+"details("+news_id+")"+"><h2>"+obj[i].title+"</h2><p>Time  "+obj[i].time+"</p></div>"+"</a>");
 			//$( "#news_content" ).append("<div id="+news_id+"></div>");
-			//$( "#news_content" ).append( "<p>Title_o "+obj[i].title+"</p>");
-			//$( "#news_content" ).append( "<p>Time  "+obj[i].time+"</p>");
-			//$( "#news_content" ).append( "<p>Content "+obj[i].content+"</p>");
-			$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
+			if(obj[obj.length-1].admin==true)
+				$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
 		}
-		//console.log(obj.title);
-		//$( "#news_content" ).append( "<p>Title "+obj.title+"</p>");
-		//$( "#news_content" ).append( "<p>Time  "+obj.time+"</p>");
-		//$( "#news_content" ).append( "<p>Content "+obj.content+"</p>");
 		//if(obj.del_but)
 		//	$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+obj.del_but+')">');
 		
@@ -349,11 +344,10 @@ function get_n(){
 						}
 						else{
 							var news_id = obj[0].id;
-							//$( "#news_content" ).append("<div id="+news_id+"></div>");
-							$( "#news_content" ).append( "<p>Title "+obj[0].title+"</p>");
-							$( "#news_content" ).append( "<p>Time  "+obj[0].time+"</p>");
-							$( "#news_content" ).append( "<p>Content "+obj[0].content+"</p><a>more</a>");
-							$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
+							$( "#news_content" ).append("<a href="+"#"+" "+"class="+"big-link"+" "+"style="+"text-decoration:none;display:block;width:600px;color:black;"+" "+"data-reveal-id="+"show_box"+">"+"<div class="+"news_div"+" "+"onclick="+"details("+news_id+")"+"><h2>"+obj[0].title+"</h2><p>Time  "+obj[0].time+"</p></div>"+"</a>");
+							if(obj[1].admin==true)
+								$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
+							//$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
 							ka++;
 						}
 						
@@ -365,14 +359,18 @@ function get_n(){
 	});
 }
 
-//get news
-//$(document).ready(function(){
-//	get_news();
-//});
-//function get_news(){
-//	
-//}
-//
+function details(news_id){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "function/news_detail.php?news_id="+news_id, true);
+	xhttp.send();
+	
+}
 
 function check_login(){
 	$.post("function/check_login.php",
@@ -383,9 +381,9 @@ function check_login(){
 		},
 		function(data){
 			var obj=JSON.parse(data);
+			if(obj.message=='Wrong Account or password !!')
+				alert(obj.message);
 			location.reload();
-			alert(obj.id);
-			alert(obj.message);
 		}
 		
 		);
@@ -442,10 +440,10 @@ function login(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("show_box").innerHTML = xhttp.responseText;
+			document.getElementById("m-show_box").innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("GET", "function/login_form.html", true);
+	xhttp.open("GET", "qrcode.php", true);
 	xhttp.send();
 }
 
@@ -496,4 +494,18 @@ function add_news_submit(){
 	});
 		 return false;
 	}); 
+}
+
+function test(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+			
+	alert('hi');
+		}
+	};
+	xhttp.open("GET", "function/qrcode.php", true);
+	xhttp.send();
 }

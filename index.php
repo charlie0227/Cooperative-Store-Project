@@ -1,5 +1,6 @@
 <?php
 require_once "sysconfig.php";
+write_log('Visit','');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -40,20 +41,20 @@ require_once "sysconfig.php";
 		<link href="css/reveal.css" rel="stylesheet" type="text/css" />
 		<link href="css/jquery-an-showbox.css" rel="stylesheet" type="text/css" />
 		<link href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" rel="stylesheet" >
-		
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
 		<style>
 /* Material Theme padding adjustment*/
                 
                 
-
+				
                 #search_bar-list .k-item > span {
                     -webkit-box-sizing: border-box;
                     -moz-box-sizing: border-box;
                     box-sizing: border-box;
                     display: inline-block;
                     vertical-align: top;
-                    margin: 20px 10px 10px 5px;
+					font-family: cursive;
                 }
 
                 #search_bar-list .k-item > span:first-child {
@@ -71,9 +72,13 @@ require_once "sysconfig.php";
         width: 500px;
 		height: 500px;
       }
+	  
+   .mobileShow { display: none;}
+   @media only screen
+   and (min-device-width : 320px)
+   and (max-device-width : 480px){ .mobileShow { display: inline;}}
 
 </style>
-
 	</head>
 	<body>  
 		<!--<div style = "width:600px; margin:0 auto; font-size:13px;" id="sitebody">-->
@@ -90,13 +95,13 @@ require_once "sysconfig.php";
 				  </div>
 				</div>
 			</li>
-			
+		
 			<li class="menu_bar_search" ><input id="search_bar" style="width:100%;"type="text" name="search_bar" placeholder="Search for store and company"></li>
-			<li></li>
+			<li class="account_bar"><input class="k-button" type="button" value="登入"><input class="k-button" type="button" value="TEST" onclick="window.open('qrcode.php')"></li>
 			<li><?if($_SESSION['name']){?>
 			<a onclick="fblogout();location.href='./function/logout.php';" ><div class="title">logout</div></a>
 			<?}else{?>
-			<a href="#" class="big-link" data-reveal-id="show_box"><div class="title" onclick="login()">login</div></a>
+			<a href="#" class="big-link" data-reveal-id="m-show_box"><div class="title" onclick="login()">login</div></a>
 			
 			<?}?>
 			</li>
@@ -138,5 +143,8 @@ require_once "sysconfig.php";
 		<div style='clear:both;'></div>		
 　		<!--<div id="footer">footer</div>-->
 		<div id="show_box" class="reveal-modal"><a class="close-reveal-modal"></a></div>
+		<div id="test" class="mobileShow" style="margin: 0px auto;font-size:36px;">
+		<div id="m-show_box" class="reveal-modal" ><a class="close-reveal-modal"></a></div>
+		</div>
 	</body>
 </html>

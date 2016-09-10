@@ -28,7 +28,7 @@
 }
 #content{
 	position: relative;
-    left: 250px;
+    left: 400px;
     top: 70px;
 	z-index:0;
 	min-width: 1000px; 
@@ -114,7 +114,7 @@ img{
     width: 100%;
 }
 
-/*  ∑∆§JÆ…≈‹¥´©≥¶‚ºÀ¶° */  
+/*  ÊªëÂÖ•ÊôÇËÆäÊèõÂ∫ïËâ≤Ê®£Âºè */  
 .sidebar_over{
 	color: #2A2E45;
 	background:#FFFFFF;
@@ -212,7 +212,16 @@ img{
 
 .menu_bar_search {
 	float: left;
-	min-width: 400px;
+	min-width: 700px;
+	padding-top:14px; 
+	padding-bottom: 14px;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+.account_bar {
+	display: -webkit-inline-box;
+    position: absolute;
+	min-width: 500px;
 	padding-top:14px; 
 	padding-bottom: 14px;
 	padding-right: 16px;
@@ -318,11 +327,11 @@ body{
 }
 
 .news_div{
-	    border: solid 1px rgba(51,51,51,0.12);
+	border: solid 1px rgba(51,51,51,0.12);
     width: 600px;
     padding: 10px;
     margin: 5px 0px 5px 0px;
-    background: #f5f2f0;
+    background: #FFFFFA;
     box-shadow: 1px 1px 1px rgba(51,51,51,0.12);
     border-radius: 2px;
 }
@@ -337,4 +346,36 @@ h1 {
 	text-transform: uppercase; 
 	text-shadow: 2px 2px 0 #000, margin: 10px 0 24px; 
 	text-align: left; }
+	
+
+
+
+
+li {
+	margin-bottom: 10px;
+}
+
+.button {
+	display: inline-block;
+	background: hsl(40, 100%, 60%);
+	color: hsl(40, 100%, 20%);
+	text-decoration: none;
+	padding: 5px 10px;
+}
+
+[data-notifications] {
+	position: relative;
+}
+
+[data-notifications]:after {
+	content: attr(data-notifications);
+	position: absolute;
+	background: red;
+	border-radius: 50%;
+	display: inline-block;
+	padding: 0.3em;
+	color: #f2f2f2;
+	right: -15px;
+	top: -15px;
+}
 

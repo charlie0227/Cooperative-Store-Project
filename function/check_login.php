@@ -19,9 +19,12 @@ if($result){
 	$_SESSION['id']=$result->id;
 	$data->id=$result->id;
 	$data->message="Hello ".$result->name." Welcome !!";
+	write_log('Login Success','id: '.$result->id.' account: '.$result->account.' name: '.$result->name);
 }
-else
+else{
 	$data->message="Wrong Account or password !!";
+	write_log('Login Failed','');
+}
 echo json_encode($data);
 ?>
 

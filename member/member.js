@@ -477,3 +477,22 @@ function createChart() {
         });
     }
 
+function show_contract(id,type){//0=store 1=company
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("POST","member/owner_contract_list.php",true);
+	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	if(type)
+		xhttp.send("company_id="+id);
+	else
+		xhttp.send("store_id="+id);
+}
+
+function testt(){
+	return 4;
+}

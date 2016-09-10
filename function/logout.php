@@ -1,5 +1,6 @@
 <?php
 require_once "../sysconfig.php";
+write_log('Logout','id: '.$_SESSION['id'].' account: '.$_SESSION['account'].' name: '.$_SESSION['name']);
 unset($_SESSION['account']);
 unset($_SESSION['name']);
 unset($_SESSION['id']);

@@ -15,42 +15,61 @@ require_once "../sysconfig.php";
 
     <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="http://kendo.cdn.telerik.com/2016.2.714/js/kendo.all.min.js"></script>
+	<style>
+	html {
+  background: #f2f2f2;
+}
+
+body {
+	margin: 100px 20px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+  background: #fff;
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+.button {
+	display: inline-block;
+	background: hsl(40, 100%, 60%);
+	color: hsl(40, 100%, 20%);
+	text-decoration: none;
+	padding: 5px 10px;
+}
+
+[data-notifications] {
+	position: relative;
+}
+
+[data-notifications]:after {
+	content: attr(data-notifications);
+	position: absolute;
+	background: red;
+	border-radius: 50%;
+	display: inline-block;
+	padding: 0.3em;
+	color: #f2f2f2;
+	right: -15px;
+	top: -15px;
+}
+	</style>
 </head>
 <body>
-<div id="map" style="float:left;width:70%; height:100%"></div>
-<div id="directionsPanel" style="float:right;width:30%;height 100%"></div>
+<ol>
+  <li>
+    <a data-notifications="19"><input type="button" data-notifications="19"  value="New Comments on Your Posts"></a>
+  </li>
+  <li>
+    <a class="button" href="#">Number of Post Likes</a>
+  </li>
+<ol>
 
-<script>
-    var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
-var map;
 
-function initialize() {
-  directionsDisplay = new google.maps.DirectionsRenderer();
-  var chicago = new google.maps.LatLng(41.850033, -87.6500523);
-  var mapOptions = {
-    zoom:7,
-    center: chicago
-  }
-  map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  directionsDisplay.setMap(map);
-  directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-}
-
-function calcRoute() {
-  var start = document.getElementById("start").value;
-  var end = document.getElementById("end").value;
-  var request = {
-    origin:start,
-    destination:end,
-    travelMode: google.maps.TravelMode.DRIVING
-  };
-  directionsService.route(request, function(response, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(response);
-    }
-  });
-}
-</script>
 </body>
 </html>

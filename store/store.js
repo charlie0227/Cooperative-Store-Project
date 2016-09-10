@@ -123,7 +123,7 @@ function store_submit(){
 	}); 
 }
 //preview image http://jsnwork.kiiuo.com/archives/2258/jquery-javascript-%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E8%A3%BD%E4%BD%9C%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3%E5%89%8D%E7%9A%84%E9%A0%90%E8%A6%BD%E5%9C%96
-$(function (){
+(function (){
     function format_float(num, pos)
     {
         var size = Math.pow(10, pos);
@@ -150,3 +150,55 @@ $(function (){
     })
     
 })  
+
+function show_box_map(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+			show_store_near();
+		}
+	};
+	xhttp.open("GET", "store/store_near.html", true);
+	xhttp.send();
+}
+
+function m_list(id){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("list").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "member/belong_list_company.php?store_id="+id, true);
+	xhttp.send();
+
+}
+
+function show_discount(company_id,store_id){
+	$.post("store/discount.php",
+		{
+			datatype:'text',
+			company_id:company_id,
+			store_id:store_id
+		},
+		function(data){
+			alert(data);
+		});
+}
+
+function check_in(company_id,store_id){
+	$.post("store/check_in.php",
+		{
+			datatype:'text',
+			company_id:company_id,
+			store_id:store_id
+		},
+		function(data){
+			alert(data);
+		});
+}
+
+

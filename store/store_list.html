@@ -3,16 +3,20 @@
 <div id="store_bar">
 	<table>
 	<tr>
-	<td>查詢項目<form action=""></td>
+	<td>查詢項目</td>
 	<td><select style="width:100%;"id="search_for" name="search_for">
 		<option value="name">名稱</option>
 		<option value="phone">電話</option>
 		<option value="address">地址</option>
 		</select></td>
-	<td><input id="search_word" class="k-textbox" type="text" name="search_word"></input></form></td>
-	<td></td>
+	<td><input id="search_word" class="k-textbox" type="text" name="search_word"></input></td>
+	</tr><tr>
+	<td>查詢附近店家</td>
+	<td><input id="search_place" class="k-textbox" type="text" value="台北車站"></input></td>
+	<td><a type="button" class = "member_option" style="background: #E78F8E;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_box_map()">查詢</a></td>
 	</tr>
 	</table>
+	
 	<input class = "member_option" style="background: #E78F8E;"type="button" value="登入新商家" onclick="add_new_store()" >
 	<div id="show_search_store"></div>
 </div>

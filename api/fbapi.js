@@ -65,8 +65,6 @@ window.fbAsyncInit = function(){
 		},
 		function(data){
 		var obj=JSON.parse(data);
-			alert(obj.id);
-			alert(obj.message);
 			if(obj.message==='Wrong Account or password !!'){//this mean fb isn't register
 				FB_register();
 			}
@@ -109,7 +107,6 @@ function fblogout() {
 		if (response.status === 'connected') {
 		  FB.logout(function (response) {
             //Do what ever you want here when logged out like reloading the page
-			alert('logout');
             window.location.reload();
         });
 		}

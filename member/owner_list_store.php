@@ -9,6 +9,7 @@ while($result=$sth->fetchObject()){?>
 	<tr>
 	<td style="width: 200px; border-bottom: 1px solid #6E8898;"><?echo $result->name?></td>
 	<td><input class="member_option" style="width: auto; background: #E78F8E;"type="button" value="管理" onclick="show_own_store_content(<?echo $result->store_id?>,<?echo "'owner_map'"?>)"></td>
+	<td><a data-notifications="張順成該該叫" href="#" class="big-link" data-reveal-id="show_box"><input class="member_option" style="width: auto; background: #E78F8E;"type="button" value="合約列表_______" onclick="show_contract(<?echo $result->store_id?>,0)"></a></td>
 	</tr>
 <?}
 echo '</table>';
