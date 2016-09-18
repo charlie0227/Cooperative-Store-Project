@@ -43,12 +43,10 @@ require_once "sysconfig.php";
 </style>
 </head>
 <div id="login_form"  style="margin: 0px auto;font-size:60px;">
-<?echo $_GET['store_id'];?>
 <ul class="fieldlist">
 <?if($_SESSION['id']){?>
 <body onload="m_list(<?echo $_GET['store_id'];?>)">
 	<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
-	<input class = "k-button" style = "width: 90%; margin-bottom: 10px;" type="button" value="logout" onclick="fblogout();location.href='./function/logout.php';">
 	<div id="list"></div>
 </body>
 <?}else{?>

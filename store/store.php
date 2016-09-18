@@ -38,10 +38,11 @@ $result_img = $sth2->fetchObject();
 					echo $result_company->name.'</p><p>';
 				}?>
 			</p>
+			<p>QRCODE<div id="qrcode"></div></p>
 		<?}?>
-	<input type="button" class="abutton" style="width:auto;" value="與店家合作" onclick="">
-	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="abutton" style="width:auto;" value="我是店長" onclick="owner_show_store(<?echo $result->id?>)"></a>
-	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="abutton" style="width:auto;" value="簽約" onclick="select_company(<?echo $result->id?>)"/></a>
-	<input type="button" class="abutton" style="width:auto;" value="返回" onclick="back_to_store_list()">
+	<input type="button" class="k-button" style="width:auto;" value="與店家合作" onclick="">
+	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我是店長" onclick="owner_show_store(<?echo $result->id?>)"></a>
+	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="簽約" onclick="select_company(<?echo $result->id?>)"/></a>
+	<input type="button" class="k-button" style="width:auto;" value="返回" onclick="back_to_store_list()">
 
 </html>

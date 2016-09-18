@@ -69,11 +69,11 @@ function contract_make(store_id,company_id,who){
 					document.getElementById("back_to_where").innerHTML ='<input type="button" class="k-button" value="返回" onclick="back_to_store()"/>';
 					status=0;
 				}
-				contract_make_date();
 				document.getElementById("contract_who").innerHTML =obj.contract;
 				document.getElementById("store_id").value = store_id;
 				document.getElementById("company_id").value = company_id;
 				contract_content_function();
+				contract_date_fill()
 				if(obj.who=='store')
 					$('#into_company_contract').fadeIn(500);
 				if(obj.who=='company')
@@ -92,7 +92,6 @@ function contract_manage(contract_id,who){
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			show_box_close();
 			document.getElementById("my_member").innerHTML = xhttp.responseText;
-			alert(contract_id+who);
 			$.post("contract/contract.php",
 			{
 				contract_id:contract_id,
@@ -100,11 +99,11 @@ function contract_manage(contract_id,who){
 			    datatype:'json'
 			},
 			function(data){
-				alert(data);	
 				var obj=JSON.parse(data);
+				alert(obj.content.remark);
 				document.getElementById("date_sta").value =obj.date_sta;
 				document.getElementById("date_end").value =obj.date_end;
-				document.getElementById("date_sign").innerHTML =obj.date_sign;
+				document.getElementById("now_date").innerHTML=obj.date_sign;
 				document.getElementById("store_name1").innerHTML =obj.store_name;
 				document.getElementById("store_name2").innerHTML =obj.store_name;
 				document.getElementById("company_name1").innerHTML =obj.company_name;
@@ -117,10 +116,30 @@ function contract_manage(contract_id,who){
 					document.getElementById("back_to_where").innerHTML ='<input type="button" class="k-button" value="返回" onclick="my_store_company_list()"/>';
 					document.getElementById("contract_who").innerHTML =obj.contract;
 					document.getElementById("contract_remark").value =obj.content.remark;
-					
 					status=0;
-					
 				}
+				if(obj.status==0 && who=='store'){
+					//store see company expect and fill discount 
+					status=1;
+				}
+				if(obj.status==1 && who=='store'){
+					//edit discount
+					status=1;
+				}
+				if(obj.status==1 && who=='company'){
+					//sign contract yes=2 no=0
+					status=2;
+				}
+				if(obj.status==2 && who=='company'){
+					//already lock wait store
+					status=2;
+				}
+				if(obj.status==2 && who=='store'){
+					//check locked contract agree=3 sign success
+					status=3;
+				}
+				contract_content_function();
+				
 				
 			});
 			
@@ -129,68 +148,13 @@ function contract_manage(contract_id,who){
 	xhttp.open("GET", "contract/contract.html", true);
 	xhttp.send();
 }
-function contract_make_date(){
-	var d = new Date();
-	document.getElementById("date_sta").value=d.toLocaleDateString();
-	document.getElementById("now_date").innerHTML=d.getFullYear()-1911+'  年  '+(d.getMonth()+1)+'  月  '+d.getDate()+'  日';
-	
-	d.setFullYear(d.getFullYear()+1);
-	d.setDate(d.getDate()-1);
-	document.getElementById("date_end").value=d.toLocaleDateString();
-	
-	
-	function date_staChange() {
-		var date_staDate = date_sta.value(),
-		endDate = date_end.value();
 
-		if (date_staDate) {
-			date_staDate = new Date(date_staDate);
-			date_staDate.setDate(date_staDate.getDate());
-			date_end.min(date_staDate);
-		} else if (endDate) {
-			date_sta.max(new Date(endDate));
-		} else {
-			endDate = new Date();
-			date_sta.max(endDate);
-			date_end.min(endDate);
-		}
-	}
-
-	function endChange() {
-		var endDate = date_end.value(),
-		date_staDate = date_sta.value();
-
-		if (endDate) {
-			endDate = new Date(endDate);
-			endDate.setDate(endDate.getDate());
-			date_sta.max(endDate);
-		} else if (date_staDate) {
-			date_end.min(new Date(date_staDate));
-		} else {
-			endDate = new Date();
-			date_sta.max(endDate);
-			date_end.min(endDate);
-		}
-	}
-
-	var date_sta = $("#date_sta").kendoDatePicker({
-		change: date_staChange
-	}).data("kendoDatePicker");
-
-	var date_end = $("#date_end").kendoDatePicker({
-		change: endChange
-	}).data("kendoDatePicker");
-
-	date_sta.max(date_end.value());
-	date_end.min(date_sta.value());
-	
-}
 function contract_content_function(){
 	var static_num;
 	var big=0,small=0,people=0,time='';
 	var method='';
 	var manual=new Array();
-	
+	contract_date_function();
 	//tabstrip
 	$(".tabstrip").kendoTabStrip({
 		animation:  {
@@ -360,7 +324,10 @@ function contract_content_function(){
 				small:small,
 				time:time,
 				remark:document.getElementById("contract_remark").value
-			}:'';
+			}:
+			{
+				remark:document.getElementById("contract_remark").value
+			};
 			//alert(JSON.stringify(content));
 		var store_owner=document.getElementById("store_owner")!=null?document.getElementById("store_owner").value:'';
 		var store_address=document.getElementById("store_address")!=null?document.getElementById("store_address").value:'';
@@ -390,6 +357,62 @@ function contract_content_function(){
 			}
 		);
 	});
+}
+function contract_date_function(){
+	function date_staChange() {
+		var date_staDate = date_sta.value(),
+		endDate = date_end.value();
+
+		if (date_staDate) {
+			date_staDate = new Date(date_staDate);
+			date_staDate.setDate(date_staDate.getDate());
+			date_end.min(date_staDate);
+		} else if (endDate) {
+			date_sta.max(new Date(endDate));
+		} else {
+			endDate = new Date();
+			date_sta.max(endDate);
+			date_end.min(endDate);
+		}
+	}
+
+	function endChange() {
+		var endDate = date_end.value(),
+		date_staDate = date_sta.value();
+
+		if (endDate) {
+			endDate = new Date(endDate);
+			endDate.setDate(endDate.getDate());
+			date_sta.max(endDate);
+		} else if (date_staDate) {
+			date_end.min(new Date(date_staDate));
+		} else {
+			endDate = new Date();
+			date_sta.max(endDate);
+			date_end.min(endDate);
+		}
+	}
+
+	var date_sta = $("#date_sta").kendoDatePicker({
+		change: date_staChange
+	}).data("kendoDatePicker");
+
+	var date_end = $("#date_end").kendoDatePicker({
+		change: endChange
+	}).data("kendoDatePicker");
+
+	date_sta.max(date_end.value());
+	date_end.min(date_sta.value());
+	
+}
+function contract_date_fill(){
+	var d = new Date();
+	document.getElementById("date_sta").value=d.toLocaleDateString();
+	document.getElementById("now_date").innerHTML=d.getFullYear()-1911+'  年  '+(d.getMonth()+1)+'  月  '+d.getDate()+'  日';
+	
+	d.setFullYear(d.getFullYear()+1);
+	d.setDate(d.getDate()-1);
+	document.getElementById("date_end").value=d.toLocaleDateString();
 }
 function back_to_company(){
 	$('#into_company').show();
@@ -421,22 +444,121 @@ function fill(store_id,company_id,who){
 		}
 	});
 }
+//quick contract
 function quick_contract_submit(){
+	var stma=document.getElementById("dis_5_num").value;
+	static_num =$('input[id=dis_1]').is(':checked')?$('input[id=dis_1]').val():
+				$('input[id=dis_2]').is(':checked')?$('input[id=dis_2]').val():
+				$('input[id=dis_3]').is(':checked')?$('input[id=dis_3]').val():
+				$('input[id=dis_4]').is(':checked')?$('input[id=dis_4]').val():
+				stma<10?stma*10:stma;
 	var content = 
 		{
 			method:'static',
-			discount:document.getElementById("quick_discount").value,
+			discount:static_num,
 			remark:''
 		};
 	$.post("contract/contract_create.php",
 		{
 			status:3,
 			content:JSON.stringify(content),
-			store_id:document.getElementById("quick_store").value,
-			company_id:document.getElementById("quick_company").value,
+			store_id:document.getElementById("quick_store").store_id,
+			company_id:document.getElementById("quick_company").company_id,
 			datatype:'json'
 		},function(data){
 			alert(data);
 		}
 	);
+}
+function quick_contract_ready(){
+	//click on text then choose radio
+	$('.quick_discount input[type=text]').on('click',function(){
+		$(this).siblings('input[type=radio]').prop('checked', false);
+		$(this).parent().prev().prop('checked', true);
+	});
+	//numeric test
+	$('.quick_discount input[type=text]').on('focusout',function(){
+		if(!Number.isInteger(parseFloat($(this).val())) && $(this).val()!=''){
+			$(this).next().html('請輸入整數');
+			$(this).val('');
+		}
+		else
+			$(this).next().html('');
+	});
+	$.post("function/search_bar.php",
+	{
+	  datatype:'json'
+	},
+	function(data){
+		
+		var temp='{"list":'+data+'}';
+		var obj=JSON.parse(temp);
+		var availableTags=[];
+		var store = new Array();
+		var company = new Array();
+		for(var i=0;i<obj.list.length;i++){
+			
+			var obj_tmp = new Object;
+			obj_tmp.name = obj.list[i].name;
+			obj_tmp.address = obj.list[i].address;
+			obj_tmp.id = obj.list[i].id
+			obj_tmp.label = obj.list[i].name;
+			obj_tmp.img_url = obj.list[i].image_url;
+			if(obj.list[i].type==0)//store
+				store = store.concat(obj_tmp);
+			else//company
+				company = company.concat(obj_tmp);
+		}
+		
+			
+			var auto_store = $("#quick_store").kendoAutoComplete({
+				minLength: 1,
+				dataTextField: "name",
+				template: '<span class="k-state-default" style="background-image: url(\'#:data.img_url#\')"></span>' +
+						  '<span class="k-state-default"><h3>#: data.name #</h3><p>#: data.address #</p></span>',
+				virtual: {
+					itemHeight: 110
+				},
+				dataSource: store,
+				height: 440,
+				select:function(e){
+					var dataItem = this.dataItem(e.item.index());
+					var obj=JSON.parse(kendo.stringify(dataItem));
+					document.getElementById("quick_store").store_id=obj.id;
+					document.getElementById("quick_select_store").innerHTML = 
+						'<span class="k-state-default" style="background-image: url(\''+obj.img_url+'\')"></span>' +
+						'<span class="k-state-default"><h3>'+obj.name+'</h3><p>'+obj.address+'</p></span>';
+					
+				}
+			}).data("kendoAutoComplete");
+			$("#quick_store").on('focus',function(){
+				auto_store.search($("#quick_store").val());
+				
+			});
+			var auto_company = $("#quick_company").kendoAutoComplete({
+				minLength: 1,
+				dataTextField: "name",
+				dataTextValue: "id",
+				template: '<span class="k-state-default" style="background-image: url(\'#:data.img_url#\')"></span>' +
+						  '<span class="k-state-default"><h3>#: data.name #</h3><p>#: data.address #</p></span>',
+				virtual: {
+					itemHeight: 110
+				},
+				dataSource: company,
+				height: 440,
+				select:function(e){
+					var dataItem = this.dataItem(e.item.index());
+					var obj=JSON.parse(kendo.stringify(dataItem));
+					document.getElementById("quick_company").company_id=obj.id;
+					document.getElementById("quick_select_company").innerHTML = 
+						'<span class="k-state-default" style="background-image: url(\''+obj.img_url+'\')"></span>' +
+						'<span class="k-state-default"><h3>'+obj.name+'</h3><p>'+obj.address+'</p></span>';
+				}
+			}).data("kendoAutoComplete");
+			$("#quick_company").on('focus',function(){
+				auto_company.search($("#quick_company").val());
+				
+			});
+			
+	  });
 }

@@ -12,16 +12,17 @@ function member(){
 	};
 	xhttp.open("GET", "member/member_list.php", true);
 	xhttp.send();
+	$(".mem_op").slideDown();
 }
 function edit_personal(){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			$("#my_member").hide();
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
 			edit_personal_ready();
-			$("#my_member").fadeIn(500);
+			$("#content").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "member/edit_personal.php", true);
@@ -52,9 +53,9 @@ function edit_personal_submit(){
 	$('#edit_personal_ajaxForm').submit(function() { 
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
-		$("#my_member").hide();
+		$("#content").hide();
 		alert(data);
-		$("#my_member").fadeIn(500);
+		$("#content").fadeIn(500);
 	});
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
 
@@ -66,9 +67,9 @@ function edit_password(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			$("#my_member").hide();
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
-			$("#my_member").fadeIn(500);
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
+			$("#content").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "member/edit_pass.php", true);
@@ -98,10 +99,10 @@ function my_belong_list(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			$("#my_member").hide();
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
 			belong_list_ready();
-			$("#my_member").fadeIn(500);
+			$("#content").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "member/belong_list.html", true);
@@ -116,6 +117,17 @@ function belong_list_ready(){
 		}
 	};
 	xhttp.open("GET", "member/belong_list_company.php", true);
+	xhttp.send();
+}
+function show_owner_company_discount(id){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("div_r").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "member/owner_company_discount.php?company_id="+id, true);
 	xhttp.send();
 }
 function show_belong_store(id){
@@ -149,11 +161,11 @@ function my_store_company_list(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			$("#my_member").hide();
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
 			owner_store_ready();
 			owner_company_ready();
-			$("#my_member").fadeIn(500);
+			$("#content").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "member/owner.html", true);
@@ -182,9 +194,9 @@ function owner_company_ready(){
 	xhttp.send();
 }
 function owner_create(){
-	$("#my_member").hide();
-	document.getElementById("my_member").innerHTML = '<input type="button" value="新增店家" onclick="owner_create_store()">'+'</br>'+'<input type="button" value="新增企業" onclick="owner_create_company()">';
-	$("#my_member").fadeIn(500);
+	$("#content").hide();
+	document.getElementById("content").innerHTML = '<input type="button" value="新增店家" onclick="owner_create_store()">'+'</br>'+'<input type="button" value="新增企業" onclick="owner_create_company()">';
+	$("#content").fadeIn(500);
 }
 function owner_show_store(id){
 	var xhttp;
@@ -246,7 +258,7 @@ function owner_create_store(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+			document.getElementById("content").innerHTML = xhttp.responseText;
 			$("#search_store_result").hide();
 			owner_create_store_search();
 			$("#search_store_result").fadeIn(500);
@@ -287,7 +299,7 @@ function owner_create_company(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+			document.getElementById("content").innerHTML = xhttp.responseText;
 			$("#search_company_result").hide();
 			owner_create_company_search();
 			$("#search_company_result").fadeIn(500);
@@ -323,8 +335,8 @@ function show_own_store_content(id,map_id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("my_member") != null) {
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("content") != null) {
+			document.getElementById("content").innerHTML = xhttp.responseText;
 			initMap(map_id);//set google map
 			find_address(id);//geocodeAddress(address)
 		}
@@ -337,8 +349,8 @@ function owner_store_edit(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("my_member") != null) {
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("content") != null) {
+			document.getElementById("content").innerHTML = xhttp.responseText;
 		}
 	};
 	xhttp.open("GET", "member/edit_store.php?edit_id="+id, true);
@@ -361,8 +373,8 @@ function show_own_company_content(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("my_member") != null) {
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("content") != null) {
+			document.getElementById("content").innerHTML = xhttp.responseText;
 		}
 	};
 	xhttp.open("GET", "member/owner_company.php?company_id="+id, true);
@@ -374,8 +386,8 @@ function owner_company_edit(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("my_member") != null) {
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
+		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("content") != null) {
+			document.getElementById("content").innerHTML = xhttp.responseText;
 		}
 	};
 	xhttp.open("GET", "member/edit_company.php?edit_id="+id, true);
@@ -431,9 +443,9 @@ function show_own_store_analysis(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("my_member") != null) {
-			document.getElementById("my_member").innerHTML = xhttp.responseText;
-			createChart();
+		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("content") != null) {
+			document.getElementById("content").innerHTML = xhttp.responseText;
+			createChart(id);
 		}
 	};
 	xhttp.open("GET", "member/owner_store_analysis.php?store_id="+id, true);
@@ -441,10 +453,167 @@ function show_own_store_analysis(id){
 	
 }
 
-function createChart() {
-        $("#chart").kendoChart({
+function createChart(id) {
+	$.post("member/population_information.php",
+	{
+		datatype:'json',
+	    store_id:id
+	},
+	function(data){
+		var temp='{"list":'+data+'}';
+		var obj=JSON.parse(temp);
+		var time = new Array();
+		var birth = new Array();
+		var name = new Array();
+		var count;
+		var male;
+		var female;
+		var type;//year 0 month 2016~2036 day 1-12
+		var category=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+		var NowDate=new Date();
+		var d=new Date();
+		$(document).ready(function(){
+			$('#ana_m').siblings('input[type=radio]').prop('checked', false);
+			$('#ana_m').prop('checked', true);
+			count = new Array(12);
+			male = new Array(12);
+			female = new Array(12);
+			mystring=NowDate.getFullYear();
+			type="month";
+			document.getElementById("ana_n").value=NowDate.getMonth();
+		});
+		change_chart();
+		$('#ana_l').on('click',function(){
+			if($('input[id=ana_y]').is(':checked')){
+				d.setFullYear(d.getFullYear()-1);
+			}
+			if($('input[id=ana_m]').is(':checked')){
+				d.setMonth(d.getMonth()-1);
+			}
+			if($('input[id=ana_d]').is(':checked')){
+				d.setDate(d.getDate()-1);
+			}
+		});
+		$('#ana_r').on('click',function(){
+			if($('input[id=ana_y]').is(':checked')){
+				d.setFullYear(d.getFullYear()+1);
+			}
+			if($('input[id=ana_m]').is(':checked')){
+				d.setMonth(d.getMonth()+1);
+			}
+			if($('input[id=ana_d]').is(':checked')){
+				d.setDate(d.getDate()+1);
+			}
+		});
+		$('.ana_select input').on('click',function(){
+			change_chart();
+		});
+		$('.ana_radio input[type=radio]').on('change',function(){
+			d=NowDate;
+			change_chart();
+		});
+		function change_chart(){
+			if($('input[id=ana_y]').is(':checked')){
+				document.getElementById("ana_n").value=d.getFullYear();
+				count = new Array(12);
+				male = new Array(12);
+				female = new Array(12);
+				mystring=d.getFullYear();
+				category=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+				type="year";
+				}
+			if($('input[id=ana_m]').is(':checked')){
+				document.getElementById("ana_n").value=d.getMonth()+1;
+				var days = new Date(NowDate.getFullYear(),mystring,0).getDate();
+				count = new Array(days);
+				male = new Array(days);
+				female = new Array(days);
+				mystring=d.getMonth()+1;
+				category=new Array();
+				for(var i=0;i<days;i++){
+					var t=i+1;
+					category=category.concat(t);
+				}
+				type="month";
+				}
+			if($('input[id=ana_d]').is(':checked')){
+				document.getElementById("ana_n").value=d.getDate();
+				count = new Array(24);
+				male = new Array(24);
+				female = new Array(24);
+				mystring=d.getDate();
+				category=new Array();
+				for(var i=0;i<24;i++){
+					var t=i+':00';
+					category=category.concat(t);
+				}
+				type="day";
+				}
+			for(var i=0;i<count.length;i++){
+			count[i]=0;
+			male[i]=0;
+			female[i]=0;
+		}
+		for(var i=0;i<obj.list.length;i++){
+			var date_tmp=(obj.list[i].time).split("-");
+			var tmp=date_tmp[2].split(" ");
+			date_tmp[2]=tmp[0];
+			var time_tmp=tmp[1].split(":");
+			if(type=='year'){
+				if(d.getFullYear()==date_tmp[0]){
+					var flag=parseInt(date_tmp[1]);
+					count[flag-1]=count[flag-1]+1;
+					if(obj.list[i].gender=='0'){
+						female[flag-1]=female[flag-1]+1;
+					}
+					else{
+						male[flag-1]=male[flag-1]+1;
+					}
+				}
+			}
+			else if(type=='month'){
+				if(d.getFullYear()==date_tmp[0]){
+					if(d.getMonth()+1==date_tmp[1]){
+						var flag=parseInt(date_tmp[2]);
+						count[flag-1]=count[flag-1]+1;
+						if(obj.list[i].gender=='0'){
+							female[flag-1]=female[flag-1]+1;
+						}
+						else{
+							male[flag-1]=male[flag-1]+1;
+						}
+					}
+				}
+			}
+			else{
+				if(d.getFullYear()==date_tmp[0]){
+					if(d.getMonth()+1==date_tmp[1]){
+						if(d.getDate()==date_tmp[2]){
+							var flag=parseInt(time_tmp[0]);
+							count[flag]=count[flag]+1;
+							if(obj.list[i].gender=='0'){
+								female[flag]=female[flag]+1;
+							}
+							else{
+								male[flag]=male[flag]+1;
+							}
+						}
+					}
+				}
+			}
+			/*
+			alert(date_tmp[0]);//year
+			alert(date_tmp[1]);//month
+			alert(date_tmp[2]);//day
+			alert(time_tmp[0]);//hour
+			alert(time_tmp[1]);//min
+			alert(time_tmp[2]);//sec
+			*/
+		}
+		
+		$("#chart").kendoChart({
             title: {
-                text: "Site Visitors Stats /thousands/"
+                text: mystring
             },
             legend: {
                 position: "bottom"
@@ -454,10 +623,13 @@ function createChart() {
             },
             series: [{
                 name: "Total Visits",
-                data: [56000, 63000, 74000, 91000, 117000, 138000]
-            }, {
-                name: "Unique visitors",
-                data: [52000, 34000, 23000, 48000, 67000, 83000]
+                data: count
+            },  {
+                name: "male visitors",
+                data: male
+            },  {
+                name: "female visitors",
+                data: female
             }],
             valueAxis: {
                 line: {
@@ -465,7 +637,7 @@ function createChart() {
                 }
             },
             categoryAxis: {
-                categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                categories: category,
                 majorGridLines: {
                     visible: false
                 }
@@ -475,6 +647,9 @@ function createChart() {
                 format: "{0}"
             }
         });
+		}
+		
+	});
     }
 
 function show_contract(id,type){//0=store 1=company

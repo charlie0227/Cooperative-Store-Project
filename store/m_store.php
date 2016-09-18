@@ -44,7 +44,6 @@ and (max-device-width : 480px){ .mobileShow { display: inline;}}
 			</p>
 		<?}?>
 		<?$sth="../qrcode.php?store_id=".$result->id;?>
-		<?echo $sth;?>
-	<input type="button" class="abutton" style="width:auto;" value="打卡立即取得優惠" onclick="window.location.replace('<?echo $sth?>');">
+	<input type="button" class="abutton" style="width:auto;" value="點擊查看享有優惠項目" onclick="window.location.replace('<?echo $sth?>');">
 
 </html>

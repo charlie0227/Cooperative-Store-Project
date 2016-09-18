@@ -49,6 +49,7 @@ function store_list(){
 	};
 	xhttp.open("GET", "store/store_list.html", true);
 	xhttp.send();
+	$(".mem_op").slideUp();
 }
 function find_address(id){
 	$.post("store/check_store.php",
@@ -74,6 +75,15 @@ function view_store(id,map_id){
 			initMap(map_id);//set google map
 			find_address(id);//geocodeAddress(address)
 			$("#into_store").fadeIn(500);
+			$("#qrcode").kendoQRCode({
+				value: "http://people.cs.nctu.edu.tw/~cwchen05030530//store/m_store.php?store_id="+id,
+				errorCorrection: "M",
+				size: 120,
+				border: {
+					color: "#000000",
+					width: 5
+				}
+			});
 		}
 	};
 	xhttp.open("GET", "store/store.php?store_id="+id, true);
@@ -189,12 +199,13 @@ function show_discount(company_id,store_id){
 		});
 }
 
-function check_in(company_id,store_id){
-	$.post("store/check_in.php",
+function population_add(company_id,store_id,member_id){
+	$.post("store/population_add.php",
 		{
 			datatype:'text',
 			company_id:company_id,
-			store_id:store_id
+			store_id:store_id,
+			member_id:member_id
 		},
 		function(data){
 			alert(data);

@@ -2,7 +2,6 @@
 require_once "../sysconfig.php";
 ?>
 <html>	
-	<div id = "memberbar">
 	<?if(!$_SESSION['name']){?>
 		<p><-----------</p>
 		<p>請先登入</p>
@@ -21,5 +20,5 @@ require_once "../sysconfig.php";
 	
 	<?}?>
 	<div style="margin:25px;"id="my_member"></div>
-	</div>
+
 </html>

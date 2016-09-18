@@ -48,30 +48,11 @@ write_log('Visit','');
                 
                 
 				
-                #search_bar-list .k-item > span {
-                    -webkit-box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                    box-sizing: border-box;
-                    display: inline-block;
-                    vertical-align: top;
-					font-family: cursive;
-                }
-
-                #search_bar-list .k-item > span:first-child {
-                    -moz-box-shadow: inset 0 0 30px rgba(0,0,0,.3);
-                    -webkit-box-shadow: inset 0 0 30px rgba(0,0,0,.3);
-                    box-shadow: inset 0 0 30px rgba(0,0,0,.3);
-                    margin: 10px;
-                    width: 90px;
-                    height: 90px;
-                    border-radius: 50%;
-                    background-size: 100%;
-                    background-repeat: no-repeat;
-                }
+                
 				#news_map{
-        width: 500px;
-		height: 500px;
-      }
+					width: 500px;
+					height: 500px;
+				  }
 	  
    .mobileShow { display: none;}
    @media only screen
@@ -84,7 +65,7 @@ write_log('Visit','');
 		<!--<div style = "width:600px; margin:0 auto; font-size:13px;" id="sitebody">-->
 		<div style="text-align:center;">
 		<ul class="header">
-			<li class="menu_bar"><a href="#" style=" font-weight: bold;">Home</a></li>
+			<li class="menu_bar"><input type="image" style="width:60px;height:60px" src="images/better_MARK.png" onclick="location.reload()"></li>
 			
 			<li class="menu_bar">
 			<div class="dropdown" id="dropdown">
@@ -126,10 +107,18 @@ write_log('Visit','');
 						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 					<?}?>
 					
-					<input type="button" class = "sidebar" style="border-top:2px solid white;" id = "show_news" onclick="news()" value="News">
-					<input type="button" class = "sidebar" id = "show_member" onclick="member()" value="Member">
-					<input type="button" class = "sidebar" id = "show_store" onclick="store_list()" value="Store">
-					<input type="button" class = "sidebar" id = "show_company" onclick="company_list()" value="Company">
+					<input type="button" class = "sidebar" style="border-top:2px solid white;" id = "show_news" onclick="news()" value="最新消息">
+					<input type="button" class = "sidebar" id = "show_member" onclick="member()" value="會員專區">
+					<?if($_SESSION['name']){?>
+						<input class="mem_op" type="button" style="display:none;" value="所屬團體" onclick="my_belong_list(<?echo $_SESSION['id']?>)"></td>
+						<input class="mem_op" type="button" style="display:none;" value="擁有店家/企業管理" onclick="my_store_company_list()"></td>
+						<input class="mem_op" type="button" style="display:none;" value="修改會員資料" onclick="edit_personal()">
+						<input class="mem_op" type="button" style="display:none;" value="修改密碼" onclick="edit_password()">
+					<?}?>
+						
+					<input type="button" class = "sidebar" id = "show_store" onclick="store_list()" value="商店列表">
+					<input type="button" class = "sidebar" id = "show_company" onclick="company_list()" value="企業列表">
+					<input type="button" class = "sidebar" id = "quick_contract" onclick="goto_quick_contract()" value="快速新增合約">
 					
 					
 				</div>

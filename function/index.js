@@ -193,8 +193,24 @@ function news(){
 	};
 	xhttp.open("GET", "function/news.php", true);
 	xhttp.send();
+	$(".mem_op").slideUp();
 }
 
+function goto_quick_contract(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
+			quick_contract_ready();
+			$("#content").fadeIn(500);
+		}
+	};
+	xhttp.open("GET", "contract/quick_contract.php", true);
+	xhttp.send();
+	$(".mem_op").slideUp();
+}
 //js for captcha
 var rval;
 function checkEmail() {
@@ -215,7 +231,7 @@ function checkEmail() {
 		document.getElementById("send").value = 'Send again 0.0';
 	}
 	else {
-		alert("False");
+		alert("Wrong Email format");
 		//$("#form").focus();
 	}
 }

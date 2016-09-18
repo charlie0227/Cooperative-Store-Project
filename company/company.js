@@ -49,6 +49,7 @@ function company_list(){
 	};
 	xhttp.open("GET", "company/company_list.html", true);
 	xhttp.send();
+	$(".mem_op").slideUp();
 }
 
 function view_company(id){

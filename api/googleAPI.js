@@ -4,7 +4,7 @@ var geocoder;
 function initMap(map_id) {
   map = new google.maps.Map(document.getElementById(map_id), {
     center: {lat: 23.397, lng: 120.644},
-    zoom: 12
+    zoom: 17
   });
   geocoder = new google.maps.Geocoder();
   
@@ -101,10 +101,12 @@ function show_store_near(){
 
 			if(arr[i].type==0){//store
 			if(arr[i].address.length>1){
+				var id = arr[i].id;
 				var name = arr[i].name;
 				var img_url=arr[i].img_url;
 				var address=arr[i].address;
 				var marker;
+				var p="'store_map'";
                 // 把地標加到地圖上
 				geocoder.geocode({'address': address}, function(results, status) {
 					if (status === google.maps.GeocoderStatus.OK) {
@@ -112,7 +114,7 @@ function show_store_near(){
 					  //alert(arr[i].address);
 					  //<img id="store_img" onclick=" var newwin = window.open();newwin.location='http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image_url?>';" src="<?echo $result_img->image_url?>"/>
 					  var infowindow = new google.maps.InfoWindow({
-						content: '<img style="height:50px;width:50px;"src="'+img_url+'"<br>name'+ name + '<br>address'+ address + '<br>',
+						content: '<div onclick="view_store('+id+','+p+'); show_box_close()"><div style="width:31px"><img style="height:31px;width:31px;"src="'+img_url+'"</div><div style="80px">'+ name + '<br>'+ address + '</div></div>',
 						maxWidth: 200
 					  });
 					  marker = new google.maps.Marker({

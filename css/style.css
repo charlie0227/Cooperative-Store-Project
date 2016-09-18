@@ -26,9 +26,10 @@
 	background: #7D7E75;
 	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png); 
 }
+
 #content{
 	position: relative;
-    left: 400px;
+    left: 300px;
     top: 70px;
 	z-index:0;
 	min-width: 1000px; 
@@ -39,6 +40,7 @@
 	margin-left:20px; 
 	font-weight:bold;  
 	float:left;
+	padding:10px;
 }
 #list{
 	height: 900px;
@@ -113,7 +115,27 @@ img{
 	height: 50px;
     width: 100%;
 }
-
+.mem_op{
+	font-size: 100%;
+	display:block;
+	border-right:hidden;
+	border-left:hidden;
+	border-top: hidden;
+	border-bottom: 2px solid white;
+    //border-radius: 5px;
+	background:#A3A396;
+	//background-image:url(http://people.cs.nctu.edu.tw/~cwchen05030530/images/lohp_streams_header_bg_v4.png);
+	//margin-bottom: 5px; 
+	//margin-top: 5px; 
+	text-decoration: none;
+	color: #FFFFFF;
+	height: 50px;
+    width: 100%;
+}
+.mem_op:hover{
+	color: #2A2E45;
+	background:#FFFFFF;
+}
 /*  滑入時變換底色樣式 */  
 .sidebar_over{
 	color: #2A2E45;
@@ -378,4 +400,27 @@ li {
 	right: -15px;
 	top: -15px;
 }
+#search_bar-list .k-item > span,#quick_store-list .k-item > span,#quick_company-list .k-item > span,#quick_select_store > span,#quick_select_company > span{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+	font-family: cursive;
+}
 
+#search_bar-list .k-item > span:first-child ,#quick_store-list .k-item > span:first-child,#quick_company-list .k-item > span:first-child,#quick_select_store > span:first-child,#quick_select_company > span:first-child{
+	-moz-box-shadow: inset 0 0 30px rgba(0,0,0,.3);
+	-webkit-box-shadow: inset 0 0 30px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 30px rgba(0,0,0,.3);
+	margin: 10px;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.quick_block div{
+	width:600px;
+	height:110px;
+}

@@ -18,10 +18,9 @@ $company_address=isset($_POST['company_address'])?$_POST['company_address']:"";
 $company_phone  =isset($_POST['company_phone'])?$_POST['company_phone']:"";
 
 
-$sql="INSERT INTO `jangsc27_cs_project`.`contract`(`status`, `date_sta`, `date_end`, `date_sign`, `content`, `store_id`, `store_owner`, `store_address`, `store_phone`, `company_id`, `company_owner`, `company_address`, `company_phone`)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+$sql="INSERT INTO `jangsc27_cs_project`.`contract`(`status`, `date_sta`, `date_end`, `date_sign`, `content`, `store_id`, `store_owner`, `store_address`, `store_phone`, `company_id`, `company_owner`, `company_address`, `company_phone`)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 $sth = $db->prepare($sql);
 $sth->execute(array($status,$date_sta,$date_end,$date_sign,$content,$store_id,$store_owner,$store_address,$store_phone,$company_id,$company_owner,$company_address,$company_phone));
 
-echo $status.$date_sta.$date_end.$date_sign.$content.$store_id.$store_owner.$store_address.$store_phone.$company_id.$company_owner.$company_address.$company_phone;
-$sth=$db->prepare($sql);
+echo $status.'#'.$date_sta.'#'.$date_end.'#'.$date_sign.'#'.$content.'#'.$store_id.'#'.$store_owner.'#'.$store_address.'#'.$store_phone.'#'.$company_id.'#'.$company_owner.'#'.$company_address.'#'.$company_phone;
 ?>

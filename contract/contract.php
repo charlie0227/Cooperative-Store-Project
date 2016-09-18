@@ -7,15 +7,31 @@ $store_id=$_POST['store_id'];
 $company_id=$_POST['company_id'];
 $contract_id=$_POST['contract_id'];
 if(isset($_POST['contract_id'])){
-	$sql = "SELECT * FROM `jangsc27_cs_project`.`contract` WHERE `contract_id` = ?";
+	$sql = "SELECT *,b.name as store_name,c.name as company_name 
+	FROM `jangsc27_cs_project`.`contract` a 
+	JOIN  `jangsc27_cs_project`.`store` b 
+	JOIN  `jangsc27_cs_project`.`company` c 
+	ON a.`store_id` = b.`id`
+	AND a.`company_id` = c.`id`
+	AND a.`id` = ?";
 	$sth = $db->prepare($sql);
 	$sth->execute(array($contract_id));
 	$result_contract = $sth->fetchObject();
 	
+	$data->status = $result_contract->status;
+	$data->date_sta = $result_contract->date_sta;
+	$data->date_end = $result_contract->date_end;
+	$data->date_sign= $result_contract->date_sign;
+	$content=json_decode($result_contract->content);
+	$data->content = $content;
+	
+	$data->company_name  = $result_contract->company_name;
 	$data->company_owner = $result_contract->company_owner;
 	$data->company_name  = $result_contract->company_name;
 	$data->company_phone = $result_contract->company_phone;
 	$data->company_address=$result_contract->company_address;
+	
+	$data->store_name    = $result_contract->store_name;
 	$data->store_owner   = $result_contract->store_owner;
 	$data->store_name    = $result_contract->store_name;
 	$data->store_phone   = $result_contract->store_phone;

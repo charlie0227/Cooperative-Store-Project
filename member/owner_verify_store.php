@@ -32,6 +32,6 @@ $result_img = $sth2->fetchObject();
 			}?>
 		</p>
 	<?}?>
-	<input type="button" class="abutton" style="width: auto;" value="對，我是店長" onclick="owner_verify_store(<?echo $result->id?>)">
+	<input type="button" class="k-button" style="width: auto;" value="對，我是店長" onclick="owner_verify_store(<?echo $result->id?>)">
 
 </html>
