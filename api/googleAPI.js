@@ -34,6 +34,33 @@ function geocodeAddress(address) {
 }
 
 function show_store_near(){
+	alert('here');
+	//initMap('news_map');
+	var address=document.getElementById("search_place").value;
+	geocodeAddress(address);
+	var type="food";
+	var radius=5000;
+	geocoder.geocode({'address': address}, function(results, status) {
+		var latlng=results[0].geometry.location.toString();
+			latlng=(latlng.substring(1,latlng.length-1));
+		alert(type);
+		alert(radius);
+		alert(latlng);
+		var asd="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latlng+"&radius="+radius+"&types="+type+"&key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI";
+		console.log(asd);
+		
+		$.post("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latlng+"&radius="+radius+"&types="+type+"&key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI",
+		{
+		  datatype:'json'
+		},
+		function(data){
+			alert(data);
+		});
+		
+	});
+}
+
+function show_store_near_in_database(){
 	initMap('news_map');
 	var addr=document.getElementById("search_place").value;
 	geocodeAddress(addr);

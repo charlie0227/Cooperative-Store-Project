@@ -15,10 +15,10 @@ while($result=$sth->fetchObject()){?>
 	$sth2->execute(array($result->company_id));
 	$result_img = $sth2->fetchObject();
 	?>
-	<tr onclick="contract_make(<?echo $_GET['store_id']?>,<?echo $result->company_id?>,'company');">
+	<tr onclick="contract_application(<?echo $_GET['store_id']?>,<?echo $result->company_id?>);">
 	<td>
 	<?if($result_img){?>
-		<img style="width:100px; height:100px;" id="store_img" onclick=" var newwin = window.open();newwin.location='http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image_url?>';" src="<?echo $result_img->image_url?>"/>
+		<img style="width:100px; height:100px;" id="store_img" src="<?echo $result_img->image_url?>"/>
 	<?}?>		
 	</td>
 	<td><?echo $result->name?></td>

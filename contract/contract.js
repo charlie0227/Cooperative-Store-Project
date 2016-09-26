@@ -21,7 +21,29 @@ function select_company(store_id){
 	xhttp.open("GET", "contract/select_company.php?store_id="+store_id, true);
 	xhttp.send();
 }
-
+function contract_application(store_id,company_id){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "contract/application_form.php?store_id="+store_id+"&company_id="+company_id, true);
+	xhttp.send();
+}
+function contract_application_submit(){
+	$('#application_ajaxForm').submit(function() { 
+	 // 提交表单
+    $(this).ajaxSubmit(function(data){
+		show_box_close();
+		alert(data);
+		view_store(data);
+	});
+    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
+		 return false;
+	}); 
+}
 function contract_make(store_id,company_id,who){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
@@ -32,12 +54,6 @@ function contract_make(store_id,company_id,who){
 				$('#into_company').hide();
 				$('#into_company_contract').hide();
 				document.getElementById("into_company_contract").innerHTML = xhttp.responseText;
-				
-			}
-			if(who=='company'){
-				$('#into_store').hide();
-				$('#into_store_contract').hide();
-				document.getElementById("into_store_contract").innerHTML = xhttp.responseText;
 			}	
 			$.post("contract/contract.php",
 			{
@@ -48,11 +64,12 @@ function contract_make(store_id,company_id,who){
 			},
 			function(data){
 				var obj=JSON.parse(data);
-				document.getElementById("store_name1").innerHTML =obj.store_name;
-				document.getElementById("store_name2").innerHTML =obj.store_name;
-				document.getElementById("company_name1").innerHTML =obj.company_name;
-				document.getElementById("company_name2").innerHTML =obj.company_name;
 				if(obj.who=='store'){
+					document.getElementById("store_name1").innerHTML =obj.store_name;
+					document.getElementById("store_name2").innerHTML =obj.store_name;
+					document.getElementById("company_name1").innerHTML =obj.company_name;
+					document.getElementById("company_name2").innerHTML =obj.company_name;
+				
 					document.getElementById("s_owner").innerHTML ='<input type="text" class="k-textbox" id="store_owner"/>';
 					document.getElementById("s_address").innerHTML ='<input type="text" class="k-textbox" id="store_address"/>';
 					document.getElementById("s_phone").innerHTML ='<input type="text" class="k-textbox" id="store_phone"/>';
@@ -60,26 +77,14 @@ function contract_make(store_id,company_id,who){
 					document.getElementById("back_to_where").innerHTML ='<input type="button" class="k-button" value="返回" onclick="back_to_company()"/>';
 					status=1;
 					
-				}
-				if(obj.who=='company'){
-					document.getElementById("c_owner").innerHTML ='<input type="text" class="k-textbox" id="company_owner"/>';
-					document.getElementById("c_address").innerHTML ='<input type="text"class="k-textbox" id="company_address"/>';
-					document.getElementById("c_phone").innerHTML ='<input type="text" class="k-textbox" id="company_phone"/>';
-					document.getElementById("fill_company").innerHTML ='<input type="button" class="k-button" style="margin: 2px;" onclick="fill('+store_id+','+company_id+",'"+who+"'"+')" value="填入"/>';
-					document.getElementById("back_to_where").innerHTML ='<input type="button" class="k-button" value="返回" onclick="back_to_store()"/>';
-					status=0;
-				}
-				document.getElementById("contract_who").innerHTML =obj.contract;
-				document.getElementById("store_id").value = store_id;
-				document.getElementById("company_id").value = company_id;
-				contract_content_function();
-				contract_date_fill()
-				if(obj.who=='store')
+					document.getElementById("contract_who").innerHTML =obj.contract;
+					document.getElementById("store_id").value = store_id;
+					document.getElementById("company_id").value = company_id;
+					contract_content_function();
+					contract_date_fill()
 					$('#into_company_contract').fadeIn(500);
-				if(obj.who=='company')
-					$('#into_store_contract').fadeIn(500);
+				}
 			});
-			
 		}
 	};
 	xhttp.open("GET", "contract/contract.html", true);

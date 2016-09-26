@@ -167,7 +167,7 @@ function show_box_map(){
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			document.getElementById("show_box").innerHTML = xhttp.responseText;
-			show_store_near();
+			show_store_near_in_database();
 		}
 	};
 	xhttp.open("GET", "store/store_near.html", true);

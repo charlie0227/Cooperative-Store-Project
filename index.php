@@ -65,7 +65,7 @@ write_log('Visit','');
 		<!--<div style = "width:600px; margin:0 auto; font-size:13px;" id="sitebody">-->
 		<div style="text-align:center;">
 		<ul class="header">
-			<li class="menu_bar"><input type="image" style="width:60px;height:60px" src="images/better_MARK.png" onclick="location.reload()"></li>
+			<li class="menu_bar"><input type="image" style="width:130px;height:60px" src="images/black_mark.png" onclick="location.reload()"></li>
 			
 			<li class="menu_bar">
 			<div class="dropdown" id="dropdown">
