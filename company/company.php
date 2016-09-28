@@ -60,9 +60,9 @@ if($sth->fetchObject())
 			<input type="button" class="k-button" style="width:auto;" value="等待審核中(再次點即取消加入)" onclick="apply_cancel(<?echo $_SESSION['id']?>,<?echo $_GET['company_id']?>,0)"/></a>
 		<?}if($situation==2){?>
 			<input type="button" class="k-button" style="width:auto;" value="退出此團體" onclick="quit(<?echo $_SESSION['id']?>,<?echo$_GET['company_id']?>)">
-		<?}
-	}?>
-	<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="簽約" onclick="select_store(<?echo $result->id?>)"/></a>
+		<?}?>
+		<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="簽約" onclick="select_store(<?echo $result->id?>)"/></a>
+	<?}?>
 	<input type="button" class="k-button" style="width:auto;" value="返回" onclick="back_to_company_list()">
 
 </html>

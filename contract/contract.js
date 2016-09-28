@@ -33,12 +33,12 @@ function contract_application(store_id,company_id){
 	xhttp.send();
 }
 function contract_application_submit(){
-	$('#application_ajaxForm').submit(function() { 
+	$('#contract_application_ajaxForm').submit(function() { 
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
 		show_box_close();
-		alert(data);
-		view_store(data);
+		alert('店家將會收到您的簽約邀請！')
+		view_store(data,'store_map');
 	});
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
 		 return false;
