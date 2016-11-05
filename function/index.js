@@ -66,6 +66,10 @@ $(document).ready( function() {
 //}
 
 //min sidebar
+$(function(){
+	news();
+	get_n();
+});
 var m = 0;
 function min_sidebar(){
 	if(m==0){
@@ -92,90 +96,8 @@ function min_sidebar(){
 	}
 }
 
-
-
-
-$(document).ready(function(){
-	news();
-	get_n();
-});
-$(document).ready(function(){
-	$.post("function/search_bar.php",
-	{
-	  datatype:'json'
-	},
-	function(data){
-		var temp='{"list":'+data+'}';
-		var obj=JSON.parse(temp);
-		var availableTags=[];
-		var arr = new Array();
-		for(var i=0;i<obj.list.length;i++){
-			var obj_tmp = new Object;
-			obj_tmp.name = obj.list[i].name;
-			obj_tmp.address = obj.list[i].address;
-			obj_tmp.id = obj.list[i].id
-			obj_tmp.label = obj.list[i].name;
-			obj_tmp.type = obj.list[i].type;
-			obj_tmp.img_url = obj.list[i].image_url;
-			arr = arr.concat(obj_tmp);
-		}
-		
-			
-			var autocomplete = $("#search_bar").kendoAutoComplete({
-				minLength: 1,
-				dataTextField: "name",
-				template: '<span class="k-state-default" style="background-image: url(\'#:data.img_url#\')"></span>' +
-						  '<span class="k-state-default"><h3>#: data.name #</h3><p>#: data.address #</p></span>',
-				virtual: {
-					itemHeight: 110
-				},
-				dataSource: arr,
-				height: 440,
-				select:function(e){
-					var dataItem = this.dataItem(e.item.index());
-					var obj=JSON.parse(kendo.stringify(dataItem));
-					if(obj.type==0){
-						store_list();
-						view_store(obj.id,'store_map');
-					}
-					else{
-						company_list();
-						view_company(obj.id);
-					}
-				}
-			}).data("kendoAutoComplete");
-			$("#search_bar").on('focus',function(){
-				autocomplete.search($("#search_bar").val());
-				
-			});
-		
-		
-		/*
-		<img id="store_img" style="width:70px;height:70px;" src="http://people.cs.nctu.edu.tw/~cwchen05030530/#: data.img_url #"
-		
-		$( "#search_bar" ).kendoAutoComplete({
-		  source: arr,
-		  select: function( event, ui ) {
-				if(ui.item.type==0){
-					store_list();
-					view_store(ui.item.id,'store_map');
-				}
-				else{
-					company_list();
-					view_company(ui.item.id);
-				}
-			}
-		}).data("ui-autocomplete")._renderItem = function (ul, item) {
-         return $("<li></li>")
-             .data("item.autocomplete", item)
-			 .append('<div style="float:left;width:94%;height:70px"><div style="float:left;width:20%;height:100%"> <img id="store_img" style="width:70px;height:70px;" src="'+item.img_url+ '"/></div><div style="width:80%;height:100%">' + item.label + "</br>" + item.address + '</div></div>')
-             .appendTo(ul);
-     };
-	 
-	 */
-	  });
-});
 function news(){
+	$("#loading").show();
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -187,7 +109,7 @@ function news(){
 			get_news_ready();
 			$("#content").fadeIn(500);
 			scroll_switch = 1;
-			
+			$("#loading").hide();
 			//console.log("HERE");
 		}
 	};
@@ -303,6 +225,7 @@ function show_box_close(){
 ////
 //get news ready
 function get_news_ready(){
+	$("#loading").show();
 	document.getElementById("news_content").innerHTML = "";
 	$.post("function/get_news.php",
 	{
@@ -326,6 +249,7 @@ function get_news_ready(){
 		//if(obj.del_but)
 		//	$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+obj.del_but+')">');
 		
+		$("#loading").hide();
 	});
 }
 function get_n(){

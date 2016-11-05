@@ -101,25 +101,55 @@ function my_belong_list(){
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			$("#content").hide();
 			document.getElementById("content").innerHTML = xhttp.responseText;
-			belong_list_ready();
+			belong_list_search('company_id');
 			$("#content").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "member/belong_list.html", true);
 	xhttp.send();
 }
-function belong_list_ready(){
-	var xhttp;
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("div_l").innerHTML = xhttp.responseText;
+function belong_list_search(order){
+	$('#loading').show();
+	$.post("member/belong_list.php",
+	{
+		datatype:'json',
+		q:order
+	},
+	function(data){
+		var obj=JSON.parse(data);
+		for(var i=0; i<obj.length; i++){
+			//discount calculate
+			var res=obj[i].content;
+			var content=JSON.parse(res);
+			var discount="";
+			var discount_intro="";
+			if(content.method=="dynamic"){
+				discount=parseInt(content.big)-Math.floor(parseInt(obj[i].num)/parseInt(content.people));
+				discount=(discount<parseInt(content.small))?parseInt(content.small):discount;
+				//discount introduction
+				var big=(parseInt(content.big)%10==0)?parseInt(content.big)/10:parseInt(content.big);
+				var how_many=content.people-(obj[i].num % content.people);
+				var small=(parseInt(content.small)%10==0)?parseInt(content.small)/10:parseInt(content.small);
+				discount_intro="原始折扣"+big+"折 再消費"+how_many+"人可再折扣1% 最低至"+small+"折";
+			}
+			else{
+				discount=parseInt(content.discount);
+				discount_intro="固定折扣";
+			}
+			discount=(discount%10==0)?discount/10:discount;
+			//append into table
+			$( "#belong_search" ).append('<tr>\
+				<td><input class="k-button" type="button" value="'+obj[i].company_name+'"></td>\
+				<td><input class="k-button" type="button" value="'+obj[i].store_name+'"></td>\
+				<td><p>'+discount+'折</p></td>\
+				<td><p>'+discount_intro+'</p></td>\
+				</tr>');
+			
 		}
-	};
-	xhttp.open("GET", "member/belong_list_company.php", true);
-	xhttp.send();
+		$('#loading').hide();
+	});
 }
-function show_owner_company_discount(id){
+function show_belong_company_discount(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -127,36 +157,22 @@ function show_owner_company_discount(id){
 			document.getElementById("div_r").innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("GET", "member/owner_company_discount.php?company_id="+id, true);
+	xhttp.open("GET", "member/belong_company_discount.php?company_id="+id, true);
 	xhttp.send();
 }
-function show_belong_store(id){
+function show_belong_store_content(id){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("div_r").innerHTML = xhttp.responseText;
-		}
-	};
-	xhttp.open("GET", "member/belong_list_store.php?id="+id, true);
-	xhttp.send();
-}
-function show_belong_store_content(id,map_id){
-	var xhttp;
-	xhttp = new XMLHttpRequest();
-	var thttp;
-	thttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("store_info").innerHTML = xhttp.responseText;
-			initMap(map_id);//set google map
-			find_address(id);//geocodeAddress(address)
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
 		}
 	};
 	xhttp.open("GET", "member/belong_store_show.php?store_id="+id, true);
 	xhttp.send();
 }
 function my_store_company_list(){
+	$('#loading').show();
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -165,6 +181,7 @@ function my_store_company_list(){
 			document.getElementById("content").innerHTML = xhttp.responseText;
 			owner_store_ready();
 			owner_company_ready();
+			$('#loading').hide();
 			$("#content").fadeIn(500);
 		}
 	};
@@ -652,20 +669,16 @@ function createChart(id) {
 	});
     }
 
-function show_contract(id,type){//0=store 1=company
+function show_contract(){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("show_box").innerHTML = xhttp.responseText;
+			document.getElementById("content").innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("POST","member/owner_contract_list.php",true);
-	xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	if(type)
-		xhttp.send("company_id="+id);
-	else
-		xhttp.send("store_id="+id);
+	xhttp.open("GET", "member/owner_contract_list", true);
+	xhttp.send();
 }
 
 function testt(){

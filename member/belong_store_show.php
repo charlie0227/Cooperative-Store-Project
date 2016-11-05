@@ -30,8 +30,7 @@ $result_img = $sth2->fetchObject();
 			<?}?>
 			<p>電話 <?echo $result->phone?></p>
 			<p>地址 <?echo $result->address?></p>
-			<div id="belong_map" style="width:250px; height:250px;display:inline-block;" ></div>
-			</p>
+			<p>優惠內容 </p>
 		<?}?>
 
 </html>

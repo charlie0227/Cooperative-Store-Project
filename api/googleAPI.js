@@ -1,5 +1,6 @@
 var map;
 var geocoder;
+var infowindow;
 
 function initMap(map_id) {
   map = new google.maps.Map(document.getElementById(map_id), {
@@ -33,9 +34,74 @@ function geocodeAddress(address) {
   });
 }
 
-function show_store_near(){
+function show_store_near(map_id){//not in database
+	initMap(map_id);
+	var address=document.getElementById("search_word").value;
+	alert(address);
+	geocodeAddress(address);
+	geocoder.geocode({'address': address}, function(results, status) {
+		var latlng=results[0].geometry.location;
+		
+		 map = new google.maps.Map(document.getElementById(map_id), {
+			center: latlng,
+			zoom: 15
+		  });
+		  
+		var infowindow = new google.maps.InfoWindow();
+		var service = new google.maps.places.PlacesService(map);
+		  service.radarSearch({
+			location: latlng,
+			radius: 500,
+			types: ['food']
+		  }, callback);
+		  var ttt=0;
+		function callback(results, status) {
+		  if (status === google.maps.places.PlacesServiceStatus.OK) {
+			for (var i = 0; i < results.length; i++) {
+				createMarker(results[i]);
+			  //service.getDetails(results[i],createMarker);
+			}
+		  }
+		}
+		
+	
+		function createMarker(place) {
+		  
+			  ttt=ttt+1;
+			  var marker = new google.maps.Marker({
+				map: map,
+				//icon: place.icon,
+				id: place.place_id,
+				position: place.geometry.location
+			  });
+
+			  google.maps.event.addListener(marker, 'click', function() {
+				//infowindow.setContent(place.name+'<br>'+place.formatted_address+'<br>'+place.formatted_phone_number);
+				service.getDetails(place,setinfo);
+				infowindow.open(map, this);
+				
+			  });
+		}
+		
+		function setinfo(place,status){
+			infowindow.setContent(place.name+'<br>'+place.formatted_address+'<br>'+place.formatted_phone_number);
+			$.post("store/auto_add.php",
+			{
+				datatype:'json',
+				name:place.name,
+				phone:place.formatted_phone_number,
+				address:place.formatted_address,
+				url:place.website
+			},
+			function(data){;
+			}
+			);
+		}
+		
+	});
+	/*
 	alert('here');
-	//initMap('news_map');
+	initMap('news_map');
 	var address=document.getElementById("search_place").value;
 	geocodeAddress(address);
 	var type="food";
@@ -46,18 +112,34 @@ function show_store_near(){
 		alert(type);
 		alert(radius);
 		alert(latlng);
-		var asd="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latlng+"&radius="+radius+"&types="+type+"&key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI";
-		console.log(asd);
 		
-		$.post("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latlng+"&radius="+radius+"&types="+type+"&key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI",
-		{
-		  datatype:'json'
-		},
-		function(data){
-			alert(data);
+	
+		
+		  
+		
+		
+		
+		var target="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latlng+"&radius="+radius+"&types="+type+"&key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI";
+		//var target="https://maps.googleapis.com/maps/api/place/nearbysearch/json?jsoncallback=?";
+		//var target="http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		console.log(target);
+	
+		$.ajax({
+			type: 'POST',
+			url: target,
+			dataType: 'jsonp',
+			success: function (data) {
+				//alert(data);
+				alert('87');
+			},
+			error: function () {
+				alert('fail');
+			}
 		});
 		
+		
 	});
+	*/
 }
 
 function show_store_near_in_database(){

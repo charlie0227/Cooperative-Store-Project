@@ -7,13 +7,15 @@ write_log('Visit','');
 	<head>
 		<meta charset="utf-8" />
 		<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
-				
+		
+			
 		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="function/index.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
-		<script   src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"   integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="   crossorigin="anonymous"></script>
+		<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"   integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="   crossorigin="anonymous" ></script>
 		<script src="js/jquery.reveal.js"></script>
 		<script src="js/jquery-an-showbox.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI"async defer></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI&libraries=places"async defer></script>
 		<script src="http://connect.facebook.net/zh_TW/all.js"></script>
 		<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
 		<script src="api/fbapi.js"></script>
@@ -21,12 +23,10 @@ write_log('Visit','');
 		<script src="company/company.js"></script>
 		<script src="member/member.js"></script>
 		<script src="contract/contract.js"></script>
-		<script src="function/index.js"></script>
+		
 		<script async src="api/googleAPI.js"></script>
 		<!--contract UI-->
-		
-		<script src="js/jquery.min.js"></script>
-		<script src="http://kendo.cdn.telerik.com/2016.2.714/js/kendo.all.min.js"></script>
+		<script src="js/require.js" defer async="true" data-main="js/main"></script>
 		<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css"/>
 		<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.rtl.min.css"/>
 		<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.silver.min.css"/>
@@ -79,7 +79,7 @@ write_log('Visit','');
 		
 			<li class="menu_bar_search" ><input id="search_bar" style="width:100%;"type="text" name="search_bar" placeholder="Search for store and company"></li>
 			<li class="account_bar"><input class="k-button" type="button" value="登入"><input class="k-button" type="button" value="TEST" onclick="window.open('qrcode.php')"></li>
-			<li><?if($_SESSION['name']){?>
+			<li><?if(isset($_SESSION['name'])){?>
 			<a onclick="fblogout();location.href='./function/logout.php';" ><div class="title">logout</div></a>
 			<?}else{?>
 			<a href="#" class="big-link" data-reveal-id="m-show_box"><div class="title" onclick="login()">login</div></a>
@@ -95,7 +95,7 @@ write_log('Visit','');
 				<div id="sidebar">
 					<!--<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="test" onclick="fblogin()">-->
 					<!--login status-->
-					<?if($_SESSION['name']){?>
+					<?if(isset($_SESSION['name'])){?>
 						<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
 						<input class = "k-button" style = "width: 90%; margin-bottom: 10px;" type="button" value="logout" onclick="fblogout();location.href='./function/logout.php';">
 					<?}else{?>
@@ -109,8 +109,8 @@ write_log('Visit','');
 					
 					<input type="button" class = "sidebar" style="border-top:2px solid white;" id = "show_news" onclick="news()" value="最新消息">
 					<input type="button" class = "sidebar" id = "show_member" onclick="member()" value="會員專區">
-					<?if($_SESSION['name']){?>
-						<input class="mem_op" type="button" style="display:none;" value="所屬團體" onclick="my_belong_list(<?echo $_SESSION['id']?>)"></td>
+					<?if(isset($_SESSION['name'])){?>
+						<input class="mem_op" type="button" style="display:none;" value="所屬團體" onclick="my_belong_list()"></td>
 						<input class="mem_op" type="button" style="display:none;" value="擁有店家/企業管理" onclick="my_store_company_list()"></td>
 						<input class="mem_op" type="button" style="display:none;" value="修改會員資料" onclick="edit_personal()">
 						<input class="mem_op" type="button" style="display:none;" value="修改密碼" onclick="edit_password()">
@@ -132,6 +132,7 @@ write_log('Visit','');
 		<div style='clear:both;'></div>		
 　		<!--<div id="footer">footer</div>-->
 		<div id="show_box" class="reveal-modal"><a class="close-reveal-modal"></a></div>
+		<div id="loading" style="display:none;"><img src="images/loading.gif"></div>
 		<div id="test" class="mobileShow" style="margin: 0px auto;font-size:36px;">
 		<div id="m-show_box" class="reveal-modal" ><a class="close-reveal-modal"></a></div>
 		</div>

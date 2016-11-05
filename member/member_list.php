@@ -2,11 +2,11 @@
 require_once "../sysconfig.php";
 ?>
 <html>	
-	<?if(!$_SESSION['name']){?>
+	<?if(!isset($_SESSION['name'])){?>
 		<p><-----------</p>
 		<p>請先登入</p>
 	<?}
-	if($_SESSION['name']){?>
+	if(isset($_SESSION['name'])){?>
 		<h2>會員專區</h2>
 		<table>
 		<tr>

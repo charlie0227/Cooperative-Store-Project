@@ -15,18 +15,19 @@ $sth2->execute(array($_GET['company_id']));
 $result_img = $sth2->fetchObject();
 
 
-
-$situation = 0;#new
-$sql = "SELECT * FROM `jangsc27_cs_project`.`member_application` WHERE `member_id`= ? AND `company_id`= ?";
-$sth = $db->prepare($sql);
-$sth->execute(array($_SESSION['id'],$_GET['company_id']));
-if($sth->fetchObject())
-	$situation= 1;#applied
-$sql = "SELECT * FROM `jangsc27_cs_project`.`member_belong` WHERE `member_id`= ? AND `company_id`= ?";
-$sth = $db->prepare($sql);
-$sth->execute(array($_SESSION['id'],$_GET['company_id']));
-if($sth->fetchObject())
-	$situation= 2;#belong
+if(isset($_SESSION['id'])){
+	$situation = 0;#new
+	$sql = "SELECT * FROM `jangsc27_cs_project`.`member_application` WHERE `member_id`= ? AND `company_id`= ?";
+	$sth = $db->prepare($sql);
+	$sth->execute(array($_SESSION['id'],$_GET['company_id']));
+	if($sth->fetchObject())
+		$situation= 1;#applied
+	$sql = "SELECT * FROM `jangsc27_cs_project`.`member_belong` WHERE `member_id`= ? AND `company_id`= ?";
+	$sth = $db->prepare($sql);
+	$sth->execute(array($_SESSION['id'],$_GET['company_id']));
+	if($sth->fetchObject())
+		$situation= 2;#belong
+}
 ?>
 <html>
 <head>
@@ -52,7 +53,7 @@ if($sth->fetchObject())
 			</p>
 		<?}?>
 	<?
-	if($_SESSION['id']){
+	if(isset($_SESSION['id'])){
 		if($situation==0){?>
 			<a href="#" class="big-link" data-reveal-id="show_box">
 			<input type="button" class="k-button" style="width:auto;" value="加入此團體" onclick="apply(<?echo $_SESSION['id']?>,<?echo$_GET['company_id']?>)"></a>

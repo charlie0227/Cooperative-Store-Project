@@ -14,17 +14,6 @@ $sth2 = $db->prepare($sql);
 $sth2->execute(array($_GET['store_id']));
 $result_img = $sth2->fetchObject();
 
-$situation = 0;#new
-$sql = "SELECT * FROM `jangsc27_cs_project`.`contract_application` WHERE `member_id`= ? AND `company_id`= ?";
-$sth = $db->prepare($sql);
-$sth->execute(array($_SESSION['id'],$_GET['store_id']));
-if($sth->fetchObject())
-	$situation= 1;#applied
-$sql = "SELECT * FROM `jangsc27_cs_project`.`contract` WHERE `member_id`= ? AND `company_id`= ?";
-$sth = $db->prepare($sql);
-$sth->execute(array($_SESSION['id'],$_GET['company_id']));
-if($sth->fetchObject()->status==1)
-	$situation= 2;#belong
 ?>	
 <html>
 <head>
@@ -51,14 +40,8 @@ if($sth->fetchObject()->status==1)
 			</p>
 			<p>QRCODE<div id="qrcode"></div></p>
 		<?}
-	if($_SESSION['id']){
-		if($situation==0){?>
-			<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我想簽約" onclick="select_company(<?echo $result->id?>)"/></a>
-		<?}if($situation==1){?>
-			<input type="button" class="k-button" style="width:auto;" value="已送出邀請(再次點擊取消邀請)" onclick=""/>
-		<?}if($situation==2){?>
-			<input type="button" class="k-button" style="width:auto;" value="查看合約" onclick="">
-		<?}?>
+	if(isset($_SESSION['id'])){?>
+		<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我想簽約" onclick="select_company(<?echo $result->id?>)"/></a>
 		<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我是店長" onclick="owner_show_store(<?echo $result->id?>)"></a>
 	<?}?>
 	

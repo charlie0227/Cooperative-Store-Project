@@ -7,7 +7,7 @@ $sth->bindValue(2, (int) $_POST['num'],PDO::PARAM_INT);
 $sth->execute();
 $result = $sth->fetchAll();
 if($result){
-	if($_SESSION['id']==22||$_SESSION['id']==23||$_SESSION['id']==24){
+	if(isset($_SESSION['id']) && ($_SESSION['id']==22||$_SESSION['id']==23||$_SESSION['id']==24)){
 		array_push($result, array('admin' => true));
 	}
 	else{

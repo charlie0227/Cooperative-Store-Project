@@ -5,24 +5,46 @@ var clear_interval =function (interval){
 	clearInterval(interval);
 }
 function show_store_list(){
-	$("#search_for").kendoDropDownList({
-		optionLabel: "--項目--"
-	});
-	lastwordValue = $("#search_word").val();
-	lastforValue = $("#search_for").val();
-	
-	var xhttp;
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			if(document.getElementById("store_bar")!= null)
-				document.getElementById("show_search_store").innerHTML = xhttp.responseText;
-		}
-	};
-	var q = $("#search_for").val();
-	var word = $("#search_word").val();
-	xhttp.open("GET", "store/store_search.php?q="+q+"&word="+word, true);
-	xhttp.send();
+	if(document.getElementById('switch').getAttribute("value")=="1"){
+		document.getElementById("search_btn").setAttribute("hidden",true);
+		$("#search_for").kendoDropDownList({
+			optionLabel: "--項目--"
+		});
+		lastwordValue = $("#search_word").val();
+		lastforValue = $("#search_for").val();
+		
+		var xhttp;
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (xhttp.readyState == 4 && xhttp.status == 200) {
+				if(document.getElementById("store_bar")!= null)
+					document.getElementById("show_search_store").innerHTML = xhttp.responseText;
+			}
+		};
+		var q = $("#search_for").val();
+		var word = $("#search_word").val();
+		xhttp.open("GET", "store/store_search.php?q="+q+"&word="+word, true);
+		xhttp.send();
+	}
+	else{
+		document.getElementById('show_search_store').innerHTML="";
+		document.getElementById("search_btn").removeAttribute("hidden");
+		document.getElementById("search_for").setAttribute("hidden",true);
+		document.getElementById("search_word").setAttribute("value","台北車站");
+		show_store_near('show_search_store');
+	}
+}
+
+function my_switch(){
+	var s = document.getElementById('switch');
+	if(document.getElementById('switch').getAttribute("value")=="1"){
+		document.getElementById("switch").setAttribute("value", "2");
+		show_store_list();
+	}
+	else{
+		document.getElementById("switch").setAttribute("value", "1");
+		show_store_list();
+	}
 }
 
 function store_list(){
@@ -31,20 +53,22 @@ function store_list(){
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			document.getElementById("content").innerHTML = xhttp.responseText;
-			$("#show_search_store").hide();
-			show_store_list();
-			$("#show_search_store").fadeIn(500);
-			search_sto=setInterval(function () {
-				if(document.getElementById("store_bar")== null){
-					clear_interval(search_sto);
-				}
-				else if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ) ){
-					$("#show_search_store").hide();
-					show_store_list();
-					$("#show_search_store").fadeIn(500);	
-				}
-				
-			}, 500);
+		if(document.getElementById('switch').getAttribute("value")=="1"){
+		$("#show_search_store").hide();
+		show_store_list();
+		$("#show_search_store").fadeIn(500);
+		search_sto=setInterval(function () {
+			if(document.getElementById("store_bar")== null){
+				clear_interval(search_sto);
+			}
+			else if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ) ){	
+				$("#show_search_store").hide();
+				show_store_list();
+				$("#show_search_store").fadeIn(500);	
+			}
+			
+		}, 500);
+		}
 		}
 	};
 	xhttp.open("GET", "store/store_list.html", true);
@@ -167,7 +191,8 @@ function show_box_map(){
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			document.getElementById("show_box").innerHTML = xhttp.responseText;
-			show_store_near_in_database();
+			//show_store_near_in_database();
+			show_store_near();
 		}
 	};
 	xhttp.open("GET", "store/store_near.html", true);

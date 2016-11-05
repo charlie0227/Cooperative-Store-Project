@@ -25,7 +25,7 @@ $result_img = $sth2->fetchObject();
 		<?}?>
 		<p>電話 <?echo $result->phone?></p>
 		<p>地址 <?echo $result->address?></p>
-		<p>Email <?echo $result->email?></p>
+		<p>網址<?echo $result->url?></p>
 		<p>合作企業 <?
 			while($result_company = $sth1->fetchObject()){
 				echo $result_company->name.'</p><p>';

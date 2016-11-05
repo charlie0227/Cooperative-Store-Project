@@ -424,3 +424,10 @@ li {
 	width:600px;
 	height:110px;
 }
+#loading {
+	position: fixed;
+    left: 50%;
+    top: 30%;
+    z-index: -1;
+    zoom: 150%;
+}

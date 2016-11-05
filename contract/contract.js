@@ -32,6 +32,19 @@ function contract_application(store_id,company_id){
 	xhttp.open("GET", "contract/application_form.php?store_id="+store_id+"&company_id="+company_id, true);
 	xhttp.send();
 }
+function delete_contract_application(company_id,store_id){
+	$.post("contract/application_delete.php",
+			{
+				store_id:store_id,
+				company_id:company_id,
+			    datatype:'json'
+			},
+			function(){
+				
+				show_box_close();
+				select_company(store_id);
+			});
+}
 function contract_application_submit(){
 	$('#contract_application_ajaxForm').submit(function() { 
 	 // 提交表单
