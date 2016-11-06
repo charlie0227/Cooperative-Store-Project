@@ -181,8 +181,8 @@ function my_store_company_list(){
 			document.getElementById("content").innerHTML = xhttp.responseText;
 			owner_store_ready();
 			owner_company_ready();
-			$('#loading').hide();
 			$("#content").fadeIn(500);
+			$('#loading').hide();
 		}
 	};
 	xhttp.open("GET", "member/owner.html", true);
@@ -238,8 +238,8 @@ function owner_show_company(id){
 	xhttp.send();
 }
 function owner_verify_store(id){
+	show_box_close();
 	member();
-	
 	$.post("store/verify.php",
 		{
 			datatype:'json',
@@ -247,15 +247,26 @@ function owner_verify_store(id){
 		},
 		function(data){
 			var obj=JSON.parse(data);
-			show_box_close();
 			if(obj.p=="ok")
 				my_store_company_list();
 		});
 }
-
+function delete_store_owner(){
+	var store_id = document.getElementById("store_id").value;
+	$.post("member/delete_store_owner.php",
+		{
+			datatype:'json',
+		    store_id:store_id
+		},
+		function(data){
+			var obj=JSON.parse(data);
+			if(obj.q=="ok")
+				my_store_company_list();
+		});
+	
+}
 function owner_verify_company(id){
 	member();
-	
 	$.post("company/verify.php",
 		{
 			datatype:'json',
@@ -362,7 +373,8 @@ function show_own_store_content(id,map_id){
 	xhttp.send();
 	
 }
-function owner_store_edit(id){
+function owner_store_edit(){
+	var store_id=document.getElementById("store_id").value;
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -370,7 +382,7 @@ function owner_store_edit(id){
 			document.getElementById("content").innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("GET", "member/edit_store.php?edit_id="+id, true);
+	xhttp.open("GET", "member/edit_store.php?edit_id="+store_id, true);
 	xhttp.send();
 }
 function edit_store_submit(){
@@ -456,16 +468,17 @@ function dropselect(){
 	});
 }
 
-function show_own_store_analysis(id){
+function show_own_store_analysis(){
+	var store_id=document.getElementById("store_id").value;
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200 && document.getElementById("content") != null) {
 			document.getElementById("content").innerHTML = xhttp.responseText;
-			createChart(id);
+			createChart(store_id);
 		}
 	};
-	xhttp.open("GET", "member/owner_store_analysis.php?store_id="+id, true);
+	xhttp.open("GET", "member/owner_store_analysis.php?store_id="+store_id, true);
 	xhttp.send();
 	
 }
@@ -670,11 +683,15 @@ function createChart(id) {
     }
 
 function show_contract(){
+	$('#loading').show();
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			$('#content').hide();		
 			document.getElementById("content").innerHTML = xhttp.responseText;
+			$('#loading').hide();				
+			$('#content').fadeIn(500);		
 		}
 	};
 	xhttp.open("GET", "member/owner_contract_list", true);

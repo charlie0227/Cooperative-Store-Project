@@ -213,12 +213,7 @@ function shownotice(id){
 	);
 }
 function show_box_close(){
-	document.getElementById('show_box').innerHTML = "";
-	$('.reveal-modal-bg').css({'display' : 'none'});     
-	$('#show_box').css({
-		'visibility' : 'hidden', 
-		'top' : '0px'
-	});	
+	$('.reveal-modal-bg').trigger('click');
 }
 //rgb
 //gyg

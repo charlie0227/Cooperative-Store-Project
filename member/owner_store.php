@@ -39,8 +39,9 @@ $result_img = $sth2->fetchObject();
 				}?>
 			</p>
 		<?}?>
-	<input type="button" class="k-button" style="width:auto;" value="edit" onclick="owner_store_edit(<?echo $_GET['store_id']?>)">
-	<input type="button" class="k-button" style="width:auto;" value="分析" onclick="show_own_store_analysis(<?echo $_GET['store_id']?>)">
+	<input type="button" class="k-button" style="width:auto;" value="edit" onclick="owner_store_edit()">
+	<input type="button" class="k-button" style="width:auto;" value="分析" onclick="show_own_store_analysis()">
+	<input type="button" class="k-button" style="width:auto;" value="我不是店長" onclick="delete_store_owner()">
 	<input type="button" class="k-button" style="width:auto;" value="返回" onclick="my_store_company_list()">
-
+	<input type="hidden" value="<?echo $_GET['store_id']?>" id="store_id">
 </html>
