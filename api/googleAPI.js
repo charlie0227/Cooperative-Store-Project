@@ -1,8 +1,11 @@
 var map;
 var geocoder;
 var infowindow;
-
+var center_marker;
+var last_pos;
+//https://www.google.com.tw/search?tbm=isch&q=%E5%BC%B5%E9%A0%86%E7%A8%8B
 function initMap(map_id) {
+	
   map = new google.maps.Map(document.getElementById(map_id), {
     center: {lat: 23.397, lng: 120.644},
     zoom: 17
@@ -33,20 +36,48 @@ function geocodeAddress(address) {
   }
   });
 }
+function asdasd(){
+	 alert(center_marker.getPosition());
+}
 
-function show_store_near(map_id){//not in database
-	initMap(map_id);
-	var address=document.getElementById("search_word").value;
-	alert(address);
-	geocodeAddress(address);
-	geocoder.geocode({'address': address}, function(results, status) {
-		var latlng=results[0].geometry.location;
+
+
+
+function show_store_near(map_id,type){//not in database
+	//alert(type);
+	if(!type){
+		initMap(map_id);
+	}
 		
+	
+	var address=document.getElementById("search_word").value;
+	//geocodeAddress(address);
+	geocoder.geocode({'address': address}, function(results, status) {
+		if(!type){
+			var latlng=results[0].geometry.location;
+		}
+		else{
+			latlng=center_marker.getPosition();
+			//alert(latlng);
+		}
 		 map = new google.maps.Map(document.getElementById(map_id), {
 			center: latlng,
 			zoom: 15
 		  });
-		  
+		 center_marker = new google.maps.Marker({
+			map: map,
+			draggable: true,
+			position: latlng
+			
+		  });
+		  center_marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+		google.maps.event.addListener(center_marker, 'dragend', function() 
+			{
+				show_store_near('show_search_store',true);
+				
+			});
+		
+		
 		var infowindow = new google.maps.InfoWindow();
 		var service = new google.maps.places.PlacesService(map);
 		  service.radarSearch({
@@ -64,7 +95,6 @@ function show_store_near(map_id){//not in database
 		  }
 		}
 		
-	
 		function createMarker(place) {
 		  
 			  ttt=ttt+1;
@@ -245,6 +275,12 @@ function show_store_near_in_database(){
 
 		});
 	});
+}
+
+function grab_first_image(){
+	window.open()
+	//https://www.google.com.tw/search?tbm=isch&q=±i¶¶µ{
+	
 }
 
 

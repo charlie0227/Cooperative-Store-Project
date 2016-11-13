@@ -95,6 +95,15 @@ function min_sidebar(){
 		m = 0;
 	}
 }
+function show_box_login(){
+	document.getElementById("show_box").innerHTML="";
+	document.getElementById("show_box").innerHTML+='<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Login</h3>';
+	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;" class="k-textbox" id="username" type="text" name="username" placeholder="Account">';
+	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password">';
+	document.getElementById("show_box").innerHTML+='<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">';
+	document.getElementById("show_box").innerHTML+='<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">';
+	document.getElementById("show_box").innerHTML+='<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>';
+}
 
 function news(){
 	$("#loading").show();
@@ -243,8 +252,6 @@ function get_news_ready(){
 		}
 		//if(obj.del_but)
 		//	$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+obj.del_but+')">');
-		
-		$("#loading").hide();
 	});
 }
 function get_n(){
@@ -285,7 +292,7 @@ function get_n(){
 							//$( "#news_content" ).append( '<input type="button" class="k-button" value="Delete" onclick="delete_news('+news_id+')">');
 							ka++;
 						}
-						
+						$('#loading').hide();
 					});
 			}
 		}

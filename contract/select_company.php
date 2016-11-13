@@ -41,7 +41,7 @@ while($result=$sth->fetchObject()){?>
 	<?
 	if($_SESSION['id']){
 		if($situation==0){?>
-			<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我想簽約" onclick="contract_application(<?echo $_GET['store_id']?>,<?echo $result->company_id?>);"/></a>
+			<input type="button" class="k-button" style="width:auto;" value="我想簽約" onclick="contract_application(<?echo $_GET['store_id']?>,<?echo $result->company_id?>);"/>
 		<?}if($situation==1){?>
 			<input type="button" class="k-button" style="width:auto;" value="已送出邀請(再次點擊取消邀請)" onclick="delete_contract_application(<?echo $result->company_id?>,<?echo $_GET['store_id']?>)"/>
 		<?}if($situation==2){?>

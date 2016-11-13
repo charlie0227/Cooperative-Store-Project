@@ -78,11 +78,10 @@ write_log('Visit','');
 			</li>
 		
 			<li class="menu_bar_search" ><input id="search_bar" style="width:100%;"type="text" name="search_bar" placeholder="Search for store and company"></li>
-			<li class="account_bar"><input class="k-button" type="button" value="登入"><input class="k-button" type="button" value="TEST" onclick="window.open('qrcode.php')"></li>
-			<li><?if(isset($_SESSION['name'])){?>
-			<a onclick="fblogout();location.href='./function/logout.php';" ><div class="title">logout</div></a>
+			<li class="account_bar"><?if(isset($_SESSION['name'])){?>
+			<a type="button" class = "k-button" onclick="fblogout();location.href='./function/logout.php';">登出</a>
 			<?}else{?>
-			<a href="#" class="big-link" data-reveal-id="m-show_box"><div class="title" onclick="login()">login</div></a>
+			<a type="button" class = "k-button" style="background: #E78F8E;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_box_login()">登入</a>
 			
 			<?}?>
 			</li>
@@ -95,17 +94,8 @@ write_log('Visit','');
 				<div id="sidebar">
 					<!--<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="test" onclick="fblogin()">-->
 					<!--login status-->
-					<?if(isset($_SESSION['name'])){?>
-						<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
-						<input class = "k-button" style = "width: 90%; margin-bottom: 10px;" type="button" value="logout" onclick="fblogout();location.href='./function/logout.php';">
-					<?}else{?>
-						<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Login</h3>
-						<input style = "margin-bottom: 5px;" class="k-textbox" id="username" type="text" name="username" placeholder="Account">
-						<input style = "margin-bottom: 5px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password">
-						<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">
-						<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">
+					
 						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-					<?}?>
 					
 					<input type="button" class = "sidebar" style="border-top:2px solid white;" id = "show_news" onclick="news()" value="最新消息">
 					<input type="button" class = "sidebar" id = "show_member" onclick="member()" value="會員專區">

@@ -27,6 +27,7 @@ function show_company_list(){
 }
 
 function company_list(){
+	$('#loading').show();
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -34,6 +35,7 @@ function company_list(){
 			document.getElementById("content").innerHTML = xhttp.responseText;
 			$("#show_search_company").hide();
 			show_company_list();
+			$('#loading').hide();
 			$("#show_search_company").fadeIn(500);
 			search_com=setInterval(function () {
 				if(document.getElementById("company_bar")== null){
@@ -41,7 +43,9 @@ function company_list(){
 				}
 				else if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue && $("#search_word").val() != "") ){
 					$("#show_search_company").hide();
+					$('#loading').show();
 					show_company_list();
+					$('#loading').hide();
 					$("#show_search_company").fadeIn(500);
 				}
 			}, 500);

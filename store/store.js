@@ -31,23 +31,25 @@ function show_store_list(){
 		document.getElementById("search_btn").removeAttribute("hidden");
 		document.getElementById("search_for").setAttribute("hidden",true);
 		document.getElementById("search_word").setAttribute("value","台北車站");
-		show_store_near('show_search_store');
+		show_store_near('show_search_store',false);
+		document.getElementById('show_search_store').setAttribute("style","height:750px");
 	}
 }
 
 function my_switch(){
-	var s = document.getElementById('switch');
 	if(document.getElementById('switch').getAttribute("value")=="1"){
 		document.getElementById("switch").setAttribute("value", "2");
 		show_store_list();
 	}
 	else{
 		document.getElementById("switch").setAttribute("value", "1");
+		document.getElementById("search_word").setAttribute("value","");
 		show_store_list();
 	}
 }
 
 function store_list(){
+	$('#loading').show();
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -56,14 +58,17 @@ function store_list(){
 		if(document.getElementById('switch').getAttribute("value")=="1"){
 		$("#show_search_store").hide();
 		show_store_list();
+		$('#loading').hide();
 		$("#show_search_store").fadeIn(500);
 		search_sto=setInterval(function () {
 			if(document.getElementById("store_bar")== null){
 				clear_interval(search_sto);
 			}
-			else if ($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ) ){	
+			else if (($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ))&&(document.getElementById('switch').getAttribute("value")=="1") ){	
 				$("#show_search_store").hide();
+				$('#loading').show();
 				show_store_list();
+				$('#loading').hide();
 				$("#show_search_store").fadeIn(500);	
 			}
 			
@@ -144,6 +149,7 @@ function add_store_ready(){
 		}
 	});
 }
+
 function store_submit(){
 	$('#store_ajaxForm').submit(function() {
 		$(this).ajaxSubmit(function(data){

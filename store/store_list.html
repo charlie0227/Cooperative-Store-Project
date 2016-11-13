@@ -12,8 +12,10 @@ header("Access-Control-Allow-Origin: http://maps.googleapis.com");?>
 		<option value="address">地址</option>
 		</select></td>
 	<td><input id="search_word" class="k-textbox" type="text" name="search_word"></input></td>
-	<td><a id="search_btn" hidden type="button" class = "member_option" style="background: #E78F8E;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_box_map()">查詢</a></td>
+	<td><a id="search_btn" hidden type="button" class = "member_option" style="background: #E78F8E;" onclick="show_store_near('show_search_store')">查詢</a></td>
+	<td><input class = "member_option" style="background: #E78F8E;"type="button" value="登入新商家" onclick="add_new_store()" ></td>
 	<td><a id="switch" type="button" class = "member_option"  value="1" onclick="my_switch()">switch</a></td>
+	<input type="button" value="test" onclick="asdasd()">
 	</tr>
 	<!--
 	<tr>
@@ -25,8 +27,9 @@ header("Access-Control-Allow-Origin: http://maps.googleapis.com");?>
 	-->
 	</table>
 
-	<input class = "member_option" style="background: #E78F8E;"type="button" value="登入新商家" onclick="add_new_store()" >
+	
 	<div id="show_search_store"></div>
+	<div id="store_list_map" ></div>
 </div>
 <div id="into_store"></div>
 <div id="into_store_contract"></div>

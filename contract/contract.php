@@ -2,10 +2,10 @@
 require_once "../sysconfig.php";
 $data=new stdClass();
 
-$who=$_POST['who'];
-$store_id=$_POST['store_id'];
-$company_id=$_POST['company_id'];
-$contract_id=$_POST['contract_id'];
+$who		 =	isset($_POST['who'])		?$_POST['who']:"";
+$store_id    =	isset($_POST['store_id'])	?$_POST['store_id']:"";
+$company_id  =	isset($_POST['company_id']) ?$_POST['company_id']:"";
+$contract_id =	isset($_POST['contract_id'])?$_POST['contract_id']:"";
 if(isset($_POST['contract_id'])){
 	$sql = "SELECT *,b.name as store_name,c.name as company_name 
 	FROM `jangsc27_cs_project`.`contract` a 
@@ -25,19 +25,23 @@ if(isset($_POST['contract_id'])){
 	$content=json_decode($result_contract->content);
 	$data->content = $content;
 	
+	$data->company_id	 = $result_contract->company_id;
 	$data->company_name  = $result_contract->company_name;
 	$data->company_owner = $result_contract->company_owner;
 	$data->company_name  = $result_contract->company_name;
 	$data->company_phone = $result_contract->company_phone;
 	$data->company_address=$result_contract->company_address;
 	
+	$data->store_id	 	 = $result_contract->store_id;
 	$data->store_name    = $result_contract->store_name;
 	$data->store_owner   = $result_contract->store_owner;
 	$data->store_name    = $result_contract->store_name;
 	$data->store_phone   = $result_contract->store_phone;
 	$data->store_address = $result_contract->store_address;
+	if($who=='company' && $data->status==0 || $who=='store' && $data->status==1)
+		$flag='view';
 }
-if(isset($_POST['store_id'])){
+if(isset($_POST['company_id'])){
 	$sql = "SELECT b.name as company_owner, c.name as company_name, c.phone as company_phone, c.address as company_address
 	FROM `jangsc27_cs_project`.`member_company` a 
 	JOIN  `jangsc27_cs_project`.`member` b 
@@ -48,13 +52,14 @@ if(isset($_POST['store_id'])){
 	$sth = $db->prepare($sql);
 	$sth->execute(array($company_id));
 	$result_company = $sth->fetchObject();
-	$data->company_owner=$result_company->company_owner;
+	$data->company_owner=$_SESSION['name'];
 	$data->company_name=$result_company->company_name;
 	$data->company_phone=$result_company->company_phone;
 	$data->company_address=$result_company->company_address;
+	$flag='';
 
 }
-if(isset($_POST['company_id'])){
+if(isset($_POST['store_id'])){
 	$sql = "SELECT b.name as store_owner, c.name as store_name, c.phone as store_phone, c.address as store_address
 	FROM `jangsc27_cs_project`.`member_store` a 
 	JOIN  `jangsc27_cs_project`.`member` b 
@@ -65,11 +70,11 @@ if(isset($_POST['company_id'])){
 	$sth = $db->prepare($sql);
 	$sth->execute(array($store_id));
 	$result_store = $sth->fetchObject();
-	$data->store_owner=$result_store->store_owner;
+	$data->store_owner=$_SESSION['name'];
 	$data->store_name=$result_store->store_name;
 	$data->store_phone=$result_store->store_phone;
 	$data->store_address=$result_store->store_address;
-
+	$flag='';
 }
 $data->who=$who;
 
@@ -167,5 +172,14 @@ if($who=='company'){
 	';
 	
 }
+if($who=='view' || $flag='view'){
+	$data->contract='<div class="auto_calculate" style="height:180px;width=:100%;display:-webkit-box;color:blue;"> 
+						<div style="width:50%;line-height:40px;" id="contract_content"></div>
+						<div style="width:50%" id="show_discount"></div>
+					</div>
+					<p>備註</p>
+					<p id="contract_remark" style="width: 600px;height:120px;color:blue;"></p>';
+}
+	
 echo json_encode($data);
 ?>
