@@ -76,6 +76,7 @@ function contract_make(store_id,company_id,who){
 			    datatype:'json'
 			},
 			function(data){
+				console.log(data);
 				var obj=JSON.parse(data);
 				if(obj.who=='store'){
 					document.getElementById("d_sta").innerHTML ='<input id="date_sta" style="width:200px"/>';
@@ -89,6 +90,7 @@ function contract_make(store_id,company_id,who){
 					document.getElementById("s_address").innerHTML ='<input type="text" class="k-textbox" id="store_address"/>';
 					document.getElementById("s_phone").innerHTML ='<input type="text" class="k-textbox" id="store_phone"/>';
 					document.getElementById("fill_store").innerHTML ='<input type="button" class="k-button" style="margin: 2px;" onclick="fill('+store_id+','+company_id+",'"+who+"'"+')" value="填入"/>';
+					//send button
 					$('#back_to_where').append('<input id="send_contract" class="k-button" type="button" value="送出" />');
 					$('#back_to_where').append('<input type="button" class="k-button" value="返回" onclick="back_to_company()"/>');
 					document.getElementById("contract_who").innerHTML =obj.contract;
@@ -213,12 +215,34 @@ function contract_manage(contract_id,who){
 					view_contract_content(obj);
 					document.getElementById("store_id").value = obj.store_id;
 					document.getElementById("company_id").value = obj.company_id;
-					
+					//send button
+					$('#back_to_where').append('<input id="send_contract" class="k-button" type="button" value="送出" />');
 					status=1;
+					contract_last_send(obj,status);
 				}
 				if(obj.status==1 && who=='store'){
 					//store confirm
+					var obj=JSON.parse(data);
+					document.getElementById("d_sta").innerHTML =obj.date_sta;
+					document.getElementById("d_end").innerHTML =obj.date_end;
+					document.getElementById("now_date").innerHTML=obj.date_sign;
+
+					document.getElementById("store_name1").innerHTML =obj.store_name;
+					document.getElementById("store_name2").innerHTML =obj.store_name;
+					document.getElementById("s_owner").innerHTML =obj.store_owner;
+					document.getElementById("s_address").innerHTML =obj.store_address;
+					document.getElementById("s_phone").innerHTML =obj.store_phone;
+
+					document.getElementById("company_name1").innerHTML =obj.company_name;
+					document.getElementById("company_name2").innerHTML =obj.company_name;
+					document.getElementById("c_owner").innerHTML =obj.company_owner;
+					document.getElementById("c_address").innerHTML =obj.company_address;
+					document.getElementById("c_phone").innerHTML =obj.company_phone;
+					view_contract_content(obj);
+					//send button
+					$('#back_to_where').append('<input id="send_contract" class="k-button" type="button" value="接受" />');
 					status=2;
+					contract_last_send(obj,status);
 				}
 				
 				
@@ -445,6 +469,7 @@ function contract_content_function(){
 		method='dynamic';
 	}
 	$('#send_contract').on('click',function(){
+		$('#loading').show();
 		var content = 
 			(method=='static')?
 			{
@@ -474,30 +499,79 @@ function contract_content_function(){
 		//contract validation
 		if(method=='static' && $.isNumeric(static_num)
 		|| method=='dynamic' && big!=0 && $.isNumeric(big) && people!=0 && $.isNumeric(people) && small!=0 && $.isNumeric(small) && time!="" && big>small){
-			$.post("contract/contract_create.php",
-				{
-					status:status,
-					date_sta:document.getElementById("date_sta").value,
-					date_end:document.getElementById("date_end").value,
-					date_sign:document.getElementById("now_date").innerHTML,
-					content:JSON.stringify(content),
-					store_id:document.getElementById("store_id").value,
-					store_owner:store_owner,
-					store_address:store_address,
-					store_phone:store_phone,
-					company_id:document.getElementById("company_id").value,
-					company_owner:company_owner,
-					company_address:company_address,
-					company_phone:company_phone,
-					datatype:'json'
-				},function(data){
-				alert(data);
-					show_contract();
-				}
-			);
+			if(store_owner!='' && store_address!='' && store_phone!=''){
+				$.post("contract/contract_create.php",
+					{
+						status:status,
+						date_sta:document.getElementById("date_sta").value,
+						date_end:document.getElementById("date_end").value,
+						date_sign:document.getElementById("now_date").innerHTML,
+						content:JSON.stringify(content),
+						store_id:document.getElementById("store_id").value,
+						store_owner:store_owner,
+						store_address:store_address,
+						store_phone:store_phone,
+						company_id:document.getElementById("company_id").value,
+						company_owner:company_owner,
+						company_address:company_address,
+						company_phone:company_phone,
+						datatype:'json'
+					},function(data){
+					alert(data);
+						show_contract();
+					}
+				);
+			}
+			else{
+				$('#loading').hide();
+				alert('請填入資料');
+			}
+		}
+		else {
+			$('#loading').hide();
+			alert('請填折扣內容');
+		}
+	});
+}
+function contract_last_send(obj,status){
+	$('#send_contract').on('click',function(){
+		$('#loading').show();
+		var store_owner=document.getElementById("store_owner")!=null?document.getElementById("store_owner").value:obj.store_owner;
+		var store_address=document.getElementById("store_address")!=null?document.getElementById("store_address").value:obj.store_address;
+		var store_phone=document.getElementById("store_phone")!=null?document.getElementById("store_phone").value:obj.store_phone;
+		var company_owner=document.getElementById("company_owner")!=null?document.getElementById("company_owner").value:obj.company_owner;
+		var company_address=document.getElementById("company_address")!=null?document.getElementById("company_address").value:obj.company_address;
+		var company_phone=document.getElementById("company_phone")!=null?document.getElementById("company_phone").value:obj.company_phone;
+		if(company_owner!='' && company_address!='' && company_phone!=''){
+			if(confirm("合約內容經送出後無法修改，請再次留意(確認後送出)")==true){
+				$.post("contract/contract_create.php",
+					{
+						status:status,
+						date_sta:obj.date_sta,
+						date_end:obj.date_end,
+						date_sign:obj.date_sign,
+						content:JSON.stringify(obj.content),
+						store_id:obj.store_id,
+						store_owner:store_owner,
+						store_address:store_address,
+						store_phone:store_phone,
+						company_id:obj.company_id,
+						company_owner:company_owner,
+						company_address:company_address,
+						company_phone:company_phone,
+						datatype:'json'
+					},function(data){
+						show_contract();
+					}
+				);
+			}
+			else{
+				$('#loading').hide();
+			}
 		}
 		else{
-			alert('請填折扣內容');
+			$('#loading').hide();
+			alert('請填入資料');
 		}
 	});
 }
@@ -687,7 +761,7 @@ function quick_contract_submit(){
 		};
 	$.post("contract/contract_create.php",
 		{
-			status:3,
+			status:2,
 			content:JSON.stringify(content),
 			store_id:document.getElementById("quick_store").store_id,
 			company_id:document.getElementById("quick_company").company_id,

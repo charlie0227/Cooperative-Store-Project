@@ -45,10 +45,9 @@ while($result=$sth->fetchObject()){
 		<td><input type="button" onclick="contract_manage(<?echo $result->contract_id?>,'<?echo $whoami?>')" value="前往確認"></td>
 		<?}if($result->status==1 && $whoami=="company"){?>
 		<td>等待商家確認</td>
-		<td><input type="button" onclick="view_contract(<?echo $result->contract_id?>)" value="預覽">
-		<input type="button" onclick="contract_manage(<?echo $result->contract_id?>,'<?echo $whoami?>')" value="修改"></td>
+		<td><input type="button" onclick="view_contract(<?echo $result->contract_id?>)" value="預覽"></td>
 	   <?}if($result->status==2){?>
-	   <td></td><td></td><td><input type="button" onclick="view_contract()" value="查看合約"></td>
+	   <td><input type="button" onclick="view_contract(<?echo $result->contract_id?>)" value="查看合約"></td><td></td><td></td>
 	   <?}?>
 	</tr>
 	

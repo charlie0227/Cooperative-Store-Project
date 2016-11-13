@@ -4,7 +4,7 @@ $data = new stdClass();
 function hash_password($password){
 	return crypt($password,'$1$eSlWcNyAr');
 }
-$name=$_POST['username'];
+$name=isset($_POST['username'])?$_POST['username']:'';
 if(isset($_POST['password']))
 	$pass=hash_password($_POST['password']);
 else if($_POST['type']=='facebook')

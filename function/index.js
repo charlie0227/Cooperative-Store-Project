@@ -97,12 +97,12 @@ function min_sidebar(){
 }
 function show_box_login(){
 	document.getElementById("show_box").innerHTML="";
-	document.getElementById("show_box").innerHTML+='<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Login</h3>';
-	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;" class="k-textbox" id="username" type="text" name="username" placeholder="Account">';
-	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password">';
+	document.getElementById("show_box").innerHTML+='<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Username</h3>';
+	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;margin-left: 10px;" class="k-textbox" id="username" type="text" name="username" placeholder="Account"><br>';
+	document.getElementById("show_box").innerHTML+='<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Password</h3>';
+	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;margin-left: 10px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password">';
 	document.getElementById("show_box").innerHTML+='<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">';
-	document.getElementById("show_box").innerHTML+='<input class = "k-button" style = "width:90%; margin-bottom: 5px;" type="button" value="register" onclick="go_register()">';
-	document.getElementById("show_box").innerHTML+='<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>';
+	document.getElementById("show_box").innerHTML+='<a href="#" onclick="fblogin();"><img src="images/fb_login.png" style="width: 50%;height: 0%;" border="0" alt=""></a>';
 }
 
 function news(){
@@ -323,23 +323,24 @@ function check_login(){
 		},
 		function(data){
 			var obj=JSON.parse(data);
-			if(obj.message=='Wrong Account or password !!')
+			if(obj.message=='Wrong Account or password !!'){
 				alert(obj.message);
-			location.reload();
+				show_box_login();
+			}
+			else
+				location.reload();
 		}
 		
 		);
 }
 
-function go_register(){
+function show_box_register(){
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			$("#content").hide();
-			document.getElementById("content").innerHTML = xhttp.responseText;
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
 			register_ready();
-			$("#content").fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "function/register.php", true);
@@ -347,6 +348,7 @@ function go_register(){
 }
 
 function register_ready(){
+	//document.getElementsByClassName('reveal-modal-bg').onwheel = function(){ return false; }
 	//var no_space = [^\s]; 
 	var reg_acc = $("#register_account").val();
 	if(reg_acc.search("\s")==-1){

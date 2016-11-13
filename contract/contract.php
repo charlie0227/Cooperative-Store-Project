@@ -1,7 +1,7 @@
 <?php
 require_once "../sysconfig.php";
 $data=new stdClass();
-
+$flag='';
 $who		 =	isset($_POST['who'])		?$_POST['who']:"";
 $store_id    =	isset($_POST['store_id'])	?$_POST['store_id']:"";
 $company_id  =	isset($_POST['company_id']) ?$_POST['company_id']:"";
@@ -172,13 +172,13 @@ if($who=='company'){
 	';
 	
 }
-if($who=='view' || $flag='view'){
-	$data->contract='<div class="auto_calculate" style="height:180px;width=:100%;display:-webkit-box;color:blue;"> 
+if($who=='view' || $flag=='view'){
+	$data->contract='<div class="auto_calculate" style="height:180px;width=:100%;display:-webkit-box;color:blue;border-style:dashed;"> 
 						<div style="width:50%;line-height:40px;" id="contract_content"></div>
 						<div style="width:50%" id="show_discount"></div>
 					</div>
 					<p>備註</p>
-					<p id="contract_remark" style="width: 600px;height:120px;color:blue;"></p>';
+					<p id="contract_remark" style="width: 100%;height:100%;color:blue;display:inline-block;"></p>';
 }
 	
 echo json_encode($data);

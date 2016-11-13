@@ -79,9 +79,11 @@ write_log('Visit','');
 		
 			<li class="menu_bar_search" ><input id="search_bar" style="width:100%;"type="text" name="search_bar" placeholder="Search for store and company"></li>
 			<li class="account_bar"><?if(isset($_SESSION['name'])){?>
+				<p style="color:white">Welcome , <?echo $_SESSION['name']?></p>
 			<a type="button" class = "k-button" onclick="fblogout();location.href='./function/logout.php';">登出</a>
 			<?}else{?>
 			<a type="button" class = "k-button" style="background: #E78F8E;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_box_login()">登入</a>
+			<a type="button" class = "k-button" style="background: #E78F8E;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_box_register()">註冊</a>
 			
 			<?}?>
 			</li>
@@ -94,8 +96,6 @@ write_log('Visit','');
 				<div id="sidebar">
 					<!--<input class = "abutton" style = "width:90%; margin-bottom: 5px;" type="button" value="test" onclick="fblogin()">-->
 					<!--login status-->
-					
-						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 					
 					<input type="button" class = "sidebar" style="border-top:2px solid white;" id = "show_news" onclick="news()" value="最新消息">
 					<input type="button" class = "sidebar" id = "show_member" onclick="member()" value="會員專區">
