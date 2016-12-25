@@ -12,7 +12,7 @@ function show_store_list(){
 	if(document.getElementById('switch').getAttribute("value")=="1"){
 		document.getElementById("search_btn").setAttribute("hidden",true);
 		$('#wrapper').show();
-		document.getElementById("show_search_store").setAttribute("hidden",true);
+		$('#show_search_store').hide();
 		document.getElementById("nearby_btn").setAttribute("hidden",true);
 		$("#search_for").kendoDropDownList({
 			optionLabel: "--項目--"
@@ -112,6 +112,38 @@ function store_list(){
 		}
 	};
 	xhttp.open("GET", "store/store_list.html", true);
+	xhttp.send();
+	$(".mem_op").slideUp();
+}
+function store_list_app(){
+	$('#loading').show();
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("content").innerHTML = xhttp.responseText;
+		if(document.getElementById('switch').getAttribute("value")=="1"){
+		$("#show_search_store").hide();
+		show_store_list();
+		$('#loading').hide();
+		$("#show_search_store").fadeIn(500);
+		search_sto=setInterval(function () {
+			if(document.getElementById("store_bar")== null){
+				clear_interval(search_sto);
+			}
+			else if (($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ))&&(document.getElementById('switch').getAttribute("value")=="1") ){
+				$("#show_search_store").hide();
+				$('#loading').show();
+				show_store_list();
+				$('#loading').hide();
+				$("#show_search_store").fadeIn(500);
+			}
+
+		}, 500);
+		}
+		}
+	};
+	xhttp.open("GET", "store/store_list_app.html", true);
 	xhttp.send();
 	$(".mem_op").slideUp();
 }

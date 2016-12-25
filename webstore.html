@@ -1,0 +1,69 @@
+<?php
+require_once "sysconfig.php";
+write_log('Visit','');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<html xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml">
+
+
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/jspdf.debug.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+		<script src="js/jquery.reveal.js"></script>
+		<script src="js/jquery-an-showbox.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI&libraries=places"async defer></script>
+		<script src="https://connect.facebook.net/zh_TW/all.js"></script>
+		<script src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+		<script src="api/fbapi.js"></script>
+		<script src="js/iscroll-probe.js"></script>
+		<script src="store/store.js"></script>
+		<script src="company/company.js"></script>
+		<script src="member/member.js"></script>
+		<script src="contract/contract.js"></script>
+
+		<script async src="api/googleAPI.js"></script>
+
+		<!--contract UI-->
+		<script src="js/require.js" defer async="true" data-main="js/main"></script>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.rtl.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.silver.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.default.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.mobile.all.min.css"/>
+		<!---test-->
+		<!---->
+
+		<script src="js/jquery.form.js"></script>
+
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/reveal.css" rel="stylesheet" type="text/css" />
+		<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
+		<link href="css/jquery-an-showbox.css" rel="stylesheet" type="text/css" />
+		<link href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" rel="stylesheet" >
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<style>
+/* Material Theme padding adjustment*/
+
+
+
+
+				#news_map{
+					width: 500px;
+					height: 500px;
+				  }
+
+   .mobileShow { display: none;}
+   @media only screen
+   and (min-device-width : 320px)
+   and (max-device-width : 480px){ .mobileShow { display: inline;}}
+
+</style>
+	</head>
+	<body  onload="store_list_app()">
+		<div id="content" ></div>
+	</body>
+</html>
