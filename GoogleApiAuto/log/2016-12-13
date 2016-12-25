@@ -1,0 +1,86 @@
+---------------------------------------------------------------------------------------------------
+Config: location 21.9769 120.3964 radius 2000 key AIzaSyDDhjNzjNq5S_wfT6FkGqhfqyThsXCrGKA
+Type "r" to resume
+Type "p" to pause
+Type "set default" to set config to default
+Type "set lat|lng|rad|key" to set config
+Type "y" to start Server
+Type "auto" to Auto Run
+[2016-12-13 09:21:10]location:  23.350781856265105 , 121.77541627436669
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-13 09:21:40]location:  23.75242651324165 , 121.107571926933
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-13 09:22:10]location:  22.453838114923613 , 121.51829436434596
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-13 09:22:40]location:  22.59269500309171 , 121.3783426484952
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-13 09:23:10]location:  23.05799820470796 , 121.18997234837036
+Results Find:  2
+[2016-12-13 09:23:11] id:  ChIJZREeqCYKbzQRkaFaMo5jhWc Query
+[2016-12-13 09:23:11] id:  ChIJF56UNTwKbzQRj8WcEJjQwvk Query
+[2016-12-13 09:23:11] Result=> id: ChIJF56UNTwKbzQRj8WcEJjQwvk / Name: 君玉茶園 / location: No. 124-5, Xibu Rd, Guanshan Township, Taitung County, Taiwan 956
+Successful Update query:  2 Reapted query:  0 Failed query:  0
+[2016-12-13 09:23:11] Result=> id: ChIJZREeqCYKbzQRkaFaMo5jhWc / Name: 待客之稻碾米廠 / location: 956, Taiwan, Taitung County, Guanshan Township, 新福里溪埔13鄰137號
+---------------------------------------------------------------------------------------------------
+[2016-12-13 09:23:40]location:  24.886008954065595 , 120.48742441881846
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-13 09:24:10]location:  23.78105079307482 , 121.80824796469606
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+[2016-12-13 09:24:40]location:  22.068097369606445 , 122.31618519988153
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------

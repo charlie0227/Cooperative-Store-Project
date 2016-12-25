@@ -1,0 +1,2206 @@
+Type "r" to resume
+Type "set lat|lng|rad|key" to set config
+---------------------------------------------------------------------------------------------------
+Type "set default" to set config to default
+Type "p" to pause
+Type "y" to start Server
+Config: location 21.9769 120.3964 radius 2000 key AIzaSyDDhjNzjNq5S_wfT6FkGqhfqyThsXCrGKA
+Type "auto" to Auto Run
+[2016-12-16 11:08:23]location:  22.438936238145455 , 120.48768772284497
+Results Find:  14
+[2016-12-16 11:08:23] id:  ChIJXYUkA-fgcTQR23Wgmww4uD0 Query
+[2016-12-16 11:08:23] id:  ChIJhzzp4OzgcTQR4LApCuoOVqo Query
+[2016-12-16 11:08:23] id:  ChIJJf0pk1rgcTQRZwfhxpcOKz8 Repeat
+[2016-12-16 11:08:24] id:  ChIJKfSsG6vhcTQRVJn9w-azv5A Query
+[2016-12-16 11:08:23] id:  ChIJo6nB_VTgcTQRGP4EZheQltw Query
+[2016-12-16 11:08:24] id:  ChIJqZj6LOzgcTQRdVJlE0dd20o Query
+[2016-12-16 11:08:24] id:  ChIJKcWEQFHgcTQR1VAdMyRdQ88 Query
+[2016-12-16 11:08:24] id:  ChIJsVda4ezgcTQRG02CiPVBRLU Query
+[2016-12-16 11:08:24] id:  ChIJkTtYk8LgcTQR0sg3LhLb7hA Query
+[2016-12-16 11:08:24] id:  ChIJ0ysGjVTgcTQRlOCVmE0US2w Query
+[2016-12-16 11:08:24] id:  ChIJPf3fHlzgcTQRa29RzTup1h8 Repeat
+[2016-12-16 11:08:24] id:  ChIJlwfeqFHgcTQRDdHOx4vB7Bs Query
+[2016-12-16 11:08:24] id:  ChIJ74_uP17gcTQRIDcz11p1emY Repeat
+[2016-12-16 11:08:24] id:  ChIJLVh61ZLgcTQRFYuyKE2ti5Q Repeat
+[2016-12-16 11:08:25] Result=> id: ChIJhzzp4OzgcTQR4LApCuoOVqo / Name: 政益食品有限公司 / location: No. 122號, Chenggong Rd, Linbian Township, Pingtung County, Taiwan 927
+[2016-12-16 11:08:25] Result=> id: ChIJkTtYk8LgcTQR0sg3LhLb7hA / Name: 崎峰繁殖場 / location: 27 號, No. 191-1, Yuhou Rd, Linbian Township, Pingtung County, Taiwan 927
+[2016-12-16 11:08:25] Result=> id: ChIJo6nB_VTgcTQRGP4EZheQltw / Name: 東方渡假酒店-珍饌廳 / location: 鵬 灣 大道 二 段 1 號, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:08:25] Result=> id: ChIJXYUkA-fgcTQR23Wgmww4uD0 / Name: 阿雀姨自助餐 / location: Guangqian Rd, Linbian Township, Pingtung County, Taiwan 92746
+[2016-12-16 11:08:25] Result=> id: ChIJsVda4ezgcTQRG02CiPVBRLU / Name: 菓之寶 / location: 92747, Taiwan, Pingtung County, Linbian Township, 成功路11號
+[2016-12-16 11:08:25] Result=> id: ChIJqZj6LOzgcTQRdVJlE0dd20o / Name: 圓圓關東煮 / location: 927, Taiwan, Pingtung County, Linbian Township, 成功路5巷4號
+[2016-12-16 11:08:25] Result=> id: ChIJKcWEQFHgcTQR1VAdMyRdQ88 / Name: 天河海產 / location: Yanhai Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:08:25] Result=> id: ChIJKfSsG6vhcTQRVJn9w-azv5A / Name: 海角堡 / location: No. 53, Dapeng Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:08:25] Result=> id: ChIJlwfeqFHgcTQRDdHOx4vB7Bs / Name: 天河海鮮餐廳 / location: 之 10, No. 1大潭路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:08:25] Result=> id: ChIJ0ysGjVTgcTQRlOCVmE0US2w / Name: 東方渡假酒店-國際宴會廳 / location: 鵬 灣 大道 二 段 1 號, Donggang Township, Pingtung County, Taiwan 928
+Successful Update query:  10 Reapted query:  4 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:26]location:  24.67640008130863 , 122.32536583891643
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:29]location:  22.199958930462646 , 121.73530710134061
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:32]location:  23.909252584697423 , 121.26562962593863
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+Results Find:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:35]location:  22.96126086442247 , 120.52884634966068
+Results Find:  24
+[2016-12-16 11:08:35] id:  ChIJpWp_qSRobjQR9Sk_63Z8JAo Query
+[2016-12-16 11:08:35] id:  ChIJXUg4JYNCbjQRnQ-eXz88wjQ Query
+[2016-12-16 11:08:35] id:  ChIJK6g1I4NCbjQRR1d1aOqjF38 Query
+[2016-12-16 11:08:35] id:  ChIJ4UqvW4dCbjQRiOFnHixV6Ck Query
+[2016-12-16 11:08:35] id:  ChIJGRJkNoNCbjQRw88-1up0fU4 Query
+[2016-12-16 11:08:36] id:  ChIJeeuJm5xCbjQRaRyrY50FKkM Query
+[2016-12-16 11:08:35] id:  ChIJiytGMYNCbjQRyqkZ4CKAfbQ Query
+[2016-12-16 11:08:35] id:  ChIJKW_JNYNCbjQRU_8qj_4cUaw Query
+[2016-12-16 11:08:35] id:  ChIJ35DHNYNCbjQRvuwIU03mc2M Query
+[2016-12-16 11:08:36] id:  ChIJX_OmnJxCbjQRX7UJ49GOf1c Query
+[2016-12-16 11:08:36] id:  ChIJS9X3_ptCbjQRU1IiDUhQ8t8 Query
+[2016-12-16 11:08:36] id:  ChIJXYVKxplCbjQRAOFuwxqMUEI Query
+[2016-12-16 11:08:36] id:  ChIJubBkSi5objQR54iu2VpVVmQ Query
+[2016-12-16 11:08:36] id:  ChIJ9-WPl9FpbjQRmbuqLKkI_2k Query
+[2016-12-16 11:08:36] id:  ChIJyS6sQZBCbjQRXNgXY7DRAAU Query
+[2016-12-16 11:08:36] id:  ChIJ7cbEC5FCbjQRgJmsttmS80A Query
+[2016-12-16 11:08:36] id:  ChIJ8aL-8ZdCbjQRjyLWCfUnf64 Query
+[2016-12-16 11:08:36] id:  ChIJrRduoZlCbjQRQQkXWNJ6tvw Query
+[2016-12-16 11:08:36] id:  ChIJXQ7cYL1CbjQRfeN__1OjtCk Query
+[2016-12-16 11:08:36] id:  ChIJn9gpb71CbjQRhpWCXZE9cUk Query
+[2016-12-16 11:08:36] id:  ChIJlVyNIpdCbjQR9eVnjIaMDbE Query
+[2016-12-16 11:08:36] id:  ChIJGRBHjZdCbjQRYKDHKFz5TIY Query
+[2016-12-16 11:08:36] id:  ChIJJ_BjI3hCbjQRGaBrSIpoC9s Query
+[2016-12-16 11:08:36] id:  ChIJ6VdiNS5objQRYK5atqQNE7A Query
+[2016-12-16 11:08:37] Result=> id: ChIJpWp_qSRobjQR9Sk_63Z8JAo / Name: 大衛營高爾夫球場 / location: No. 98之3號, Gouping Rd, Qishan District, Kaohsiung City, Taiwan 842
+[2016-12-16 11:08:37] Result=> id: ChIJGRJkNoNCbjQRw88-1up0fU4 / Name: 7-Eleven / location: No. 46號, Qingshui Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJXUg4JYNCbjQRnQ-eXz88wjQ / Name: 江南自助餐 / location: 846, Taiwan, Kaohsiung City, Shanlin District, 玉山景觀公路水里玉山線
+[2016-12-16 11:08:37] Result=> id: ChIJK6g1I4NCbjQRR1d1aOqjF38 / Name: 中興農藥行 / location: 號, No. 27清水路杉林區高雄市 Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJKW_JNYNCbjQRU_8qj_4cUaw / Name: 早安美芝城 / location: 846, Taiwan, Kaohsiung City, Shanlin District, 玉山景觀公路水里玉山線
+[2016-12-16 11:08:37] Result=> id: ChIJiytGMYNCbjQRyqkZ4CKAfbQ / Name: 賀買商店 / location: No. 36-2, Qingshui Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJeeuJm5xCbjQRaRyrY50FKkM / Name: 杉林自助餐 / location: No. 64, Qingshui Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJ4UqvW4dCbjQRiOFnHixV6Ck / Name: 月光杉林廚房 / location: No. 66-1, Tongzhu Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJXYVKxplCbjQRAOFuwxqMUEI / Name: 鄉間小吃棧 / location: No. 304-1, Qingshui Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJyS6sQZBCbjQRXNgXY7DRAAU / Name: 嚕嚕咪 / location: 846, Taiwan, Kaohsiung City, Shanlin District, Hexin Rd, 70號號
+[2016-12-16 11:08:37] Result=> id: ChIJ35DHNYNCbjQRvuwIU03mc2M / Name: 八泡生活茶飲 / location: 846, Taiwan, Kaohsiung City, Shanlin District, 玉山景觀公路水里玉山線
+[2016-12-16 11:08:37] Result=> id: ChIJubBkSi5objQR54iu2VpVVmQ / Name: 尾庄牛肉麵 / location: 號, No. 2溝坪路旗山區高雄市 Taiwan 842
+[2016-12-16 11:08:37] Result=> id: ChIJrRduoZlCbjQRQQkXWNJ6tvw / Name: 杉都餐館 / location: No. 283-4, Qingshui Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJS9X3_ptCbjQRU1IiDUhQ8t8 / Name: 樹榮自助餐 / location: No. 199, Qingshui Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJX_OmnJxCbjQRX7UJ49GOf1c / Name: 杉林肉圓 / location: No. 73-4, Qingshui Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJ7cbEC5FCbjQRgJmsttmS80A / Name: 高雄市築夢新故鄉文化產業發展協會 / location: 號, 合心路146巷杉林區高雄市 Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJGRBHjZdCbjQRYKDHKFz5TIY / Name: 山東水餃 / location: No. 16號, Lane 24, Shanxian Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJ6VdiNS5objQRYK5atqQNE7A / Name: 後庄牛肉麵 / location: 842, Taiwan, Kaohsiung City, Qishan District, Gouping Rd, 8號號
+[2016-12-16 11:08:37] Result=> id: ChIJJ_BjI3hCbjQRGaBrSIpoC9s / Name: 悠福坊---農業生活藝術 / location: 之 5 號, No. 226桐竹路杉林區高雄市 Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJlVyNIpdCbjQR9eVnjIaMDbE / Name: 萊爾富 / location: No. 1, Daai Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJ9-WPl9FpbjQRmbuqLKkI_2k / Name: 思原生態農場 / location: 號, No. 1-10蕉埔巷旗山區高雄市 Taiwan 842
+[2016-12-16 11:08:37] Result=> id: ChIJXQ7cYL1CbjQRfeN__1OjtCk / Name: 東港妹手工包杉林分店 / location: Lane 24, Shanxian Rd, Shanlin District, Kaohsiung City, Taiwan 846
+[2016-12-16 11:08:37] Result=> id: ChIJn9gpb71CbjQRhpWCXZE9cUk / Name: 內門潘家手工外省麵 / location: 號, No. 57清水路杉林區高雄市 Taiwan 846
+[2016-12-16 11:08:38]location:  23.124409397112252 , 121.79132225051701
+[2016-12-16 11:08:37] Result=> id: ChIJ8aL-8ZdCbjQRjyLWCfUnf64 / Name: 上來快餐 / location: No. 21-1, Lane 24, Shanxian Rd, Shanlin District, Kaohsiung City, Taiwan 846
+Successful Update query:  24 Reapted query:  0 Failed query:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Results Find:  0
+---------------------------------------------------------------------------------------------------
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:41]location:  23.39990430065731 , 121.4277908356406
+Results Find:  0
+[2016-12-16 11:08:44]location:  24.079900265105838 , 120.68099312908711
+Results Find:  192
+[2016-12-16 11:08:45] id:  ChIJnz66zaQ8aTQR3reg6WWmnmQ Repeat
+[2016-12-16 11:08:45] id:  ChIJ777Fj1g7aTQRp6SPhuEtCDo Repeat
+[2016-12-16 11:08:45] id:  ChIJ-3LX_aQ8aTQRHJ3M2LxMOBM Repeat
+[2016-12-16 11:08:45] id:  ChIJf-0HMbs8aTQR0j-QLCKf4SA Repeat
+[2016-12-16 11:08:45] id:  ChIJUXs6Crw8aTQRe324eUgRdZQ Repeat
+[2016-12-16 11:08:45] id:  ChIJzdJinZU8aTQRJ8pQeWZBzm4 Repeat
+[2016-12-16 11:08:45] id:  ChIJxdwSzKc8aTQR5Ywer1k88WM Repeat
+[2016-12-16 11:08:45] id:  ChIJs61th588aTQRGbAxmbI9pcY Query
+[2016-12-16 11:08:45] id:  ChIJ4xM4josxaTQR-vb5pKSlW3M Query
+[2016-12-16 11:08:45] id:  ChIJzWwP-_c8aTQR1-krKb3--4A Repeat
+[2016-12-16 11:08:45] id:  ChIJF5H6A5I8aTQRpzdifJVKBsM Query
+[2016-12-16 11:08:45] id:  ChIJMySyyaU8aTQRA3rnSpNwcrI Repeat
+[2016-12-16 11:08:45] id:  ChIJOfgq1bw8aTQRw8SYqfsOs0U Query
+[2016-12-16 11:08:45] id:  ChIJzWwP-_c8aTQR5-Ld-ytv3Yg Query
+[2016-12-16 11:08:45] id:  ChIJxZDPvGE7aTQRnSa7jZY7Jgw Query
+[2016-12-16 11:08:45] id:  ChIJ_V0P45w8aTQRjT-_Rkvh3B4 Query
+[2016-12-16 11:08:45] id:  ChIJqXa9nV87aTQRirUGBpbRxS8 Query
+[2016-12-16 11:08:45] id:  ChIJy7GZs6I8aTQRVBtU2QtzaqI Query
+[2016-12-16 11:08:45] id:  ChIJwaBbap08aTQR1TgcQkLo9Ck Query
+[2016-12-16 11:08:45] id:  ChIJJfbggHA7aTQRi-CO7aU2_bU Query
+[2016-12-16 11:08:46] id:  ChIJMzF4Yo88aTQRRe3PbpVVinw Query
+[2016-12-16 11:08:46] id:  ChIJ24otIbw8aTQRY47lDL-K6mU Repeat
+[2016-12-16 11:08:45] id:  ChIJyVWkI548aTQRZNQ8lTCIz4M Query
+[2016-12-16 11:08:45] id:  ChIJWQV8NaA8aTQR_KhGYqdv0_k Repeat
+[2016-12-16 11:08:46] id:  ChIJl-Pmrm87aTQROa45IdCIrwk Query
+[2016-12-16 11:08:46] id:  ChIJuzmHU6E8aTQRVHu4tWkJek8 Query
+[2016-12-16 11:08:46] id:  ChIJx49zR287aTQRtY5TkltFbyY Query
+[2016-12-16 11:08:46] id:  ChIJVWa9VLw8aTQRRESi69Ncd-A Repeat
+[2016-12-16 11:08:46] id:  ChIJe6Irg2g7aTQRUfZ5fvCOse8 Query
+[2016-12-16 11:08:46] id:  ChIJJT6Ek3E7aTQRoCh-_tbF9lk Query
+[2016-12-16 11:08:46] id:  ChIJCzeseb48aTQRJXjzGKb1gtE Query
+[2016-12-16 11:08:46] id:  ChIJjSH4x5M8aTQRJrOuBb2Vnxs Query
+[2016-12-16 11:08:46] id:  ChIJ5f_g13E7aTQRRs4sKEYLqxo Query
+[2016-12-16 11:08:46] id:  ChIJ04QXcr48aTQR5mY_u4ymIKI Query
+[2016-12-16 11:08:46] id:  ChIJvULR1qQ8aTQRnoTTlQ6UGNs Repeat
+[2016-12-16 11:08:46] id:  ChIJJzsR_JQ8aTQRXT8kVY4CwxI Query
+[2016-12-16 11:08:46] id:  ChIJkRoger48aTQRtYFpmJxOQ30 Query
+[2016-12-16 11:08:46] id:  ChIJq8yrNG47aTQRHJ_co-d1ODQ Query
+[2016-12-16 11:08:46] id:  ChIJNUvvOrs8aTQRKH2BmgeLGNw Repeat
+[2016-12-16 11:08:46] id:  ChIJ2eJfo748aTQR486Ud4_yQCk Repeat
+[2016-12-16 11:08:46] id:  ChIJK1ziWL48aTQRZMCO8zbLotk Query
+[2016-12-16 11:08:46] id:  ChIJf_W4S287aTQRaGZNAq0aUj8 Query
+[2016-12-16 11:08:46] id:  ChIJs9TcGF07aTQRxRGHA4bGc2Y Query
+[2016-12-16 11:08:46] id:  ChIJCUrTjpI8aTQRf3rXvwQfI5A Query
+[2016-12-16 11:08:46] id:  ChIJ0zmuPZU8aTQRakHThetltn0 Query
+[2016-12-16 11:08:46] id:  ChIJl_o9mbs8aTQR1B4YIZ_yqko Repeat
+[2016-12-16 11:08:46] id:  ChIJ0-OW2aQ8aTQRySavbDRYzww Query
+[2016-12-16 11:08:46] id:  ChIJ53m5EeY8aTQRyoGFWXsnbb8 Repeat
+[2016-12-16 11:08:46] id:  ChIJaSToY7k8aTQR7-uxRjNH3QU Repeat
+[2016-12-16 11:08:46] id:  ChIJAUR6ZVk7aTQR7LBOO8ggjBM Query
+[2016-12-16 11:08:46] id:  ChIJqwJUlmI7aTQRO2KVd3ACXso Query
+[2016-12-16 11:08:46] id:  ChIJxwKnRFg7aTQRsvMs0CfcwS0 Repeat
+[2016-12-16 11:08:46] id:  ChIJbyvncZw8aTQR2JG2FkvjfxY Query
+[2016-12-16 11:08:46] id:  ChIJ5YGHZaU8aTQRTj8baRfNBb8 Repeat
+[2016-12-16 11:08:46] id:  ChIJ7UoKzr48aTQRYaPVse7tEV8 Repeat
+[2016-12-16 11:08:46] id:  ChIJVe8kJYM8aTQRzq_ecY8lkAU Repeat
+[2016-12-16 11:08:46] id:  ChIJWVOOhJI8aTQR3edWtbGZ_Pw Query
+[2016-12-16 11:08:46] id:  ChIJ4VhtYJs8aTQRiz9vbJhECxY Query
+[2016-12-16 11:08:46] id:  ChIJxV7limI7aTQRAJH60tDlSYo Query
+[2016-12-16 11:08:46] id:  ChIJy8ib3II8aTQRE5oBh7Awozc Query
+[2016-12-16 11:08:46] id:  ChIJcykHKaA8aTQRjuWazdDJ4yA Query
+[2016-12-16 11:08:46] id:  ChIJS2sY_WE7aTQR3m8qg6y7Ups Query
+[2016-12-16 11:08:46] id:  ChIJW7QRRYI8aTQR1DBugHYKLYU Query
+[2016-12-16 11:08:46] id:  ChIJCTcTV588aTQRJqVIRPvgglc Query
+[2016-12-16 11:08:46] id:  ChIJA01zV588aTQRWKABodF1dWY Repeat
+[2016-12-16 11:08:46] id:  ChIJZcv7JZ48aTQRG2nYvlqKLS4 Query
+[2016-12-16 11:08:46] id:  ChIJuS3fLqA8aTQRsQkt3CTt7Rg Query
+[2016-12-16 11:08:46] id:  ChIJUcJE8WI7aTQRpzrOrfYqyGg Query
+[2016-12-16 11:08:46] id:  ChIJJVNgc3w7aTQRwno7cQ9WZH8 Query
+[2016-12-16 11:08:46] id:  ChIJ0eScIpg8aTQRXiyY-UB5CQE Query
+[2016-12-16 11:08:46] id:  ChIJn87MBKE8aTQRTXXUwwGZMck Repeat
+[2016-12-16 11:08:47] id:  ChIJ0fgMNZ48aTQRGaKVHlJ2HII Query
+[2016-12-16 11:08:47] id:  ChIJMwj91Hs7aTQRDL8mbVnGuKI Repeat
+[2016-12-16 11:08:46] id:  ChIJHfDNLqA8aTQR6E16fCyZvoU Query
+[2016-12-16 11:08:46] id:  ChIJQdnMgJ88aTQRZ3KpNN1Kc9s Query
+[2016-12-16 11:08:47] id:  ChIJqy3WvaM8aTQRAlpYl_AyXT0 Query
+[2016-12-16 11:08:47] id:  ChIJpf0Q9r48aTQR4Gkunbq9YH4 Query
+[2016-12-16 11:08:47] id:  ChIJIWVoKFk7aTQRF3r6_Jh4pEQ Query
+[2016-12-16 11:08:47] id:  ChIJM7IDmqM8aTQRHi1XgtA5HyA Query
+[2016-12-16 11:08:47] id:  ChIJLzmGu6I8aTQRsR4lMA6k5NQ Query
+[2016-12-16 11:08:47] id:  ChIJocKYino7aTQReIcJZvhxoj0 Repeat
+[2016-12-16 11:08:47] id:  ChIJ33MJZZE8aTQR2XOtOsNSl8A Query
+[2016-12-16 11:08:47] id:  ChIJQz11rL08aTQRi_YXKu0nJSc Query
+[2016-12-16 11:08:47] id:  ChIJhwxXvr08aTQRur0_UrncWTA Query
+[2016-12-16 11:08:47] id:  ChIJGTyRmcc8aTQRUj2Srz1qOuE Query
+[2016-12-16 11:08:47] id:  ChIJsbwA0ZY8aTQRxE8RVTl7uH8 Query
+[2016-12-16 11:08:47] id:  ChIJHx6Z4708aTQRmjZ81QpTzBM Query
+[2016-12-16 11:08:47] id:  ChIJ8Z6loKY8aTQRrAeMOoRPaSQ Query
+[2016-12-16 11:08:47] id:  ChIJ6T0I3b08aTQRiIWbiazjPQM Query
+[2016-12-16 11:08:47] id:  ChIJH5ZZyaU8aTQRLWqVEapvemI Query
+[2016-12-16 11:08:47] id:  ChIJZzd_CL08aTQREKiOfIOsH4I Query
+[2016-12-16 11:08:47] id:  ChIJ6Vr_grw8aTQRYOsfj4A4piw Query
+[2016-12-16 11:08:47] id:  ChIJf_W4S287aTQRtp0Xs3Y3CCc Query
+[2016-12-16 11:08:47]location:  22.337987790904705 , 121.65992125314901
+[2016-12-16 11:08:47] id:  ChIJnZsPoKY8aTQRYO-OsQumlsQ Query
+[2016-12-16 11:08:47] id:  ChIJG1PcZ7k8aTQR5Xx6jQoMnxU Repeat
+[2016-12-16 11:08:47] id:  ChIJPf_ThLw8aTQRZjN1gW2jvK0 Query
+[2016-12-16 11:08:47] id:  ChIJY1iK2L08aTQRfynwH2cKQm4 Query
+[2016-12-16 11:08:47] id:  ChIJqVx6Rrw8aTQRPhLzDCul3ck Query
+[2016-12-16 11:08:47] id:  ChIJyY29qG87aTQREV72QaT0eM4 Query
+[2016-12-16 11:08:47] id:  ChIJF57zL7w8aTQRVKUxE0rScR4 Query
+[2016-12-16 11:08:47] id:  ChIJoTM2CW87aTQRWlIG5BuBlgQ Query
+[2016-12-16 11:08:47] id:  ChIJKZwefrs8aTQR8fmMRDCW17c Query
+[2016-12-16 11:08:47] id:  ChIJYV2I_KQ8aTQR2YJxMxwr6_w Query
+[2016-12-16 11:08:47] id:  ChIJ9TnPL3A7aTQROFoSV2xZDF0 Query
+[2016-12-16 11:08:47] id:  ChIJVSCYvog8aTQRFXnhwqIwsUI Query
+[2016-12-16 11:08:47] id:  ChIJ6fevFm87aTQRVDBsQtf4gw0 Query
+[2016-12-16 11:08:47] id:  ChIJ46NNv4g8aTQR4ezuKXXtktU Query
+[2016-12-16 11:08:47] id:  ChIJhbldEJI8aTQR_iZeyoIP_fE Repeat
+[2016-12-16 11:08:47] id:  ChIJ6fevFm87aTQRcrXGudh2ves Query
+[2016-12-16 11:08:47] id:  ChIJibCE0KQ8aTQRJc3OpzUu3Ys Query
+[2016-12-16 11:08:47] id:  ChIJSzqGPbw8aTQRmSFZ6Z40nbc Query
+[2016-12-16 11:08:47] id:  ChIJAa0aeLs8aTQRNSwh3oXopl8 Query
+[2016-12-16 11:08:47] id:  ChIJibCE0KQ8aTQR5uI9h6Cc9bk Query
+[2016-12-16 11:08:47] id:  ChIJdcmftG87aTQRR3Q9GJpA0Q4 Query
+[2016-12-16 11:08:47] id:  ChIJa-3HPrs8aTQRvqwgBuCjKw4 Query
+[2016-12-16 11:08:47] id:  ChIJOa8VCG87aTQRnECAnVD9BH8 Query
+[2016-12-16 11:08:47] id:  ChIJgfb9T6E8aTQRoRzDMEVAMUA Query
+[2016-12-16 11:08:47] id:  ChIJIwfWgr48aTQRCz4FygdubAI Query
+[2016-12-16 11:08:47] id:  ChIJx08BIbw8aTQRqZMHdzYg6PA Repeat
+[2016-12-16 11:08:47] id:  ChIJk1s6zqQ8aTQRAOtWToW473o Query
+[2016-12-16 11:08:47] id:  ChIJZckjIbw8aTQRaX21UDVgcR4 Repeat
+[2016-12-16 11:08:47] id:  ChIJWXYfEZI8aTQRfJQen7kprbo Query
+[2016-12-16 11:08:47] id:  ChIJpeQpg748aTQRHmxy9SvXPkM Repeat
+[2016-12-16 11:08:47] id:  ChIJte9cFJI8aTQRonm1T7YPuoU Query
+[2016-12-16 11:08:47] id:  ChIJo2CISJI8aTQRm2T3KRVSNOM Query
+[2016-12-16 11:08:47] id:  ChIJ13N7Grw8aTQRsnWK48hpnWU Repeat
+[2016-12-16 11:08:48] id:  ChIJG5wMyaU8aTQRmNJnjO4hF68 Query
+[2016-12-16 11:08:48] id:  ChIJh7ienLs8aTQREYAWnMDlPB4 Repeat
+[2016-12-16 11:08:47] id:  ChIJ037fd7w8aTQRGmyBv9XAtTA Query
+[2016-12-16 11:08:48] id:  ChIJW2jnR5I8aTQRW_qjf7jjXB4 Query
+[2016-12-16 11:08:47] id:  ChIJ72huGrw8aTQR1jQL54oHvBg Repeat
+[2016-12-16 11:08:48] id:  ChIJbYoUY748aTQRT8BGABcw7Ww Repeat
+[2016-12-16 11:08:48] id:  ChIJp2fx1qQ8aTQRaBemzl0ff2o Repeat
+[2016-12-16 11:08:48] id:  ChIJfQDNSJI8aTQRDG2iN-Ay8ao Query
+[2016-12-16 11:08:47] id:  ChIJMT_r0KQ8aTQRfGtr6T2rrQs Repeat
+[2016-12-16 11:08:48] id:  ChIJP3t1uKU8aTQR_0HFcnfHnGo Query
+[2016-12-16 11:08:48] id:  ChIJiYaWHrw8aTQRLWhH-zs_FYU Query
+[2016-12-16 11:08:48] id:  ChIJZ8UoPrs8aTQRG5k1ZbrnBg8 Query
+[2016-12-16 11:08:48] id:  ChIJO3KFx6U8aTQRVyn6oyCN3tw Query
+[2016-12-16 11:08:48] id:  ChIJy2q3mr48aTQRPjyL5IPvc04 Repeat
+[2016-12-16 11:08:48] id:  ChIJZRtJz6U8aTQRhos-ls1uV6g Query
+[2016-12-16 11:08:48] id:  ChIJO3KFx6U8aTQRfuarGbRolnU Query
+[2016-12-16 11:08:48] id:  ChIJrV7JRpI8aTQRbbAoaR3r0Ls Query
+[2016-12-16 11:08:48] id:  ChIJAdhH3m47aTQRKiCzHQw9CuQ Query
+[2016-12-16 11:08:48] id:  ChIJfZ1bpJM8aTQRNG81wpC8vJw Query
+[2016-12-16 11:08:48] id:  ChIJl1NfkL48aTQR3TiF3iZY7vU Query
+[2016-12-16 11:08:48] id:  ChIJWZYbApU8aTQRdFJ5bG-tf2Q Query
+[2016-12-16 11:08:48] id:  ChIJwXDnoL48aTQR2Q8sM9wB4u0 Query
+[2016-12-16 11:08:48] id:  ChIJnfETB5U8aTQR551DBvoPZuU Query
+[2016-12-16 11:08:48] id:  ChIJbyhQCpU8aTQR-1XRFxxo7XU Query
+[2016-12-16 11:08:48] id:  ChIJb7BWuKU8aTQRPstBNwExRX0 Repeat
+[2016-12-16 11:08:48] id:  ChIJq7gsL247aTQRXKN8ZaCrN4A Query
+[2016-12-16 11:08:48] id:  ChIJgcMG9r48aTQRlPSPW5Vn7N0 Query
+[2016-12-16 11:08:48] id:  ChIJcXjv6r48aTQRoWygjHRJyq4 Query
+[2016-12-16 11:08:48] id:  ChIJWQv2TpI8aTQRBvkWYwnDUs8 Query
+[2016-12-16 11:08:48] id:  ChIJ3UyAw6U8aTQRkNcRIP907Cg Query
+[2016-12-16 11:08:48] id:  ChIJVTDqqoM7aTQRelKxC2OL-y0 Query
+[2016-12-16 11:08:48] id:  ChIJmxSSHbw8aTQRHoV3htZ7VC8 Query
+[2016-12-16 11:08:48] id:  ChIJyzv4zro8aTQRJSlzwJM7bqY Query
+[2016-12-16 11:08:48] id:  ChIJ34GC73E7aTQRkzE7381FW6Y Query
+[2016-12-16 11:08:48] id:  ChIJV8Q6_r88aTQRXhZWgmz6Rus Query
+[2016-12-16 11:08:48] id:  ChIJv_l1Ubk8aTQRJSpHbPJY-Q8 Query
+[2016-12-16 11:08:48] id:  ChIJpwmDUJI8aTQR-qSU75enV1Y Query
+[2016-12-16 11:08:48] id:  ChIJt_KWXpI8aTQRr81A5Pxoaj8 Query
+[2016-12-16 11:08:48] id:  ChIJhTfDW7k8aTQRhUqTdMRxcaA Query
+[2016-12-16 11:08:48] id:  ChIJD-YE9748aTQR6438KJxz6qE Query
+[2016-12-16 11:08:48] id:  ChIJDawGxKU8aTQRfooXWRia1zI Query
+[2016-12-16 11:08:48] id:  ChIJ2QP-6bo8aTQRrZeY8mjYv0o Query
+[2016-12-16 11:08:48] id:  ChIJ75a3hZI8aTQRIuVAwc3lYYo Query
+[2016-12-16 11:08:48] id:  ChIJ9VgmbW47aTQRpOIodjGEcC4 Query
+[2016-12-16 11:08:48] id:  ChIJWeuuYZI8aTQRBfrjKcikVqM Query
+[2016-12-16 11:08:48] id:  ChIJQ9OiuH08aTQRkz4RopMNQfg Query
+[2016-12-16 11:08:48] id:  ChIJ51VfaVk7aTQR0pxWboaNYao Repeat
+[2016-12-16 11:08:48] id:  ChIJO3uRg5I8aTQRcaFqTpIGdPw Query
+[2016-12-16 11:08:48] id:  ChIJxxSH4j7KCBQR7XfZzIl6szE Query
+[2016-12-16 11:08:48] id:  ChIJMxiZjVw7aTQRTQASP80HJAc Repeat
+[2016-12-16 11:08:48] id:  ChIJS2xaH788aTQRh2lcl0cPyek Query
+[2016-12-16 11:08:48] id:  ChIJl4P8jpI8aTQR1jeB-142Wq8 Query
+[2016-12-16 11:08:48] id:  ChIJPQgkC1k7aTQR37bcBfnCCho Query
+[2016-12-16 11:08:48] id:  ChIJmyEZi1w7aTQRfx-Ch0Id0bY Query
+[2016-12-16 11:08:48] id:  ChIJEURbH788aTQRSEcjbrki7GY Repeat
+[2016-12-16 11:08:48] id:  ChIJraKWMe08aTQR-UTjPK4u6GI Query
+[2016-12-16 11:08:48] id:  ChIJt4Xjirs8aTQRodgn1gOJD3k Query
+[2016-12-16 11:08:48] id:  ChIJHzzTRZI8aTQRO7AAWU-BC9Q Query
+[2016-12-16 11:08:48] id:  ChIJD9yT61w7aTQRIJBeE9NXnkM Query
+[2016-12-16 11:08:48] id:  ChIJ6-x8ZFk7aTQR0SITbrlEocc Query
+[2016-12-16 11:08:48] id:  ChIJHWyFX5I8aTQRyB2tRHUCSjw Query
+[2016-12-16 11:08:48] id:  ChIJiUMFV588aTQRNxvaeUe2YPk Query
+[2016-12-16 11:08:48] id:  ChIJZfD4eb48aTQR70okOYHUd3Y Query
+[2016-12-16 11:08:48] id:  ChIJ93RCH788aTQRIrJVddBHfEs Query
+[2016-12-16 11:08:48] id:  ChIJV3hmhKE8aTQRse4IOx1s_yA Query
+[2016-12-16 11:08:48] id:  ChIJmQPDc5U8aTQR-Y2-CdjYSGg Query
+[2016-12-16 11:08:50]location:  24.379715114422748 , 121.75212488662291
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+Results Find:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:51] Result=> id: ChIJF5H6A5I8aTQRpzdifJVKBsM / Name: 7-Eleven / location: No. 276號, Guozhong Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:51] Result=> id: ChIJxZDPvGE7aTQRnSa7jZY7Jgw / Name: 大榮金屬 / location: 號, No. 96西湖路187巷大里區台中市 Taiwan 412
+[2016-12-16 11:08:51] Result=> id: ChIJqXa9nV87aTQRirUGBpbRxS8 / Name: 美方芋仔冰 西湖店 / location: No. 2-3, Dafeng Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:51] Result=> id: ChIJyVWkI548aTQRZNQ8lTCIz4M / Name: 世華生物科技股份有限公司 / location: 41263, Taiwan, Taichung City, Dali District, 西湖路191號
+[2016-12-16 11:08:51] Result=> id: ChIJOfgq1bw8aTQRw8SYqfsOs0U / Name: 慈緣素食 / location: No. 197, Zhonghu Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:51] Result=> id: ChIJzWwP-_c8aTQR5-Ld-ytv3Yg / Name: Family Mart / location: No. 50號, Lane 78, Changchun Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:51] Result=> id: ChIJ4xM4josxaTQR-vb5pKSlW3M / Name: 佬佬咖啡 / location: No. 69, Zhangchun Road, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:51] Result=> id: ChIJwaBbap08aTQR1TgcQkLo9Ck / Name: 丘比特食品企業商行 / location: No. 359-9, Xihu Rd, Dali District, Taichung City, Taiwan 41263
+[2016-12-16 11:08:51] Result=> id: ChIJuzmHU6E8aTQRVHu4tWkJek8 / Name: 全家大里東芳店 / location: 412, Taiwan, Taichung City, Dali District, Dongnan Rd, 142-6號全家大里東芳店
+[2016-12-16 11:08:51] Result=> id: ChIJ_V0P45w8aTQRjT-_Rkvh3B4 / Name: 妙珠素食 / location: 號, No. 86西湖路大里區台中市 Taiwan 412
+[2016-12-16 11:08:51] Result=> id: ChIJMzF4Yo88aTQRRe3PbpVVinw / Name: 味源股份有限公司 / location: 412, Taiwan, Taichung City, Dali District, Lane 483, Guozhong Rd, 3號號
+[2016-12-16 11:08:51] Result=> id: ChIJx49zR287aTQRtY5TkltFbyY / Name: A-Bao 四德店 / location: 號, No. 296四德路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:51] Result=> id: ChIJJfbggHA7aTQRi-CO7aU2_bU / Name: 農宬冷凍調理食品 / location: No. 78, Xinbu Rd, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJf_W4S287aTQRaGZNAq0aUj8 / Name: 霧峰擔仔麵 / location: 413, Taiwan, Taichung City, Wufeng District, 台中縣霧峰鄉四德路25號
+[2016-12-16 11:08:51] Result=> id: ChIJs61th588aTQRGbAxmbI9pcY / Name: 7-Eleven / location: No. 167號, Dafeng Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJJT6Ek3E7aTQRoCh-_tbF9lk / Name: 7-Eleven / location: No. 392號, Side Road, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJjSH4x5M8aTQRJrOuBb2Vnxs / Name: 嚴選shop烘培用品專家-烘焙用具/包裝盒/保鮮盒/餐廚用品/烘焙用品/甜點/手作餅乾/烘焙模型器具 / location: 412, Taiwan, Taichung City, Dali District, 大衛路48號之5 號
+[2016-12-16 11:08:52] Result=> id: ChIJkRoger48aTQRtYFpmJxOQ30 / Name: 莊家火雞肉飯-中興仁化店 / location: No. 301, Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJl-Pmrm87aTQROa45IdCIrwk / Name: 赤風船 / location: Side Road, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJ5f_g13E7aTQRRs4sKEYLqxo / Name: 新井茶 霧峰店 / location: 413, Taiwan, Taichung City, Wufeng District, 中投交流道(四德 霧峰 烏日)
+[2016-12-16 11:08:52] Result=> id: ChIJe6Irg2g7aTQRUfZ5fvCOse8 / Name: 金昌魚池 / location: No. 274, Side Road, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJq8yrNG47aTQRHJ_co-d1ODQ / Name: 老蕭雞肉飯 / location: 號, No. 394四德路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJJzsR_JQ8aTQRXT8kVY4CwxI / Name: Admiral House Beef Noodle / location: No. 9, Section 1, Guoguang Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ04QXcr48aTQR5mY_u4ymIKI / Name: 百果園水果專賣店(大里中興店) / location: No. 343, Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJs9TcGF07aTQRxRGHA4bGc2Y / Name: Family Mart / location: No. 204號, Side Road, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJ0-OW2aQ8aTQRySavbDRYzww / Name: 瑪其朵烘焙坊 / location: 412 號, No. 154, Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJCzeseb48aTQRJXjzGKb1gtE / Name: 馬可先生健康烘焙中興店 / location: No. 299號, Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJqwJUlmI7aTQRO2KVd3ACXso / Name: Family Mart / location: No. 337, Xihu Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJAUR6ZVk7aTQR7LBOO8ggjBM / Name: 老口味牛肉麵 / location: 413, Taiwan, Taichung City, Wufeng District, 台中市霧峰區林森路896號
+[2016-12-16 11:08:52] Result=> id: ChIJK1ziWL48aTQRZMCO8zbLotk / Name: 各式封口機|收縮機|泡殼機|真空機|包裝機維修 及耗材提供|明鈿客製機種| / location: 412, Taiwan, Taichung City, Dali District, Lane 736, Renhua Rd, 7號號 04-24963484
+[2016-12-16 11:08:52] Result=> id: ChIJW7QRRYI8aTQR1DBugHYKLYU / Name: 宏岳事業社 / location: 233 巷 號, Caodi Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJZcv7JZ48aTQRG2nYvlqKLS4 / Name: 麥味登 / location: 412, Taiwan, Taichung City, Dali District, 台中市大里區西湖路33號
+[2016-12-16 11:08:52] Result=> id: ChIJbyvncZw8aTQR2JG2FkvjfxY / Name: 亞紀 / location: 412, Taiwan, Taichung City, Dali District, 景庄街202巷35弄3號
+[2016-12-16 11:08:52] Result=> id: ChIJ4VhtYJs8aTQRiz9vbJhECxY / Name: 尚豪海產 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市西湖路53號
+[2016-12-16 11:08:51] Result=> id: ChIJy7GZs6I8aTQRVBtU2QtzaqI / Name: 達雅企業股份有限公司 / location: No. 182, Zhongxiao Rd, Dali District, Taichung City, Taiwan 41267
+[2016-12-16 11:08:52] Result=> id: ChIJxV7limI7aTQRAJH60tDlSYo / Name: 育瑩特殊車廠 / location: 號, No. 158西湖路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJS2sY_WE7aTQR3m8qg6y7Ups / Name: 川味客家菜 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市西湖路37號
+[2016-12-16 11:08:52] Result=> id: ChIJCUrTjpI8aTQRf3rXvwQfI5A / Name: 7-Eleven / location: No. 295號, Dali Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJCTcTV588aTQRJqVIRPvgglc / Name: 古早味炒麭鲁肉饭 / location: 路口, 中山路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJHfDNLqA8aTQR6E16fCyZvoU / Name: 東鑫早午餐 / location: No. 65, Xihu Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ0eScIpg8aTQRXiyY-UB5CQE / Name: 榮鴻五金 / location: 號, No. 465大峰路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ0zmuPZU8aTQRakHThetltn0 / Name: 達美樂 / location: No. 48之1號, Section 2, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJy8ib3II8aTQRE5oBh7Awozc / Name: 台灣省嘉南羊乳運銷合作社台中縣經銷處 / location: 412, Taiwan, Dali District, 大里區草堤路158巷13弄1號
+[2016-12-16 11:08:52] Result=> id: ChIJcykHKaA8aTQRjuWazdDJ4yA / Name: 鄉村漢堡 大里大峰店 / location: Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ0fgMNZ48aTQRGaKVHlJ2HII / Name: 阿義師一口酥 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市西湖路22號
+[2016-12-16 11:08:52] Result=> id: ChIJUcJE8WI7aTQRpzrOrfYqyGg / Name: Hauryueh Tools Co.Ltd / location: North District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJsbwA0ZY8aTQRxE8RVTl7uH8 / Name: 晟佳地板 / location: 862 巷 18 號, No. 68環河路一段烏日區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJWVOOhJI8aTQR3edWtbGZ_Pw / Name: 美廉社 大里大里店 / location: No. 338, Dali Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJpf0Q9r48aTQR4Gkunbq9YH4 / Name: 帝王食補 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市仁化路740號
+[2016-12-16 11:08:52] Result=> id: ChIJJVNgc3w7aTQRwno7cQ9WZH8 / Name: 南方咖啡商行 / location: 號 413158 號, 新埔路 & 新埔路160巷霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJQdnMgJ88aTQRZ3KpNN1Kc9s / Name: 天橋下麵攤 / location: 號, No. 20-3西湖路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ33MJZZE8aTQR2XOtOsNSl8A / Name: 福新 / location: No. 7, Lane 37, Dawei Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ8Z6loKY8aTQRrAeMOoRPaSQ / Name: 有青海鮮 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市東南路10號
+[2016-12-16 11:08:52] Result=> id: ChIJqy3WvaM8aTQRAlpYl_AyXT0 / Name: 8C烘豆工坊 / location: No. 186, Zhongshan Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJuS3fLqA8aTQRsQkt3CTt7Rg / Name: 鴨肉飯 / location: 號, No. 65西湖路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJhwxXvr08aTQRur0_UrncWTA / Name: 再興米糕 / location: No. 1029, Renhua Rd,, 大里區台中市 Taiwan 412
+Results Find:  0
+[2016-12-16 11:08:52] Result=> id: ChIJGTyRmcc8aTQRUj2Srz1qOuE / Name: 永豐山海產店 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市仁化路571號
+[2016-12-16 11:08:52] Result=> id: ChIJZzd_CL08aTQREKiOfIOsH4I / Name: 小中欣簡餐 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市長春路108號
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+[2016-12-16 11:08:52] Result=> id: ChIJH5ZZyaU8aTQRLWqVEapvemI / Name: 好口味北平烤鴨 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市東南路1號
+[2016-12-16 11:08:52] Result=> id: ChIJY1iK2L08aTQRfynwH2cKQm4 / Name: 金甲賀 / location: 869 號, No. 867仁化路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ6T0I3b08aTQRiIWbiazjPQM / Name: 姆姆早午餐 MuMu Brunch / location: 412, Taiwan, Taichung City, Dali District, Renhua Rd, 800號號
+[2016-12-16 11:08:52] Result=> id: ChIJVSCYvog8aTQRFXnhwqIwsUI / Name: 貨櫃屋好宅 / location: No. 21, 街 巷 1 弄, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ9TnPL3A7aTQROFoSV2xZDF0 / Name: 盛鴻農場 / location: 413, Taiwan, 台中市霧峰區北柳里
+[2016-12-16 11:08:52] Result=> id: ChIJ6fevFm87aTQRVDBsQtf4gw0 / Name: 弘爺漢堡 - 四德店 / location: 413, Taiwan, Taichung City, Wufeng District, 四德路341號
+[2016-12-16 11:08:52] Result=> id: ChIJoTM2CW87aTQRWlIG5BuBlgQ / Name: 江姐姐肉圓 / location: 號, No. 332四德路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJPf_ThLw8aTQRZjN1gW2jvK0 / Name: 弘爺漢堡 - 青年店 / location: 412, Taiwan, Taichung City, Dali District, 中湖路56號
+[2016-12-16 11:08:52] Result=> id: ChIJ6Vr_grw8aTQRYOsfj4A4piw / Name: 櫻熊飯團涼麵吐司 / location: 號, No. 48中湖路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJyY29qG87aTQREV72QaT0eM4 / Name: 祥記牛肉麵 / location: 號, No. 320四德路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJnZsPoKY8aTQRYO-OsQumlsQ / Name: 弘爺漢堡 - 東南二店 / location: 412, Taiwan, Taichung City, Dali District, 台中市大里區東南路75號
+[2016-12-16 11:08:52] Result=> id: ChIJLzmGu6I8aTQRsR4lMA6k5NQ / Name: 雅富美食團購網-趙婧如 / location: 412, Taiwan, Taichung City, Dali District, 忠孝路
+[2016-12-16 11:08:52] Result=> id: ChIJIWVoKFk7aTQRF3r6_Jh4pEQ / Name: 泰蒝薑母鴨 / location: No. 139, Caohu Rd, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJ46NNv4g8aTQR4ezuKXXtktU / Name: Yano / location: Alley 1, Lane 21, Dali St, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJdcmftG87aTQRR3Q9GJpA0Q4 / Name: 霧峰鵝肉 / location: 號, No. 427四德路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJOa8VCG87aTQRnECAnVD9BH8 / Name: 港式（郎）鮮肉包 霧峰店 / location: 號, No. 107四德路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJibCE0KQ8aTQRJc3OpzUu3Ys / Name: 真好味擔仔麵 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市中興路一段312號之1
+[2016-12-16 11:08:52] Result=> id: ChIJgfb9T6E8aTQRoRzDMEVAMUA / Name: 高雄蚵仔煎 / location: No. 12, Dongnan Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJAa0aeLs8aTQRNSwh3oXopl8 / Name: 薩啦嘿呦鍋燒麵 / location: 412, Taiwan, Taichung City, Dali District, 中湖路27號
+[2016-12-16 11:08:52] Result=> id: ChIJ6fevFm87aTQRcrXGudh2ves / Name: 南北柳現炒 / location: 號, No. 341四德路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJa-3HPrs8aTQRvqwgBuCjKw4 / Name: 魯肉飯 / location: Zhongxing Rd, Nantou City, Taichung City, Taiwan 540
+[2016-12-16 11:08:52] Result=> id: ChIJibCE0KQ8aTQR5uI9h6Cc9bk / Name: 台灣饅頭專賣店-大里店 / location: No. 173-40, Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJIwfWgr48aTQRCz4FygdubAI / Name: 弘爺漢堡 / location: 412, Taiwan, Taichung City, Dali District, 中興路一段360號
+[2016-12-16 11:08:52] Result=> id: ChIJQz11rL08aTQRi_YXKu0nJSc / Name: 弘爺漢堡 - 達日好店 / location: 412, Taiwan, Taichung City, Dali District, 長春路80號
+[2016-12-16 11:08:52] Result=> id: ChIJKZwefrs8aTQR8fmMRDCW17c / Name: 貓印咖啡 / location: 412, Taiwan, Taichung City, Dali District, Zhonghu Rd, 30號號
+[2016-12-16 11:08:52] Result=> id: ChIJM7IDmqM8aTQRHi1XgtA5HyA / Name: 氵酉卒Bar / location: No. 180, Zhongshan Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJo2CISJI8aTQRm2T3KRVSNOM / Name: 素食水煎包 / location: No. 299-2 Guozhong Rd, 大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJYV2I_KQ8aTQR2YJxMxwr6_w / Name: 85度C。咖啡 大里草湖店 / location: 號, No. 105中興路一段大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJWXYfEZI8aTQRfJQen7kprbo / Name: 小時候大餅(大里分店) / location: 號, No. 332國中路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJHx6Z4708aTQRmjZ81QpTzBM / Name: 元歲本舖 / location: 412, Taiwan, Taichung City, Dali District, 國寶街36巷2號
+[2016-12-16 11:08:52] Result=> id: ChIJSzqGPbw8aTQRmSFZ6Z40nbc / Name: 大埔鐵板燒 / location: No. 2, Changchun Rd,, 大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJW2jnR5I8aTQRW_qjf7jjXB4 / Name: 好吃湯包 / location: 號, No. 299-2國中路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJte9cFJI8aTQRonm1T7YPuoU / Name: 多樂漢堡 / location: No. 330, Guozhong Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJO3KFx6U8aTQRfuarGbRolnU / Name: 歐瑟國際 / location: 25 弄 2 巷 號, No. 16中興路一段大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJO3KFx6U8aTQRVyn6oyCN3tw / Name: orsir / location: 2 巷 25 弄 號, No. 16中興路一段大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJP3t1uKU8aTQR_0HFcnfHnGo / Name: 利百加菸酒專賣店 / location: 412, Taiwan, Taichung City, Dali District, 中興路一段11之4號
+[2016-12-16 11:08:52] Result=> id: ChIJqVx6Rrw8aTQRPhLzDCul3ck / Name: 長春路麵攤 / location: No. 33, Zhangchun Road, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJ037fd7w8aTQRGmyBv9XAtTA / Name: 金時代自助洗車 / location: 號, No. 173中興路一段大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJiYaWHrw8aTQRLWhH-zs_FYU / Name: 蓮華素食 / location: No. 1043, Tucheng Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJF57zL7w8aTQRVKUxE0rScR4 / Name: 胖老爹美式炸雞 塗城店 / location: No. 225, Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJl1NfkL48aTQR3TiF3iZY7vU / Name: 小四川麵食館 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市中興路一段382巷36號
+[2016-12-16 11:08:52] Result=> id: ChIJZ8UoPrs8aTQRG5k1ZbrnBg8 / Name: 菩提素疏食坊 / location: Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJAdhH3m47aTQRKiCzHQw9CuQ / Name: 黑木耳肉羹 / location: 號, No. 98新厝路霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:52] Result=> id: ChIJZRtJz6U8aTQRhos-ls1uV6g / Name: 橋頭美食 / location: No. 11-1 Section 1 Zhongxing Rd, 大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJWQv2TpI8aTQRBvkWYwnDUs8 / Name: 一多一魯肉飯 國中店 / location: 號, No. 286國中路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJrV7JRpI8aTQRbbAoaR3r0Ls / Name: 大里懶人飯糰 / location: 號, No. 74東里路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJmxSSHbw8aTQRHoV3htZ7VC8 / Name: 包狀元手工包子饅頭店 / location: No. 817, Renhua Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJf_W4S287aTQRtp0Xs3Y3CCc / Name: 佳美素食餐飲店 / location: 413, Taiwan, Taichung City, Wufeng District, 台中縣霧峰鄉四德路401號
+[2016-12-16 11:08:52] Result=> id: ChIJfQDNSJI8aTQRDG2iN-Ay8ao / Name: 八方雲集（大里國中店） / location: 號, No. 290國中路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJWZYbApU8aTQRdFJ5bG-tf2Q / Name: 驢磨坊永和豆漿 / location: 號, No. 1國中路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJnfETB5U8aTQR551DBvoPZuU / Name: 東港美食海鮮餐廳 / location: 號, No. 1國光路一段大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJfZ1bpJM8aTQRNG81wpC8vJw / Name: DYE Asia / location: 號, No. 253國中路大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJcXjv6r48aTQRoWygjHRJyq4 / Name: 勝記地香舖 / location: 號, No. 82仁化路781巷大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJyzv4zro8aTQRJSlzwJM7bqY / Name: 義芳軒 食品行 / location: 號, No. 14成功路大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJk1s6zqQ8aTQRAOtWToW473o / Name: 非素不可 / location: 號, No. 139中興路一段大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJwXDnoL48aTQR2Q8sM9wB4u0 / Name: 千井大腸蚵仔麵線 / location: No. 948號, Tucheng Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJG5wMyaU8aTQRmNJnjO4hF68 / Name: 橋頭臭豆腐 / location: 號, No. 11-5中興路一段大里區台中市 Taiwan 412
+[2016-12-16 11:08:52] Result=> id: ChIJq7gsL247aTQRXKN8ZaCrN4A / Name: 弘爺漢堡 - 幸福店 / location: 413, Taiwan, Taichung City, Wufeng District, 台中市霧峰區四德路447之2號
+[2016-12-16 11:08:53] Result=> id: ChIJWeuuYZI8aTQRBfrjKcikVqM / Name: 弘爺漢堡 - 東里店 / location: 412, Taiwan, Taichung City, Dali District, 台中市大里區東里路26號
+[2016-12-16 11:08:53] Result=> id: ChIJV8Q6_r88aTQRXhZWgmz6Rus / Name: 陸媽媽水餃 / location: 41270, Taiwan, Taichung City, Dali District, 大元路98號
+[2016-12-16 11:08:53] Result=> id: ChIJDawGxKU8aTQRfooXWRia1zI / Name: 霸味薑母鴨 / location: 號, No. 14中潭公路大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJpwmDUJI8aTQR-qSU75enV1Y / Name: 瑞安餐盒食品工廠 / location: 號, No. 65, Dawei Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJVTDqqoM7aTQRelKxC2OL-y0 / Name: 齊樂行食品有限公司 / location: No. 460, Section 2, Zhongtou W Rd, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:53] Result=> id: ChIJ3UyAw6U8aTQRkNcRIP907Cg / Name: 全家便利商店 大里草湖橋店 / location: No. 2-1, Section 1, Zhongxing Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJHWyFX5I8aTQRyB2tRHUCSjw / Name: 茶窯複合式餐飲 / location: No. 29, Dongli Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJbyhQCpU8aTQR-1XRFxxo7XU / Name: Carrefour / location: No. 2, Section 2, Zhongxing Rd,, 大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJ75a3hZI8aTQRIuVAwc3lYYo / Name: 大里古早味早餐 / location: No. 299, Rd, Dali, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJgcMG9r48aTQRlPSPW5Vn7N0 / Name: 阿樹老店薑母鴨 / location: No. 742, Renhua Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJ34GC73E7aTQRkzE7381FW6Y / Name: 龍珍香沉香茶 / location: 413, Taiwan, Taichung City, Wufeng District, 丁台路19號
+[2016-12-16 11:08:53] Result=> id: ChIJmyEZi1w7aTQRfx-Ch0Id0bY / Name: 王品食材廠 / location: 號, No. 10四德路138巷霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:53] Result=> id: ChIJv_l1Ubk8aTQRJSpHbPJY-Q8 / Name: 金字塔能量活水機/大里塗城 / location: No. 953, Tucheng Rd, Dali District, Taichung City, Taiwan 41271
+[2016-12-16 11:08:53] Result=> id: ChIJ9VgmbW47aTQRpOIodjGEcC4 / Name: 灰太郎日式料理 / location: 413, Taiwan, Taichung City, Wufeng District, Wugong 1st Rd, 台灣 60 號
+[2016-12-16 11:08:53] Result=> id: ChIJt_KWXpI8aTQRr81A5Pxoaj8 / Name: 阿福師現炒店 / location: 號 之 1 號, No. 41東里路大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJl4P8jpI8aTQR1jeB-142Wq8 / Name: 蒸有味複合式餐飲 / location: 412, Taiwan, Taichung City, Dali District, 台中縣大里市大里路50號
+[2016-12-16 11:08:53] Result=> id: ChIJ93RCH788aTQRIrJVddBHfEs / Name: 紅牛炙熱牛排 / location: No. 383號, Renhua Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJO3uRg5I8aTQRcaFqTpIGdPw / Name: 昱品香素食 / location: 號, No. 333大里路大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJhTfDW7k8aTQRhUqTdMRxcaA / Name: 洪氏素食 / location: 號, No. 927塗城路大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJS2xaH788aTQRh2lcl0cPyek / Name: 全聯福利中心-台中大里仁化店 / location: 號, No. 500仁化路大里區台中市 Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJQ9OiuH08aTQRkz4RopMNQfg / Name: 一法有限公司 / location: 412, Taiwan, Taichung City, Dali District, 412台中市大里區中投西路三段167-5號
+[2016-12-16 11:08:53] Result=> id: ChIJ2QP-6bo8aTQRrZeY8mjYv0o / Name: 51巷咖啡館 / location: No. 10, Lane 51, Chenggong Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJV3hmhKE8aTQRse4IOx1s_yA / Name: Pen MaMa 愛團購 / location: 412, Taiwan, Taichung City, Dali District, Caohu Rd, 239-1號號
+[2016-12-16 11:08:53] Result=> id: ChIJmQPDc5U8aTQR-Y2-CdjYSGg / Name: Nescafe Dolce Gusto 家樂福大里內新店 / location: 412, Taiwan, ���中市大里區中興路二段309巷2號
+[2016-12-16 11:08:53] Result=> id: ChIJ6-x8ZFk7aTQR0SITbrlEocc / Name: 帝王薑母鴨 / location: 413, Taiwan, Taichung City, Wufeng District, 台中市霧峰區林森路884號
+[2016-12-16 11:08:53] Result=> id: ChIJxxSH4j7KCBQR7XfZzIl6szE / Name: 達香餅行 / location: No. 46, Lane 1137, Zhongzheng Rd, Wufeng District, Taichung City, Taiwan 413
+[2016-12-16 11:08:53] Result=> id: ChIJPQgkC1k7aTQR37bcBfnCCho / Name: 珍豪吃平價自助餐 / location: 號, No. 1草湖路90巷霧峰區台中市 Taiwan 413
+[2016-12-16 11:08:53] Result=> id: ChIJD-YE9748aTQR6438KJxz6qE / Name: 帝王食補紅面薑母鴨大里店 / location: No. 734, Renhua Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJraKWMe08aTQR-UTjPK4u6GI / Name: 北海道魷魚羹 / location: No. 333, Dali Rd, Dali District, Taichung City, Taiwan 412
+[2016-12-16 11:08:53] Result=> id: ChIJiUMFV588aTQRNxvaeUe2YPk / Name: 西湖客棧 / location: 412, Taiwan, Taichung City, Dali District, Dafeng Rd, 320號號
+[2016-12-16 11:08:53] Result=> id: ChIJHzzTRZI8aTQRO7AAWU-BC9Q / Name: 偉多立蛋糕店 / location: 412, Taiwan, Taichung City, Dali District, Dongli Rd, 78號號
+[2016-12-16 11:08:53] Result=> id: ChIJt4Xjirs8aTQRodgn1gOJD3k / Name: 大通寶電子遊藝場 / location: 412, Taiwan, Taichung City, Dali District, Alley 5, Lane 298, Section 1, Zhongxing Rd, 15號9 號
+[2016-12-16 11:08:53] Result=> id: ChIJZfD4eb48aTQR70okOYHUd3Y / Name: 勛勛串燒 / location: 412, Taiwan, Taichung City, Dali District, Renhua Rd, 766號號
+[2016-12-16 11:08:53] Result=> id: ChIJD9yT61w7aTQRIJBeE9NXnkM / Name: 天慈素食 / location: 413, Taiwan, Taichung City, Wufeng District, 台中市霧峰區四德路183巷1號
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:53]location:  22.66541137707869 , 121.08713016964167
+[2016-12-16 11:08:56]location:  22.139380887409626 , 122.34097097596363
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:08:59]location:  22.93826653865173 , 121.35512686351355
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:02]location:  24.50257506022868 , 121.879474434563
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:05]location:  24.334681380158898 , 120.82981845607262
+Results Find:  18
+[2016-12-16 11:09:05] id:  ChIJ1_PC148EaTQRzj9R-wIG8IE Repeat
+[2016-12-16 11:09:05] id:  ChIJzUyN1EEDaTQR7r9hyeNt_WY Repeat
+[2016-12-16 11:09:05] id:  ChIJ8UF99gYDaTQRjfvWY-7Oau0 Repeat
+[2016-12-16 11:09:05] id:  ChIJrQME9T8DaTQRML_6BWibKlM Repeat
+[2016-12-16 11:09:05] id:  ChIJ1_PC148EaTQRP3MmwN5N9JY Query
+[2016-12-16 11:09:05] id:  ChIJoSlrfBEDaTQRqxcDZYFCaVA Repeat
+[2016-12-16 11:09:05] id:  ChIJ63hFK3EDaTQROjAchG1PPzA Query
+[2016-12-16 11:09:05] id:  ChIJVVVVVXIDaTQRIT8wPyWrQYY Repeat
+[2016-12-16 11:09:05] id:  ChIJ_7_QTgADaTQRsb1MBY9geTA Repeat
+[2016-12-16 11:09:05] id:  ChIJk5ps6hQDaTQRVVpZlBbgTjg Repeat
+[2016-12-16 11:09:05] id:  ChIJp7Xm1EEDaTQRtBAMTTaEg94 Query
+[2016-12-16 11:09:05] id:  ChIJSfFIoHsDaTQRCCJdSg3LnfE Repeat
+[2016-12-16 11:09:05] id:  ChIJG7suf3MDaTQRRvNsVobbxpE Repeat
+[2016-12-16 11:09:05] id:  ChIJ9wVbB0EDaTQR6_X1FQltjoY Repeat
+[2016-12-16 11:09:05] id:  ChIJ90Xy-EsAaTQRscJhUSl2FN8 Query
+[2016-12-16 11:09:06] id:  ChIJhwHBAGYDaTQR8BS4BrG3fZ4 Query
+[2016-12-16 11:09:06] Result=> id: ChIJp7Xm1EEDaTQRtBAMTTaEg94 / Name: 鄉城餐廳 / location: 369, Taiwan, Miaoli County, Zhuolan Township, 豐田里30-2號
+[2016-12-16 11:09:06] Result=> id: ChIJ63hFK3EDaTQROjAchG1PPzA / Name: 彩虹之城咖啡廖明世 / location: 369, Taiwan, Miaoli County, Zhuolan Township, 112 號
+[2016-12-16 11:09:05] id:  ChIJrZLRX0ADaTQRX26xxRYkxZA Query
+[2016-12-16 11:09:06] id:  ChIJk-vzgaEDaTQR-wE0wKbWhzw Repeat
+[2016-12-16 11:09:06] Result=> id: ChIJhwHBAGYDaTQR8BS4BrG3fZ4 / Name: 荳媽媽觀光農園 / location: 369, Taiwan, Miaoli County, Zhuolan Township, 苗栗縣卓蘭鎮西坪里西坪109之20號
+[2016-12-16 11:09:06] Result=> id: ChIJ90Xy-EsAaTQRscJhUSl2FN8 / Name: 公德伯水果攤 / location: 364, Taiwan, Miaoli County, Dahu Township, 新開村5鄰8-1號
+[2016-12-16 11:09:06] Result=> id: ChIJrZLRX0ADaTQRX26xxRYkxZA / Name: 果之梨 / location: 苗栗縣卓蘭鎮豐田里豐田2之6號, Jhongfong Rd, Zhuolan Township, Miaoli County, Taiwan 369
+Successful Update query:  6 Reapted query:  12 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:06] Result=> id: ChIJ1_PC148EaTQRP3MmwN5N9JY / Name: 花自在 / location: 369, Taiwan, Miaoli County, Zhuolan Township, 西坪里4鄰37-2號
+[2016-12-16 11:09:08]location:  22.836626000061933 , 120.92111028722539
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:11]location:  22.608334316589918 , 122.30821012851676
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+[2016-12-16 11:09:14]location:  23.387972408734868 , 120.63860925168403
+Results Find:  1
+[2016-12-16 11:09:14] id:  ChIJjfdTr5bubjQRjmeNHMa6rmE Query
+[2016-12-16 11:09:14] Result=> id: ChIJjfdTr5bubjQRjmeNHMa6rmE / Name: 三佳茶行 / location: 602, Taiwan, Chiayi County, Fanlu Township, 草山28號
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:17]location:  22.921518142820872 , 121.64029376264696
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:09:20]location:  22.640493193099253 , 120.70065942557133
+[2016-12-16 11:09:23]location:  24.74827298613007 , 120.70821711774508
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+Results Find:  0
+[2016-12-16 11:09:26]location:  24.93094711742662 , 121.67818604138026
+Results Find:  38
+[2016-12-16 11:09:26] id:  ChIJAQAAAAD_ZzQRs0tvxkSBqnM Query
+[2016-12-16 11:09:26] id:  ChIJAQAAAAD_ZzQRILyjhXCl9Xs Repeat
+[2016-12-16 11:09:26] id:  ChIJAQAAAAD_ZzQRlRDCzAqn2EQ Repeat
+[2016-12-16 11:09:26] id:  ChIJAQAAAAD_ZzQRJzg1ZFLnGm4 Repeat
+[2016-12-16 11:09:26] id:  ChIJnV6yPAr_ZzQRONLIIuSXTwg Repeat
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRiVPek09e5Kk Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRUGueFIcmmNk Query
+[2016-12-16 11:09:26] id:  ChIJAQAAAAD_ZzQRYiDfJzNgkQM Repeat
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQR22_uNNTvdQ4 Repeat
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRRPh6TbrYk0Q Query
+[2016-12-16 11:09:26] id:  ChIJrbKCwU1TXTQR4ajthZO_teU Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRGpH8hra8aDk Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRdX1iecA6ac0 Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRA2DmdhiDEF4 Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRToY_rSfRNYM Query
+[2016-12-16 11:09:27] id:  ChIJGZodkXH_ZzQRemDWWwkDQ78 Query
+[2016-12-16 11:09:27] id:  ChIJHYfkSwL_ZzQR2gLMV4u2MfY Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQReCknxsRR1T0 Query
+[2016-12-16 11:09:27] id:  ChIJi0AmRHb_ZzQR4qrLUnOgrpQ Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRBhzKQaZV4io Query
+[2016-12-16 11:09:26] id:  ChIJP7IiQ3H_ZzQRe8e6XutkPlo Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRs-uS1Iag054 Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRdrCGtoloW0M Query
+[2016-12-16 11:09:27] id:  ChIJISJuAp7_ZzQRJCHJbJ_Wz_E Query
+[2016-12-16 11:09:27] id:  ChIJcd5jiwT_ZzQRwjvjjmhD4WE Query
+[2016-12-16 11:09:27] id:  ChIJrUnsQgL_ZzQR_M8lcTod10o Query
+[2016-12-16 11:09:27] id:  ChIJVWPbxQP_ZzQR7lwFESQyRXk Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRBFEv8q_Zxd4 Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRw7_3Ofs40MM Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRLeXwq0wNIGE Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQR0jGOpY3CP3Q Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRtGKUONRicgs Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRBQ3IZyG0tZk Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQR-UasMQTKsFY Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQR1UbdfR2seDE Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRlBfXROC0grE Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQRs7Zf15Gy3lY Query
+[2016-12-16 11:09:27] id:  ChIJAQAAAAD_ZzQR2DbnmagLFHM Query
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRs0tvxkSBqnM / Name: 冠壽司 / location: 232, Taiwan, New Taipei City, Pinglin District, 台北縣新莊市美秀市場南美二街36號(新莊體育場旁)
+[2016-12-16 11:09:27] Result=> id: ChIJrbKCwU1TXTQR4ajthZO_teU / Name: 泰原位泰式料理 / location: 221, Taiwan, New Taipei City, Pinglin District, 台北縣汐止市福德一路260號對面
+[2016-12-16 11:09:27] Result=> id: ChIJP7IiQ3H_ZzQRe8e6XutkPlo / Name: 鬍鬚茶園 / location: 232, Taiwan, New Taipei City, Pinglin District, 粗窟18號
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRRPh6TbrYk0Q / Name: 德夫麵包 / location: 231, Taiwan, New Taipei City, Pinglin District, 台北縣新店市寶興路45巷內
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRGpH8hra8aDk / Name: 洋磨坊義式麵屋 / location: 220, Taiwan, New Taipei City, Pinglin District, 台北縣板橋市大仁街24號
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRToY_rSfRNYM / Name: 拉亞漢堡 / location: 232, Taiwan, New Taipei City, Pinglin District, 台北縣中和市連城路和泰和街口附近
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRiVPek09e5Kk / Name: 不一樣臭豆腐 / location: 232, Taiwan, New Taipei City, Pinglin District, 台北縣新店市中正路惠國市場內
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRdX1iecA6ac0 / Name: 逢甲阿郎鹹酥雞 / location: 235, Taiwan, New Taipei City, Pinglin District, 台北縣中和市復興路308巷口
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRA2DmdhiDEF4 / Name: 大玉門精緻火鍋百匯 / location: 242, Taiwan, New Taipei City, Pinglin District, 台北縣新莊市市龍安路120號
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRBhzKQaZV4io / Name: 皇廚一品牛排 / location: 241, Taiwan, New Taipei City, Pinglin District, 台北縣三重市中正北路193巷45號1F(愛買三重店)
+[2016-12-16 11:09:27] Result=> id: ChIJGZodkXH_ZzQRemDWWwkDQ78 / Name: 34K coffee / location: 131 號, 北宜路七段坪林區新北市 Taiwan 232
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRLeXwq0wNIGE / Name: 老三水煎包 / location: 251, Taiwan, New Taipei City, Pinglin District, 台北縣淡水鎮英專路(台G店附近)
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQReCknxsRR1T0 / Name: 魯都香滷味 / location: 244, Taiwan, New Taipei City, Pinglin District, 台北縣林口鄉文化二路一段68巷內
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRdrCGtoloW0M / Name: 滇雲風味小吃 / location: 220, Taiwan, New Taipei City, Pinglin District, 台北縣板橋市中山路一段50巷22號(原宿側門旁)
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRtGKUONRicgs / Name: 永和智光無名壽司攤 / location: 234, Taiwan, New Taipei City, Pinglin District, 台北縣永和市中正路106號巷口，御錢殿入口對面
+[2016-12-16 11:09:27] Result=> id: ChIJHYfkSwL_ZzQR2gLMV4u2MfY / Name: 金瓜寮阿卿的店 / location: 232, Taiwan, New Taipei City, Pinglin District, 金瓜寮路
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQR1UbdfR2seDE / Name: 五元蔥燒餅 / location: 220, Taiwan, New Taipei City, Pinglin District, 台北縣板橋市重慶路308巷17號(重慶國中斜對面)
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRUGueFIcmmNk / Name: 佳園港式小吃店 / location: 232, Taiwan, New Taipei City, Pinglin District, 台北縣淡水鎮北新路182巷21弄(大學城)
+[2016-12-16 11:09:27] Result=> id: ChIJVWPbxQP_ZzQR7lwFESQyRXk / Name: 一會 咖啡 / location: 232, Taiwan, New Taipei City, Pinglin District, 金瓜寮路9 號
+[2016-12-16 11:09:27] Result=> id: ChIJISJuAp7_ZzQRJCHJbJ_Wz_E / Name: 財茂茶莊 / location: No. 81, Section 7, Beiyi Rd, Pinglin District, New Taipei City, Taiwan 232
+[2016-12-16 11:09:27] Result=> id: ChIJi0AmRHb_ZzQR4qrLUnOgrpQ / Name: 氧森谷花園餐廳 / location: 232, Taiwan, New Taipei City, Pinglin District, 新北市坪林區粗窟里仁里坂15之2號
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRs-uS1Iag054 / Name: 胖虎雞排 / location: 244, Taiwan, New Taipei City, Pinglin District, 台北縣林口鄉文化二路一段68巷內
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRBFEv8q_Zxd4 / Name: 新埔牛肉麵 / location: 220, Taiwan, New Taipei City, Pinglin District, 台北縣板橋市陽明街23巷內
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRw7_3Ofs40MM / Name: 早安大飯糰 / location: 232, Taiwan, New Taipei City, Pinglin District, 台北縣新店市台北縣新店市民權路39號
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQR-UasMQTKsFY / Name: 良晟食品 / location: 243, Taiwan, New Taipei City, Pinglin District, 台北縣泰山鄉泰林路2段306巷12號
+[2016-12-16 11:09:27] Result=> id: ChIJrUnsQgL_ZzQR_M8lcTod10o / Name: 蔡瑞陽茶舖有限公司 / location: 232, Taiwan, New Taipei City, Pinglin District, 粗窟里金瓜寮3-2號
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRBQ3IZyG0tZk / Name: 楓定食 / location: 232, Taiwan, New Taipei City, Pinglin District, 台北縣新店市北新路二段永華街7號1樓
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQR0jGOpY3CP3Q / Name: 挑嘴女孩 / location: 231, Taiwan, New Taipei City, 新店區新坡一街68號
+[2016-12-16 11:09:27] Result=> id: ChIJcd5jiwT_ZzQRwjvjjmhD4WE / Name: 吳雙福茶莊 / location: 232, Taiwan, New Taipei City, Pinglin District, 金瓜寮路之 號 台灣
+Successful Update query:  32 Reapted query:  6 Failed query:  0
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRlBfXROC0grE / Name: 韓二寶 / location: 241, Taiwan, New Taipei City, Pinglin District, 台北縣三重市重新路五段654號1樓內
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQRs7Zf15Gy3lY / Name: 桂莊餡餅粥 / location: 241, Taiwan, New Taipei City, Pinglin District, 台北縣三重市重新路五段654號1樓內
+[2016-12-16 11:09:27] Result=> id: ChIJAQAAAAD_ZzQR2DbnmagLFHM / Name: 金山 / location: 208, Taiwan, New Taipei City, Pinglin District, 台北縣金山鄉忠孝一路十九巷三十四號
+[2016-12-16 11:09:29]location:  23.926886235255655 , 120.40296619195033
+Results Find:  6
+[2016-12-16 11:09:29] id:  ChIJtzZJROJMaTQRJ6Jy2eOQrEg Query
+[2016-12-16 11:09:29] id:  ChIJlV1swPNMaTQRbh-BE7ecdbo Repeat
+[2016-12-16 11:09:29] id:  ChIJoS7lgvtMaTQRwFKAiqLdzOM Repeat
+[2016-12-16 11:09:29] id:  ChIJU76v2_9MaTQR9xOwmmgmXUY Query
+[2016-12-16 11:09:29] id:  ChIJq6qqqvpMaTQR_k-MhkQmea8 Repeat
+[2016-12-16 11:09:29] Result=> id: ChIJtzZJROJMaTQRJ6Jy2eOQrEg / Name: 二林農場 / location: Erlin Township, Changhua County, Taiwan 526
+[2016-12-16 11:09:29] Result=> id: ChIJU76v2_9MaTQR9xOwmmgmXUY / Name: 德威牧場 / location: 526, Taiwan, Changhua County, Erlin Township, 新殿巷50號號
+[2016-12-16 11:09:29] id:  ChIJq6qqqvpMaTQRbggo8eJn5fk Repeat
+Successful Update query:  2 Reapted query:  4 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:32]location:  24.245045630558067 , 121.33674473968651
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:35]location:  24.790654786075464 , 120.73258860222379
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:38]location:  22.70184222253943 , 121.70190306352553
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:41]location:  25.101387177335123 , 121.25560107403608
+Results Find:  84
+[2016-12-16 11:09:42] id:  ChIJA2BmYoWfQjQRhtC9t5QfN7Y Query
+[2016-12-16 11:09:42] id:  ChIJAQAAAKyfQjQR4Ez7tBzpXTU Query
+[2016-12-16 11:09:42] id:  ChIJl63w4mSfQjQRa2D2uLoeh_s Query
+[2016-12-16 11:09:42] id:  ChIJQQWR5yqgQjQRzxAk_Ct9YXg Query
+[2016-12-16 11:09:42] id:  ChIJZeWv_GSfQjQRYU-hyoKTeVE Query
+[2016-12-16 11:09:42] id:  ChIJieWeM5ufQjQRxsmlX4t3C7o Query
+[2016-12-16 11:09:42] id:  ChIJE4hY_WOfQjQR4ErS-VaEp2M Query
+[2016-12-16 11:09:42] id:  ChIJSSJnanCfQjQRs8CbtppWG1Q Query
+[2016-12-16 11:09:42] id:  ChIJ5QtkZn6fQjQRLbxjwjgoWZE Query
+[2016-12-16 11:09:42] id:  ChIJvep6h4OfQjQRyAv0bvsdPb4 Query
+[2016-12-16 11:09:42] id:  ChIJNXiHSX6fQjQRVT7xAlQDq_s Query
+[2016-12-16 11:09:42] id:  ChIJb_Y5ZnyfQjQREzTbzZBR5Mo Query
+[2016-12-16 11:09:42] id:  ChIJVRYjCY-fQjQRD-bcd7CCCPA Query
+[2016-12-16 11:09:42] id:  ChIJDfDCcJCfQjQR6I0S425tf_4 Query
+[2016-12-16 11:09:42] id:  ChIJTX7hT3SfQjQR4wWiLd_pyGo Query
+[2016-12-16 11:09:42] id:  ChIJuz0QcHOfQjQRqQjiNIi4MyE Query
+[2016-12-16 11:09:42] id:  ChIJ_xJI8I6fQjQRQQSqs9t363k Query
+[2016-12-16 11:09:42] id:  ChIJ83uKaHCfQjQRomxqckc_Quw Query
+[2016-12-16 11:09:42] id:  ChIJh5oFDo-fQjQRH5aoNOwcZdE Query
+[2016-12-16 11:09:42] id:  ChIJ7TDTeCugQjQRcNHyQ0AKDLI Query
+[2016-12-16 11:09:42] id:  ChIJyYtY4yqgQjQR_Q88dXA6BEE Query
+[2016-12-16 11:09:42] id:  ChIJScHWF2yfQjQRC1FTLggtc_g Query
+[2016-12-16 11:09:42] id:  ChIJWYorLIWfQjQRDDIu_c85FJ4 Query
+[2016-12-16 11:09:42] id:  ChIJq6qqapmfQjQR2fkqt_ovUG4 Query
+[2016-12-16 11:09:42] id:  ChIJtWBQDYEgaDQRB3IjCszopK4 Query
+[2016-12-16 11:09:42] id:  ChIJaf_zRIKfQjQR74z-qcS8sDc Query
+[2016-12-16 11:09:42] id:  ChIJ8ePvS5qfQjQRylY_y-hh0wQ Query
+[2016-12-16 11:09:42] id:  ChIJGyseW3SfQjQRTrCWDDzzqVE Query
+[2016-12-16 11:09:42] id:  ChIJRcZC_yigQjQRQeb03B_tdbE Query
+[2016-12-16 11:09:42] id:  ChIJJ-SwqmOfQjQRuiCq10diAHI Query
+[2016-12-16 11:09:42] id:  ChIJK5iqYaCfQjQRAyVtOYhlbnk Query
+[2016-12-16 11:09:42] id:  ChIJ98mNLXyfQjQRs-BOUGKc0F4 Query
+[2016-12-16 11:09:42] id:  ChIJfTZyOH6fQjQRaLDvFUmrsXk Query
+[2016-12-16 11:09:42] id:  ChIJu2_HNnyfQjQR1mM1DRTAhyo Query
+[2016-12-16 11:09:42] id:  ChIJh5oFDo-fQjQR9YlFCx7r0Qo Query
+[2016-12-16 11:09:42] id:  ChIJS3TVbyygQjQRR3mHzJi0MwM Query
+[2016-12-16 11:09:42] id:  ChIJP4ywOX6fQjQRmzgdFJrSwaA Query
+[2016-12-16 11:09:42] id:  ChIJt1XhOX6fQjQRaNm9jbCRWww Query
+[2016-12-16 11:09:42] id:  ChIJ9Xj1qmSfQjQRdR_4RMNUVaQ Query
+[2016-12-16 11:09:42] id:  ChIJjRndEGyfQjQRBTTz6b-X1hE Query
+[2016-12-16 11:09:42] id:  ChIJcedgN36fQjQR5mcT-kUNjdY Query
+[2016-12-16 11:09:42] id:  ChIJmQRvlnafQjQROcHOOzn8pDU Query
+[2016-12-16 11:09:42] id:  ChIJKXh64WSfQjQRlg4MdzjkRA0 Query
+[2016-12-16 11:09:42] id:  ChIJbU0BGGyfQjQRQa6UVMg3p28 Query
+[2016-12-16 11:09:42] id:  ChIJHW5CQXSfQjQRQf59YCroZu4 Query
+[2016-12-16 11:09:42] id:  ChIJ7S-mRnSfQjQRgdKpoYBKVS8 Query
+[2016-12-16 11:09:42] id:  ChIJJXHoSXSfQjQRlG2pvypHwrQ Query
+[2016-12-16 11:09:42] id:  ChIJd08GXoOfQjQRulZHH89WuO8 Query
+[2016-12-16 11:09:42] id:  ChIJMfLHE6GfQjQRGx-J43lS3FU Query
+[2016-12-16 11:09:42] id:  ChIJH5mHP4WfQjQRKV97BQd9W6o Query
+[2016-12-16 11:09:42] id:  ChIJIbjqCmWfQjQRvUVjBZoitG4 Query
+[2016-12-16 11:09:42] id:  ChIJGU4ERHSfQjQRFjVNYO4GF-c Query
+[2016-12-16 11:09:42] id:  ChIJs5H6a3SfQjQRiaL-2nvkyY4 Query
+[2016-12-16 11:09:43] id:  ChIJ82XGBY-fQjQRuv8YCCmskj4 Query
+[2016-12-16 11:09:43] id:  ChIJI8j_foWfQjQRwHPh5K7r618 Query
+[2016-12-16 11:09:43] id:  ChIJmfRXriygQjQRo7_hjfHXw2w Query
+[2016-12-16 11:09:43] id:  ChIJ_85vN36fQjQRXfQmSCWe9Kw Query
+[2016-12-16 11:09:43] id:  ChIJzyh3jI-fQjQRfapSC8mQoqw Query
+[2016-12-16 11:09:43] id:  ChIJA2BmYoWfQjQRZ34Q4z3258Y Query
+[2016-12-16 11:09:43] id:  ChIJoRyXgSugQjQRfo3oxIWw8Bw Query
+[2016-12-16 11:09:43] id:  ChIJmQ2Pno-fQjQRlhyd2-G0iKY Query
+[2016-12-16 11:09:43] id:  ChIJ4clLHKCfQjQRo18kfkoe8rA Query
+[2016-12-16 11:09:43] id:  ChIJozJbdI-fQjQRXtP0x1eQ17s Query
+[2016-12-16 11:09:43] id:  ChIJ-TznSpefQjQR1MWcJHfqAGE Query
+[2016-12-16 11:09:43] id:  ChIJm3dkO3ufQjQR18lQmTj_zD0 Query
+[2016-12-16 11:09:43] id:  ChIJuySjeXKfQjQROEbfFq9oCmo Query
+[2016-12-16 11:09:43] id:  ChIJ9z_Qmm2fQjQRIqncq1iPGJ0 Query
+[2016-12-16 11:09:43] id:  ChIJVRYjCY-fQjQRvBIIjJ4eLPs Query
+[2016-12-16 11:09:43] id:  ChIJUQHrmG2fQjQRsOLUh_rOUno Query
+[2016-12-16 11:09:43] id:  ChIJoWRReSugQjQRkmceUCZk0YQ Query
+[2016-12-16 11:09:43] id:  ChIJqXb-oa8gaDQRckljaLAw-jc Query
+[2016-12-16 11:09:43] id:  ChIJU1-L246fQjQRb89EBS4r3HE Query
+[2016-12-16 11:09:43] id:  ChIJjTii-IifQjQRz6_yvsHzIeo Query
+[2016-12-16 11:09:43] id:  ChIJ3R0ZD4-fQjQRVuUHTiksaTQ Query
+[2016-12-16 11:09:43] id:  ChIJSQ0EO2yfQjQRry4OItmOKNM Query
+[2016-12-16 11:09:43] id:  ChIJncaUCKGfQjQRDIh4u0pkd8Q Query
+[2016-12-16 11:09:43] id:  ChIJa9Zzxo6fQjQRRRIXBkQ2aSk Query
+[2016-12-16 11:09:43] id:  ChIJ3aDtPmyfQjQRccSrbKb1Joo Query
+[2016-12-16 11:09:43] id:  ChIJgV64QGyfQjQRBNcf38-nrLE Query
+[2016-12-16 11:09:43] id:  ChIJjRndEGyfQjQRlBUVAzMeuKw Query
+[2016-12-16 11:09:43] id:  ChIJO410A2yfQjQRpXHc3aIzMiY Query
+[2016-12-16 11:09:43] id:  ChIJRSCpfnafQjQR0HJJWwoB-5c Query
+[2016-12-16 11:09:43] id:  ChIJ-UXPA2yfQjQR34ltReNE15o Query
+[2016-12-16 11:09:43] id:  ChIJs7nxOHOfQjQRlipSPJhwboA Query
+[2016-12-16 11:09:43] Result=> id: ChIJE4hY_WOfQjQR4ErS-VaEp2M / Name: Hilife / location: No. 203號, Section 1, Binhai Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:43] Result=> id: ChIJA2BmYoWfQjQRhtC9t5QfN7Y / Name: 嚐鮮美食屋 / location: 337, Taiwan, Taoyuan City, Dayuan District, 桃園縣大園鄉竹圍村三民路一段538號
+[2016-12-16 11:09:43] Result=> id: ChIJQQWR5yqgQjQRzxAk_Ct9YXg / Name: OK Mart / location: No. 232號, Section 1, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:43] Result=> id: ChIJAQAAAKyfQjQR4Ez7tBzpXTU / Name: 明師父海鮮賞 / location: 337, Taiwan, Taoyuan City, Dayuan District, 沙崙里港口48之5號
+[2016-12-16 11:09:43] Result=> id: ChIJ5QtkZn6fQjQRLbxjwjgoWZE / Name: 呷熊吼小吃攤 / location: 1 號, No. 72, Section 2, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:43] Result=> id: ChIJZeWv_GSfQjQRYU-hyoKTeVE / Name: 7-Eleven / location: No. 40號, Section 1, Binhai Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:43] Result=> id: ChIJSSJnanCfQjQRs8CbtppWG1Q / Name: Hilife / location: No. 149號, Jianguo Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:43] Result=> id: ChIJ83uKaHCfQjQRomxqckc_Quw / Name: 大園航空城教會 / location: 號, No. 135建國路大園區桃園市 Taiwan 337
+[2016-12-16 11:09:43] Result=> id: ChIJl63w4mSfQjQRa2D2uLoeh_s / Name: 瑞麟美而美濱海店 / location: 號, No. 30濱海路一段蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJ8ePvS5qfQjQRylY_y-hh0wQ / Name: OK Mart / location: 337, Taiwan, Taoyuan City, Dayuan District, Hangqin N Rd, 8之1號3樓
+[2016-12-16 11:09:43] Result=> id: ChIJTX7hT3SfQjQR4wWiLd_pyGo / Name: Overseas Dragon / location: No. 45號, Zhuwei St, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJvep6h4OfQjQRyAv0bvsdPb4 / Name: Family Mart / location: No. 5號, Hangxiang Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJq6qqapmfQjQR2fkqt_ovUG4 / Name: 復興空廚 / location: No. 538, Section 1, Sanmin Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJVRYjCY-fQjQRD-bcd7CCCPA / Name: 7-Eleven / location: No. 110號, Section 2, Sanmin Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJaf_zRIKfQjQR74z-qcS8sDc / Name: OK Mart / location: No. 101號, Hangxiang Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ_xJI8I6fQjQRQQSqs9t363k / Name: 竹林小館 / location: No. 811, Section 1, Sanmin Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJuz0QcHOfQjQRqQjiNIi4MyE / Name: Hilife / location: No. 581號, Section 3, Guoji Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJh5oFDo-fQjQRH5aoNOwcZdE / Name: OK Mart / location: No. 95號, Section 2, Sanmin Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJNXiHSX6fQjQRVT7xAlQDq_s / Name: Family Mart / location: No. 7號, Section 2, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJb_Y5ZnyfQjQREzTbzZBR5Mo / Name: Hilife / location: No. 262號, Section 2, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJJ-SwqmOfQjQRuiCq10diAHI / Name: 信可物流-海湖倉 / location: 台灣, No. 190, Zhongzhen St, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJtWBQDYEgaDQRB3IjCszopK4 / Name: 劉記北方小吃 / location: 337, Taiwan, Taoyuan City, Dayuan District, 竹圍村3鄰8-5號
+[2016-12-16 11:09:44] Result=> id: ChIJDfDCcJCfQjQR6I0S425tf_4 / Name: 中油直營便利店桃園機場第三站 / location: 337, Taiwan, Taoyuan City, Dayuan District, 埔心里航勤南路2號
+[2016-12-16 11:09:44] Result=> id: ChIJu2_HNnyfQjQR1mM1DRTAhyo / Name: 美而美早餐店 / location: No. 178號, Section 2, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJWYorLIWfQjQRDDIu_c85FJ4 / Name: 阿柑米苔目冰連鎖總店 / location: No. 238號, Section 2, Sanmin Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJcedgN36fQjQR5mcT-kUNjdY / Name: 吉得堡中西式早餐 / location: 338, Taiwan, Taoyuan City, Luzhu District, 桃園縣蘆竹鄉海湖東路8號
+[2016-12-16 11:09:44] Result=> id: ChIJfTZyOH6fQjQRaLDvFUmrsXk / Name: 成蕙超市 / location: 號, No. 16海山路二段蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJh5oFDo-fQjQR9YlFCx7r0Qo / Name: OK Mart / location: No. 16之5號, Section 2, Sanmin Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJt1XhOX6fQjQRaNm9jbCRWww / Name: 一日三餐飲食店 / location: 號, No. 10海湖東路蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJmQRvlnafQjQROcHOOzn8pDU / Name: 山東餃子館 / location: 號, No. 104三民路一段大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJieWeM5ufQjQRxsmlX4t3C7o / Name: TransAsia Bakery / location: No. 538, Section 1, Sanmin Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJS3TVbyygQjQRR3mHzJi0MwM / Name: Hilife / location: No. 13號, Section 1, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJyYtY4yqgQjQR_Q88dXA6BEE / Name: 庄腳所在 美味時代 / location: 號, No. 207海山路一段蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJ9Xj1qmSfQjQRdR_4RMNUVaQ / Name: 高丞染整 / location: 號, No. 428海山路二段蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJHW5CQXSfQjQRQf59YCroZu4 / Name: 竹圍水果店 / location: 號, No. 31竹圍街大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ98mNLXyfQjQRs-BOUGKc0F4 / Name: 華膳空廚股份有限公司 / location: No. 22, Lane 156, Section 2, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJs5H6a3SfQjQRiaL-2nvkyY4 / Name: 進福珍糕餅舖 / location: 號, No. 46-6竹圍街大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJRcZC_yigQjQRQeb03B_tdbE / Name: 彩繪莊園(民宿.簡餐.咖啡.下午茶.團體烤肉) / location: 338, Taiwan, Taoyuan City, Luzhu District, 坑口里頭前15鄰28號28號
+[2016-12-16 11:09:44] Result=> id: ChIJMfLHE6GfQjQRGx-J43lS3FU / Name: 竹圍山豬城土雞海鮮餐廳 / location: No. 46-5, Zhuwei St, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ7S-mRnSfQjQRgdKpoYBKVS8 / Name: 早安美芝城 / location: 337, Taiwan, Taoyuan City, Dayuan District, Zhuwei St, 30號號
+[2016-12-16 11:09:44] Result=> id: ChIJd08GXoOfQjQRulZHH89WuO8 / Name: 長榮航空員工餐廳 / location: 337, Taiwan, Taoyuan City, Dayuan District, 桃園縣大園鄉復興空廚上三民路一段第一個紅綠燈右轉就是
+[2016-12-16 11:09:44] Result=> id: ChIJ7TDTeCugQjQRcNHyQ0AKDLI / Name: 7-Eleven / location: No. 76號, Section 1, Haishan Rd, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJScHWF2yfQjQRC1FTLggtc_g / Name: 陶帝飽活海鮮餐廳 / location: 337, Taiwan, Taoyuan City, 大園鄉沙崙村港口路46巷15號
+[2016-12-16 11:09:44] Result=> id: ChIJIbjqCmWfQjQRvUVjBZoitG4 / Name: 看機機景觀餐廳 / location: 338, Taiwan, 桃園市蘆竹區海湖里
+[2016-12-16 11:09:44] Result=> id: ChIJK5iqYaCfQjQRAyVtOYhlbnk / Name: 竹圍育苗場 / location: No. 412, Section 3, Guoji Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJGU4ERHSfQjQRFjVNYO4GF-c / Name: 美而美早餐店 / location: 337, Taiwan, Taoyuan City, Dayuan District, Zhuwei St, 30號號
+[2016-12-16 11:09:44] Result=> id: ChIJKXh64WSfQjQRlg4MdzjkRA0 / Name: 海湖、上青 / location: 號, No. 547海山路二段蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJbU0BGGyfQjQRQa6UVMg3p28 / Name: 珍品味小吃 / location: 337, Taiwan, Taoyuan City, Dayuan District, 桃園縣大園鄉沙崙村(竹圍漁港)
+[2016-12-16 11:09:44] Result=> id: ChIJGyseW3SfQjQRTrCWDDzzqVE / Name: 7-Eleven / location: No. 45之3號, Zhuwei St, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJJXHoSXSfQjQRlG2pvypHwrQ / Name: 頂香綜合早點 / location: 337 號 桃園 市 大 園區 街 14 號, No. 14竹圍街大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJI8j_foWfQjQRwHPh5K7r618 / Name: 信實 / location: 號, No. 10-2復興街68巷35弄大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ82XGBY-fQjQRuv8YCCmskj4 / Name: 吳記港式燒臘店 / location: 337, Taiwan, Taoyuan City, Dayuan District, 桃園縣大園鄉三民路二段128號
+[2016-12-16 11:09:44] Result=> id: ChIJH5mHP4WfQjQRKV97BQd9W6o / Name: 7-Eleven / location: 337, Taiwan, Taoyuan City, Dayuan District, 桃園縣大園鄉三民路一段785號
+[2016-12-16 11:09:44] Result=> id: ChIJjRndEGyfQjQRBTTz6b-X1hE / Name: Hilife / location: 337, Taiwan, Taoyuan City, Dayuan District, 港口路48之6號
+[2016-12-16 11:09:44] Result=> id: ChIJzyh3jI-fQjQRfapSC8mQoqw / Name: 中壢新老牌牛肉麵 / location: 號, No. 38三民路二段大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJA2BmYoWfQjQRZ34Q4z3258Y / Name: 高家麟太監雞 / location: 337, Taiwan, Taoyuan City, Dayuan District, 桃園縣大園鄉三民路二段415號
+[2016-12-16 11:09:44] Result=> id: ChIJoRyXgSugQjQRfo3oxIWw8Bw / Name: P.Y.手作烘焙 / location: 號, No. 69海山路一段蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJP4ywOX6fQjQRmzgdFJrSwaA / Name: 羅沙台印小吃店 / location: 號, No. 12海湖東路蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJozJbdI-fQjQRXtP0x1eQ17s / Name: 機場口金牌牛肉麵 / location: 號, No. 65三民路二段大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJuySjeXKfQjQROEbfFq9oCmo / Name: 海口釣具店 / location: 33747, Taiwan, Taoyuan City, Dayuan District, 海口村11鄰172號
+[2016-12-16 11:09:44] Result=> id: ChIJVRYjCY-fQjQRvBIIjJ4eLPs / Name: 昭和園~巨蛋 / location: 號, No. 110三民路二段大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJoWRReSugQjQRkmceUCZk0YQ / Name: 蕊媽麵店 / location: 338, Taiwan, Taoyuan City, Luzhu District, Dayou St, 8號號
+[2016-12-16 11:09:44] Result=> id: ChIJU1-L246fQjQRb89EBS4r3HE / Name: 謝家魯肉飯 / location: 號, No. 177三民路二段大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ-TznSpefQjQR1MWcJHfqAGE / Name: 嫂子小吃部 / location: No. 9, Hangzhan South Rd, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJmfRXriygQjQRo7_hjfHXw2w / Name: 宏達發 / location: Lane 9, Dayou St, Luzhu District, Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJ_85vN36fQjQRXfQmSCWe9Kw / Name: 鮮菓子超好喝手搖飲專賣店 / location: 號, No. 6海湖東路蘆竹區桃園市 Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJjRndEGyfQjQRlBUVAzMeuKw / Name: 福吉海產加工場 / location: 33748, Taiwan, Taoyuan City, Dayuan District, 沙崙村一鄰港口48-6號
+[2016-12-16 11:09:44] Result=> id: ChIJm3dkO3ufQjQR18lQmTj_zD0 / Name: 桃子牛肉麵 / location: No. 3, Haishan W Rd, 蘆竹鄉 Taoyuan City, Taiwan 338
+[2016-12-16 11:09:44] Result=> id: ChIJ4clLHKCfQjQRo18kfkoe8rA / Name: 芳鄰便利商店 / location: 號, No. 34成功街大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJmQ2Pno-fQjQRlhyd2-G0iKY / Name: 台北永康豬腳爌肉飯 機二店 / location: 號, No. 76三民路二段大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ3R0ZD4-fQjQRVuUHTiksaTQ / Name: 春成排骨酥 / location: -126 號, No. 118三民路二段大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44]location:  24.231336408003422 , 121.89984525725231
+[2016-12-16 11:09:44] Result=> id: ChIJO410A2yfQjQRpXHc3aIzMiY / Name: 山本10活海產 / location: 號, No. 1046巷大園區桃園市 Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ3aDtPmyfQjQRccSrbKb1Joo / Name: 金丸舖 / location: 337, Taiwan, Taoyuan City, Dayuan District, 港口51號
+[2016-12-16 11:09:44] Result=> id: ChIJs7nxOHOfQjQRlipSPJhwboA / Name: 皇家水果 / location: 桃 海 沙 路 10 鄰 28 號, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJncaUCKGfQjQRDIh4u0pkd8Q / Name: 鰻蝦合作社 / location: 337, Taiwan, Taoyuan City, Dayuan District, 13之1號
+[2016-12-16 11:09:44] Result=> id: ChIJRSCpfnafQjQR0HJJWwoB-5c / Name: 星光魚池 / location: 337, Taiwan, Taoyuan City, Dayuan District, Zhuwei St, 3-3號號
+[2016-12-16 11:09:44] Result=> id: ChIJSQ0EO2yfQjQRry4OItmOKNM / Name: 明洲水產科技股份有限公司 / location: 337, Taiwan, Taoyuan City, Dayuan District, 大園鄉沙崙村港口18鄰79號之3
+[2016-12-16 11:09:44] Result=> id: ChIJqXb-oa8gaDQRckljaLAw-jc / Name: 儂翠泰式料理 / location: 337, Taiwan, Taoyuan City, Dayuan District, 漁港路275號
+[2016-12-16 11:09:44] Result=> id: ChIJ-UXPA2yfQjQR34ltReNE15o / Name: 11號蘭陽小吃 / location: 337, Taiwan, Taoyuan City, Dayuan District, 46巷10號號
+[2016-12-16 11:09:44] Result=> id: ChIJjTii-IifQjQRz6_yvsHzIeo / Name: 菓林民生社區 / location: 71-30, Dayuan District, Taoyuan City, Taiwan 337
+[2016-12-16 11:09:44] Result=> id: ChIJ9z_Qmm2fQjQRIqncq1iPGJ0 / Name: 小山豬碳烤店 / location: 337, Taiwan, Taoyuan City, Dayuan District, 漁港路266號
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+[2016-12-16 11:09:44] Result=> id: ChIJUQHrmG2fQjQRsOLUh_rOUno / Name: 大樹下海鮮碳烤店 / location: 號, No. 196桃23鄉道大園區桃園市 Taiwan 337
+Results Find:  0
+[2016-12-16 11:09:44] Result=> id: ChIJa9Zzxo6fQjQRRRIXBkQ2aSk / Name: 大魏王 / location: 337, Taiwan, Taoyuan City, Dayuan District, Section 2, Sanmin Rd, 231號號
+[2016-12-16 11:09:44] Result=> id: ChIJgV64QGyfQjQRBNcf38-nrLE / Name: 八里渡船頭雙胞胎 竹圍漁港店 / location: 18 鄰 號, No. 54許厝港大園區桃園市 Taiwan 337
+[2016-12-16 11:09:47]location:  24.850938554894295 , 120.62237326917057
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:50]location:  22.621096841650456 , 121.99095613306567
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:53]location:  22.44765760031338 , 122.07476427743427
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:09:56]location:  22.405452880927385 , 120.49422569151979
+Results Find:  2
+[2016-12-16 11:09:56] id:  ChIJf1yaXb_gcTQR8dXtXbg0IbY Query
+[2016-12-16 11:09:56] id:  ChIJ19BcKLngcTQRlHsc2PA7gho Query
+[2016-12-16 11:09:56] Result=> id: ChIJf1yaXb_gcTQR8dXtXbg0IbY / Name: 127手工水餃 / location: 92745, Taiwan, Pingtung County, Linbian Township, Fengyu Rd, 127 號
+[2016-12-16 11:09:56] Result=> id: ChIJ19BcKLngcTQRlHsc2PA7gho / Name: 雨傘店黑輪-尊王殿 / location: 927, Taiwan, Pingtung County, Linbian Township, 水利村海堤
+---------------------------------------------------------------------------------------------------
+Successful Update query:  2 Reapted query:  0 Failed query:  0
+[2016-12-16 11:09:59]location:  23.10373962673482 , 121.64007033890154
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Results Find:  6
+[2016-12-16 11:10:02]location:  22.935100739740815 , 120.51425908492199
+[2016-12-16 11:10:02] id:  ChIJ69vrdXlCbjQRBWI87fyU1yw Query
+[2016-12-16 11:10:02] id:  ChIJCZG1H5NpbjQR-ALn_osmib4 Query
+[2016-12-16 11:10:02] id:  ChIJJ_BjI3hCbjQRGaBrSIpoC9s Repeat
+[2016-12-16 11:10:02] id:  ChIJ9-WPl9FpbjQRmbuqLKkI_2k Repeat
+[2016-12-16 11:10:02] id:  ChIJ-7vrH5NpbjQRztCMLkn-4xA Query
+[2016-12-16 11:10:02] id:  ChIJByNjbJNpbjQRtJhAKq3Iqhk Query
+[2016-12-16 11:10:02] Result=> id: ChIJByNjbJNpbjQRtJhAKq3Iqhk / Name: 宋 乾麵 / location: 842, Taiwan, Kaohsiung City, Qishan District, 台21線73號號
+[2016-12-16 11:10:03] Result=> id: ChIJCZG1H5NpbjQR-ALn_osmib4 / Name: 綠湖旗緣溫室農場 / location: No. 92, Section 3, Qijia Rd, Qishan District, Kaohsiung City, Taiwan 842
+[2016-12-16 11:10:03] Result=> id: ChIJ-7vrH5NpbjQRztCMLkn-4xA / Name: 綠湖旗緣溫室農場 / location: 84248, Taiwan, Kaohsiung City, Qishan District, 旗甲路三段92號
+[2016-12-16 11:10:03] Result=> id: ChIJ69vrdXlCbjQRBWI87fyU1yw / Name: 月光山林景觀餐廳民宿 / location: 846, Taiwan, Kaohsiung City, Shanlin District, 月美里桐竹路209號
+---------------------------------------------------------------------------------------------------
+Successful Update query:  4 Reapted query:  2 Failed query:  0
+[2016-12-16 11:10:05]location:  23.753732265824986 , 121.0590285805067
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:08]location:  22.489582346845115 , 120.7394089171679
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:11]location:  22.073913732616163 , 121.85334006194513
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:14]location:  25.143314619808553 , 122.16842963438533
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:10:17]location:  22.45491764163368 , 121.91263342825414
+[2016-12-16 11:10:20]location:  22.055187298894673 , 121.50695438819272
+Results Find:  21
+[2016-12-16 11:10:20] id:  ChIJAQAAANwOcDQR2ymAR6cB8ps Repeat
+[2016-12-16 11:10:20] id:  ChIJSY25EegOcDQRBHO38MaczvY Query
+[2016-12-16 11:10:21] id:  ChIJva9lvOEOcDQRCQ9ETvqsxOc Repeat
+[2016-12-16 11:10:20] id:  ChIJ1yUvnuEOcDQRNhKb0Gc-oFo Query
+[2016-12-16 11:10:20] id:  ChIJSWnNb-EOcDQRuI7OXmcLckA Repeat
+[2016-12-16 11:10:21] id:  ChIJN53-E-gOcDQRT4LAgTSH9Iw Repeat
+[2016-12-16 11:10:21] id:  ChIJg29s1ucOcDQRY2JEkpR4MJU Query
+[2016-12-16 11:10:21] id:  ChIJheqNq-EOcDQRjBVPjkVbYCw Query
+[2016-12-16 11:10:21] id:  ChIJheqNq-EOcDQR2ITXjAylRAI Query
+[2016-12-16 11:10:21] id:  ChIJ1TG9NR4PcDQRA-JpjqZJhW0 Query
+[2016-12-16 11:10:21] id:  ChIJrVer1ucOcDQRKovRQiFOF7U Query
+[2016-12-16 11:10:21] id:  ChIJKXWfFegOcDQR2n-qAEuR3B4 Query
+[2016-12-16 11:10:21] id:  ChIJmajFdugOcDQRaozDwOjxzOE Query
+[2016-12-16 11:10:21] id:  ChIJFYdX4rcOcDQR23kvxTMmxRQ Query
+[2016-12-16 11:10:21] id:  ChIJH7mXG-gOcDQR7jldY26hY-A Query
+[2016-12-16 11:10:21] id:  ChIJOU0nEugOcDQRa9sM7T-suck Query
+[2016-12-16 11:10:21] id:  ChIJ838--9sOcDQRnccxlDAOB3Y Query
+[2016-12-16 11:10:21] id:  ChIJp2dDZeEOcDQRGaQyJ5z33rU Query
+[2016-12-16 11:10:21] id:  ChIJdR4-QOgOcDQR5q3AKMglZK4 Query
+[2016-12-16 11:10:21] id:  ChIJ5ZN8GegOcDQRgGfdLOimleM Query
+[2016-12-16 11:10:21] id:  ChIJr_FYa-gOcDQR6N75zUkOOLo Query
+[2016-12-16 11:10:21] Result=> id: ChIJ1yUvnuEOcDQRNhKb0Gc-oFo / Name: 有一間燒烤 / location: 952, Taiwan, Taitung County, Lanyu Township, 椰油村296之4號
+[2016-12-16 11:10:21] Result=> id: ChIJSY25EegOcDQRBHO38MaczvY / Name: 蘭嶼開元小吃店 / location: 952, Taiwan, Taitung County, Lanyu Township, 椰油村16號
+[2016-12-16 11:10:21] Result=> id: ChIJmajFdugOcDQRaozDwOjxzOE / Name: 雅悠冰飲 / location: Huandao Rd, Lanyu Township, Taitung County, Taiwan 952
+[2016-12-16 11:10:21] Result=> id: ChIJheqNq-EOcDQRjBVPjkVbYCw / Name: 小木屋關東煮 / location: 952, Taiwan, Taitung County, Lanyu Township, 1
+[2016-12-16 11:10:21] Result=> id: ChIJdR4-QOgOcDQR5q3AKMglZK4 / Name: 雅悠餐廳 / location: 21 號, 蘭嶼鄉台東縣 Taiwan 952
+[2016-12-16 11:10:21] Result=> id: ChIJp2dDZeEOcDQRGaQyJ5z33rU / Name: 飛魚香腸攤 / location: Huandao Rd, Lanyu Township, Taitung County, Taiwan 952
+[2016-12-16 11:10:21] Result=> id: ChIJg29s1ucOcDQRY2JEkpR4MJU / Name: 089簡餐 / location: Huandao Rd, Lanyu Township, Taitung County, Taiwan 952
+[2016-12-16 11:10:21] Result=> id: ChIJ5ZN8GegOcDQRgGfdLOimleM / Name: 懷舊小吃 / location: 952, Taiwan, 台東縣蘭嶼鄉椰油村
+[2016-12-16 11:10:21] Result=> id: ChIJH7mXG-gOcDQR7jldY26hY-A / Name: 椰子樹牛排 / location: Lanyu Township, Taitung County, Taiwan 952
+[2016-12-16 11:10:21] Result=> id: ChIJFYdX4rcOcDQR23kvxTMmxRQ / Name: 7-ELEVEN 蘭嶼門市 / location: 952, Taiwan, Taitung County, Lanyu Township, 椰油村椰油296之12號
+[2016-12-16 11:10:21] Result=> id: ChIJOU0nEugOcDQRa9sM7T-suck / Name: 恩寶．喵喵食坊 / location: 952, Taiwan, Taitung County, Lanyu Township, 18 號
+[2016-12-16 11:10:21] Result=> id: ChIJ838--9sOcDQRnccxlDAOB3Y / Name: 蘭嶼小島牛肉麵 / location: 952, Taiwan, Taitung County, Lanyu Township, 椰油村19號
+[2016-12-16 11:10:21] Result=> id: ChIJheqNq-EOcDQR2ITXjAylRAI / Name: GoodFood小木屋關東煮 / location: 952, Taiwan, Taitung County, Lanyu Township, 1
+[2016-12-16 11:10:21] Result=> id: ChIJr_FYa-gOcDQR6N75zUkOOLo / Name: 椰油商號 / location: 95201, Taiwan, 台東縣蘭嶼鄉椰油村
+[2016-12-16 11:10:21] Result=> id: ChIJrVer1ucOcDQRKovRQiFOF7U / Name: 麵小妹 / location: 952, Taiwan, Taitung County, Lanyu Township, 椰油村117-1號
+Successful Update query:  17 Reapted query:  4 Failed query:  0
+[2016-12-16 11:10:21] Result=> id: ChIJKXWfFegOcDQR2n-qAEuR3B4 / Name: 蘭嶼海洋觀光超市 / location: 952, Taiwan, Taitung County, Lanyu Township, 椰油村椰油路296-1號
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:21] Result=> id: ChIJ1TG9NR4PcDQRA-JpjqZJhW0 / Name: 船長咖啡屋 / location: 95241, Taiwan, Taitung County, Lanyu Township, 椰油村10-2號
+[2016-12-16 11:10:23]location:  23.078849937340014 , 121.56296933077319
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:26]location:  23.503361010159367 , 121.19638643621764
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:10:29]location:  22.20752162154231 , 121.94616478092993
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:32]location:  22.17067156021723 , 120.86531890279123
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:35]location:  22.944319877544675 , 120.97628774889797
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:38]location:  22.85212141517892 , 120.44601978618608
+Results Find:  2
+[2016-12-16 11:10:38] id:  ChIJkTvRok5rbjQR_GhG_dNwIQ4 Query
+[2016-12-16 11:10:38] id:  ChIJHXWZ56kUbjQRPIyW0t7-kjs Query
+[2016-12-16 11:10:38] Result=> id: ChIJHXWZ56kUbjQRPIyW0t7-kjs / Name: 田寮山養生農場 / location: No. 二之十二號, Kunshan Rd, Tianliao District, Kaohsiung City, Taiwan 823
+[2016-12-16 11:10:38] Result=> id: ChIJkTvRok5rbjQR_GhG_dNwIQ4 / Name: [高] 荔枝 / location: 842, Taiwan, Kaohsiung City, Qishan District, 中寮一路99號
+Successful Update query:  2 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:41]location:  24.255136247241545 , 121.93033949615862
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:10:44]location:  24.837247130618337 , 120.95927171687728
+Results Find:  54
+[2016-12-16 11:10:45] id:  ChIJM-w9UTM0aDQR3805Sodkm7M Query
+[2016-12-16 11:10:45] id:  ChIJZ63qFFY0aDQRCDl2AowpQ9E Repeat
+[2016-12-16 11:10:45] id:  ChIJ1XxL_D40aDQRGauSkXcjMcI Repeat
+[2016-12-16 11:10:45] id:  ChIJW-fKBLQ1aDQRiINpi5BsxZY Repeat
+[2016-12-16 11:10:45] id:  ChIJlfxHtcs1aDQRaM6NSK5SY1w Repeat
+[2016-12-16 11:10:45] id:  ChIJ_VB56LM1aDQRF4H3imYfBq4 Repeat
+[2016-12-16 11:10:45] id:  ChIJ97-K11o0aDQRvLW_XunL4B8 Repeat
+[2016-12-16 11:10:45] id:  ChIJGwVZ4T40aDQR82UlwROAnp4 Repeat
+[2016-12-16 11:10:45] id:  ChIJy2v0_7I1aDQR-vodZTZhiQM Repeat
+[2016-12-16 11:10:45] id:  ChIJu0IAW7E1aDQR-RpoZWSBKco Repeat
+[2016-12-16 11:10:45] id:  ChIJfayTgWk0aDQRm2tpvldsZzU Query
+[2016-12-16 11:10:45] id:  ChIJnbDtglY0aDQR0SZ9uPwjns0 Repeat
+[2016-12-16 11:10:45] id:  ChIJ6U10jrY1aDQR4LxIOESnyJ8 Repeat
+[2016-12-16 11:10:45] id:  ChIJ0evS_BQ0aDQRkxyrXXVtWbM Repeat
+[2016-12-16 11:10:45] id:  ChIJVXsfjrY1aDQRJXgOvfNmPU0 Repeat
+[2016-12-16 11:10:45] id:  ChIJkc4sGD80aDQRJVlHa1XgyOI Query
+[2016-12-16 11:10:45] id:  ChIJA_yU79E1aDQRRB7BsQ2WkT4 Query
+[2016-12-16 11:10:45] id:  ChIJL_aPBLQ1aDQRoN9Q4C_O43g Repeat
+[2016-12-16 11:10:45] id:  ChIJeS0zkLY1aDQR5e4AZUSt0TU Repeat
+[2016-12-16 11:10:45] id:  ChIJuYj9Q1I0aDQR1HvpWR-nAfk Repeat
+[2016-12-16 11:10:45] id:  ChIJAQAAAKw1aDQRnCZ2EDvA_v4 Repeat
+[2016-12-16 11:10:45] id:  ChIJZ8uzccs1aDQR2rBmCHusHOQ Repeat
+[2016-12-16 11:10:45] id:  ChIJyelmVD80aDQRa2AJ_kZYezo Query
+[2016-12-16 11:10:45] id:  ChIJPSqKHLQ1aDQRVlra0YVUK-E Repeat
+[2016-12-16 11:10:45] id:  ChIJWx0EMEI0aDQRWZMIafX27no Query
+[2016-12-16 11:10:45] id:  ChIJJQ-q4RQ0aDQR7F6WMsTRFos Query
+[2016-12-16 11:10:45] id:  ChIJGZ-vZFY0aDQRgSvpkNykGsY Repeat
+[2016-12-16 11:10:45] id:  ChIJIc0Op_g0aDQRt44L_ugBYcA Repeat
+[2016-12-16 11:10:45] id:  ChIJczU0crU1aDQRejEZ_yHcExk Repeat
+[2016-12-16 11:10:45] id:  ChIJlWO8Wzs0aDQRTlIVaeqGD8A Query
+[2016-12-16 11:10:45] id:  ChIJv0Jm0Dw0aDQRUSZl89i_L54 Query
+[2016-12-16 11:10:45] id:  ChIJZ8ahxVs0aDQRcHKjy6P9HzU Repeat
+[2016-12-16 11:10:45] id:  ChIJax_-2Tw0aDQRBZ-poWNbbao Query
+[2016-12-16 11:10:45] id:  ChIJ4zikPlw0aDQRSuPnrJ7SrZ8 Repeat
+[2016-12-16 11:10:45] id:  ChIJe5t90zw0aDQRa_BuyupGSWw Query
+[2016-12-16 11:10:45] id:  ChIJgzQO4Mo1aDQRfiZfUbBa9s4 Repeat
+[2016-12-16 11:10:45] id:  ChIJ20n8nVY0aDQROxvf-NH9vIc Repeat
+[2016-12-16 11:10:45] id:  ChIJFbFx5C80aDQRZmjBIFgZDTA Query
+[2016-12-16 11:10:45] id:  ChIJUzaE8LU1aDQRyFsxGjHTWLs Repeat
+[2016-12-16 11:10:45] id:  ChIJ-YGTPss1aDQRpxE9GAstv4k Query
+[2016-12-16 11:10:45] id:  ChIJaaFEoLY1aDQRWYmSnv3hNZ4 Repeat
+[2016-12-16 11:10:45] id:  ChIJh7aMP8s1aDQRNtkm7DO-fKU Query
+[2016-12-16 11:10:45] id:  ChIJCzLzm7Y1aDQRCbJy_oKZOhs Repeat
+[2016-12-16 11:10:45] id:  ChIJ12TYkbY1aDQRmogu8NMyDeU Repeat
+[2016-12-16 11:10:45] id:  ChIJfy9wQ801aDQRPMMhT02C_jU Query
+[2016-12-16 11:10:45] id:  ChIJyzpbZ8s1aDQRd0qwLWR69xM Query
+[2016-12-16 11:10:45] id:  ChIJkyyeocw1aDQR9LwACSYIMEg Query
+[2016-12-16 11:10:45] id:  ChIJIe_Yx7Y1aDQRC2vJyy63VyE Repeat
+[2016-12-16 11:10:45] id:  ChIJZ0VxirU1aDQR9Yj1M3ZbqkA Query
+[2016-12-16 11:10:45] id:  ChIJQ4yXkbc1aDQR3Vnzy0KWVHE Repeat
+[2016-12-16 11:10:45] id:  ChIJ1XqUF8o1aDQRqA85-dOC0po Query
+[2016-12-16 11:10:45] id:  ChIJtSlFQMs1aDQRVTsziaJdYb8 Query
+[2016-12-16 11:10:45] id:  ChIJX4PEP1Y0aDQRDTfWkoDvIqw Repeat
+[2016-12-16 11:10:46] id:  ChIJjzJk_ko0aDQRsjFw2GyYYzs Repeat
+[2016-12-16 11:10:46] Result=> id: ChIJkc4sGD80aDQRJVlHa1XgyOI / Name: 璽悅 / location: 號, No. 82-83中正西路竹北市新竹縣 Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJfayTgWk0aDQRm2tpvldsZzU / Name: 7-Eleven / location: No. 388號, Section 1, Changqing Road, Zhubei City, Hsinchu County, Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJA_yU79E1aDQRRB7BsQ2WkT4 / Name: Family Mart / location: No. 2號, Lane 175, Wuling Rd, North District, Hsinchu City, Taiwan 300
+[2016-12-16 11:10:46] Result=> id: ChIJM-w9UTM0aDQR3805Sodkm7M / Name: Family Mart / location: No. 267號, Wuling Rd, North District, Hsinchu City, Taiwan 300
+[2016-12-16 11:10:46] Result=> id: ChIJJQ-q4RQ0aDQR7F6WMsTRFos / Name: 新竹修車廠 / location: 號, No. 390白地街410巷竹北市新竹縣 Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJyelmVD80aDQRa2AJ_kZYezo / Name: 豐田海產店 / location: No. 1375號, Zhongzheng W Rd, Zhubei City, Hsinchu County, Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJWx0EMEI0aDQRWZMIafX27no / Name: 奇美蔬菜產銷班 / location: 302, Taiwan, Hsinchu County, Zhubei City, 長青路一段207巷56號
+[2016-12-16 11:10:46] Result=> id: ChIJlWO8Wzs0aDQRTlIVaeqGD8A / Name: 正老林羊肉爐 / location: No. 110, Xinliao St, Zhubei City, Hsinchu County, Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJe5t90zw0aDQRa_BuyupGSWw / Name: 竹北無名牛肉餡餅 / location: Zhongzheng W Rd, Zhubei City, Hsinchu County, Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJax_-2Tw0aDQRBZ-poWNbbao / Name: 1+1便利商 / location: No. 1122, Zhongzheng W Rd, Zhubei City, Hsinchu County, Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJv0Jm0Dw0aDQRUSZl89i_L54 / Name: Family Mart / location: 302, Taiwan, Hsinchu County, Zhubei City, 新竹縣竹北市中正西路999號
+[2016-12-16 11:10:46] Result=> id: ChIJfy9wQ801aDQRPMMhT02C_jU / Name: 新竹舊社肉圓 / location: No. 13號, Lane 227, Wuling Rd, North District, Hsinchu City, Taiwan 300
+[2016-12-16 11:10:46] Result=> id: ChIJFbFx5C80aDQRZmjBIFgZDTA / Name: 皮卡丘聖地 / location: 號, No. 273新寮街275巷竹北市新竹縣 Taiwan 302
+[2016-12-16 11:10:46] Result=> id: ChIJ-YGTPss1aDQRpxE9GAstv4k / Name: 7-Eleven / location: No. 280號, Section 2, Tiedao Rd, North District, Hsinchu City, Taiwan 300
+[2016-12-16 11:10:46] Result=> id: ChIJh7aMP8s1aDQRNtkm7DO-fKU / Name: A-BAO阿寶早午餐 / location: 300, Taiwan, Hsinchu City, North District, Section 2, Tiedao Rd, 233號號
+[2016-12-16 11:10:46] Result=> id: ChIJyzpbZ8s1aDQRd0qwLWR69xM / Name: 黎記麵食館 / location: 300, Taiwan, Hsinchu City, North District, 新竹市北區武陵路211號
+[2016-12-16 11:10:46] Result=> id: ChIJZ0VxirU1aDQR9Yj1M3ZbqkA / Name: 私廚 / location: 300, Taiwan, Hsinchu City, North District, 新竹市湳中街109號
+[2016-12-16 11:10:46] Result=> id: ChIJ1XqUF8o1aDQRqA85-dOC0po / Name: 牛肉麵王 / location: No. 55, Nanzhong Street, North District, Hsinchu City, Taiwan 300
+[2016-12-16 11:10:46] Result=> id: ChIJtSlFQMs1aDQRVTsziaJdYb8 / Name: 葉記西點烘焙材料 / location: No. 231, Section 2, Tiedao Rd, North District, Hsinchu City, Taiwan 300
+Successful Update query:  20 Reapted query:  34 Failed query:  0
+[2016-12-16 11:10:46] Result=> id: ChIJkyyeocw1aDQR9LwACSYIMEg / Name: 和樂早餐店 / location: 300, Taiwan, Hsinchu City, North District, 新竹市北區武陵路272號
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:47]location:  22.16583461425805 , 121.74219563153933
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:50]location:  23.32949070431723 , 120.5611648370621
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:53]location:  22.487387252658653 , 120.93399054779933
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:10:56]location:  22.01830427864669 , 121.36424588338001
+---------------------------------------------------------------------------------------------------
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:10:59]location:  24.860645990342157 , 120.66492564985367
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:02]location:  23.993977253011334 , 122.08353094543004
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:05]location:  22.448928186738677 , 120.4485040864564
+Results Find:  126
+[2016-12-16 11:11:06] id:  ChIJ7-P6PZrhcTQRzbwoOhm_adY Query
+[2016-12-16 11:11:06] id:  ChIJsS2GEnfhcTQRszL1JY7Pz1Y Query
+[2016-12-16 11:11:06] id:  ChIJ2aopfoThcTQRUhtbr3suY38 Query
+[2016-12-16 11:11:06] id:  ChIJIe0RVJzhcTQRmi4IQjxva3s Query
+[2016-12-16 11:11:06] id:  ChIJoeUwL5_hcTQRZ2EPxICQVp4 Query
+[2016-12-16 11:11:06] id:  ChIJSdppX5nhcTQRPu2tmjjthOU Query
+[2016-12-16 11:11:06] id:  ChIJUzoCv5zhcTQRkOHQHxSLBEs Query
+[2016-12-16 11:11:06] id:  ChIJv1-lP5vhcTQRnk47PseT9z8 Query
+[2016-12-16 11:11:06] id:  ChIJGQgcwIPhcTQRU4WErSRf4NA Query
+[2016-12-16 11:11:06] id:  ChIJ1aopfoThcTQRwRno_TG71Z8 Query
+[2016-12-16 11:11:06] id:  ChIJx_m7ab_hcTQRPqlryNps_FA Query
+[2016-12-16 11:11:06] id:  ChIJaWRm2nfhcTQR_iGfMqo3qlc Query
+[2016-12-16 11:11:06] id:  ChIJCcyZNZvhcTQRmXrtS5jTCFI Query
+[2016-12-16 11:11:06] id:  ChIJ5Rvy3JrhcTQRE4uWAxUBMGY Query
+[2016-12-16 11:11:06] id:  ChIJ3V9Ms4ThcTQRIaHTbuycVjE Query
+[2016-12-16 11:11:06] id:  ChIJE9LOcJrhcTQRFzWYyEB-jgE Query
+[2016-12-16 11:11:06] id:  ChIJnYju6pnhcTQRvCR58AoxQK0 Query
+[2016-12-16 11:11:06] id:  ChIJoR6r7ZrhcTQRtUMKyFoPzFA Query
+[2016-12-16 11:11:06] id:  ChIJdYUt-5rhcTQRdbSQf0NssQs Query
+[2016-12-16 11:11:06] id:  ChIJyTYjk5rhcTQRGmKICoQWG_I Query
+[2016-12-16 11:11:06] id:  ChIJEaJrTpfhcTQRedtg7X8Brdk Query
+[2016-12-16 11:11:06] id:  ChIJ3yO5DnfhcTQRVs1DAnvJRW8 Query
+[2016-12-16 11:11:07] id:  ChIJhZQ07nLhcTQRkzkjNV5oKCs Query
+[2016-12-16 11:11:06] id:  ChIJr-V1TJzhcTQRh-aXU2diKpM Query
+[2016-12-16 11:11:06] id:  ChIJSa6f_JnhcTQRrDyH5XzhmpA Query
+[2016-12-16 11:11:07] id:  ChIJd22OqqPhcTQRLlaurEpOHAc Query
+[2016-12-16 11:11:07] id:  ChIJ64zXk6LhcTQRbA07sO3mHnY Repeat
+[2016-12-16 11:11:07] id:  ChIJl7vS75zhcTQRzcIo6e2PKks Query
+[2016-12-16 11:11:07] id:  ChIJWUjlZpvhcTQRqmrSHn0z15w Query
+[2016-12-16 11:11:07] id:  ChIJBUx01IPhcTQRWedMh0MIKXc Query
+[2016-12-16 11:11:07] id:  ChIJaysOwZfhcTQRFPwyPbDPkcA Query
+[2016-12-16 11:11:07] id:  ChIJRd1rkIPhcTQR33rvuAIhMnM Query
+[2016-12-16 11:11:07] id:  ChIJ82OtFZvhcTQRQa2JeQgTrvQ Query
+[2016-12-16 11:11:07] id:  ChIJU9h9xIThcTQRoJ5X0cBmIaA Query
+[2016-12-16 11:11:07] id:  ChIJDUT3aJvhcTQRJd4bVOlXWpw Query
+[2016-12-16 11:11:07] id:  ChIJdcdDEpnhcTQR-elSM2ET2KY Query
+[2016-12-16 11:11:07] id:  ChIJ5dm84prhcTQRkN6pxNZKNP8 Query
+[2016-12-16 11:11:07] id:  ChIJsVsCzIThcTQRq19grNMK6mY Query
+[2016-12-16 11:11:07] id:  ChIJMY03upvhcTQR-edes3VVWbI Repeat
+[2016-12-16 11:11:07] id:  ChIJp0EXIJvhcTQRkZT69npb1aw Query
+[2016-12-16 11:11:07] id:  ChIJ9QYcxoThcTQRHyTxfd5da-Q Query
+[2016-12-16 11:11:07] id:  ChIJM8mD45rhcTQR1ZoCK6HhzPg Query
+[2016-12-16 11:11:07] id:  ChIJsyeI4JrhcTQRYIFZd_i4ZFc Query
+[2016-12-16 11:11:07] id:  ChIJtckl3IThcTQRrLwj0ZVvWpM Query
+[2016-12-16 11:11:07] id:  ChIJVVVVVYThcTQRdqRttFRTNLs Query
+[2016-12-16 11:11:07] id:  ChIJefKFlJrhcTQR7uVJsTjNbdg Query
+[2016-12-16 11:11:07] id:  ChIJfTHLHZrhcTQRWYN8126CAv8 Query
+[2016-12-16 11:11:07] id:  ChIJLznxO5rhcTQRmhFkBhProQg Query
+[2016-12-16 11:11:07] id:  ChIJ8SSDXZfhcTQRHiG2LyThXf0 Query
+[2016-12-16 11:11:07] id:  ChIJk2DXWprhcTQRkAKOODtdRkc Query
+[2016-12-16 11:11:07] id:  ChIJ-8d7LIXhcTQRg7h5UD-ccYo Query
+[2016-12-16 11:11:07] id:  ChIJY9vz65rhcTQRbzPjAtDlAdE Query
+[2016-12-16 11:11:07] id:  ChIJZ0du55rhcTQRg3ytThGOkgE Query
+[2016-12-16 11:11:07] id:  ChIJfznj8ZnhcTQRfsubGfMVK5g Query
+[2016-12-16 11:11:07] id:  ChIJPxD5FJrhcTQRIjBeC-8cZh0 Query
+[2016-12-16 11:11:07] id:  ChIJfznj8ZnhcTQRAHy5--UZkKU Query
+[2016-12-16 11:11:07] id:  ChIJ16ogN4XhcTQRfufwSi1ut8g Query
+[2016-12-16 11:11:07] id:  ChIJkW1AEJrhcTQRDrXbXxXZ6Ig Query
+[2016-12-16 11:11:07] id:  ChIJOcnkL5fhcTQRC2K5Un19pkM Query
+[2016-12-16 11:11:07] id:  ChIJi0ArsqPhcTQRGtli01ue0Uw Query
+[2016-12-16 11:11:07] id:  ChIJbzz5EZrhcTQR00QEabezSaM Query
+[2016-12-16 11:11:07] id:  ChIJV3z4bZrhcTQR_fzsCuTwWgg Query
+[2016-12-16 11:11:07] id:  ChIJmS7aS4XhcTQRkyMeQ5wXU_g Query
+[2016-12-16 11:11:07] id:  ChIJ8RwpC5rhcTQReb3eBXRA5nc Query
+[2016-12-16 11:11:07] id:  ChIJkdqMk6LhcTQRcP_fCOEVqbA Query
+[2016-12-16 11:11:07] id:  ChIJHZ-bfprhcTQRo2HprilUgho Query
+[2016-12-16 11:11:07] id:  ChIJE2PjgJrhcTQRehp4b5t5zFI Query
+[2016-12-16 11:11:07] id:  ChIJ8Y5YgZrhcTQRO5nkoT6EiM0 Query
+[2016-12-16 11:11:07] id:  ChIJNRk9vJXhcTQRG-mApNDvE-w Query
+[2016-12-16 11:11:07] id:  ChIJD8rrhZrhcTQRgKS1XyaOB2k Query
+[2016-12-16 11:11:07] id:  ChIJcVPMF4XhcTQRWQXnTomG6kA Query
+[2016-12-16 11:11:07] id:  ChIJvSXtpJrhcTQR8EzTXpvX1Bs Query
+[2016-12-16 11:11:07] Result=> id: ChIJIe0RVJzhcTQRmi4IQjxva3s / Name: Hilife / location: No. 1之3號, Jialian Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:07] Result=> id: ChIJ7-P6PZrhcTQRzbwoOhm_adY / Name: 阿仁海鮮 / location: No. 108, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:07] Result=> id: ChIJoeUwL5_hcTQRZ2EPxICQVp4 / Name: 東港大鵬灣新新海鮮 / location: 928屏東縣東港鎮嘉新路101-1號
+[2016-12-16 11:11:07] Result=> id: ChIJ2aopfoThcTQRUhtbr3suY38 / Name: 葉家肉粿 / location: No. 156, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:07] Result=> id: ChIJsS2GEnfhcTQRszL1JY7Pz1Y / Name: 變形特區咖啡輕食 / location: 928, Taiwan, Pingtung County, Donggang Township, 嘉蓮里嘉蓮路42-7號
+[2016-12-16 11:11:07] Result=> id: ChIJUzoCv5zhcTQRkOHQHxSLBEs / Name: Family Mart / location: No. 129號, Shunyu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ5Rvy3JrhcTQRE4uWAxUBMGY / Name: 原子古の味 / location: 1 號, No. 15-1, Tongming St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJx_m7ab_hcTQRPqlryNps_FA / Name: 東隆蔘藥行養生舖 / location: No. 181號, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJSdppX5nhcTQRPu2tmjjthOU / Name: 芋仔.蕃薯食堂 / location: 928, Taiwan, Pingtung County, Donggang Township, 共和里共和新村廣播鐵塔
+[2016-12-16 11:11:08] Result=> id: ChIJdYUt-5rhcTQRdbSQf0NssQs / Name: 五福海鮮屋 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮光復路三段110號
+[2016-12-16 11:11:08] Result=> id: ChIJGQgcwIPhcTQRU4WErSRf4NA / Name: 原創漁味美食特產本舖 / location: No. 1-68, Zhenhai Rd, Donggang Township, Pingtung County, Taiwan 92845
+[2016-12-16 11:11:08] Result=> id: ChIJCcyZNZvhcTQRmXrtS5jTCFI / Name: 百味海鮮 / location: 號, No. 187, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJEaJrTpfhcTQRedtg7X8Brdk / Name: SUBWAY / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮光復路二段110號
+[2016-12-16 11:11:08] Result=> id: ChIJ1aopfoThcTQRwRno_TG71Z8 / Name: 黃家肉粿 / location: No. 254, Yanping Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJE9LOcJrhcTQRFzWYyEB-jgE / Name: Ba Fang Yun Ji Dumpling / location: No. 28, Zhongshan Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJv1-lP5vhcTQRnk47PseT9z8 / Name: 鄭記肉丸榮 / location: No. 26, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJaWRm2nfhcTQR_iGfMqo3qlc / Name: 東港宏品生魚片(華橋市場) / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮嘉新路一段52之1號
+[2016-12-16 11:11:08] Result=> id: ChIJyTYjk5rhcTQRGmKICoQWG_I / Name: Family Mart / location: No. 55號, Zhongzheng Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJnYju6pnhcTQRvCR58AoxQK0 / Name: 同鮮鍋物 / location: No. 1之5號, Zhongshan Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJd22OqqPhcTQRLlaurEpOHAc / Name: 旺海產店 / location: No. 75, Yanhai Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJl7vS75zhcTQRzcIo6e2PKks / Name: 小腳ㄚ / location: No. 16, Lane 21, Shunyu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJoR6r7ZrhcTQRtUMKyFoPzFA / Name: 歐士烘培坊 / location: No. 48, Zhongzheng Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJBUx01IPhcTQRWedMh0MIKXc / Name: 關東煮 / location: 號, No. 45-3鎮海路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJr-V1TJzhcTQRh-aXU2diKpM / Name: 壹品中日式料理火鍋 / location: 號, No. 402嘉新路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJWUjlZpvhcTQRqmrSHn0z15w / Name: 阿婆肉粿 / location: No. 41, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJhZQ07nLhcTQRkzkjNV5oKCs / Name: 631 cafe / location: 928, Taiwan, Pingtung County, Donggang Township, Nanping Rd, 631號3樓
+[2016-12-16 11:11:08] Result=> id: ChIJSa6f_JnhcTQRrDyH5XzhmpA / Name: 星玥小食堂 / location: No. 2-124, Hemei St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJaysOwZfhcTQRFPwyPbDPkcA / Name: 雞蛋酥 / location: No. 72-3, Gonghe St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ3V9Ms4ThcTQRIaHTbuycVjE / Name: 好記海鮮 / location: No. 21之12, Fude St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ82OtFZvhcTQRQa2JeQgTrvQ / Name: 大自然素食滷味 / location: No. 33-37, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJDUT3aJvhcTQRJd4bVOlXWpw / Name: 鄉土香 鍋燒麵專賣 / location: No. 55-1, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJRd1rkIPhcTQR33rvuAIhMnM / Name: 東港 八蝦泰國蝦料理 / location: Zhenhai Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJdcdDEpnhcTQR-elSM2ET2KY / Name: 東港共和市場 / location: 號, No. 113共和街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ3yO5DnfhcTQRVs1DAnvJRW8 / Name: 細尾手作壽司 / location: No. 45, Jialian Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ9QYcxoThcTQRHyTxfd5da-Q / Name: 亞家素食 / location: 號, No. 45-2福德街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJU9h9xIThcTQRoJ5X0cBmIaA / Name: 和香素食 / location: 號, No. 45-1福德街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ5dm84prhcTQRkN6pxNZKNP8 / Name: 菜瓜陞海產粥 / location: 928 號, No. 154, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJfTHLHZrhcTQRWYN8126CAv8 / Name: 東港阿鴻蔥油餅水煎包 / location: Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJY9vz65rhcTQRbzPjAtDlAdE / Name: 黃家小吃麵店 / location: No. 41, Zhongzheng Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJsyeI4JrhcTQRYIFZd_i4ZFc / Name: 老牌羊肉專門店 / location: No. 31, Zhongzheng Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJsVsCzIThcTQRq19grNMK6mY / Name: 佛緣素食鹽酥雞 / location: 號 之 7, No. 30福德街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJM8mD45rhcTQR1ZoCK6HhzPg / Name: 東港海鮮街 / location: Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJp0EXIJvhcTQRkZT69npb1aw / Name: 全紅紅茶 / location: 號, No. 180光復路三段東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ16ogN4XhcTQRfufwSi1ut8g / Name: 烤饅頭 / location: No. 40, Bo'ai St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJVVVVVYThcTQRdqRttFRTNLs / Name: 慶祥食品 / location: No. 231號, Yanping Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJtckl3IThcTQRrLwj0ZVvWpM / Name: 大眾海產 / location: No. 180-1, Yanping Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ8SSDXZfhcTQRHiG2LyThXf0 / Name: 九佰碗豆花 / location: 928, Taiwan, Pingtung County, Donggang Township, No. 1之11號 ZhongShan Road
+[2016-12-16 11:11:08] Result=> id: ChIJLznxO5rhcTQRmhFkBhProQg / Name: 東禾麵食 / location: 928 號, No. 43, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJPxD5FJrhcTQRIjBeC-8cZh0 / Name: 池上便當 / location: Gonghe St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJk2DXWprhcTQRkAKOODtdRkc / Name: 大明包子饅頭店 / location: No. 82, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJefKFlJrhcTQR7uVJsTjNbdg / Name: 勝美美食 / location: No. 44號, Zhaoyang St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJZ0du55rhcTQRg3ytThGOkgE / Name: 鄭 粉腸肉丸 / location: 928 54 號, No. 42, Zhongzheng Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJkW1AEJrhcTQRDrXbXxXZ6Ig / Name: Laya Burger / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮中山路8號
+[2016-12-16 11:11:08] Result=> id: ChIJfznj8ZnhcTQRAHy5--UZkKU / Name: ONEPIZZA 東港柴燒窯烤 / location: 928, Taiwan, Pingtung County, Donggang Township, 中山路2-140號
+[2016-12-16 11:11:08] Result=> id: ChIJcVPMF4XhcTQRWQXnTomG6kA / Name: Toko ayu / location: 928, Taiwan, Pingtung County, Donggang Township, Xinsheng 1st Rd, 30號號 之 7 號
+[2016-12-16 11:11:08] Result=> id: ChIJHZ-bfprhcTQRo2HprilUgho / Name: 肉粽肉羹湯 / location: No. 60, Zhongshan Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJfznj8ZnhcTQRfsubGfMVK5g / Name: 弘爺漢堡 - 東港中山店 / location: 928, Taiwan, Pingtung County, Donggang Township, 中山路2-6號
+[2016-12-16 11:11:08] Result=> id: ChIJmS7aS4XhcTQRkyMeQ5wXU_g / Name: 許家旗魚丸 東港名產 / location: No. 67, Bo'ai St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJD8rrhZrhcTQRgKS1XyaOB2k / Name: 大眾茶行 / location: No. 81, Section 1, Zhongzheng Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJbzz5EZrhcTQR00QEabezSaM / Name: 屏東瑞麟美而美(好吃) / location: 928 號 屏 東 縣 東港 鎮 中山 路 22 號, No. 22中山路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ-8d7LIXhcTQRg7h5UD-ccYo / Name: Q媽媽飯湯 / location: 號, No. 150延平路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJi0ArsqPhcTQRGtli01ue0Uw / Name: 坤記餅店 / location: No. 25-48, Yanhai Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJkdqMk6LhcTQRcP_fCOEVqbA / Name: PizzaHut必勝客-屏東東港店 / location: 92848, Taiwan, Pingtung County, Donggang Township, 船頭路23-6號
+[2016-12-16 11:11:08] Result=> id: ChIJ8Y5YgZrhcTQRO5nkoT6EiM0 / Name: 素食白糖炸 / location: 號, No. 93中正路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJV3z4bZrhcTQR_fzsCuTwWgg / Name: 爆蛋蔥油餅 / location: 號, No. 43中山路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJ8RwpC5rhcTQReb3eBXRA5nc / Name: 潘家粽子 / location: 號, No. 16新基街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJE2PjgJrhcTQRehp4b5t5zFI / Name: 傳統車輪餅 / location: 928, Taiwan, Pingtung County, Donggang Township, 中山路和中正路一段交叉口
+[2016-12-16 11:11:08] Result=> id: ChIJOcnkL5fhcTQRC2K5Un19pkM / Name: 海味珍活海鮮 / location: No. 104, Section 2, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJvSXtpJrhcTQR8EzTXpvX1Bs / Name: 石川日式料理 / location: 號, No. 13朝陽街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:08] Result=> id: ChIJNRk9vJXhcTQRG-mApNDvE-w / Name: 東港肉包大王 / location: 屏東縣東港鎮中正路和中山路交叉口, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:08]location:  23.599280677620648 , 120.7362153067479
+Results Find:  1
+[2016-12-16 11:11:08] id:  ChIJF66UjunabjQR_SESuDbl3Ag Query
+[2016-12-16 11:11:08] Result=> id: ChIJF66UjunabjQR_SESuDbl3Ag / Name: 觀雲頂高山製茶廠 / location: 557, Taiwan, Nantou County, Zhushan Township, 大鞍里坪林巷66號
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJK8j0RJvhcTQRajizt7d3qho Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:09] id:  ChIJhQg935rhcTQRuSqiMSeILSM Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJGQIphIPhcTQREbYEzvcmqtA Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJ7-P6PZrhcTQRi1t1jeYwN1g Query
+[2016-12-16 11:11:09] id:  ChIJx_O88ZnhcTQR_wfnjmJV-P8 Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJgSGmZpvhcTQR2KnEmhbYEgM Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJc90bEZvhcTQRTD9P2OcgW64 Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:09] id:  ChIJNwYO7ZnhcTQRP157JjzAadQ Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:09] id:  ChIJZ-FnZJrhcTQRXCdT_2oHVlU Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJ8bOuhZrhcTQRVOIn-k1wZ-E Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:09] id:  ChIJI2KIQ5vhcTQR5TACAMSI0TA Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJGVSjQJrhcTQR1zeVnzfIXAY Query
+[2016-12-16 11:11:09] id:  ChIJ7-P6PZrhcTQR4gqsvlUKJFs Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJcam1YZrhcTQR6IJ56Kt0qDk Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJ_zT73ZnhcTQREdJ3jYbGD9E Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:09] id:  ChIJ0zP-GprhcTQRuZIC9AhlUvM Query
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:09] id:  ChIJI1TL0YLhcTQRYO4lUP7zZIA Query
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:09] id:  ChIJ8eeZ8ZnhcTQROoNkK8PXlzo Query
+[2016-12-16 11:11:09] id:  ChIJFyZkovpS_xMR9C7Zbwj-L7Q Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:10] id:  ChIJ3xOPTaLhcTQRLxJkf_LDdIE Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:10] id:  ChIJJ1fHpJzhcTQR1bNpft5N3IE Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:10] id:  ChIJBz7RpZDhcTQRxCzph37v1tQ Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:10] id:  ChIJDQ2CTJzhcTQRyXIY6vO6qd8 Query
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:10] id:  ChIJXRFMpJvhcTQR0vdSsBpEuMw Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:10] id:  ChIJVVVVFaDhcTQRRarOa4R318U Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:10] id:  ChIJh19-vZzhcTQRq0lyk31L0Mg Query
+[2016-12-16 11:11:10] id:  ChIJ8eXTE5vhcTQRL5nCfoiC0RU Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:10] id:  ChIJgWyw7YThcTQRgRS9AVH7yLQ Query
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:10] id:  ChIJqeTE4JrhcTQRZ5LxaqVPS7k Query
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:10] id:  ChIJMzL-GprhcTQRIzI2HcXCB2w Query
+[2016-12-16 11:11:10] id:  ChIJ7-P6PZrhcTQR_I8vtHZRpXU Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:10] id:  ChIJc0DuPprhcTQRyXyJq52_46s Repeat
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:10] id:  ChIJhRVWGprhcTQR21K1LlJSnuw Query
+[2016-12-16 11:11:10] id:  ChIJ3z3tJpvhcTQRTt2A2TApT44 Query
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:10] id:  ChIJtVvIlZrhcTQR4cQqVpcYoRQ Query
+[2016-12-16 11:11:10] id:  ChIJM8mD45rhcTQR6QB9dl0Sz2Q Query
+[2016-12-16 11:11:10] id:  ChIJFfZJDZrhcTQRP7aPPr1vNIE Query
+[2016-12-16 11:11:10] id:  ChIJywUdPprhcTQRpGydBVQkhXc Query
+[2016-12-16 11:11:10] id:  ChIJm38Y1IThcTQRvkOsBRfx26k Query
+[2016-12-16 11:11:10] id:  ChIJp4gjEXjhcTQRKinijZbpt50 Query
+[2016-12-16 11:11:10] id:  ChIJhxsvFpvhcTQRnUfCCM0gSIs Query
+[2016-12-16 11:11:10] id:  ChIJY1lhyYThcTQR2gcpFVp0zfc Query
+[2016-12-16 11:11:10] id:  ChIJo1nBNoPhcTQRCsWjzWL9PIY Query
+[2016-12-16 11:11:10] id:  ChIJO7xn4JrhcTQR6Ob_2JklOkk Query
+[2016-12-16 11:11:10] id:  ChIJ7VKgb5vhcTQR1V_t5QhGS5w Query
+[2016-12-16 11:11:10] id:  ChIJY-dDFhLhcTQRxdWmHVqUwQU Query
+[2016-12-16 11:11:10] id:  ChIJjdTcdJnhcTQRn9s-iU7Ksqs Query
+[2016-12-16 11:11:10] id:  ChIJ0Vp02IThcTQR0l2cKz82qDI Query
+[2016-12-16 11:11:10] id:  ChIJrf-hHaLhcTQRYUjGCm5Mmag Query
+[2016-12-16 11:11:10] id:  ChIJ5WBAWprhcTQRTwrpX7s1ySE Query
+[2016-12-16 11:11:10] id:  ChIJO37mx5nhcTQREjPk_p06c9o Query
+[2016-12-16 11:11:10] id:  ChIJmwdPEZrhcTQRN0xnixFC1WM Query
+[2016-12-16 11:11:10] id:  ChIJhW__kprhcTQRlGmeWOPLtXU Query
+[2016-12-16 11:11:10] id:  ChIJ9cEU7ZrhcTQRgshLWEjy2Kw Query
+[2016-12-16 11:11:11] Result=> id: ChIJGQIphIPhcTQREbYEzvcmqtA / Name: 7-Eleven / location: 928, Taiwan, Pingtung County, Donggang Township, 海路1之100號
+[2016-12-16 11:11:11] Result=> id: ChIJhQg935rhcTQRuSqiMSeILSM / Name: 奇波咖啡 / location: 光復路三段180號, 東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ7-P6PZrhcTQRi1t1jeYwN1g / Name: 益仔海產店 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮光復路三段78號之3
+[2016-12-16 11:11:11] Result=> id: ChIJx_O88ZnhcTQR_wfnjmJV-P8 / Name: McDonald / location: No. 2-39, Zhongshan Rd, 屏東縣 Pingtung County, Taiwan 92847
+[2016-12-16 11:11:11] Result=> id: ChIJK8j0RJvhcTQRajizt7d3qho / Name: 金品菓本舖 / location: No. 14-5, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJZ-FnZJrhcTQRXCdT_2oHVlU / Name: 金海味-東港水產特產 / location: No. 33之4號, Zhaoyang St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJI1TL0YLhcTQRYO4lUP7zZIA / Name: 嘉裕商號 / location: Fuyu 3rd Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJFyZkovpS_xMR9C7Zbwj-L7Q / Name: 龍興海鮮城 / location: 928, Taiwan, Pingtung County, Donggang Township, 光復路三段8號
+[2016-12-16 11:11:11] Result=> id: ChIJc90bEZvhcTQRTD9P2OcgW64 / Name: 寶源水產有限公司 / location: No. 27-8, Gonghe St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ8bOuhZrhcTQRVOIn-k1wZ-E / Name: 新東興牛肉爐 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮中正路87之2號
+[2016-12-16 11:11:11] Result=> id: ChIJcam1YZrhcTQR6IJ56Kt0qDk / Name: 東港 石川 日式家常料理 家常菜 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮朝陽街1號(位於媽祖廟對面)
+[2016-12-16 11:11:11] Result=> id: ChIJ_zT73ZnhcTQREdJ3jYbGD9E / Name: 東港福包園 / location: 928, Taiwan, Pingtung County, Donggang Township, 中山路2-195號
+[2016-12-16 11:11:11] Result=> id: ChIJNwYO7ZnhcTQRP157JjzAadQ / Name: 7-Eleven / location: No. 3號, Zhongshan Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJBz7RpZDhcTQRxCzph37v1tQ / Name: 天津蔥抓餅 / location: No. 45號, Fude St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJI2KIQ5vhcTQR5TACAMSI0TA / Name: 東港廟口簡餐 / location: No. 14-3, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ3xOPTaLhcTQRLxJkf_LDdIE / Name: 海王子海鮮館 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮沿海路40號
+[2016-12-16 11:11:11] Result=> id: ChIJgSGmZpvhcTQR2KnEmhbYEgM / Name: 東港阿元肉粿 / location: No. 45號, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJXRFMpJvhcTQR0vdSsBpEuMw / Name: 芊華烤鴨 / location: 號, No. 53共和街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ7-P6PZrhcTQR4gqsvlUKJFs / Name: 國珍平價海鮮料理棧 / location: No. 96, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ8eeZ8ZnhcTQROoNkK8PXlzo / Name: 麥當勞/屏東東港店 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮中山路2-39號
+[2016-12-16 11:11:11] Result=> id: ChIJ3z3tJpvhcTQRTt2A2TApT44 / Name: 阿富a灶咖 / location: 928, Taiwan, Pingtung County, Donggang Township, Section 3, Guangfu Rd, 180號號
+[2016-12-16 11:11:11] Result=> id: ChIJh19-vZzhcTQRq0lyk31L0Mg / Name: 東港黑媽媽食堂 / location: 928, Taiwan, Pingtung County, Donggang Township, 興漁里興漁街144-7號
+[2016-12-16 11:11:11] Result=> id: ChIJhRVWGprhcTQR21K1LlJSnuw / Name: 金礦咖啡 / location: No. 4-1, Zhongshan Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJqeTE4JrhcTQRZ5LxaqVPS7k / Name: 東港肉粿 / location: 號, No. 156光復路三段東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ0zP-GprhcTQRuZIC9AhlUvM / Name: 秀英肉粿 / location: No. 100, Section 2, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJGVSjQJrhcTQR1zeVnzfIXAY / Name: 林記肉粿 / location: 號, No. 84, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJVVVVFaDhcTQRRarOa4R318U / Name: 海岸咖啡館 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮嘉蓮里45號
+[2016-12-16 11:11:11] Result=> id: ChIJ7-P6PZrhcTQR_I8vtHZRpXU / Name: 魚河岸海鮮料理 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮光復路三段129號
+[2016-12-16 11:11:11] Result=> id: ChIJJ1fHpJzhcTQR1bNpft5N3IE / Name: 財之林豆花 / location: 號, No. 140興漁街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJM8mD45rhcTQR6QB9dl0Sz2Q / Name: 紅茶臭豆腐 / location: Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ8eXTE5vhcTQRL5nCfoiC0RU / Name: 大自然滷味 / location: No. 27, Donglong St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJDQ2CTJzhcTQRyXIY6vO6qd8 / Name: 東港大鵬灣珍珍海鮮 / location: Jiaxin Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ0Vp02IThcTQR0l2cKz82qDI / Name: 東港松記食品商行 / location: No. 170, Yanping Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJm38Y1IThcTQRvkOsBRfx26k / Name: 晶浩鮮魚批發 / location: 號, No. 8-6福德街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJhxsvFpvhcTQRnUfCCM0gSIs / Name: 東港蛋包飯 / location: 號, No. 39東隆街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJgWyw7YThcTQRgRS9AVH7yLQ / Name: 我家便利食堂 / location: 現 ～1 號, No. 3, Fengyu St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJtVvIlZrhcTQR4cQqVpcYoRQ / Name: 佐佐木食堂。東港 / location: No. 31, Zhaoyang St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJywUdPprhcTQRpGydBVQkhXc / Name: 阿榮好味海鮮屋 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮光復路三段8號
+[2016-12-16 11:11:11] Result=> id: ChIJY-dDFhLhcTQRxdWmHVqUwQU / Name: 廟埕海產 / location: 號, No. 202南興路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ7VKgb5vhcTQR1V_t5QhGS5w / Name: 阿婆肉粿 / location: 928 號 屏 東 縣 東港 鎮 東 隆 街 53 號, No. 53東隆街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJMzL-GprhcTQRIzI2HcXCB2w / Name: 金鑛咖啡 Crown Fancy / location: No. 112, Section 2, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJY1lhyYThcTQR2gcpFVp0zfc / Name: 蘇阿姨手工饅頭 / location: 號 之 7 號, No. 30福德街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJO7xn4JrhcTQR6Ob_2JklOkk / Name: 錦龍廣東粥 / location: 928, Taiwan, Pingtung County, Donggang Township, 中正路三段99-5號
+[2016-12-16 11:11:11] Result=> id: ChIJp4gjEXjhcTQRKinijZbpt50 / Name: 海冠黑鮪魚之屋 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮沿海路73號
+[2016-12-16 11:11:11] Result=> id: ChIJFfZJDZrhcTQRP7aPPr1vNIE / Name: 達美樂 / location: No. 28號, Zhongshan Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJO37mx5nhcTQREjPk_p06c9o / Name: 美而美早餐店 / location: 號, No. 1-22中山路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJrf-hHaLhcTQRYUjGCm5Mmag / Name: 天天來喜餅店 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮船頭路25-244號
+[2016-12-16 11:11:11] Result=> id: ChIJo1nBNoPhcTQRCsWjzWL9PIY / Name: 東港黑食堂 / location: Xinghai Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJmwdPEZrhcTQRN0xnixFC1WM / Name: 曉樂天麵食 / location: 928, Taiwan, Pingtung County, Donggang Township, 屏東縣東港鎮中山路11號
+[2016-12-16 11:11:11] Result=> id: ChIJhW__kprhcTQRlGmeWOPLtXU / Name: 勝美切仔擔 / location: 號, No. 44朝陽街東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ9cEU7ZrhcTQRgshLWEjy2Kw / Name: 松 板條 / location: 號, No. 52中正路東港鎮屏東縣 Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJ5WBAWprhcTQRTwrpX7s1ySE / Name: 麗華壽司 / location: No. 82, Section 3, Guangfu Rd, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11] Result=> id: ChIJjdTcdJnhcTQRn9s-iU7Ksqs / Name: 貓居手作料理 / location: No. 105, Gonghe St, Donggang Township, Pingtung County, Taiwan 928
+[2016-12-16 11:11:11]location:  24.232986497706314 , 121.91066079120448
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:14]location:  22.024867177371473 , 121.71131886095519
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:17]location:  24.706394574657665 , 120.65162105847591
+Results Find:  0
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:20]location:  24.02784536806154 , 120.96467545568662
+Results Find:  7
+[2016-12-16 11:11:20] id:  ChIJGfCdCLTeaDQRIgEnzoa8Rq4 Query
+[2016-12-16 11:11:20] id:  ChIJdTyUvMTeaDQRMq_kX3vYMC4 Query
+[2016-12-16 11:11:21] id:  ChIJr2Du8NneaDQRshNq3lohE7I Query
+[2016-12-16 11:11:21] id:  ChIJZ1y3lkrZaDQRF0QJWm1XORU Query
+[2016-12-16 11:11:21] id:  ChIJt6O6uNveaDQR_sh-C4mScB8 Query
+[2016-12-16 11:11:21] id:  ChIJ562YfDzfaDQRwjheSFW8KKw Query
+[2016-12-16 11:11:21] id:  ChIJr2Du8NneaDQR_pNqx15QdQ4 Query
+[2016-12-16 11:11:21] Result=> id: ChIJZ1y3lkrZaDQRF0QJWm1XORU / Name: 台糖福興農場 / location: Puli Township, Nantou County, Taiwan 545
+[2016-12-16 11:11:21] Result=> id: ChIJ562YfDzfaDQRwjheSFW8KKw / Name: 農聯社 / location: No. 1之4號, Meiyuan Rd, Puli Township, Nantou County, Taiwan 545
+[2016-12-16 11:11:21] Result=> id: ChIJr2Du8NneaDQRshNq3lohE7I / Name: 康是寶生技谷份有限公司 / location: No. 28-8, Fujin Rd, Puli Township, Nantou County, Taiwan 545
+[2016-12-16 11:11:21] Result=> id: ChIJr2Du8NneaDQR_pNqx15QdQ4 / Name: 世寶農場 / location: No. 28-8, Fujin Rd, Puli Township, Nantou County, Taiwan 54559
+[2016-12-16 11:11:21] Result=> id: ChIJGfCdCLTeaDQRIgEnzoa8Rq4 / Name: 埔里龍坑農場露營區 / location: No. 236, Fuzhang Rd, Puli Township, Nantou County, Taiwan 545
+[2016-12-16 11:11:21] Result=> id: ChIJdTyUvMTeaDQRMq_kX3vYMC4 / Name: 成龍山莊民宿 / location: No. 20-1, Fujin Rd, Puli Township, Nantou County, Taiwan 545
+[2016-12-16 11:11:21] Result=> id: ChIJt6O6uNveaDQR_sh-C4mScB8 / Name: 【菇仔舍】菇蕈栽植場 / location: 545, Taiwan, 南投縣埔里鎮廣成里
+Successful Update query:  7 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:23]location:  22.17743816825503 , 120.86962595634691
+Results Find:  1
+[2016-12-16 11:11:23] id:  ChIJragBtd7McTQROp8bfZufI_w Query
+[2016-12-16 11:11:24] Result=> id: ChIJragBtd7McTQROp8bfZufI_w / Name: 牡丹灣生態旅遊工作室 / location: 94543, Taiwan, Pingtung County, Mudan Township, 旭海73號
+Successful Update query:  1 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:26]location:  24.978263267075434 , 121.49660123592976
+Results Find:  200
+[2016-12-16 11:11:28] id:  ChIJmQT63nYCaDQRtlYhhm7eO94 Query
+[2016-12-16 11:11:28] id:  ChIJ17s1lXMCaDQReZprzYJHEH4 Query
+[2016-12-16 11:11:28] id:  ChIJq6qqqn4CaDQRtIvAworKWG0 Query
+[2016-12-16 11:11:28] id:  ChIJlWUsVXICaDQRVMGy5wZ9ELE Query
+[2016-12-16 11:11:28] id:  ChIJj0sfKmwCaDQRZRHXPhZPIAM Query
+[2016-12-16 11:11:28] id:  ChIJgfxIVXACaDQRjPZCoIunsHg Query
+[2016-12-16 11:11:28] id:  ChIJG6nLTHICaDQRaXX7M1oce6o Query
+[2016-12-16 11:11:28] id:  ChIJB1HufG4CaDQRMiSnCBrDzTk Query
+[2016-12-16 11:11:28] id:  ChIJv3rTg24CaDQRracePYQV9Fs Query
+[2016-12-16 11:11:28] id:  ChIJNf1lfG4CaDQRLqDubUnjB_Y Query
+[2016-12-16 11:11:28] id:  ChIJDTUpZHECaDQRtBfNVOvVpV8 Query
+[2016-12-16 11:11:28] id:  ChIJeTrapHMCaDQRoDVRtgohGR8 Query
+[2016-12-16 11:11:28] id:  ChIJhyxLNeCpQjQRUkYy2AnQsrE Query
+[2016-12-16 11:11:28] id:  ChIJd6DcsXMCaDQR32ydLftJfyo Query
+[2016-12-16 11:11:28] id:  ChIJebmGHF0CaDQRWO0ixisIWgU Query
+[2016-12-16 11:11:28] id:  ChIJxZctbm4CaDQRbC2rsIv7Gi8 Query
+[2016-12-16 11:11:28] id:  ChIJzVr8h3oCaDQRvSe5rU_NJyQ Query
+[2016-12-16 11:11:28] id:  ChIJWdj5i3oCaDQRxguFpreh_nA Query
+[2016-12-16 11:11:28] id:  ChIJ1cU-JncCaDQREC7t1lyO608 Query
+[2016-12-16 11:11:28] id:  ChIJDep3hHMCaDQRBRWIkZtG1PE Query
+[2016-12-16 11:11:28] id:  ChIJvX-iuXMCaDQRM2a4zzn9EKg Query
+[2016-12-16 11:11:28] id:  ChIJIeTOWnECaDQRJui_CZuIPS0 Query
+[2016-12-16 11:11:28] id:  ChIJoYxrh24CaDQRuRqWxDgok4k Query
+[2016-12-16 11:11:28] id:  ChIJI8cZNHICaDQR4W0hWcAOYmE Query
+[2016-12-16 11:11:28] id:  ChIJzbYgtXMCaDQRyBvH75Kaieg Query
+[2016-12-16 11:11:28] id:  ChIJ8SPXsm0CaDQRx6Vd_fkFfKw Query
+[2016-12-16 11:11:28] id:  ChIJMebFTnICaDQRSSUnvm1fhFE Query
+[2016-12-16 11:11:28] id:  ChIJQ3w-VHcCaDQRH7WnxmaKtY8 Query
+[2016-12-16 11:11:29] id:  ChIJl7zWM3cCaDQRHHB2wy4Quts Query
+[2016-12-16 11:11:28] id:  ChIJ91msG3cCaDQR4vqhd9RZ_G8 Query
+[2016-12-16 11:11:28] id:  ChIJ61YmDm8CaDQR_ihz4NOAq-0 Query
+[2016-12-16 11:11:28] id:  ChIJu2ovgG4CaDQRqwME2QbJVxg Query
+[2016-12-16 11:11:29] id:  ChIJccBFynMCaDQRT4AqdQEtei8 Query
+[2016-12-16 11:11:29] id:  ChIJQdj3s3MCaDQRGOb30Fgol2w Query
+[2016-12-16 11:11:29] id:  ChIJvXF2mXMCaDQRsCRzm_awBMA Query
+[2016-12-16 11:11:29] id:  ChIJBwr1YXACaDQRRvKXvFW5dt8 Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJl7zWM3cCaDQRHHB2wy4Quts
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJccBFynMCaDQRT4AqdQEtei8
+[2016-12-16 11:11:29] id:  ChIJMeq6RXECaDQRb-aLyp2JYqY Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJQdj3s3MCaDQRGOb30Fgol2w
+[2016-12-16 11:11:29] id:  ChIJw_dLhnQCaDQRU2moY5DHS7k Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJHypBNHICaDQRe-UsJ0suTBc
+[2016-12-16 11:11:29] id:  ChIJh1xigHACaDQR1vi0PT_PNWQ Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJlwP4aHwCaDQReZ3Hhk8lDQo
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJU7Y7v3kCaDQRwbD-QyhmXwg
+[2016-12-16 11:11:29] id:  ChIJbwnJBnMCaDQR181Zq3N1oPY Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJqeGifG4CaDQRGMXRHMFW8jU
+[2016-12-16 11:11:29] id:  ChIJy8cObtapQjQRSZzgJws77R0 Query
+[2016-12-16 11:11:29] id:  ChIJKQhNUHkCaDQRiVVmYzneoDY Query
+[2016-12-16 11:11:28] id:  ChIJPUyXEHwCaDQR2iNpTXcmXwU Query
+[2016-12-16 11:11:28] id:  ChIJ-6uVfm4CaDQRAlb_HRO87DA Query
+[2016-12-16 11:11:28] id:  ChIJG1Z5yHACaDQRMB9Qa2OC4Jg Query
+[2016-12-16 11:11:29] id:  ChIJyxNhL4ECaDQRE7CrEHOGJxs Query
+[2016-12-16 11:11:29] id:  ChIJFy-wV3sCaDQRjZw9Kou0n_U Query
+[2016-12-16 11:11:28] id:  ChIJtcO4a24CaDQRXHQJzVYP3nY Query
+[2016-12-16 11:11:29] id:  ChIJX6uhXm4CaDQRLXHjhQU7zNI Query
+[2016-12-16 11:11:29] id:  ChIJmxbn_3ECaDQRBRXqiwqI0W8 Query
+[2016-12-16 11:11:29] id:  ChIJq6qqqn4CaDQRB1n6SWPoVrg Query
+[2016-12-16 11:11:29] id:  ChIJqUoAy3MCaDQReC57k7PlqVo Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJy8cObtapQjQRSZzgJws77R0
+[2016-12-16 11:11:30] id:  ChIJE_-26W4CaDQR4CE7ZDW-IAc Query
+[2016-12-16 11:11:28] id:  ChIJZ0hafXACaDQR2ABY0jpQZNs Query
+[2016-12-16 11:11:28] id:  ChIJNX7Be24CaDQRqq8x8ZmUomc Query
+[2016-12-16 11:11:30] id:  ChIJN5wsUW4CaDQR54d7Spvg5RU Query
+[2016-12-16 11:11:30] id:  ChIJk2OprXMCaDQRnqxn74N_9hk Query
+[2016-12-16 11:11:28] id:  ChIJfx0-h24CaDQRSC12J5XO19g Query
+[2016-12-16 11:11:28] id:  ChIJ64bbGnwCaDQR7SR9TF9IsyM Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJ26kRZW4CaDQR5vZ6yApZ8vM
+[2016-12-16 11:11:30] id:  ChIJ1ex6OX0CaDQRUKRLGOyMvys Query
+[2016-12-16 11:11:30] id:  ChIJK20jEm4CaDQRpQYaCh2i2aE Query
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+[2016-12-16 11:11:30] id:  ChIJyxNhL4ECaDQRMk5aJ8BAPjQ Query
+Results Find:  0
+[2016-12-16 11:11:29] id:  ChIJU-QA-nICaDQRL8WQjORn9R4 Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJoYxrh24CaDQRuRqWxDgok4k
+[2016-12-16 11:11:30] id:  ChIJpZZwknACaDQRbOFH8X0rcac Query
+[2016-12-16 11:11:30] id:  ChIJQ3w-VHcCaDQRMnZA2T3UdbM Query
+[2016-12-16 11:11:30] id:  ChIJu8sLwm4CaDQR-ogROh_RoJA Query
+[2016-12-16 11:11:30] id:  ChIJwUQ5W24CaDQRoVYjNoqeT_o Query
+[2016-12-16 11:11:30] id:  ChIJnxhl-W4CaDQRDv0HIPIVQz8 Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJnxhl-W4CaDQRDv0HIPIVQz8
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJu8sLwm4CaDQR-ogROh_RoJA
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJtQbmUNepQjQRe08WwaqIWWI
+[2016-12-16 11:11:30] id:  ChIJ_QevqYACaDQR0sxY8LJyPpc Query
+[2016-12-16 11:11:30] id:  ChIJ7w_zfG4CaDQRd9N9VLiyzYg Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJrQSmVn0CaDQR16qVW-bkxyM
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJEQ9VIGwCaDQRmNfNknxu7TU
+[2016-12-16 11:11:30] id:  ChIJbd2Sh3oCaDQRIiIt9LYiwWg Query
+[2016-12-16 11:11:30] id:  ChIJ95N_7XoCaDQRfyArpm6A2bQ Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJwUQ5W24CaDQRoVYjNoqeT_o
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJve-1RW4CaDQRFmjQSMBvTvw
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJN5wsUW4CaDQR54d7Spvg5RU
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJX5xpVH4CaDQRZ9-5pIat21Y
+[2016-12-16 11:11:30] id:  ChIJuUWqRHoCaDQRwMvy-2Yf3rE Query
+[2016-12-16 11:11:30] id:  ChIJyxNhL4ECaDQRqHxevYsXXMc Query
+[2016-12-16 11:11:30] id:  ChIJZY5ih24CaDQRrUTsU22veqM Query
+[2016-12-16 11:11:30] id:  ChIJIeTOWnECaDQRviULWdGsL7E Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJj7knvW4CaDQR923Hljt0DFM
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJbd2Sh3oCaDQRIiIt9LYiwWg
+[2016-12-16 11:11:30] id:  ChIJxXuZiHACaDQRa59J36Nz_WQ Query
+[2016-12-16 11:11:30] id:  ChIJI-6daHECaDQRyEKTv_3Xu3E Query
+[2016-12-16 11:11:30] id:  ChIJLwrv29OpQjQR2JnDIqQIu_I Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJxXuZiHACaDQRa59J36Nz_WQ
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJVT0uRG4CaDQRW7Hf_gez5mY
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJ5RIQzG4CaDQRNvQVprJbNb4
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJyxNhL4ECaDQRMk5aJ8BAPjQ
+[2016-12-16 11:11:30] id:  ChIJ-8d8-3ECaDQR3z7e_JjBftg Query
+[2016-12-16 11:11:29] id:  ChIJ_QsEKXaoQjQRzV1mlOtxquQ Query
+[2016-12-16 11:11:29] id:  ChIJkYa2OHcCaDQRR4r0799n8Z0 Query
+[2016-12-16 11:11:30] id:  ChIJ1XyWSnoCaDQR8nyvINLSyr8 Query
+[2016-12-16 11:11:29] id:  ChIJLeRZem4CaDQRUKRk4tZ1iS8 Query
+[2016-12-16 11:11:29] id:  ChIJ8yMoyHMCaDQRpZm3HiXI3eo Query
+[2016-12-16 11:11:30] Result=> id: ChIJm9MdGHwCaDQRZmJnVGItIAU / Name: 北城烤鴨 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市中正路246號
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJFQ9DO30CaDQRKsfcq68wgtc
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJE-wjhHoCaDQRM3hlZi4-djc
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJjdJSDngCaDQRcEQFen9ezew
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJ95N_7XoCaDQRfyArpm6A2bQ
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJjf4tunMCaDQRSerQUGXAVj8
+[2016-12-16 11:11:31] Result=> id: ChIJNf1lfG4CaDQRLqDubUnjB_Y / Name: 欣明月泰緬料理 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市華新街44號
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJXW4IH78rbzQR4J4DUi9o0Dc
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJP6EsnXACaDQR_WkNPta-3UM
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJf2dDTdapQjQRXWtlIwfKlqE
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJsdhjSGwCaDQR22CDJZoZ1gw
+[2016-12-16 11:11:30] Result=> id: ChIJebmGHF0CaDQRWO0ixisIWgU / Name: 山間倉房 懷石日本料理 / location: No. 124, Lane 399, Section 2, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJRRhS_3ACaDQRXdnCHOdnLS4
+[2016-12-16 11:11:31] Result=> id: ChIJQ3w-VHcCaDQRH7WnxmaKtY8 / Name: Family Mart / location: No. 11號, Zhongzheng Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] id:  ChIJXW4IH78rbzQR4J4DUi9o0Dc Query
+[2016-12-16 11:11:30] id:  ChIJRRhS_3ACaDQRXdnCHOdnLS4 Query
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJk2oEwnYCaDQRJfW9XFmEW0s
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJ1XyWSnoCaDQR8nyvINLSyr8
+[2016-12-16 11:11:29] id:  ChIJ9_fIRHwCaDQRBixhiHRuzSM Query
+[2016-12-16 11:11:29] id:  ChIJ7UyIAG8CaDQRbW_4OLj67RU Query
+[2016-12-16 11:11:30] Result=> id: ChIJeTrapHMCaDQRoDVRtgohGR8 / Name: 祥壽司 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市仁愛街3號
+[2016-12-16 11:11:29] id:  ChIJxU79MX0CaDQRxSoO-1YxVvA Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJ3e8mDG0CaDQR6w38bhvd5v8
+[2016-12-16 11:11:29] id:  ChIJD5aCbm4CaDQRRgabM77aTYY Query
+[2016-12-16 11:11:29] id:  ChIJEZ6FqnECaDQRoS3KQYAKhgU Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJ_QsEKXaoQjQRzV1mlOtxquQ
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJLeRZem4CaDQRUKRk4tZ1iS8
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJKQhNUHkCaDQRiVVmYzneoDY
+[2016-12-16 11:11:31] Result=> id: ChIJzVr8h3oCaDQRvSe5rU_NJyQ / Name: Leo's / location: 235, Taiwan, New Taipei City, Zhonghe District, 新北市中和區復興路280巷1弄1號
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJFy-wV3sCaDQRjZw9Kou0n_U
+[2016-12-16 11:11:31] Result=> id: ChIJewO3om4CaDQRnTqoc27GVds / Name: 哈姆蛋廚房 / location: No. 146, Huaxin St, Zhonghe District, New Taipei City, Taiwan 23570
+[2016-12-16 11:11:29] id:  ChIJtQbmUNepQjQRe08WwaqIWWI Query
+[2016-12-16 11:11:31] Result=> id: ChIJ91msG3cCaDQR4vqhd9RZ_G8 / Name: 港麗港式茶餐廳 / location: 235, Taiwan, New Taipei City, Zhonghe District, 新北市中和區景安路134號
+[2016-12-16 11:11:31] Result=> id: ChIJPUyXEHwCaDQR2iNpTXcmXwU / Name: 義麵寶寶 / location: No. 2, Lane 198, Yuantong Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] id:  ChIJU4rF-HwCaDQR_DfpYFnnkdM Query
+[2016-12-16 11:11:31] Result=> id: ChIJDep3hHMCaDQRBRWIkZtG1PE / Name: 老饕園 / location: No. 46, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJzbYgtXMCaDQRyBvH75Kaieg / Name: 漢口家老牌魷魚羹南勢角店 / location: No. 3, Lane 85, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 23565
+[2016-12-16 11:11:29] id:  ChIJD3A0v2ECaDQRMHK82Y7Zp5U Query
+[2016-12-16 11:11:31] Result=> id: ChIJxZctbm4CaDQRbC2rsIv7Gi8 / Name: 藍天印度烤餅 / location: No. 33, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJBYBwAHwCaDQRWKgKvN9xPwE / Name: 大呼過癮 臭臭鍋 圓通店 / location: No. 207號, Yuantong Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJHUn6bm4CaDQRAjjgLHh6U-w / Name: 786 Li Yuan Halal Snacks / location: No. 9, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJu2ovgG4CaDQRqwME2QbJVxg / Name: 印度咖哩屋 / location: No. 77號, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJfx0-h24CaDQRSC12J5XO19g / Name: 清真雲南小吃 / location: No. 62, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:28] id:  ChIJm9MdGHwCaDQRZmJnVGItIAU Query
+[2016-12-16 11:11:30] id:  ChIJtQbmUNepQjQR0AVKjVKcu8I Query
+[2016-12-16 11:11:30] id:  ChIJve-1RW4CaDQRFmjQSMBvTvw Query
+[2016-12-16 11:11:30] id:  ChIJVT0uRG4CaDQRW7Hf_gez5mY Query
+[2016-12-16 11:11:30] id:  ChIJ5RIQzG4CaDQRNvQVprJbNb4 Query
+[2016-12-16 11:11:31] id:  ChIJvcdmqW0CaDQRKwWXRIPh2wQ Query
+[2016-12-16 11:11:31] Result=> id: ChIJk0aTjnACaDQRh2BXNEi4-Q0 / Name: 洋廚 / location: No. 218, Jingan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJWdj5i3oCaDQRxguFpreh_nA / Name: 幸樂精緻料理 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市復興路294號
+[2016-12-16 11:11:31] Result=> id: ChIJDTUpZHECaDQRtBfNVOvVpV8 / Name: Yihao Exit / location: No. 111, Jieyun Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJj0sfKmwCaDQRZRHXPhZPIAM / Name: 湘園美食(泰緬小吃) / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市華新街83號
+[2016-12-16 11:11:30] id:  ChIJsdhjSGwCaDQR22CDJZoZ1gw Query
+[2016-12-16 11:11:28] id:  ChIJvXXqqnECaDQRfVBwYOKhpmw Query
+[2016-12-16 11:11:30] id:  ChIJE-wjhHoCaDQRM3hlZi4-djc Query
+[2016-12-16 11:11:30] id:  ChIJFQ9DO30CaDQRKsfcq68wgtc Query
+[2016-12-16 11:11:28] id:  ChIJewO3om4CaDQRnTqoc27GVds Query
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJU4rF-HwCaDQR_DfpYFnnkdM
+[2016-12-16 11:11:28] id:  ChIJPScEyW4CaDQRNWvUz3g4ymw Query
+[2016-12-16 11:11:31] You have exceeded your daily request quota for this API. id: ChIJvcdmqW0CaDQRKwWXRIPh2wQ
+[2016-12-16 11:11:28] id:  ChIJH1xsSnICaDQRKoIh_b50MFE Query
+[2016-12-16 11:11:31] Result=> id: ChIJyQO563MCaDQR0KVjJCNBUeU / Name: 景東傣族小吃店 / location: No. 28-2, Heping St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJizSsAIgCaDQRSA5-XZ-wWk8 / Name: 佳馨古早味豆花 / location: 235, Taiwan, New Taipei City, Zhonghe District, 新北市中和區錦和路203巷3號
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJk2OprXMCaDQRnqxn74N_9hk
+[2016-12-16 11:11:30] id:  ChIJX5xpVH4CaDQR9ztuSK2pSAA Query
+[2016-12-16 11:11:30] id:  ChIJy8cObtapQjQRKx8yqZ-v-QY Query
+[2016-12-16 11:11:31] Result=> id: ChIJG9nggnACaDQRZVIsG0b-zBM / Name: 程記鴨莊 / location: No. 14號, Lane 274, Fuxing Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:28] id:  ChIJk0aTjnACaDQRh2BXNEi4-Q0 Query
+[2016-12-16 11:11:31] Result=> id: ChIJERIN7tapQjQRSqcEYJuPZqs / Name: 肯德基KFC-中和興南餐廳 / location: No. 79, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:28] id:  ChIJvS2_XG4CaDQRR5Esk0-Hci8 Query
+[2016-12-16 11:11:31] Result=> id: ChIJ27fbrHMCaDQR_enp4d43AKc / Name: 橫綱拉麵 / location: No. 24, Ren'ai Street, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJh1xigHACaDQR1vi0PT_PNWQ / Name: Wellcome / location: No. 268號, Fuxing Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJvS2_XG4CaDQRR5Esk0-Hci8 / Name: 9小吃店 / location: 235, Taiwan, New Taipei City, Zhonghe District, 新北市中和區興南路二段79巷3號
+[2016-12-16 11:11:31] Result=> id: ChIJvXF2mXMCaDQRsCRzm_awBMA / Name: 南勢角-豆花伯 / location: No. 55之2, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJ-4z0IXMCaDQRbuotjH98g48 / Name: 亞洲小館 / location: No. 5-2, Zhongxiao St, Yonghe District, New Taipei City, Taiwan 234
+[2016-12-16 11:11:31] Result=> id: ChIJH1xsSnICaDQRKoIh_b50MFE / Name: 有間燒烤 / location: No. 8號, Lane 85, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJ7w_zfG4CaDQRd9N9VLiyzYg
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJpZZwknACaDQRbOFH8X0rcac
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJ_QevqYACaDQR0sxY8LJyPpc
+[2016-12-16 11:11:31] Result=> id: ChIJ7UyIAG8CaDQRbW_4OLj67RU / Name: 7-Eleven / location: No. 90號, Section 2, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJvX-iuXMCaDQRM2a4zzn9EKg / Name: McDonald's / location: No. 83號, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:32] Result=> id: ChIJc9sgQW8CaDQRrt6AYR-vaKM / Name: OK Mart / location: No. 2號, Alley 11, Lane 143, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] Result=> id: ChIJvXXqqnECaDQRfVBwYOKhpmw / Name: 中和復興路無名麵線 / location: No. 19, Fuxing Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] id:  ChIJjf4tunMCaDQRSerQUGXAVj8 Query
+[2016-12-16 11:11:32] Result=> id: ChIJyxNhL4ECaDQR3f_dW4R7r5s / Name: Family Mart / location: No. 391之7號, Yuantong Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJ1ex6OX0CaDQRUKRLGOyMvys
+[2016-12-16 11:11:30] id:  ChIJ3e8mDG0CaDQR6w38bhvd5v8 Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJLwrv29OpQjQR2JnDIqQIu_I
+[2016-12-16 11:11:30] id:  ChIJjdJSDngCaDQRcEQFen9ezew Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJIeTOWnECaDQRviULWdGsL7E
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJQ3w-VHcCaDQRMnZA2T3UdbM
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJy8cObtapQjQRKx8yqZ-v-QY
+[2016-12-16 11:11:28] id:  ChIJBYBwAHwCaDQRWKgKvN9xPwE Query
+[2016-12-16 11:11:32] Result=> id: ChIJ9_fIRHwCaDQRBixhiHRuzSM / Name: 85°C Bakery Cafe / location: No. 47, Section 2, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJZY5ih24CaDQRrUTsU22veqM
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJyxNhL4ECaDQRqHxevYsXXMc
+[2016-12-16 11:11:30] id:  ChIJk2oEwnYCaDQRJfW9XFmEW0s Query
+[2016-12-16 11:11:32] Result=> id: ChIJ28K_VG4CaDQRzxDMsRiBJvg / Name: 福家食堂 / location: 235, Taiwan, New Taipei City, Zhonghe District, 興南路二段八十號
+[2016-12-16 11:11:32] Result=> id: ChIJ61YmDm8CaDQR_ihz4NOAq-0 / Name: 登豐港式麻辣 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市興南路二段110號
+[2016-12-16 11:11:32] Result=> id: ChIJ8SPXsm0CaDQRx6Vd_fkFfKw / Name: 街口廚房 / location: 235, Taiwan, New Taipei City, Zhonghe District, 新北市中和市忠孝街33號
+[2016-12-16 11:11:32] Result=> id: ChIJD3A0v2ECaDQRMHK82Y7Zp5U / Name: 吉米露天咖啡 / location: Lane 367, Yuantong Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] id:  ChIJP6EsnXACaDQR_WkNPta-3UM Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJuUWqRHoCaDQRwMvy-2Yf3rE
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJL-w2rn0CaDQRuh5CQ8ljBTE
+[2016-12-16 11:11:30] Result=> id: ChIJG1Z5yHACaDQRMB9Qa2OC4Jg / Name: 花東富貴雞 / location: No. 152, Nanshan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] Result=> id: ChIJmQT63nYCaDQRtlYhhm7eO94 / Name: 卡滋卡滋爆米��� / location: 235, Taiwan, New Taipei City, Zhonghe District, Jingping Rd, 458號1樓
+[2016-12-16 11:11:32] Result=> id: ChIJEZ6FqnECaDQRoS3KQYAKhgU / Name: 7-Eleven / location: No. 19, Fuxing Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJ-8d8-3ECaDQR3z7e_JjBftg
+[2016-12-16 11:11:30] Result=> id: ChIJG6nLTHICaDQRaXX7M1oce6o / Name: 蔥大師 / location: No. 14, Lane 73, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:32] Result=> id: ChIJBwr1YXACaDQRRvKXvFW5dt8 / Name: 拉亞漢堡 / location: No. 71, Fuxing Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:28] id:  ChIJERIN7tapQjQRSqcEYJuPZqs Query
+[2016-12-16 11:11:30] id:  ChIJL-w2rn0CaDQRuh5CQ8ljBTE Query
+[2016-12-16 11:11:28] id:  ChIJ2bVdgG4CaDQRnE95hD9TqdE Query
+[2016-12-16 11:11:28] id:  ChIJbcWcSnICaDQRb3Tbh9XNgS8 Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJX5xpVH4CaDQR9ztuSK2pSAA
+[2016-12-16 11:11:31] Result=> id: ChIJtcO4a24CaDQRXHQJzVYP3nY / Name: 詹記小籠包水煎包 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市華新街二號之五
+[2016-12-16 11:11:29] id:  ChIJHUn6bm4CaDQRAjjgLHh6U-w Query
+[2016-12-16 11:11:29] id:  ChIJlwP4aHwCaDQReZ3Hhk8lDQo Query
+[2016-12-16 11:11:32] Result=> id: ChIJE_-26W4CaDQR4CE7ZDW-IAc / Name: 尼克叔叔創意廚房 / location: 號, No. 14華新街192巷中和區新北市 Taiwan 235
+[2016-12-16 11:11:32] Result=> id: ChIJtQbmUNepQjQR0AVKjVKcu8I / Name: 全家便利商店 FamilyMart / location: 1樓, No. 1-3, Lane 109, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:29] id:  ChIJeWEAqnMCaDQRULfryGVj4xo Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJ8yMoyHMCaDQRpZm3HiXI3eo
+[2016-12-16 11:11:29] id:  ChIJFdlVYnECaDQRzNBsdRp5lVM Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJbcWcSnICaDQRb3Tbh9XNgS8
+[2016-12-16 11:11:29] id:  ChIJU7Y7v3kCaDQRwbD-QyhmXwg Query
+[2016-12-16 11:11:32] Result=> id: ChIJMeq6RXECaDQRb-aLyp2JYqY / Name: 糰子媽 / location: 235, Taiwan, New Taipei City, Zhonghe District, Heping St, 黃昏市場
+[2016-12-16 11:11:32] id:  ChIJJUriLXcCaDQR418ttPtSLNw Query
+[2016-12-16 11:11:29]location:  24.73858354613136 , 120.73727627451512
+[2016-12-16 11:11:32] Result=> id: ChIJLW-Ef24CaDQRBf1bRW3NU5Y / Name: 南國風味泰緬小吃 / location: 235, Taiwan, New Taipei City, Zhonghe District, 新北市中和區忠孝街1巷43號
+[2016-12-16 11:11:31] Result=> id: ChIJIeTOWnECaDQRJui_CZuIPS0 / Name: Family Mart / location: No. 56號, Heping St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:32] id:  ChIJtQbmUNepQjQRD-c7fGU1MoA Query
+[2016-12-16 11:11:32] id:  ChIJzVn3v3MCaDQRN0xL0R-PE78 Query
+[2016-12-16 11:11:30] Result=> id: ChIJB1HufG4CaDQRMiSnCBrDzTk / Name: 雲南口味 / location: No. 48號, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:32] You have exceeded your daily request quota for this API. id: ChIJfR2yyHMCaDQRGYq6sfPMBFk
+[2016-12-16 11:11:29] id:  ChIJG9nggnACaDQRZVIsG0b-zBM Query
+[2016-12-16 11:11:32] Result=> id: ChIJtQbmUNepQjQRD7XvfLy3oFE / Name: Family Mart / location: No. 16, Lane 167, Zhongzheng Road, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:32] You have exceeded your daily request quota for this API. id: ChIJtQbmUNepQjQRD-c7fGU1MoA
+[2016-12-16 11:11:29] id:  ChIJqeGifG4CaDQRGMXRHMFW8jU Query
+[2016-12-16 11:11:29] id:  ChIJ-4z0IXMCaDQRbuotjH98g48 Query
+[2016-12-16 11:11:29] id:  ChIJyQO563MCaDQR0KVjJCNBUeU Query
+[2016-12-16 11:11:32] You have exceeded your daily request quota for this API. id: ChIJzVn3v3MCaDQRN0xL0R-PE78
+[2016-12-16 11:11:29] id:  ChIJizSsAIgCaDQRSA5-XZ-wWk8 Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJw_dLhnQCaDQRU2moY5DHS7k
+[2016-12-16 11:11:29] id:  ChIJtQbmUNepQjQRD7XvfLy3oFE Query
+[2016-12-16 11:11:29] id:  ChIJLW-Ef24CaDQRBf1bRW3NU5Y Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJeWEAqnMCaDQRULfryGVj4xo
+[2016-12-16 11:11:29] id:  ChIJ27fbrHMCaDQR_enp4d43AKc Query
+[2016-12-16 11:11:29] id:  ChIJabdx8HICaDQRSzW8Ot_VOKw Query
+[2016-12-16 11:11:32] Result=> id: ChIJlWUsVXICaDQRVMGy5wZ9ELE / Name: 北方牛肉麵手工水餃 / location: No. 41, Ren'ai Street, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:32] Result=> id: ChIJhyxLNeCpQjQRUkYy2AnQsrE / Name: OK Mart / location: No. 209號, Jingan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:29] id:  ChIJHypBNHICaDQRe-UsJ0suTBc Query
+[2016-12-16 11:11:32] Result=> id: ChIJq6qqqn4CaDQRtIvAworKWG0 / Name: 無名麵攤 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市民治街7巷口
+[2016-12-16 11:11:29] id:  ChIJ1-36tnMCaDQRZ14kJO26Z7o Query
+[2016-12-16 11:11:32]location:  24.2306731050767 , 120.6329523592926
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:29] id:  ChIJC3acSH0CaDQR83al09oGUS0 Query
+[2016-12-16 11:11:29] id:  ChIJ26kRZW4CaDQR5vZ6yApZ8vM Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJbwnJBnMCaDQR181Zq3N1oPY
+[2016-12-16 11:11:29] id:  ChIJO25ff3ACaDQRYKDtBQJPaGE Query
+[2016-12-16 11:11:29] id:  ChIJV9TEgW0CaDQRz0FDVbd3uPo Query
+[2016-12-16 11:11:29] id:  ChIJyxNhL4ECaDQR3f_dW4R7r5s Query
+[2016-12-16 11:11:29] id:  ChIJtQbmUNepQjQRQBMdclIMwMg Query
+[2016-12-16 11:11:29] id:  ChIJiVmNE3MCaDQRurHBEzpoB0k Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJq6qqqn4CaDQRB1n6SWPoVrg
+[2016-12-16 11:11:32] You have exceeded your daily request quota for this API. id: ChIJJUriLXcCaDQR418ttPtSLNw
+[2016-12-16 11:11:32] id:  ChIJfR2yyHMCaDQRGYq6sfPMBFk Query
+Results Find:  0
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJX6uhXm4CaDQRLXHjhQU7zNI
+[2016-12-16 11:11:33] Result=> id: ChIJv3rTg24CaDQRracePYQV9Fs / Name: 滇城雲南美食 / location: No. 78號, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] id:  ChIJEQ9VIGwCaDQRmNfNknxu7TU Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJV9TEgW0CaDQRz0FDVbd3uPo
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJmxbn_3ECaDQRBRXqiwqI0W8
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJD5aCbm4CaDQRRgabM77aTYY
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJxU79MX0CaDQRxSoO-1YxVvA
+[2016-12-16 11:11:29] id:  ChIJ28K_VG4CaDQRzxDMsRiBJvg Query
+[2016-12-16 11:11:33] Result=> id: ChIJMebFTnICaDQRSSUnvm1fhFE / Name: 波西塔尼尼 / location: No. 31, Lane 85, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:33] Result=> id: ChIJNX7Be24CaDQRqq8x8ZmUomc / Name: 日發巴拉打專賣店 / location: No. 23, Zhongxiao St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] id:  ChIJj7knvW4CaDQR923Hljt0DFM Query
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJqUoAy3MCaDQReC57k7PlqVo
+[2016-12-16 11:11:33] Result=> id: ChIJ2bVdgG4CaDQRnE95hD9TqdE / Name: 當陽家鄉小吃 / location: No. 75號, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:33] Result=> id: ChIJ64bbGnwCaDQR7SR9TF9IsyM / Name: 雲林福記鴨莊 / location: No. 208, Yuantong Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJtQbmUNepQjQRQBMdclIMwMg
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJO25ff3ACaDQRYKDtBQJPaGE
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJyxNhL4ECaDQRE7CrEHOGJxs
+[2016-12-16 11:11:33] Result=> id: ChIJiVmNE3MCaDQRurHBEzpoB0k / Name: 龍涎居雞膳食坊 中和南勢角店 / location: No. 18-1, Lane 410, Jingxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:33] Result=> id: ChIJA-F6Vm4CaDQR27KqjBT00-c / Name: 兩披索靚鍋 / location: 235, Taiwan, New Taipei City, Zhonghe District, 新北市土城區興南路二段101號
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJU-QA-nICaDQRL8WQjORn9R4
+[2016-12-16 11:11:33] Result=> id: ChIJrzHHhXoCaDQRyA7ajZAC560 / Name: 寶湯臭臭鍋 / location: No. 281號, Fuxing Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:33] Result=> id: ChIJabdx8HICaDQRSzW8Ot_VOKw / Name: 義焗棒麵坊 / location: No. 77, Xinyi St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:29] id:  ChIJc9sgQW8CaDQRrt6AYR-vaKM Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJC3acSH0CaDQR83al09oGUS0
+[2016-12-16 11:11:33] Result=> id: ChIJI8cZNHICaDQR4W0hWcAOYmE / Name: 里仁公司-中和興南店 / location: No. 110, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:34] Result=> id: ChIJFdlVYnECaDQRzNBsdRp5lVM / Name: 骰子人遊戲咖啡館 / location: No. 85, Jieyun Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:33] Result=> id: ChIJK20jEm4CaDQRpQYaCh2i2aE / Name: 中和興南 / location: 235, Taiwan, New Taipei City, Zhonghe District, Section 2, Xingnan Rd, 39號1F
+[2016-12-16 11:11:34] Result=> id: ChIJZ0hafXACaDQR2ABY0jpQZNs / Name: 銳師傅私宅料理 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市復興私宅
+[2016-12-16 11:11:30] id:  ChIJrQSmVn0CaDQR16qVW-bkxyM Query
+[2016-12-16 11:11:30] id:  ChIJX5xpVH4CaDQRZ9-5pIat21Y Query
+[2016-12-16 11:11:34] Result=> id: ChIJPScEyW4CaDQRNWvUz3g4ymw / Name: Yun-Nan Food / location: No. 196號, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:28] id:  ChIJc4IvHXICaDQRsvlTNmVAP4Q Query
+[2016-12-16 11:11:29] You have exceeded your daily request quota for this API. id: ChIJkYa2OHcCaDQRR4r0799n8Z0
+[2016-12-16 11:11:34] Result=> id: ChIJ-6uVfm4CaDQRAlb_HRO87DA / Name: 祥鈺港式茶樓 / location: No. 65, Huaxin St, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:28] id:  ChIJA-F6Vm4CaDQR27KqjBT00-c Query
+[2016-12-16 11:11:32] Result=> id: ChIJc4IvHXICaDQRsvlTNmVAP4Q / Name: 司貝堤複合式餐坊 / location: No. 157, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] id:  ChIJf2dDTdapQjQRXWtlIwfKlqE Query
+[2016-12-16 11:11:28] id:  ChIJrzHHhXoCaDQRyA7ajZAC560 Query
+[2016-12-16 11:11:30] Result=> id: ChIJd6DcsXMCaDQR32ydLftJfyo / Name: EZTIME / location: No. 10, Ren'ai Street, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:35] Result=> id: ChIJ1-36tnMCaDQRZ14kJO26Z7o / Name: 布列德麵包店 / location: No. 75, Section 1, Xingnan Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:31] Result=> id: ChIJgfxIVXACaDQRjPZCoIunsHg / Name: 艾隆義大利麵 / location: No. 23, Fuxing Rd, Zhonghe District, New Taipei City, Taiwan 235
+[2016-12-16 11:11:30] You have exceeded your daily request quota for this API. id: ChIJI-6daHECaDQRyEKTv_3Xu3E
+[2016-12-16 11:11:35] Result=> id: ChIJ1cU-JncCaDQREC7t1lyO608 / Name: 燒惑日式炭火燒肉 / location: 235, Taiwan, New Taipei City, Zhonghe District, 台北縣中和市景平路341號
+[2016-12-16 11:11:35] id:  ChIJTVVyWHACaDQRlk69ScJ3F7Q Query
+[2016-12-16 11:11:35] id:  ChIJ_XXtxHkCaDQR3LZCXEH5eys Query
+[2016-12-16 11:11:35] id:  ChIJ_XsMGHICaDQRSSw_rW2yDVY Query
+[2016-12-16 11:11:35] You have exceeded your daily request quota for this API. id: ChIJTVVyWHACaDQRlk69ScJ3F7Q
+[2016-12-16 11:11:35] id:  ChIJdZYlR4YCaDQRtLTG48k3N3g Query
+[2016-12-16 11:11:35] You have exceeded your daily request quota for this API. id: ChIJ_XXtxHkCaDQR3LZCXEH5eys
+[2016-12-16 11:11:35] You have exceeded your daily request quota for this API. id: ChIJdZYlR4YCaDQRtLTG48k3N3g
+[2016-12-16 11:11:35] You have exceeded your daily request quota for this API. id: ChIJ_XsMGHICaDQRSSw_rW2yDVY
+[2016-12-16 11:11:35] id:  ChIJoWsQzHACaDQRu_Qe88HTpZM Query
+[2016-12-16 11:11:35] id:  ChIJPQ2nrGICaDQRHW5Nf8wQjnA Query
+[2016-12-16 11:11:35] id:  ChIJF7cvyXICaDQRInm3NhqCar8 Query
+[2016-12-16 11:11:35] id:  ChIJPZAK1XkCaDQRTGAB9hPe1WQ Query
+[2016-12-16 11:11:35] id:  ChIJy1taZnECaDQRKepHdU5F_5U Query
+[2016-12-16 11:11:35] id:  ChIJp33E_3ICaDQRLhA-dZedMrs Query
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:35] id:  ChIJAzi-gG4CaDQR4PiVPDM-GXQ Query
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:35] id:  ChIJ14VTrn0CaDQRHnpLkP0__BM Query
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:35] id:  ChIJwUOW_nICaDQRilpf4TuUKuE Query
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:35] id:  ChIJyxNhL4ECaDQRDFeMKFOshkg Query
+[2016-12-16 11:11:35] id:  ChIJ-RQXSXkCaDQRtclrx_SvTH8 Query
+[2016-12-16 11:11:35] id:  ChIJL__ke24CaDQRl1oUz0Xnvhk Query
+[2016-12-16 11:11:35] id:  ChIJN6E3e24CaDQRpT_01lNpw1Y Query
+[2016-12-16 11:11:35]location:  22.2569764017405 , 121.23363714465812
+[2016-12-16 11:11:35] id:  ChIJbcyE7XICaDQRJEX3SYTe3fw Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:36] id:  ChIJYWMs2nMCaDQRU39SjxOeELc Query
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:36] id:  ChIJ8X4FVHcCaDQREV88r4sshSA Query
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:36] id:  ChIJr3HhtXACaDQRuaz8dXvGHEM Query
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:36] id:  ChIJNV6SqnMCaDQRQwJZTZKseIY Query
+[2016-12-16 11:11:36] id:  ChIJXw22xnACaDQRdBStfgw79i4 Query
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:36] id:  ChIJ0fLHrXMCaDQRAYTaTIzClTQ Query
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJPQ2nrGICaDQRHW5Nf8wQjnA
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJoWsQzHACaDQRu_Qe88HTpZM
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJy1taZnECaDQRKepHdU5F_5U
+[2016-12-16 11:11:36] id:  ChIJFy-wV3sCaDQRDwUx9OydOQQ Query
+[2016-12-16 11:11:36] id:  ChIJJXfN53MCaDQRcWMoEAPDcCs Query
+[2016-12-16 11:11:36] id:  ChIJe5TQl3kCaDQRjJjF2I8UUzk Query
+[2016-12-16 11:11:36] id:  ChIJd-IyT3ECaDQRWOp_GjHIwIM Query
+[2016-12-16 11:11:36] id:  ChIJtxAWUn0CaDQR6Gm43-A1Bl4 Query
+[2016-12-16 11:11:36] id:  ChIJI-6daHECaDQRGidMmmC2QEs Query
+[2016-12-16 11:11:36] id:  ChIJv3FklHsCaDQRZhmrBOkN-3U Query
+[2016-12-16 11:11:36] id:  ChIJ4ZiL1nACaDQRi0PRUrvhMgo Query
+[2016-12-16 11:11:36] id:  ChIJX5xpVH4CaDQR2EAnnzm3CZg Query
+[2016-12-16 11:11:36] id:  ChIJfZyMw3YCaDQR2JpIuIs9ucw Query
+[2016-12-16 11:11:36] Result=> id: ChIJ17s1lXMCaDQReZprzYJHEH4 / Name: 純檸檬泰式小吃 / location: No. 16, Heping St, Zhonghe District, New Taipei City, Taiwan 235
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:11:36] id:  ChIJ_QevqYACaDQR68ksPbVjK5k Query
+[2016-12-16 11:11:36] id:  ChIJQwZxNXoCaDQRLawAHTOqSso Query
+[2016-12-16 11:11:36] id:  ChIJFUsyunMCaDQRTVElSdIlU3E Query
+[2016-12-16 11:11:36] id:  ChIJWZeRvHMCaDQRYkQLpXjyaZA Query
+[2016-12-16 11:11:36] id:  ChIJGc0XrHQCaDQRYZJ4Pmv_cE0 Query
+[2016-12-16 11:11:36] id:  ChIJqSpVJXcCaDQRBka8pqz3IFU Query
+[2016-12-16 11:11:36] id:  ChIJdR4y7XACaDQRSXZnZk6pjCE Query
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJ14VTrn0CaDQRHnpLkP0__BM
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJAzi-gG4CaDQR4PiVPDM-GXQ
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJyxNhL4ECaDQRDFeMKFOshkg
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJN6E3e24CaDQRpT_01lNpw1Y
+Results Find:  0
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJ-RQXSXkCaDQRtclrx_SvTH8
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJPZAK1XkCaDQRTGAB9hPe1WQ
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJwUOW_nICaDQRilpf4TuUKuE
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJp33E_3ICaDQRLhA-dZedMrs
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJL__ke24CaDQRl1oUz0Xnvhk
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJF7cvyXICaDQRInm3NhqCar8
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJYWMs2nMCaDQRU39SjxOeELc
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJ8X4FVHcCaDQREV88r4sshSA
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJr3HhtXACaDQRuaz8dXvGHEM
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJXw22xnACaDQRdBStfgw79i4
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJJXfN53MCaDQRcWMoEAPDcCs
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJe5TQl3kCaDQRjJjF2I8UUzk
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJd-IyT3ECaDQRWOp_GjHIwIM
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJNV6SqnMCaDQRQwJZTZKseIY
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJbcyE7XICaDQRJEX3SYTe3fw
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJFy-wV3sCaDQRDwUx9OydOQQ
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJ_QevqYACaDQR68ksPbVjK5k
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJFUsyunMCaDQRTVElSdIlU3E
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJI-6daHECaDQRGidMmmC2QEs
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJtxAWUn0CaDQR6Gm43-A1Bl4
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJX5xpVH4CaDQR2EAnnzm3CZg
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJ4ZiL1nACaDQRi0PRUrvhMgo
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJfZyMw3YCaDQR2JpIuIs9ucw
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJqSpVJXcCaDQRBka8pqz3IFU
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJdR4y7XACaDQRSXZnZk6pjCE
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJv3FklHsCaDQRZhmrBOkN-3U
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJ0fLHrXMCaDQRAYTaTIzClTQ
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJQwZxNXoCaDQRLawAHTOqSso
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJWZeRvHMCaDQRYkQLpXjyaZA
+[2016-12-16 11:11:36] You have exceeded your daily request quota for this API. id: ChIJGc0XrHQCaDQRYZJ4Pmv_cE0
+[2016-12-16 11:11:38]location:  23.33153797819477 , 120.96678428032499
+Results Find:  0
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Type "auto" to Auto Run
+---------------------------------------------------------------------------------------------------
+Type "r" to resume
+Type "set lat|lng|rad|key" to set config
+Config: location 21.9769 120.3964 radius 2000 key AIzaSyDDhjNzjNq5S_wfT6FkGqhfqyThsXCrGKA
+Type "y" to start Server
+Type "p" to pause
+Type "set default" to set config to default
+[2016-12-16 11:12:14]location:  23.02956424731058 , 120.4744576267843
+Results Find:  0
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:12:17]location:  24.33975565414622 , 121.97749277202799
+Results Find:  0
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+Type "set default" to set config to default
+Type "set lat|lng|rad|key" to set config
+---------------------------------------------------------------------------------------------------
+Config: location 21.9769 120.3964 radius 2000 key AIzaSyDDhjNzjNq5S_wfT6FkGqhfqyThsXCrGKA
+Type "p" to pause
+Type "r" to resume
+Type "y" to start Server
+Type "auto" to Auto Run
+[2016-12-16 11:12:53]location:  23.046172632163902 , 122.09156117836449
+{
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "ZERO_RESULTS"
+}
+
+Results Find:  0
+---------------------------------------------------------------------------------------------------
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+[2016-12-16 11:12:56]location:  23.11516182533258 , 121.0095289963783
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:12:59]location:  23.902627271930385 , 120.45104986241313
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:13:02]location:  22.87877889967398 , 121.8840146695492
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Results Find:  0
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------
+[2016-12-16 11:13:05]location:  23.287018186010606 , 121.62791523234257
+Results Find:  0
+{
+   "error_message" : "You have exceeded your daily request quota for this API.",
+   "html_attributions" : [],
+   "results" : [],
+   "status" : "OVER_QUERY_LIMIT"
+}
+
+Successful Update query:  0 Reapted query:  0 Failed query:  0
+---------------------------------------------------------------------------------------------------

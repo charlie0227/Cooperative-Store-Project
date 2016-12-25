@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<?
+header("Access-Control-Allow-Origin: http://maps.googleapis.com");?>
+<div id="store_bar">
+	<table>
+	<tr>
+	<td><p id="p1">查詢項目</p></td>
+	<td><select hidden style="width:100%;" id="search_for" name="search_for">
+		<option value="name">名稱</option>
+		<option value="phone">電話</option>
+		<option value="address">地址</option>
+		</select></td>
+	<td><input id="search_word" class="k-textbox" type="text" name="search_word"></input></td>
+	<td><a id="search_btn" hidden type="button" class = "member_option" style="background: #E78F8E;" onclick="asdasd('show_search_store')">查詢</a></td>
+	<td><a id="nearby_btn" hidden type="button" class = "member_option" style="background: #E78F8E;" onclick="get_location_and_distance()">附近位置</a></td>
+	<td><input class = "member_option" style="background: #E78F8E;"type="button" value="登入新商家" onclick="add_new_store()" ></td>
+	<td><a id="switch" type="button" class = "member_option"  value="1" onclick="my_switch()">switch</a></td>
+	</tr>
+
+	<!--
+	<tr>
+	<td>查詢附近店家</td>
+	<td><input id="search_place" class="k-textbox" type="text" value="台北車站"></input></td>
+	<td><a type="button" class = "member_option" style="background: #E78F8E;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_box_map()">查詢</a></td>
+
+	</tr>
+	-->
+	</table>
+
+	<div id="wrapper">
+		<div id="scroller">
+			<div class="pullDown">
+				<span class="pullDownIcon">&nbsp;</span>
+				<span class="pullDownLabel">向下拖曳更新</span>
+			</div>
+			<table></table>
+			<div class="pullUp"></div>
+		</div>
+	</div>
+
+	<div id="show_search_store"></div>
+	<div id="store_list_map" ></div>
+</div>
+<div id="into_store"></div>
+<div id="into_store_contract"></div>
+</html>

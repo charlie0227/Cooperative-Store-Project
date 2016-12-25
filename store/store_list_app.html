@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+		<meta charset="utf-8" />
+		<html xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml">
+
+
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/jspdf.debug.js"></script>
+		<script src="function/index.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+		<script src="js/jquery.reveal.js"></script>
+		<script src="js/jquery-an-showbox.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI&libraries=places"async defer></script>
+		<script src="https://connect.facebook.net/zh_TW/all.js"></script>
+		<script src="https://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+		<script src="api/fbapi.js"></script>
+		<script src="js/iscroll-probe.js"></script>
+		<script src="store/store.js"></script>
+		<script src="company/company.js"></script>
+		<script src="member/member.js"></script>
+		<script src="contract/contract.js"></script>
+
+		<script async src="api/googleAPI.js"></script>
+
+		<!--contract UI-->
+		<script src="js/require.js" defer async="true" data-main="js/main"></script>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.rtl.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.silver.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.default.min.css"/>
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2016.2.714/styles/kendo.mobile.all.min.css"/>
+		<!---test-->
+		<!---->
+
+		<script src="js/jquery.form.js"></script>
+
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/reveal.css" rel="stylesheet" type="text/css" />
+		<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
+		<link href="css/jquery-an-showbox.css" rel="stylesheet" type="text/css" />
+		<link href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" rel="stylesheet" >
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<style>
+/* Material Theme padding adjustment*/
+
+
+
+
+				#news_map{
+					width: 500px;
+					height: 500px;
+				  }
+
+   .mobileShow { display: none;}
+   @media only screen
+   and (min-device-width : 320px)
+   and (max-device-width : 480px){ .mobileShow { display: inline;}}
+
+</style>
+	</head>
+<?
+header("Access-Control-Allow-Origin: http://maps.googleapis.com");?>
+<body onload="store_list()>
+<div id="store_bar">
+	<table>
+	<tr>
+	<td><p id="p1">查詢項目</p></td>
+	<td><select hidden style="width:100%;" id="search_for" name="search_for">
+		<option value="name">名稱</option>
+		<option value="phone">電話</option>
+		<option value="address">地址</option>
+		</select></td>
+	<td><input id="search_word" class="k-textbox" type="text" name="search_word"></input></td>
+	<td><a id="search_btn" hidden type="button" class = "member_option" style="background: #E78F8E;" onclick="asdasd('show_search_store')">查詢</a></td>
+	<td><a id="nearby_btn" hidden type="button" class = "member_option" style="background: #E78F8E;" onclick="get_location_and_distance()">附近位置</a></td>
+	<td><input class = "member_option" style="background: #E78F8E;"type="button" value="登入新商家" onclick="add_new_store()" ></td>
+	<td><a id="switch" type="button" class = "member_option"  value="1" onclick="my_switch()">switch</a></td>
+	</tr>
+
+	<!--
+	<tr>
+	<td>查詢附近店家</td>
+	<td><input id="search_place" class="k-textbox" type="text" value="台北車站"></input></td>
+	<td><a type="button" class = "member_option" style="background: #E78F8E;" href="#" class="big-link" data-reveal-id="show_box" onclick="show_box_map()">查詢</a></td>
+
+	</tr>
+	-->
+	</table>
+
+	<div id="wrapper">
+		<div id="scroller">
+			<div class="pullDown">
+				<span class="pullDownIcon">&nbsp;</span>
+				<span class="pullDownLabel">向下拖曳更新</span>
+			</div>
+			<table></table>
+			<div class="pullUp"></div>
+		</div>
+	</div>
+
+	<div id="show_search_store"></div>
+	<div id="store_list_map" ></div>
+</div>
+<div id="into_store"></div>
+<div id="into_store_contract"></div>
+</body>
+</html>
