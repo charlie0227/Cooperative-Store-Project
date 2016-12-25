@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_save_path("/home/xu3u4tp6/public_html/session_tmp");
 session_start();
 $db_host = "localhost";
