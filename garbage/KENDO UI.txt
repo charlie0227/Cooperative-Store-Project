@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DATA MANAGEMENT
 http://demos.telerik.com/kendo-ui/scrollview/index
 EDITORS
@@ -10,4 +11,18 @@ http://demos.telerik.com/kendo-ui/qrcode/index
 FRAMEWORK
 http://demos.telerik.com/kendo-ui/pdf-export/index
 LAYOUT
+=======
+DATA MANAGEMENT
+http://demos.telerik.com/kendo-ui/scrollview/index
+EDITORS
+http://demos.telerik.com/kendo-ui/autocomplete/index O
+http://demos.telerik.com/kendo-ui/datepicker/index O
+http://demos.telerik.com/kendo-ui/upload/async
+http://demos.telerik.com/kendo-ui/validator/index
+BARCODES
+http://demos.telerik.com/kendo-ui/qrcode/index
+FRAMEWORK
+http://demos.telerik.com/kendo-ui/pdf-export/index
+LAYOUT
+>>>>>>> 66a3ddb79f85f58a773cb1462c49c2750f939b6a
 http://demos.telerik.com/kendo-ui/notification/index
