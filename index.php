@@ -116,7 +116,7 @@ write_log('Visit','');
 
 				</div>
 			</div>
-			
+
 			<div id="content" ></div>
 
 		</div>
@@ -126,6 +126,7 @@ write_log('Visit','');
 		<div id="loading" style="display:none;"><img src="images/loading.gif"></div>
 		<div id="test" class="mobileShow" style="margin: 0px auto;font-size:36px;">
 		<div id="m-show_box" class="reveal-modal" ><a class="close-reveal-modal"></a></div>
+		<input type="hidden" id="back_history" value="#">
 		</div>
 	</body>
 </html>

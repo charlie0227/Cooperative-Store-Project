@@ -50,7 +50,7 @@ function edit_personal_ready(){
 	});
 }
 function edit_personal_submit(){
-	$('#edit_personal_ajaxForm').submit(function() { 
+	$('#edit_personal_ajaxForm').submit(function() {
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
 		$("#content").hide();
@@ -60,7 +60,7 @@ function edit_personal_submit(){
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
 
 		 return false;
-	}); 
+	});
 }
 function edit_password(){
 	var xhttp;
@@ -76,7 +76,7 @@ function edit_password(){
 	xhttp.send();
 }
 function edit_pass_submit(){
-	$('#edit_pass_ajaxForm').submit(function() { 
+	$('#edit_pass_ajaxForm').submit(function() {
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
 		alert(data);
@@ -92,7 +92,7 @@ function edit_pass_submit(){
 	});
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
 		 return false;
-	}); 
+	});
 }
 function my_belong_list(){
 	var xhttp;
@@ -123,28 +123,29 @@ function belong_list_search(order){
 			var content=JSON.parse(res);
 			var discount="";
 			var discount_intro="";
-			if(content.method=="dynamic"){
-				discount=parseInt(content.big)-Math.floor(parseInt(obj[i].num)/parseInt(content.people));
-				discount=(discount<parseInt(content.small))?parseInt(content.small):discount;
-				//discount introduction
-				var big=(parseInt(content.big)%10==0)?parseInt(content.big)/10:parseInt(content.big);
-				var how_many=content.people-(obj[i].num % content.people);
-				var small=(parseInt(content.small)%10==0)?parseInt(content.small)/10:parseInt(content.small);
-				discount_intro="原始折扣"+big+"折 再消費"+how_many+"人可再折扣1% 最低至"+small+"折";
+			if(obj[i].status==2){
+				if(content.method=="dynamic"){
+					discount=parseInt(content.big)-Math.floor(parseInt(obj[i].num)/parseInt(content.people));
+					discount=(discount<parseInt(content.small))?parseInt(content.small):discount;
+					//discount introduction
+					var big=(parseInt(content.big)%10==0)?parseInt(content.big)/10:parseInt(content.big);
+					var how_many=content.people-(obj[i].num % content.people);
+					var small=(parseInt(content.small)%10==0)?parseInt(content.small)/10:parseInt(content.small);
+					discount_intro="原始折扣"+big+"折 再消費"+how_many+"人可再折扣1% 最低至"+small+"折";
+				}
+				else{
+					discount=parseInt(content.discount);
+					discount_intro="固定折扣";
+				}
+				discount=(discount%10==0)?discount/10:discount;
+				//append into table
+				$( "#belong_search" ).append('<tr>\
+					<td><input class="k-button" type="button" value="'+obj[i].company_name+'"></td>\
+					<td><input class="k-button" type="button" value="'+obj[i].store_name+'"></td>\
+					<td><p>'+discount+'折</p></td>\
+					<td><p>'+discount_intro+'</p></td>\
+					</tr>');
 			}
-			else{
-				discount=parseInt(content.discount);
-				discount_intro="固定折扣";
-			}
-			discount=(discount%10==0)?discount/10:discount;
-			//append into table
-			$( "#belong_search" ).append('<tr>\
-				<td><input class="k-button" type="button" value="'+obj[i].company_name+'"></td>\
-				<td><input class="k-button" type="button" value="'+obj[i].store_name+'"></td>\
-				<td><p>'+discount+'折</p></td>\
-				<td><p>'+discount_intro+'</p></td>\
-				</tr>');
-			
 		}
 		$('#loading').hide();
 	});
@@ -174,6 +175,7 @@ function show_belong_store_content(id){
 function my_store_company_list(){
 	$('#loading').show();
 	var xhttp;
+	$('#back_history').val('my_store_company_list');
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -263,7 +265,7 @@ function delete_store_owner(){
 			if(obj.q=="ok")
 				my_store_company_list();
 		});
-	
+
 }
 function owner_verify_company(id){
 	member();
@@ -295,7 +297,7 @@ function owner_create_store(){
 					if ($(".owner_search_store input").val() != lastStore && $(".owner_search_store input").val() != ""){
 						$("#search_store_result").hide();
 						owner_create_store_search();
-						$("#search_store_result").fadeIn(500);					
+						$("#search_store_result").fadeIn(500);
 						}
 					}, 500);
 			}
@@ -318,8 +320,8 @@ function owner_create_store_search(){
 	xhttp.send();
 }
 function owner_create_store_form(){
-	
-	
+
+
 }
 //company
 function owner_create_company(){
@@ -336,7 +338,7 @@ function owner_create_company(){
 					if ($(".owner_search_company input").val() != lastCompany && $(".owner_search_company input").val() != ""){
 						$("#search_company_result").hide();
 						owner_create_company_search();
-						$("#search_company_result").fadeIn(500);					
+						$("#search_company_result").fadeIn(500);
 						}
 					}, 500);
 			}
@@ -371,7 +373,7 @@ function show_own_store_content(id,map_id){
 	};
 	xhttp.open("GET", "member/owner_store.php?store_id="+id, true);
 	xhttp.send();
-	
+
 }
 function owner_store_edit(){
 	var store_id=document.getElementById("store_id").value;
@@ -394,7 +396,7 @@ function edit_store_submit(){
 			show_own_store_content(obj.p,'store_map');
 		});
 		 return false;
-	}); 
+	});
 }
 
 //edit company
@@ -408,7 +410,7 @@ function show_own_company_content(id){
 	};
 	xhttp.open("GET", "member/owner_company.php?company_id="+id, true);
 	xhttp.send();
-	
+
 }
 
 function owner_company_edit(id){
@@ -442,7 +444,7 @@ function application_confirm(member_id,company_id,type){
 		member_id:member_id,
 		company_id:company_id,
 		type:type
-		
+
 	},
 	function(){
 		show_application(company_id);
@@ -458,7 +460,7 @@ function show_discount(id){//company id
 		}
 	};
 	xhttp.open("GET", "member/show_discount.php?company_id="+id, true);
-	xhttp.send();	
+	xhttp.send();
 }
 
 //kendo dropdown select
@@ -480,7 +482,7 @@ function show_own_store_analysis(){
 	};
 	xhttp.open("GET", "member/owner_store_analysis.php?store_id="+store_id, true);
 	xhttp.send();
-	
+
 }
 
 function createChart(id) {
@@ -640,7 +642,7 @@ function createChart(id) {
 			alert(time_tmp[2]);//sec
 			*/
 		}
-		
+
 		$("#chart").kendoChart({
             title: {
                 text: mystring
@@ -678,7 +680,7 @@ function createChart(id) {
             }
         });
 		}
-		
+
 	});
     }
 
@@ -688,10 +690,10 @@ function show_contract(){
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			$('#content').hide();		
+			$('#content').hide();
 			document.getElementById("content").innerHTML = xhttp.responseText;
-			$('#loading').hide();				
-			$('#content').fadeIn(500);		
+			$('#loading').hide();
+			$('#content').fadeIn(500);
 		}
 	};
 	xhttp.open("GET", "member/owner_contract_list.php", true);

@@ -8,10 +8,10 @@ function show_company_list(){
 	$("#search_for").kendoDropDownList({
 		optionLabel: "--項目--"
 	});
-	
+
 	lastwordValue = $("#search_word").val();
 	lastforValue = $("#search_for").val();
-	
+
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -28,6 +28,7 @@ function show_company_list(){
 
 function company_list(){
 	$('#loading').show();
+	$('#back_history').val('company');
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -113,7 +114,7 @@ function company_submit(){
 			view_company(obj.p);
 		});
 		 return false;
-	}); 
+	});
 }
 
 function view_company(id){
@@ -149,14 +150,14 @@ function apply_cancel(member_id,company_id,type){
 		member_id:member_id,
 		company_id:company_id,
 		type:type
-		
+
 	},
 	function(){
 		view_company(company_id);
 	});
 }
 function application_submit(){
-	$('#application_ajaxForm').submit(function() { 
+	$('#application_ajaxForm').submit(function() {
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
 		show_box_close();
@@ -164,5 +165,5 @@ function application_submit(){
 	});
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
 		 return false;
-	}); 
+	});
 }

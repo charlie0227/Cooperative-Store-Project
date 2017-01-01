@@ -59,6 +59,7 @@ function contract_application_submit(){
 }
 function contract_make(store_id,company_id,who){
 	var xhttp;
+	var back_history = document.getElementById("back_history").value;
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -66,7 +67,10 @@ function contract_make(store_id,company_id,who){
 			if(who=='store'){
 				$('#into_company').hide();
 				$('#into_company_contract').hide();
-				document.getElementById("into_company_contract").innerHTML = xhttp.responseText;
+				if(back_history=='company')
+					document.getElementById("into_company_contract").innerHTML = xhttp.responseText;
+				if(back_history=='my_store_company_list')
+					document.getElementById("content").innerHTML = xhttp.responseText;
 			}
 			$.post("contract/contract.php",
 			{
@@ -78,6 +82,7 @@ function contract_make(store_id,company_id,who){
 			function(data){
 				//console.log(data);
 				var obj=JSON.parse(data);
+				var back_history = document.getElementById("back_history").value;
 				if(obj.who=='store'){
 					document.getElementById("d_sta").innerHTML ='<input id="date_sta" style="width:200px"/>';
 					document.getElementById("d_end").innerHTML ='<input id="date_end" style="width:200px"/>';
@@ -92,7 +97,12 @@ function contract_make(store_id,company_id,who){
 					document.getElementById("fill_store").innerHTML ='<input type="button" class="k-button" style="margin: 2px;" onclick="fill('+store_id+','+company_id+",'"+who+"'"+')" value="填入"/>';
 					//send button
 					$('#back_to_where').append('<input id="send_contract" class="k-button" type="button" value="送出" />');
-					$('#back_to_where').append('<input type="button" class="k-button" value="返回" onclick="back_to_company()"/>');
+					//console.log(back_history);
+					if(back_history=='company')
+						$('#back_to_where').append('<input type="button" class="k-button" value="返回" onclick="back_to_company()"/>');
+					if(back_history=='my_store_company_list')
+						$('#back_to_where').append('<input type="button" class="k-button" value="返回" onclick="my_store_company_list()"/>');
+
 					document.getElementById("contract_who").innerHTML =obj.contract;
 					document.getElementById("store_id").value = store_id;
 					document.getElementById("company_id").value = company_id;
@@ -887,13 +897,15 @@ function export_PDF(){
 		pdfwindow.document.write(html);
     return pdfwindow;
 	}
-	/*
-	$.post("contract/export_pdf.php",
-			{
-				html:target,
-			  datatype:'json'
-			},
-			function(data){
-				console.log(data)
-			});
-*/
+
+	function view_contract_application(){
+		var xhttp;
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (xhttp.readyState == 4 && xhttp.status == 200) {
+				document.getElementById("show_box").innerHTML = xhttp.responseText;
+			}
+		};
+		xhttp.open("GET", "contract/check_all_application.php", true);
+		xhttp.send();
+	}

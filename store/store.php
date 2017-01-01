@@ -39,7 +39,7 @@ $store_id = $_GET['store_id'];
 				}?>
 			</p>
 			<p>QRCODE<div id="qrcode"></div></p>
-			<input type="button" value="283d83" onClick="window.location='http://people.cs.nctu.edu.tw/~cwchen05030530/store/m_store.php?store_id=<?echo $store_id?>'">
+			
 		<?}
 	if(isset($_SESSION['id'])){?>
 		<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我想簽約" onclick="select_company(<?echo $result->id?>)"/></a>

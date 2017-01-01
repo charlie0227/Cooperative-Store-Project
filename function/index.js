@@ -101,7 +101,7 @@ function show_box_login(){
 	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;margin-left: 10px;" class="k-textbox" id="username" type="text" name="username" placeholder="Account"><br>';
 	document.getElementById("show_box").innerHTML+='<h3 style = "margin-left: 10px; margin-bottom: auto; margin-top: auto;">Password</h3>';
 	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;margin-left: 10px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password"><br>';
-	document.getElementById("show_box").innerHTML+='<input class = "k-button" style = "width:50%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()">';
+	document.getElementById("show_box").innerHTML+='<input class = "k-button" style = "width:50%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()"><br>';
 	document.getElementById("show_box").innerHTML+='<a href="#" onclick="fblogin();"><img src="images/fb_login.png" style="width: 50%;height: 0%;" border="0" alt=""></a>';
 }
 

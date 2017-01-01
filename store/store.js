@@ -9,9 +9,11 @@ var clear_interval =function (interval){
 	clearInterval(interval);
 }
 function show_store_list(){
+	$('#loading').show();
 	if(document.getElementById('switch').getAttribute("value")=="1"){
 		document.getElementById("search_btn").setAttribute("hidden",true);
 		$('#wrapper').show();
+		$('.t_head').show();
 		$('#show_search_store').hide();
 		document.getElementById("nearby_btn").setAttribute("hidden",true);
 		$("#search_for").kendoDropDownList({
@@ -61,6 +63,7 @@ function show_store_list(){
 	}
 	else{
 		$('#show_search_store').show();
+		$('.t_head').hide();
 		$('#wrapper').hide();
 		document.getElementById("search_btn").removeAttribute("hidden");
 		document.getElementById("nearby_btn").removeAttribute("hidden");
@@ -374,17 +377,16 @@ load_content = function(refresh, next_page,options) {
 					var obj = JSON.parse(data);
 					//have data or no
 					if(obj.error==1){
-						$('#wrapper > #scroller > table').html('');
-						$('#wrapper > #scroller > table').append('<tr>查無資料</tr>');
+						$('#wrapper > #scroller > table.t_body').html('');
+						$('#wrapper > #scroller > table.t_body').append('<tr>查無資料</tr>');
 					}
 					else{
 						list = obj.result;
 						//clear
-						$('#wrapper > #scroller > table').html('');
-						$('#wrapper > #scroller > table').append('<tr><th style = "width: 200px;">名稱</th><th style = "width: 200px;">電話</th><th style = "width: 500px;">地址</th><th style = "width: 100px;">距離</th></tr>');
+						$('#wrapper > #scroller > table.t_body').html('');
 						//add top10
 						for(var i=0 ; i<items_per_page && i<list.length; i++)
-							$('#wrapper > #scroller > table').append('<tr onclick="view_store('+list[i].id+','+"'store_map'"+')"><td>'+list[i].name+'</td><td>'+list[i].phone+'</td><td>'+list[i].address+'</td><td>'+list[i].distance+'</td></tr>');
+							$('#wrapper > #scroller > table.t_body').append('<tr onclick="view_store('+list[i].id+','+"'store_map'"+')"><td>'+list[i].name+'</td><td>'+list[i].phone+'</td><td>'+list[i].address+'</td><td>'+list[i].distance+'</td></tr>');
 					}
 					//callback function
 					if (myScroll) {
@@ -395,9 +397,9 @@ load_content = function(refresh, next_page,options) {
 					trigger_myScroll();
 
 					//jquery show
-					$('#wrapper > #scroller > table tr').hide();
-					$('#wrapper > #scroller > table tr').first().show( 200, function showNext() {
-						$( this ).next( "tr" ).show( 200, showNext );
+					$('#wrapper > #scroller > table.t_body tr').hide();
+					$('#wrapper > #scroller > table.t_body tr').first().show( 100, function showNext() {
+						$( this ).next( "tr" ).show( 100, showNext );
 					});
 				}
 			);
@@ -407,17 +409,16 @@ load_content = function(refresh, next_page,options) {
 					var obj = JSON.parse(data);
 					//have data or no
 					if(obj.error==1){
-						$('#wrapper > #scroller > table').html('');
-						$('#wrapper > #scroller > table').append('<tr>查無資料</tr>');
+						$('#wrapper > #scroller > table.t_body').html('');
+						$('#wrapper > #scroller > table.t_body').append('<tr>查無資料</tr>');
 					}
 					else{
 						list = obj.result;
 						//clear
-						$('#wrapper > #scroller > table').html('');
-						$('#wrapper > #scroller > table').append('<tr><th style = "width: 200px;">名稱</th><th style = "width: 200px;">電話</th><th style = "width: 500px;">地址</th><th style = "width: 100px;">距離</th></tr>');
+						$('#wrapper > #scroller > table.t_body').html('');
 						//add top10
 						for(var i=0 ; i<items_per_page && i<list.length; i++)
-							$('#wrapper > #scroller > table').append('<tr onclick="view_store('+list[i].id+','+"'store_map'"+')"><td>'+list[i].name+'</td><td>'+list[i].phone+'</td><td>'+list[i].address+'</td><td>'+list[i].distance+'</td></tr>');
+							$('#wrapper > #scroller > table.t_body').append('<tr onclick="view_store('+list[i].id+','+"'store_map'"+')"><td>'+list[i].name+'</td><td>'+list[i].phone+'</td><td>'+list[i].address+'</td><td>'+list[i].distance+'</td></tr>');
 					}
 					//callback function
 					myScroll.refresh();
@@ -433,7 +434,7 @@ load_content = function(refresh, next_page,options) {
 			// Loading the next-page content and refreshing
 			//add next 10
 			for(var i=(next_page-1)*items_per_page ; i<next_page*items_per_page && i<list.length; i++)
-				$('#wrapper > #scroller > table').append('<tr onclick="view_store('+list[i].id+','+"'store_map'"+')"><td>'+list[i].name+'</td><td>'+list[i].phone+'</td><td>'+list[i].address+'</td><td>'+list[i].distance+'</td></tr>');
+				$('#wrapper > #scroller > table.t_body').append('<tr onclick="view_store('+list[i].id+','+"'store_map'"+')"><td>'+list[i].name+'</td><td>'+list[i].phone+'</td><td>'+list[i].address+'</td><td>'+list[i].distance+'</td></tr>');
 		//callback function
 			myScroll.refresh();
 			pullActionCallback();

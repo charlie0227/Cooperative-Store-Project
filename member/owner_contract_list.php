@@ -8,10 +8,11 @@ $sql = "SELECT  a.id as contract_id , b.member_id as company_owner_id , c.member
 	JOIN `jangsc27_cs_project`.`company` d
 	JOIN `jangsc27_cs_project`.`store` e
 	ON  a.company_id=d.id
-	AND a.store_id=e.id 
-	AND b.company_id=d.id 
-	AND c.store_id=e.id 
-	AND (b.member_id = ? OR c.member_id = ?)";
+	AND a.store_id=e.id
+	AND b.company_id=d.id
+	AND c.store_id=e.id
+	AND (b.member_id = ? OR c.member_id = ?)
+	GROUP BY a.id";
 $sth = $db->prepare($sql);
 $sth->execute(array($member_id,$member_id));
 echo '<table style="text-align: center;">
@@ -50,10 +51,9 @@ while($result=$sth->fetchObject()){
 	   <td><input type="button" onclick="view_contract(<?echo $result->contract_id?>)" value="查看合約"></td><td></td><td></td>
 	   <?}?>
 	</tr>
-	
+
 	<?
 }
 echo '</table>
-<input type="hidden" id="back_history" value="show_contract">
 <input type="button" value="返回" onclick="my_store_company_list()">';
 ?>

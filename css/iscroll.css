@@ -36,7 +36,7 @@
 #wrapper {
 	position: absolute;
 	z-index: 1;
-	top: 65px;
+	top: 105px;
 	bottom: 0px;
 	left:9999px; /* Not a must - can be 0 - but it makes the appearance of the content a bit nicer */
 	width: 100%;
@@ -45,6 +45,7 @@
 }
 
 #scroller {
+	top: -8px;
 	position: absolute;
 	z-index: 1;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -65,8 +66,16 @@
 	-o-text-size-adjust: none;
 	text-size-adjust: none;
 }
-
-#scroller table {
+.t_head{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background: #E0E0E0;
+}
+.t_head th{
+	background-color:skyblue; 
+}
+.t_head, .t_body{
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -74,26 +83,26 @@
 	text-align: left;
 }
 
-#scroller tr {
+.t_head tr, .t_body tr{
 	padding: 0 10px;
-	height: 80px;
-	line-height: 80px;
+	height: 40px;
+	line-height: 40px;
 	border-bottom: 1px solid #ccc;
 	border-top: 1px solid #fff;
 	background-color: #fafafa;
 	font-size: 14px;
 }
-#scroller tr span:nth-child(1){
-    height: 50%;
-    display: block;
-    position: inherit;
-    line-height: 40px;
+.t_head tr th:nth-child(1), .t_body tr td:nth-child(1){
+	width:350px;
 }
-#scroller tr span:nth-child(2){
-    height: 50%;
-    display: block;
-    position: inherit;
-    line-height: 40px;
+.t_head tr th:nth-child(2), .t_body tr td:nth-child(2){
+	width:100px;
+}
+.t_head tr th:nth-child(3), .t_body tr td:nth-child(3){
+	width:600px;
+}
+.t_head tr th:nth-child(4), .t_body tr td:nth-child(4){
+	width:100px;
 }
 .googleIcon{
 	cursor: pointer; 
@@ -106,7 +115,7 @@
     margin: 6px;
 }
 .pullDownLabel, .pullUpLabel {color:mediumblue;}
-.pullDown, .pullUp {display:block;text-align:center;background:transparent;height:65px;line-height:40px;font-weight:bold;font-size:0.8em;color:#888}
+.pullDown, .pullUp {display:block;text-align:center;background:transparent;height:40px;line-height:40px;font-weight:bold;font-size:0.8em;color:#888}
 .pullDown .pullDownIcon, .pullUp .pullUpIcon {display:inline-block;opacity:0.4;width:40px;height:40px;background:url('../images/pull_down.png') 0 0 no-repeat;-webkit-background-size:40px 80px;-ms-background-size:40px 80px; background-size:40px 80px;-webkit-transition-property:-webkit-transform;-ms-transition-property:-webkit-transform;-webkit-transition-duration:250ms;-ms-transition-duration:250ms}
 .pullDown .pullDownIcon {-webkit-transform:rotate(0deg) translateZ(0);-ms-transform:rotate(0deg) translateZ(0)}
 .pullUp .pullUpIcon  {-webkit-transform:rotate(-180deg) translateZ(0);-ms-transform:rotate(-180deg) translateZ(0)}
