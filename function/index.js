@@ -2,16 +2,32 @@ var current_page = 0;
 var drop_show = 0;
 var ka = 5;
 var scroll_switch = 1;
+var entityMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+    '/': '&#x2F;',
+    '`': '&#x60;',
+    '=': '&#x3D;'
+};
+
+function escapeHtml (string) {
+	return String(string).replace(/[&<>"'`=\/]/g, function fromEntityMap (s) {
+		return entityMap[s];
+	});
+}
 $(document).ready( function() {
 	//當滑鼠滑入時將div的class換成divOver
 	$('.sidebar').hover(function(){
-			$(this).addClass('sidebar_over');		
+			$(this).addClass('sidebar_over');
 		},function(){
 			//滑開時移除divOver樣式
-			$(this).removeClass('sidebar_over');	
+			$(this).removeClass('sidebar_over');
 		}
 	);
-	
+
 	//click outside the button
 	$(window).click(function() {
 	//Hide the menus if visible
@@ -24,7 +40,7 @@ $(document).ready( function() {
 				drop_show = 0;
 			}
 		}
-		
+
 	});
 	$('#dropbtn').click(function(event){
 		if(drop_show==0){
@@ -40,14 +56,14 @@ $(document).ready( function() {
 			$('#dropdown-content').removeClass('dropdown-content1');
 			drop_show = 0;
 		}
-		
+
 	});
-	
-	
-	//$('#dropdown').hover(	
+
+
+	//$('#dropdown').hover(
 	//   function () {
-	//   }, 
-	
+	//   },
+
 	//   function () {
 	//		$('#dropdown-content').removeClass('dropdown-content1');
 			//$(this).css({"background-color":"blue"});
@@ -76,11 +92,11 @@ function min_sidebar(){
 		$('#sidebar').toggle('fast');
 		$('#close_side').hide();
 		$('#content').hide();
-		$('#close_side').removeClass('close_left');	
-		$('#close_side').addClass('close_right');	
+		$('#close_side').removeClass('close_left');
+		$('#close_side').addClass('close_right');
 		$('#close_side').fadeIn(500);
 		$('#content').fadeIn(500);
-		$("#content").css("left","250px");	
+		$("#content").css("left","250px");
 		m = 1;
 	}
 	else{
@@ -88,7 +104,7 @@ function min_sidebar(){
 		$('#close_side').hide();
 		$('#content').hide();
 		$('#close_side').removeClass('close_right');
-		$('#close_side').addClass('close_left');	
+		$('#close_side').addClass('close_left');
 		$('#close_side').fadeIn(500);
 		$('#content').fadeIn(500);
 		$("#content").css("left","300px");
@@ -102,7 +118,7 @@ function show_box_login(){
 	document.getElementById("show_box").innerHTML+='<h3 style = "margin-left: 10px; margin-bottom: auto; margin-top: auto;">Password</h3>';
 	document.getElementById("show_box").innerHTML+='<input style = "margin-bottom: 5px;margin-left: 10px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password"><br>';
 	document.getElementById("show_box").innerHTML+='<input class = "k-button" style = "width:50%; margin-bottom: 5px;" type="button" value="login" onclick="check_login()"><br>';
-	document.getElementById("show_box").innerHTML+='<a href="#" onclick="fblogin();"><img src="images/fb_login.png" style="width: 50%;height: 0%;" border="0" alt=""></a>';
+	document.getElementById("show_box").innerHTML+='<a href="#" onclick="fblogin();"><img src="images/fb_login.png" style="width: 50%;height: 25%;" border="0" alt=""></a>';
 }
 
 function news(){
@@ -153,7 +169,7 @@ function checkEmail() {
 		{
 		  datatype:'text',
 		  remail:remail
-		  
+
 		},
 		function(data){
 			rval = data;
@@ -209,18 +225,24 @@ function hideMenu(){
 
 // 顯示通知內容 (登入後才執行 放在login裡面)
 function shownotice(id){
-	$.post("member/check_application.php",
-	{
-	  datatype:'json',
-	  member_id:id
-	},
-	function(data){
-		var temp='{"list":'+data+'}';
-		var obj=JSON.parse(temp);
-		alert(obj.list[0].id);
-	}
-	
-	);
+  var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "member/check_all_application.php", true);
+	xhttp.send();
+
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML += xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "contract/check_all_application.php", true);
+	xhttp.send();
 }
 function show_box_close(){
 	$('.reveal-modal-bg').trigger('click');
@@ -261,15 +283,15 @@ function get_n(){
 	$(document).scroll(function() {
 		if(scroll_switch==1){
 			if(document.getElementById("news_content")== null)
-				return false; 
+				return false;
 			var win = $(window);
 			var doc_h = $(document).height();
 			var win_h = win.height();
 			var h = $(document).height() - win.height();
-			var win_top = win.scrollTop();	
-			
+			var win_top = win.scrollTop();
+
 			Math.floor(win_top);
-			
+
 			if ($(document).height() - win.height() == win_top) {
 				//find news
 				$.post("function/get_news.php",
@@ -297,8 +319,8 @@ function get_n(){
 					});
 			}
 		}
-		
-		
+
+
 	});
 }
 
@@ -312,7 +334,7 @@ function details(news_id){
 	};
 	xhttp.open("GET", "function/news_detail.php?news_id="+news_id, true);
 	xhttp.send();
-	
+
 }
 
 function check_login(){
@@ -331,7 +353,7 @@ function check_login(){
 			else
 				location.reload();
 		}
-		
+
 		);
 }
 
@@ -351,7 +373,7 @@ function show_box_register(){
 function register_ready(){
 $(document).ready( function() {
 	//document.getElementsByClassName('reveal-modal-bg').onwheel = function(){ return false; }
-	//var no_space = [^\s]; 
+	//var no_space = [^\s];
 	//var reg_acc = $("#register_account").val();
 	//if(reg_acc.search("\s")==-1){
 	//	$("#valid1").show();
@@ -381,7 +403,7 @@ $(document).ready( function() {
 			c.hide();
 			//$("#NoSpace1").hide();
 		}
-		
+
 		if($(this).val()==""){
 			var c=$(this).next();
 			c.show();
@@ -392,7 +414,7 @@ $(document).ready( function() {
 		}
 	});
 })
-	
+
 }
 
 function login(){
@@ -415,7 +437,6 @@ function delete_news(news_id){
 			news_id: news_id
 		},
 		function(data){
-			console.log(data);
 			news();
 		});
 }
@@ -439,22 +460,30 @@ function add_news(){
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			document.getElementById("show_box").innerHTML = xhttp.responseText;
+			$('#add_news_submit').on('click',function(){
+				//console.log(escapeHtml($('#news_content_form').val()));
+				$.post("function/add_news.php",
+					{
+						datatype:'text',
+						title: escapeHtml($('#news_title_form').val()),
+						content: escapeHtml($('#news_content_form').val())
+					},
+					function(data){
+						//console.log(data);
+						show_box_close();
+						news();
+					}
+				);
+			});
 		}
 	};
 	xhttp.open("GET", "function/add_news_form.php", true);
 	xhttp.send();
 }
 
-function add_news_submit(){
-	$('#add_news_ajaxForm').submit(function() { 
-    $(this).ajaxSubmit(function(data){
-		show_box_close();
-		news();
-		console.log(data);
-	});
-		 return false;
-	}); 
-}
+$(function(){
+
+});
 
 function test(){
 	var xhttp;
@@ -462,10 +491,27 @@ function test(){
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			document.getElementById("show_box").innerHTML = xhttp.responseText;
-			
+
 	alert('hi');
 		}
 	};
 	xhttp.open("GET", "function/qrcode.php", true);
+	xhttp.send();
+}
+
+function read_me(){
+	$("#loading").show();
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			$("#content").hide();
+			document.getElementById("content").innerHTML = xhttp.responseText;
+			$("#content").fadeIn(500);
+			$("#loading").hide();
+			//console.log("HERE");
+		}
+	};
+	xhttp.open("GET", "function/read_me.php", true);
 	xhttp.send();
 }

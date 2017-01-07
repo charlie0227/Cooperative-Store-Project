@@ -7,7 +7,7 @@ require_once "../sysconfig.php";
 </head>
 <body>
 <!--Add new company  add.php-->
-<form action="company/add.php" method="post" enctype="multipart/form-data" id="company_ajaxForm">
+<form method="post" enctype="multipart/form-data" id="company_ajaxForm">
 <table>
 	<tr>
 		<td>企業名稱</td>
@@ -39,13 +39,13 @@ require_once "../sysconfig.php";
 			<input class="k-textbox" type="text" name="address">
 			<div style="color:red">*</div>
 		</td>
-	</tr>	
+	</tr>
 	<tr>
 		<td>網址</td>
 	</tr>
 	<tr>
 		<td><input class="k-textbox" type="text" name="url"><div></div></td>
-	</tr>	
+	</tr>
 	<tr>
 		<td>商標圖片</td>
 	</tr>
@@ -59,8 +59,8 @@ require_once "../sysconfig.php";
 		<td><input name="files" type="file" id="files" class="upl"><div></div></td>
 	</tr>
 	<tr>
-		<td><input class = "k-button" type="submit" value="送出" name="submit" onclick="company_submit()"></td>
-	</tr>	
+		<td><input class = "k-button" type="button" value="送出" name="submit" onclick="company_submit()"></td>
+	</tr>
 </table>
 </form>
 </body>

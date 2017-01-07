@@ -40,12 +40,22 @@ function delete_contract_application(company_id,store_id){
 			    datatype:'json'
 			},
 			function(){
-
-				show_box_close();
 				select_company(store_id);
 			});
 }
 function contract_application_submit(){
+	$.ajax({
+		type:"POST",
+		url:'contract/application_join.php',
+		data:$('#contract_application_ajaxForm').serialize(),
+		dataType:'json',
+		success:function(r){
+			show_box_close();
+			alert('店家將會收到您的簽約邀請！');
+			view_store(r,'store_map');
+		}
+	});
+/*
 	$('#contract_application_ajaxForm').submit(function() {
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
@@ -56,6 +66,7 @@ function contract_application_submit(){
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
 		 return false;
 	});
+*/
 }
 function contract_make(store_id,company_id,who){
 	var xhttp;
@@ -204,7 +215,7 @@ function contract_manage(contract_id,who){
 					document.getElementById("contract_who").innerHTML =obj.contract;
 					document.getElementById("store_id").value = obj.store_id;
 					document.getElementById("company_id").value = obj.company_id;
-					//send button
+					//send button //show_contract()
 					$('#back_to_where').append('<input id="send_contract" class="k-button" type="button" value="送出" />');
 					edit_contract_fill(obj.content);
 					contract_content_function();
@@ -888,6 +899,8 @@ function export_PDF(){
 		var html = "";
     html += "<html><head></head><body><form id='formpdf' method='post' action='contract/export_pdf.php'>";
     		html += "<input type='hidden' name='html' value='" + target + "'/>";
+				html += "<input type='hidden' name='company_name' value='" + $('#company_name1').html() + "'/>";
+				html += "<input type='hidden' name='store_name' value='" + $('#store_name1').html() + "'/>";
     }
     html += "</form><script type='text/javascript'>document.getElementById(\"formpdf\").submit()</script></body></html>";
 
@@ -896,16 +909,4 @@ function export_PDF(){
 
 		pdfwindow.document.write(html);
     return pdfwindow;
-	}
-
-	function view_contract_application(){
-		var xhttp;
-		xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-			if (xhttp.readyState == 4 && xhttp.status == 200) {
-				document.getElementById("show_box").innerHTML = xhttp.responseText;
-			}
-		};
-		xhttp.open("GET", "contract/check_all_application.php", true);
-		xhttp.send();
-	}
+}

@@ -1,12 +1,11 @@
-
-
-
-
-
 <?php
 require 'pdfcrowd.php';
 //$pdf = $client->convertHtml('<html>'.$html.'</html>');
 $html=$_POST['html'];
+$company_name=$_POST['company_name'];
+$store_name=$_POST['store_name'];
+$filename = $store_name."_".$company_name.".pdf";
+$string = "Content-Disposition: attachment; filename=\"".$filename."\"";
 try
 {
     // create an API client instance
@@ -20,7 +19,7 @@ try
     header("Content-Type: application/pdf");
     header("Cache-Control: max-age=0");
     header("Accept-Ranges: none");
-    header("Content-Disposition: attachment; filename=\"google_com.pdf\"");
+    header($string);
 
     // send the generated PDF
     echo $pdf;

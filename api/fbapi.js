@@ -30,13 +30,13 @@ window.fbAsyncInit = function(){
 	FB.init({
       appId      : '1135310903195562',
       xfbml      : true,
-	  status     : true, 
+	  status     : true,
 	  channelUrl : 'index.php',
       cookie     : true,
 	  oauth      : true,
       version    : 'v2.7'
     });
-	
+
 	(function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -60,7 +60,8 @@ window.fbAsyncInit = function(){
 		function(data){
 		var obj=JSON.parse(data);
 			if(obj.message==='Wrong Account or password !!'){//this mean fb isn't register
-				FB_register();
+        FB_register();
+
 			}
 			else{
 				window.location.reload();
@@ -69,32 +70,42 @@ window.fbAsyncInit = function(){
 		);
      });
   }
-  
+
   //register
   function FB_register() {
     FB.api('/me', { locale: 'en_US', fields: 'name, email , age_range,gender' },function(response) {
-	  var a = 2016-parseInt(response.age_range.min);
-	  var b = 'male' == response.gender ? 1 : 0 ;
-	  $.post("function/register_account.php",
-		{
-		  datatype:'json',
-		  account:response.id,
-		  password:'facebook',
-		  name:response.name,
-		  phone:response.id,
-		  gender:b,
-		  year:a,
-		  month:'01',
-		  date:'01',
-		  email:response.email
-		},
-		function(){
-			window.location.reload();
-		}
-		);
+    setTimeout(function(){
+      var a = 2016-parseInt(response.age_range.min);
+  	  var b = 'male' == response.gender ? 1 : 0 ;
+      console.log(response.email);
+      var name = response.name.replace(/ /g,"_");
+      var email = response.email;
+      if(email==undefined)
+        email = "NONE";
+      console.log(name);
+      console.log(email);
+  	  $.post("function/register_account.php",
+  		{
+  		  datatype:'text',
+  		  account:response.id,
+  		  password:'facebook',
+  		  name:name,
+  		  phone:response.id,
+  		  gender:b,
+  		  year:a,
+  		  month:'01',
+  		  date:'01',
+  		  email:email
+  		},
+  		function(data){
+  			FB_login();
+  		});
+
+     }, 500);
+
       });
   }
-  
+
 
 function fblogout() {
 	FB.getLoginStatus(function(response) {
@@ -105,9 +116,9 @@ function fblogout() {
         });
 		}
     });
-	
-	
-        
+
+
+
 }
 
 function fblogin(){
@@ -119,5 +130,3 @@ function fblogin(){
 		}
 	});
 }
-
-

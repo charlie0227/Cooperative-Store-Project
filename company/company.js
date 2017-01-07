@@ -103,17 +103,62 @@ function add_company_ready(){
 			c.hide();
 		}
 	});
+	//preview image
+	function format_float(num, pos)
+    {
+        var size = Math.pow(10, pos);
+        return Math.round(num * size) / size;
+    }
+
+    function preview(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.preview').attr('src', e.target.result);
+                var KB = format_float(e.total / 1024, 2);
+                $('.size').text("檔案大小：" + KB + " KB");
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("body").on("change", ".upl", function (){
+		console.log('a');
+        preview(this);
+    })
 }
 function company_submit(){
-	$('#company_ajaxForm').submit(function() {
-		$(this).ajaxSubmit(function(data){
-			var obj=JSON.parse(data);
-			if(obj.error)
-				alert(obj.error);
-			show_company_list();
+	$('#company_ajaxForm').click(function() {
+		var $name = $('#company_ajaxForm').find('input[name="name"]');
+		var $phone = $('#company_ajaxForm').find('input[name="phone"]');
+		var $address = $('#company_ajaxForm').find('input[name="address"]');
+		var $url = $('#company_ajaxForm').find('input[name="url"]');
+		$name.val(escapeHtml($name.val()));
+		$phone.val(escapeHtml($phone.val()));
+		$address.val(escapeHtml($address.val()));
+		$url.val(escapeHtml($url.val()));
+		var data = new FormData();
+		data.append('name',$name.val());
+		data.append('phone',$phone.val());
+		data.append('address',$address.val());
+		data.append('url',$url.val());
+		data.append('files[]',$('#files')[0].files[0]);
+		$.ajax({
+		    url: 'company/add.php',
+		    type: 'POST',
+		    cache: false,
+		    data: data,
+		    processData: false,
+		    contentType: false
+		}).done(function(res) {
+			var obj = JSON.parse(res);
 			view_company(obj.p);
-		});
-		 return false;
+			return false;
+	}).fail(function(res) {alert(res);return false;});
+		event.preventDefault();
 	});
 }
 
@@ -157,13 +202,19 @@ function apply_cancel(member_id,company_id,type){
 	});
 }
 function application_submit(){
-	$('#application_ajaxForm').submit(function() {
-	 // 提交表单
-    $(this).ajaxSubmit(function(data){
-		show_box_close();
-		view_company(data);
-	});
-    // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
-		 return false;
+	$.ajax({
+		type:'POST',
+		url:'company/application_join.php',
+		data:$('#application_ajaxForm').serialize(),
+		dataType:'json',
+		success:function(r){
+			//alert(r.result);
+			show_box_close();
+			view_company(r);
+			return false;
+		},
+		error:function(){
+			return false;
+		}
 	});
 }

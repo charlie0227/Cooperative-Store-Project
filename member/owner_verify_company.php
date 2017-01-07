@@ -5,9 +5,10 @@ $sth = $db->prepare($sql);
 $sth->execute(array($_GET['company_id']));
 $result = $sth->fetchObject();
 
-$sql = "SELECT * FROM `jangsc27_cs_project`.`company` a JOIN `jangsc27_cs_project`.`contract` b ON a.`company_id` = b.`company_id` AND b.`company_id` = ?";
+$sql = "SELECT * FROM `jangsc27_cs_project`.`company` a JOIN `jangsc27_cs_project`.`company_image` b ON a.`id` = b.`company_id` AND b.`company_id` = ?";
 $sth1 = $db->prepare($sql);
 $sth1->execute(array($_GET['company_id']));
+$result_img = $sth->fetchObject();
 
 ?>	
 <html>
@@ -20,12 +21,8 @@ $sth1->execute(array($_GET['company_id']));
 		<?}?>
 		<p>電話 <?echo $result->phone?></p>
 		<p>地址 <?echo $result->address?></p>
-		<p>Email <?echo $result->email?></p>
-		<p>合作企業 <?
-			while($result_company = $sth1->fetchObject()){
-				echo $result_company->name.'</p><p>';
-			}?>
-		</p>
+		<p>Email <?echo $result->url?></p>
+		
 	<?}?>
 	<input type="button" value="對，我是企業長" onclick="owner_verify_company(<?echo $result->id?>)">
 

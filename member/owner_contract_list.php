@@ -28,6 +28,13 @@ while($result=$sth->fetchObject()){
 		$whoami="company";
 	if($member_id==$result->store_owner_id)
 		$whoami="store";
+	if($member_id==$result->company_owner_id && $member_id==$result->store_owner_id){//own both
+			if($result->status==0)//waiting bigger
+				$whoami="store";
+			if($result->status==1)//waiting bigger
+				$whoami="company";
+		}
+
 	?>
 	<tr>
 		<td><input style="width: 100%;height: 100%;"type="button" onclick="store_list();view_store(<?echo $result->store_id?>,'store_map')" value="<?echo $result->store_name?>"></td>

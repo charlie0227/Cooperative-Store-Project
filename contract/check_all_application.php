@@ -36,4 +36,5 @@ $store_img = $sth2->fetchObject();
 </td>
 <td><?echo $result->store_name?></td>
 <td><input type="button" class="k-button" style="width:auto;" value="簽約" onclick="contract_make(<?echo $result->store_id?>,<?echo $result->company_id?>,'store');"/></td>
+<td><input type="button" class="k-button" style="width:auto;" value="拒絕" onclick="delete_contract_application(<?echo $result->company_id?>,<?echo $result->store_id?>);"/></td>
 <?}?>

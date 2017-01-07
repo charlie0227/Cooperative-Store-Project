@@ -15,10 +15,10 @@ function show_store_list(){
 		$('#wrapper').show();
 		$('.t_head').show();
 		$('#show_search_store').hide();
+		$('#p1').show();
+		$('#search_for').show();
 		document.getElementById("nearby_btn").setAttribute("hidden",true);
-		$("#search_for").kendoDropDownList({
-			optionLabel: "--項目--"
-		});
+		$("#search_for").kendoDropDownList();
 		lastwordValue = $("#search_word").val();
 		lastforValue = $("#search_for").val();
 
@@ -65,6 +65,8 @@ function show_store_list(){
 		$('#show_search_store').show();
 		$('.t_head').hide();
 		$('#wrapper').hide();
+		$('#p1').hide();
+		$('#search_for').hide();
 		document.getElementById("search_btn").removeAttribute("hidden");
 		document.getElementById("nearby_btn").removeAttribute("hidden");
 		document.getElementById("search_for").setAttribute("hidden",true);
@@ -77,11 +79,13 @@ function show_store_list(){
 function my_switch(){
 	if(document.getElementById('switch').getAttribute("value")=="1"){
 		document.getElementById("switch").setAttribute("value", "2");
+		$("#switch").attr("src","images/shop.png")
 		show_store_list();
 	}
 	else{
 		document.getElementById("switch").setAttribute("value", "1");
 		document.getElementById("search_word").setAttribute("value","");
+		$("#switch").attr("src","images/googlemap.png")
 		show_store_list();
 	}
 }
@@ -96,7 +100,6 @@ function store_list(){
 		if(document.getElementById('switch').getAttribute("value")=="1"){
 		$("#show_search_store").hide();
 		show_store_list();
-		$('#loading').hide();
 		$("#show_search_store").fadeIn(500);
 		search_sto=setInterval(function () {
 			if(document.getElementById("store_bar")== null){
@@ -104,9 +107,7 @@ function store_list(){
 			}
 			else if (($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ))&&(document.getElementById('switch').getAttribute("value")=="1") ){
 				$("#show_search_store").hide();
-				$('#loading').show();
 				show_store_list();
-				$('#loading').hide();
 				$("#show_search_store").fadeIn(500);
 			}
 
@@ -128,7 +129,6 @@ function store_list_app(){
 		if(document.getElementById('switch').getAttribute("value")=="1"){
 		$("#show_search_store").hide();
 		show_store_list();
-		$('#loading').hide();
 		$("#show_search_store").fadeIn(500);
 		search_sto=setInterval(function () {
 			if(document.getElementById("store_bar")== null){
@@ -136,9 +136,7 @@ function store_list_app(){
 			}
 			else if (($("#search_word").val() != lastwordValue || ($("#search_for").val() != lastforValue ))&&(document.getElementById('switch').getAttribute("value")=="1") ){
 				$("#show_search_store").hide();
-				$('#loading').show();
 				show_store_list();
-				$('#loading').hide();
 				$("#show_search_store").fadeIn(500);
 			}
 
@@ -175,7 +173,7 @@ function view_store(id,map_id){
 			find_address(id);//geocodeAddress(address)
 			$("#into_store").fadeIn(500);
 			$("#qrcode").kendoQRCode({
-				value: "http://people.cs.nctu.edu.tw/~cwchen05030530//store/m_store.php?store_id="+id,
+				value: "https://www.charlie27.me/~xu3u4tp6/store/m_store.php?store_id="+id,
 				errorCorrection: "M",
 				size: 120,
 				border: {
@@ -256,6 +254,7 @@ function store_submit(){
     }
 
     $("body").on("change", ".upl", function (){
+		console.log('a');
         preview(this);
     })
 
@@ -323,13 +322,13 @@ function belong_list_search(order,store_id){
 			discount=(discount%10==0)?discount/10:discount;
 			//append into table
 			gompany_id = obj[i].company_id;
-			$( "#list" ).append('<tr>\
-				<td><input class="k-button" type="button" value="'+obj[i].company_name+'"></td>\
-				<td><input class="k-button" type="button" value="'+obj[i].store_name+'"></td>\
-				<td><p>'+discount+'折</p></td>\
-				<td><p>'+discount_intro+'</p></td>\
-				<td><input class="k-button" type="button" value="打卡" onclick="population_add('+obj[i].company_id+','+store_id+')"></td>\
-				</tr>');
+			$( "#list" ).append('<table>\
+				<tr><p>'+obj[i].company_name+'</p></tr>\
+				<tr><p>'+obj[i].store_name+'</p></tr>\
+				<tr><p>'+discount+'折</p></tr>\
+				<tr><p>'+discount_intro+'</p></tr>\
+				<tr><input class="k-button" type="button" value="打卡" onclick="population_add('+obj[i].company_id+','+store_id+')"></tr>\
+				</table>');
 
 		}
 		$('#loading').hide();
@@ -359,7 +358,7 @@ function population_add(company_id,store_id){
 }
 
 //scroll part
-var items_per_page = 10;
+var items_per_page = 15;
 var scroll_in_progress = false;
 var myScroll;
 
@@ -373,6 +372,7 @@ load_content = function(refresh, next_page,options) {
 	setTimeout(function() { // This immitates the CALLBACK of your AJAX function
 		if (!refresh) {
 			// Loading the initial content
+			$('#loading').show();
 			$.get('store/store_search.php',glo_options,function(data){
 					var obj = JSON.parse(data);
 					//have data or no
@@ -401,9 +401,11 @@ load_content = function(refresh, next_page,options) {
 					$('#wrapper > #scroller > table.t_body tr').first().show( 100, function showNext() {
 						$( this ).next( "tr" ).show( 100, showNext );
 					});
+					$('#loading').hide();
 				}
 			);
 		} else if (refresh && !next_page) {
+			$('#loading').show();
 			// Refreshing the content
 			$.get('store/store_search.php',glo_options,function(data){
 					var obj = JSON.parse(data);
@@ -431,6 +433,7 @@ load_content = function(refresh, next_page,options) {
 				}
 			);
 		} else if (refresh && next_page) {
+			$('#loading').show();
 			// Loading the next-page content and refreshing
 			//add next 10
 			for(var i=(next_page-1)*items_per_page ; i<next_page*items_per_page && i<list.length; i++)
@@ -440,7 +443,6 @@ load_content = function(refresh, next_page,options) {
 			pullActionCallback();
 		}
 	}, 200);
-
 };
 
 function pullDownAction() {

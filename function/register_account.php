@@ -42,12 +42,12 @@ if(check_mamber($db,$account,$password,$phone,$email,$name,$gender))
 		$sql = "INSERT INTO `jangsc27_cs_project`.`member` (account,password,phone,email,name,gender,birth)". " VALUES(?,?,?,?,?,?,?)";
 		$sth = $db->prepare($sql);
 		$sth->execute(array($account,$password,$phone,$email,$name,$gender,$ddd));
-		//echo '<h1>Create Successed!!</h1>';
+		//echo 'Create Successed!!';
 	}
 	//else
-		//echo '<h1>Create Failed!!</h1>';
-	
-	
-	
-header("Location:../index.php" )
+		//echo 'Create Failed!!';
+
+
+
+//header("Location:../index.php" )
 ?>

@@ -7,6 +7,6 @@ $time = $dt->format('Y-m-d H:i:s');
 $sql = "INSERT INTO `jangsc27_cs_project`.`news` (`time`, `title`, `content`) VALUES (?, ?, ?)";
 $sth = $db->prepare($sql);
 $sth->execute(array($time,$_POST['title'],$_POST['content']));
-echo $_POST['title'];
+echo $_POST['content'];
 echo $time;
 ?>

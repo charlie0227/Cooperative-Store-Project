@@ -2,11 +2,13 @@ var lastStore;
 var lastCompany
 function member(){
 	var xhttp;
+	$('#loading').show();
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			$("#content").hide();
 			document.getElementById("content").innerHTML = xhttp.responseText;
+			$('#loading').hide();
 			$("#content").fadeIn(500);
 		}
 	};
@@ -50,9 +52,28 @@ function edit_personal_ready(){
 	});
 }
 function edit_personal_submit(){
-	$('#edit_personal_ajaxForm').submit(function() {
+	$.ajax({
+		type:"POST",
+		url:'member/edit_personal_ok.php',
+		data:$('#edit_personal_ajaxForm').serialize(),
+		dataType:'json',
+		success:function(r){
+			alert('12');
+			if(r.q=='1'){
+				alert(r.result);
+				alert('7777777');
+				edit_personal();
+				return false;
+			}
+			else{
+				alert(r.result);
+				edit_personal();
+				return false;
+			}
+		}
+	});
 	 // 提交表单
-    $(this).ajaxSubmit(function(data){
+    /*$(this).ajaxSubmit(function(data){
 		$("#content").hide();
 		alert(data);
 		$("#content").fadeIn(500);
@@ -61,6 +82,7 @@ function edit_personal_submit(){
 
 		 return false;
 	});
+	*/
 }
 function edit_password(){
 	var xhttp;
@@ -76,23 +98,45 @@ function edit_password(){
 	xhttp.send();
 }
 function edit_pass_submit(){
-	$('#edit_pass_ajaxForm').submit(function() {
+	$.ajax({
+		type:'POST',
+		url:'member/edit_pass_ok.php',
+		data:$('#edit_pass_ajaxForm').serialize(),
+		dataType:'json',
+		success:function(r){
+			//alert(r.result);
+			if(r.q==1)
+				location.href='function/logout.php';
+			else{
+				alert(r.result);
+				edit_password();
+			}
+
+			return false;
+		},
+		error:function(){
+			edit_password();
+			return false;
+		}
+	});
+	/*$('#edit_pass_ajaxForm').submit(function() {
 	 // 提交表单
     $(this).ajaxSubmit(function(data){
-		alert(data);
+		//alert(data);
 		var obj=JSON.parse(data);
 		if(obj.q==0){
 			alert(obj.result);
 			edit_password();
 		}
 		else{
-			alert(obj.result);
+			//alert(obj.result);
+			console.log("QQ");
 			location.href='function/logout.php';
 		}
 	});
     // 为了防止普通浏览器进行表单提交和产生页面导航（防止页面刷新？）返回false
 		 return false;
-	});
+	});*/
 }
 function my_belong_list(){
 	var xhttp;
@@ -144,6 +188,7 @@ function belong_list_search(order){
 					<td><input class="k-button" type="button" value="'+obj[i].store_name+'"></td>\
 					<td><p>'+discount+'折</p></td>\
 					<td><p>'+discount_intro+'</p></td>\
+					<td><input type="button" class="k-button" style="width:auto;" value="退出此團體" onclick="quit('+"'"+'belong_list'+"'"+','+obj[i].company_id+')"></td>\
 					</tr>');
 			}
 		}
@@ -694,12 +739,43 @@ function show_contract(){
 			document.getElementById("content").innerHTML = xhttp.responseText;
 			$('#loading').hide();
 			$('#content').fadeIn(500);
+			$('#back_history').val("show_contract");
 		}
 	};
 	xhttp.open("GET", "member/owner_contract_list.php", true);
 	xhttp.send();
 }
-
-function testt(){
-	return 4;
+function view_contract_application(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "contract/check_all_application.php", true);
+	xhttp.send();
+}
+function view_member_application(){
+	var xhttp;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("show_box").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "member/check_all_application.php", true);
+	xhttp.send();
+}
+function quit(back,company_id){
+	$.post('member/delete_belong.php',{
+		back:back,
+		company_id:company_id
+	},function(data){
+		var obj = JSON.parse(data);
+		if(obj.back=='company')
+			view_company(obj.company_id);
+		if(obj.back=='belong_list')
+			my_belong_list();
+	});
 }

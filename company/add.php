@@ -3,7 +3,7 @@ require_once "../sysconfig.php";
 $s_name=$_POST['name'];
 $s_phone=$_POST['phone'];
 $s_address=$_POST['address'];
-$s_url=isset($_POST['url'])?$_POST['url']:"";
+$s_url=isset($_POST['urls'])?$_POST['urls']:"";
 $data = new stdClass();
 
 function find_company_id($db,$name,$phone,$address,$url){
@@ -19,15 +19,20 @@ if($s_name){
 	$sth->execute(array($s_name,$s_phone,$s_address,$s_url));
 }
 $company_id=find_company_id($db,$s_name,$s_phone,$s_address,$s_url);
-if($_FILES["files"]["name"]!=NULL){
-	//add image 
+
+$Iname = implode(' ', $_FILES["files"]["name"]);
+if($Iname!=NULL){
+
+	$Isize = implode(' ', $_FILES["files"]["size"]);
+	$Itmp_name = implode(' ', $_FILES["files"]["tmp_name"]);
+	//add image
 	$target_dir = "uploads/company/";
-	$target_file = $target_dir . basename($_FILES["files"]["name"]);
+	$target_file = $target_dir . basename($Iname);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
 	if(isset($_POST["submit"])) {
-		$check = getimagesize($_FILES["files"]["tmp_name"]);
+		$check = getimagesize($Itmp_name);
 		if($check !== false) {
 			$uploadOk = 1;
 		} else {
@@ -36,13 +41,13 @@ if($_FILES["files"]["name"]!=NULL){
 		}
 	}
 	// Check if file already exists
-	if (file_exists($target_file)) {
+	if (file_exists($root_dir.$target_file)) {
 		date_default_timezone_set("Asia/Taipei");
-		$target_file=str_replace(".".$imageFileType,"-".date(ymdhis)."-".rand(0,9).".".$imageFileType,$target_file);
+		$target_file=str_replace(".".$imageFileType,"-".date("Y-m-d H:i:s")."-".rand(0,9).".".$imageFileType,$target_file);
 		$uploadOk = 1;
 	}
 	// Check file size
-	if ($_FILES["files"]["size"] > 5000000) {
+	if ($Isize > 5000000) {
 		$data->error=$data->error."Sorry, your file is too large.";
 		$uploadOk = 0;
 	}
@@ -55,20 +60,20 @@ if($_FILES["files"]["name"]!=NULL){
 	}
 	//content to DB
 	if($uploadOk==1){
-		$size = getimagesize($_FILES['files']['tmp_name']);
+		$size = getimagesize($Itmp_name);
 		$size = $size[3];
-		$name = $_FILES['files']['name'];
+		$name = $Iname;
 		$imgfp = $target_file;
-		
-		
+
+
 		$sql = "INSERT INTO `jangsc27_cs_project`.`company_image` (company_id,image_url,image_size,image_name) VALUES(?,?,?,?)";
 		$sth = $db->prepare($sql);
-		
+
 		$sth->bindParam(1, $company_id);
 		$sth->bindParam(2, $imgfp);
 		$sth->bindParam(3, $size);
 		$sth->bindParam(4, $name);
-		
+
 		$sth->execute(array($company_id,$imgfp,$size,$name));
 
 	}
@@ -77,9 +82,9 @@ if($_FILES["files"]["name"]!=NULL){
 		$data->error=$data->error."Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
-		if (move_uploaded_file($_FILES["files"]["tmp_name"],$root_dir.$target_file)) {
-			chmod($root_dir.$target_file,0755); 
-			$data->message="The file ". basename( $_FILES["files"]["name"]). " has been uploaded.";
+		if (move_uploaded_file($Itmp_name,$root_dir.$target_file)) {
+			chmod($root_dir.$target_file,0755);
+			$data->message="The file ". basename( $Iname). " has been uploaded.";
 		} else {
 			$data->error=$data->error."Sorry, there was an error uploading your file.";
 		}

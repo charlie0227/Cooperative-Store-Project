@@ -13,6 +13,7 @@ write_log('Visit','');
 		<script src="js/jspdf.debug.js"></script>
 		<script src="function/index.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+
 		<script src="js/jquery.reveal.js"></script>
 		<script src="js/jquery-an-showbox.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiauOm3OUKekSdpdCA9fRhZQUKArBSBoI&libraries=places"async defer></script>
@@ -75,7 +76,12 @@ write_log('Visit','');
 			<a href="#" id="dropbtn"><div class="title">Notice</div></a>
 
 				  <div class="dropdown-content" id="dropdown-content">
-					<p>YOLO</p>
+					<a href="#" class="big-link" data-reveal-id="show_box">
+					<input class="k-button" type="button" value="查看想與您簽約的團體" onclick="view_contract_application()">
+					</a>
+					<a href="#" class="big-link" data-reveal-id="show_box">
+					<input class="k-button" type="button" value="查看加入你企業的申請" onclick="view_member_application()">
+					</a>
 				  </div>
 				</div>
 			</li>
@@ -112,6 +118,7 @@ write_log('Visit','');
 					<input type="button" class = "sidebar" id = "show_store" onclick="store_list()" value="商店列表">
 					<input type="button" class = "sidebar" id = "show_company" onclick="company_list()" value="企業列表">
 					<input type="button" class = "sidebar" id = "quick_contract" onclick="goto_quick_contract()" value="快速新增合約">
+					<input type="button" class = "sidebar" id = "read_me" onclick="read_me()" value="使用說明">
 
 
 				</div>

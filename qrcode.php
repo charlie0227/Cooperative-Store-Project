@@ -45,46 +45,14 @@ require_once "sysconfig.php";
 </head>
 <div id="login_form"  style="margin: 0px auto;font-size:60px;">
 <ul class="fieldlist">
-<?//if($_SESSION['id']){?>
-<!--	<body onload="m_list(<?echo $_GET['store_id'];?>)">
-		<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
-		<div id="list"></div>
-	</body>-->
-<?//}else if($_SESSION['name']){
-	//$sql = "SELECT * FROM `jangsc27_cs_project`.`member`"." WHERE `account` = ?";
-	//$sth = $db->prepare($sql);
-	//$sth->execute(array($_SESSION['name']));
-	//$result = $sth->fetchObject();
-	//$_SESSION['account']=$result->account;
-	//$_SESSION['id']=$result->id;
-	//}
-	?>
 	<body onload="m_list(<?echo $_GET['store_id'];?>)">
-		<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name']?> </h3>
+		<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Hi, <?echo $_SESSION['name'];echo $_SESSION['id'];?> </h3>
 		<div id="list"></div>
 		
 	</body>
-<!--<li>
-	<h3 style = "text-align:left; margin-left: 10px; margin-bottom: auto; margin-top: auto;">Login</h3>
-</li><li>
-	<input style = "margin-bottom: 5px;" class="k-textbox" id="username" type="text" name="username" placeholder="Account">
-</li><li>
-	<input style = "margin-bottom: 5px;" class="k-textbox" id="password" type="password" name="password" placeholder="Password">
-</li><li>
-	<input class = "k-button" type="button" value="login" onclick="check_login()">
-</li><li>
-	<input class = "k-button" type="button" value="register" onclick="go_register()">
-</li><li>
-	<a href="#" onclick="fblogin();"><img src="images/fb_login.png" style="width: 50%;height: 0%;" border="0" alt=""></a>
-	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-</li>-->
+
 
 </ul>
 </div>
 </html>
 
-<?/*
-<style type="text/css">
-   
-</style>
-*/?>

@@ -244,10 +244,10 @@ img{
 	display: -webkit-inline-box;
     position: absolute;
 	min-width: 500px;
-	padding-top:14px; 
-	padding-bottom: 14px;
-	padding-right: 16px;
-	padding-left: 16px;
+    left: 1000px;
+}
+.account_bar a{
+    margin: 11px 5px;
 }
 .menu_bar  a{
 	display: block;

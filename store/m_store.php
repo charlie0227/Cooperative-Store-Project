@@ -32,7 +32,7 @@ and (max-device-width : 480px){ .mobileShow { display: inline;}}
 		{?>
 			<p>店名 <?echo $result->name?></p>
 			<?if($result_img){?>
-			<img id="store_img" onclick=" var newwin = window.open();newwin.location='http://people.cs.nctu.edu.tw/~cwchen05030530/<?echo $result_img->image_url?>';" src="../<?echo $result_img->image_url?>"/>
+			<img id="store_img" onclick=" var newwin = window.open();newwin.location='https://www.charlie27.me/~xu3u4tp6/<?echo $result_img->image_url?>';" src="../<?echo $result_img->image_url?>"/>
 			<?}?>
 			<p>電話 <?echo $result->phone?></p>
 			<p>地址 <?echo $result->address?></p>
@@ -40,7 +40,7 @@ and (max-device-width : 480px){ .mobileShow { display: inline;}}
 			<p>網站 <?echo $result->url?></p>
 			<p>合作企業 <?
 				while($result_company = $sth1->fetchObject()){
-					echo $result_company->name.'</p><p>';
+					echo '<p>'.$result_company->name.'</p>';
 				}?>
 			</p>
 		<?}?>

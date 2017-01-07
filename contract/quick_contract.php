@@ -17,5 +17,5 @@
 	<label class="k-radio-label" for="dis_5">
 	<input type="text" id="dis_5_num" style="width:20px">折<span></span></label>
 </div>
-<input type="button" onclick="quick_contract_submit()" value="送出">
+<input type="button" class="k-button"onclick="quick_contract_submit()" value="送出">
 </html>

@@ -14,16 +14,20 @@
 		left: 0; 
 		}
 	
+	.reveal-modal *{
+		margin: auto;
+	}
 	.reveal-modal {
 		text-align:center;
 		visibility: hidden;
-		top: 100px; 
-		left: 50%;
-		margin-left: -300px;
-		width: 520px;
+		top: 50px !important; 
+		margin: 0px 15%;
+		height: 67%;
+		min-width:800px;
 		background: #eee url(../images/modal-gloss.png) no-repeat -200px -80px;
-		position: absolute;
+		position: fixed;
 		z-index: 101;
+		overflow-y: scroll;
 		padding: 30px 40px 34px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
@@ -32,7 +36,7 @@
 		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
 		-box-shadow: 0 0 10px rgba(0,0,0,.4);
 		}
-		
+			
 	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
 	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
 	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}

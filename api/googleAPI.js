@@ -241,7 +241,7 @@ function grab_first_image(){
 
 function get_location_and_distance(){
 	if (window.navigator.geolocation==undefined) {
-		alert("���s�������䴩�a�z�w���\��!");
+		alert("do not support loaction");
 	}
 	else {
 		var geolocation=window.navigator.geolocation; //���o Geolocation ����

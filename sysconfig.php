@@ -7,7 +7,7 @@ $db_user = "charlie27";
 $db_password = "12345678";
 $dsn = "mysql:host=$db_host;dbname=$db_name";
 $db = new PDO($dsn, $db_user, $db_password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-$root_dir ="/home/charlie27/public_html";
+$root_dir ="/home/xu3u4tp6/public_html/";
 date_default_timezone_set("Asia/Taipei");
 function write_log($status,$data)  //狀態 資料       
 {

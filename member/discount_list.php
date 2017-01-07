@@ -23,9 +23,10 @@ JOIN `jangsc27_cs_project`.`contract` d
 ON a.member_id = ?
 AND a.company_id = b.id
 AND b.id = d.company_id
+AND c.id = ?
 AND d.store_id = c.id".$order;
 $sth = $db->prepare($sql);
-$sth->execute(array($_SESSION['id']));
+$sth->execute(array($_SESSION['id'],$_POST['store_id']));
 //,$_POST['store_id']
 $result = $sth->fetchAll();
 echo json_encode($result);

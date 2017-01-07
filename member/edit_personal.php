@@ -11,7 +11,7 @@ $result=$sth->fetchObject();
 ?>
 </head>
 <body>
-<form action="member/edit_personal_ok.php" method="post" enctype="multipart/form-data" id="edit_personal_ajaxForm">
+<form method="post" enctype="multipart/form-data" id="edit_personal_ajaxForm">
 <table>
 	<tr>
 	<td>
@@ -27,7 +27,7 @@ $result=$sth->fetchObject();
 	<td>
 		name
 	</td>
-	</tr>	
+	</tr>
 	<tr>
 	<td>
 	<div class="edit_input" style="display:inline-flex">
@@ -39,14 +39,14 @@ $result=$sth->fetchObject();
 	<td>
 		Phone
 	</td>
-	</tr>	
+	</tr>
 	<tr>
 	<td>
 	<div class="edit_input" style="display:inline-flex">
 		<input class="k-textbox" style="margin: 0 5px 5px 0;" type="text" name="phone" value="<?echo $result->phone?>"><div style="display:none;color:red">*</div>
 	</div>
 	</td>
-	</tr>	
+	</tr>
 	<tr>
 	<td>
 		Gender
@@ -71,7 +71,7 @@ $result=$sth->fetchObject();
 		?>
 	</td>
 	</tr>
-	
+
 	<tr>
 	<td>
 		年:<select name="year" id="year">
@@ -187,7 +187,7 @@ $result=$sth->fetchObject();
 			 <option value="2020"<?if($year==2020) echo ' selected="selected" '?>>2020</option>
 		</select>
 	</td>
-	<td>	
+	<td>
 		月:<select name="month" id="month">
 		　<option value="01"<?if($month==01) echo ' selected="selected" '?>>1</option>
 		　<option value="02"<?if($month==02) echo ' selected="selected" '?>>2</option>
@@ -196,14 +196,14 @@ $result=$sth->fetchObject();
 		　<option value="05"<?if($month==05) echo ' selected="selected" '?>>5</option>
 		　<option value="06"<?if($month==06) echo ' selected="selected" '?>>6</option>
 		　<option value="07"<?if($month==07) echo ' selected="selected" '?>>7</option>
-		　<option value="08"<?if($month==08) echo ' selected="selected" '?>>8</option>
-		　<option value="09"<?if($month==09) echo ' selected="selected" '?>>9</option>
+		　<option value="08"<?if($month==8) echo ' selected="selected" '?>>8</option>
+		　<option value="09"<?if($month==9) echo ' selected="selected" '?>>9</option>
 		　<option value="10"<?if($month==10) echo ' selected="selected" '?>>10</option>
 		　<option value="11"<?if($month==11) echo ' selected="selected" '?>>11</option>
 		　<option value="12"<?if($month==12) echo ' selected="selected" '?>>12</option>
 		</select>
 	</td>
-	<td>	
+	<td>
 		日:<select name="date" id="date">
 		 <option value="01"<?if($day==01) echo ' selected="selected" '?>>01</option>
 		 <option value="02"<?if($day==02) echo ' selected="selected" '?>>02</option>
@@ -212,8 +212,8 @@ $result=$sth->fetchObject();
 		 <option value="05"<?if($day==05) echo ' selected="selected" '?>>05</option>
 		 <option value="06"<?if($day==06) echo ' selected="selected" '?>>06</option>
 		 <option value="07"<?if($day==07) echo ' selected="selected" '?>>07</option>
-		 <option value="08"<?if($day==08) echo ' selected="selected" '?>>08</option>
-		 <option value="09"<?if($day==09) echo ' selected="selected" '?>>09</option>
+		 <option value="08"<?if($day==8) echo ' selected="selected" '?>>08</option>
+		 <option value="09"<?if($day==9) echo ' selected="selected" '?>>09</option>
 		 <option value="10"<?if($day==10) echo ' selected="selected" '?>>10</option>
 		 <option value="11"<?if($day==11) echo ' selected="selected" '?>>11</option>
 		 <option value="12"<?if($day==12) echo ' selected="selected" '?>>12</option>
@@ -239,30 +239,30 @@ $result=$sth->fetchObject();
 		</select>
 	</td>
 	</tr>
-		
-		
-		
-	
+
+
+
+
 	<tr>
 	<td>
 		Email Address
 	</td>
-	</tr>	
-		
+	</tr>
+
 	<tr>
 	<td>
 	<div class="edit_input" style="display:inline-flex">
 		<input class="k-textbox" style="margin: 0 5px 5px 0;" type="text" name="email" value="<?echo $result->email?>"><div style="display:none;color:red">*</div>
 	</div>
 	</td>
-	</tr>	
-		
+	</tr>
+
 	<tr>
 	<td>
-		<input class = "k-button" style = "width: 100px;"type="submit" value="OK" onclick="edit_personal_submit()">
+		<input class = "k-button" style = "width: 100px;"type="button" value="OK" onclick="edit_personal_submit()">
 	</td>
 	</tr>
-</form>	
-</table>	
+</form>
+</table>
 </body>
 </html>

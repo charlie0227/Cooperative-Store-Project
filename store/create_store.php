@@ -60,6 +60,7 @@ require_once "../sysconfig.php";
 	</tr>
 	<tr>
 		<td><input class = "k-button" type="submit" value="送出" name="submit" onclick="store_submit()"></td>
+		<td><input type="button" class="k-button" style="width:auto;" value="返回" onclick="back_to_store_list()"></td>
 	</tr>	
 </table>
 </form>
