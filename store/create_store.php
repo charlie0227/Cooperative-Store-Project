@@ -7,7 +7,8 @@ require_once "../sysconfig.php";
 </head>
 <body>
 <!--Add new store  add.php-->
-<form action="store/add.php" method="post" enctype="multipart/form-data" id="store_ajaxForm">
+<!--<form action="store/add.php" method="post" enctype="multipart/form-data" id="store_ajaxForm">-->
+<form method="post" enctype="multipart/form-data" id="store_ajaxForm">
 <table>
 	<tr>
 		<td>店家名稱</td>
@@ -60,7 +61,7 @@ require_once "../sysconfig.php";
 	</tr>
 	<tr>
 		<td><input class = "k-button" type="submit" value="送出" name="submit" onclick="store_submit()"></td>
-		<td><input type="button" class="k-button" style="width:auto;" value="返回" onclick="back_to_store_list()"></td>
+		<!--<td><input type="button" class="k-button" style="width:auto;" value="返回" onclick="back_to_store_list()"></td>-->
 	</tr>	
 </table>
 </form>

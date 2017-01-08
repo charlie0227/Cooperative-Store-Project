@@ -26,7 +26,7 @@ $result_img = $sth2->fetchObject();
 </head>
 	<body>
 	<!--show original store-->
-	<form  action="member/edit_company_confirm.php" method="POST" enctype="multipart/form-data" id="edit_company_form">
+	<form id="edit_company_form">
 	<table>
 	<tr>
 	<td>
@@ -35,7 +35,7 @@ $result_img = $sth2->fetchObject();
 	</tr>
 	<tr>
 	<td>
-		<input name="name" type="text" id="edit_store_name" value="<?echo $result_object->name?>"><div class="star" id="star1" style="display:inline;">*</div>
+		<input name="name" type="text" id="edit_company_name" value="<?echo $result_object->name?>"><div class="star" id="star1" style="display:inline;">*</div>
 	</td>
 	<td>
 		<div class="valid"id="edit_store_zz">Reapted Account</div>
@@ -48,7 +48,7 @@ $result_img = $sth2->fetchObject();
 	</tr>
 	<tr>
 	<td>
-		<input type="text" name="phone" id="edit_store_phone" value="<?echo $result_object->phone?>"><div class="star" id="star2" style="display:inline;">*</div>
+		<input type="text" name="phone" id="edit_company_phone" value="<?echo $result_object->phone?>"><div class="star" id="star2" style="display:inline;">*</div>
 	</td>
 	</tr>		
 	<tr>
@@ -58,7 +58,7 @@ $result_img = $sth2->fetchObject();
 	</tr>		
 	<tr>
 	<td>	
-		<input type="text" name="address" id="edit_store_address" value="<?echo $result_object->address?>"><div class="star" id="star3" style="display:inline;">*</div>
+		<input type="text" name="address" id="edit_company_address" value="<?echo $result_object->address?>"><div class="star" id="star3" style="display:inline;">*</div>
 	</td>
 	</td>
 	<tr>
@@ -68,7 +68,7 @@ $result_img = $sth2->fetchObject();
 	</tr>
 	<tr>
 	<td style = "width: 60%;">
-			<input type="text" name="url" id="edit_store_url" value="<?echo $result_object->url?>"><div class="star" id="star3" style="display:inline;">*</div>
+			<input type="text" name="url" id="edit_company_url" value="<?echo $result_object->url?>"><div class="star" id="star3" style="display:inline;">*</div>
 	</td>
 	</tr>
 	<tr>
@@ -101,7 +101,7 @@ $result_img = $sth2->fetchObject();
 	</td>
 	
 	<td>
-		<input type="hidden" name="store_id" value="<?echo $_GET['edit_id']?>">	
+		<input type="hidden" name="company_id" value="<?echo $_GET['edit_id']?>">	
 	</td>
 	</tr>
 	<tr>

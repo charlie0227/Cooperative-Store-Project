@@ -21,18 +21,21 @@ $_SESSION['name']=$_POST['username'];
 <head>
 <script src="../js/jquery.min.js"></script>
 <style>
-.mobileShow { display: none;}
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px){ .mobileShow { display: inline;}}
+
+@media only screen and (max-device-width : 480px){ 
+	#store_view{
+		font-size:50px;
+	}
+}
 </style>
 </head>	
+	<div id = "store_view">
 		<?php
 		if($result) 
 		{?>
 			<p>店名 <?echo $result->name?></p>
 			<?if($result_img){?>
-			<img id="store_img" onclick=" var newwin = window.open();newwin.location='https://www.charlie27.me/~xu3u4tp6/<?echo $result_img->image_url?>';" src="../<?echo $result_img->image_url?>"/>
+			<img id="store_img" onclick=" var newwin = window.open();newwin.location='https://www.charlie27.me/~xu3u4tp6/<?echo $result_img->image_url?>';" src="<?echo $result_img->image_url?>"/>
 			<?}?>
 			<p>電話 <?echo $result->phone?></p>
 			<p>地址 <?echo $result->address?></p>
@@ -45,6 +48,8 @@ and (max-device-width : 480px){ .mobileShow { display: inline;}}
 			</p>
 		<?}?>
 		<?$sth="../qrcode.php?store_id=".$result->id;?>
-	<input type="button" class="abutton" style="width:auto;" value="點擊查看享有優惠項目" onclick="window.location = '<?echo $sth?>';">
+	<input type="button" style="width:auto; font-size: 50px;" value="點擊查看享有優惠項目" onclick="window.location = '<?echo $sth?>';">
+	</div>
 	<p><?echo $_POST['username'];?></p>
+	
 </html>

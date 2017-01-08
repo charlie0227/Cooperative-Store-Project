@@ -5,7 +5,8 @@ $s_phone=$_POST['phone'];
 $s_address=$_POST['address'];
 $s_url=isset($_POST['url'])?$_POST['url']:"";
 $data = new stdClass();
-
+$location = '{"lat":25.0469826,"lng":121.51635190000002}';
+$place_id = '6c8fd95d655eda7ce03a983139d66868fb8fd375';
 function find_store_id($db,$name,$phone,$address,$url){
 	$sql = "SELECT * FROM `jangsc27_cs_project`.`store` where `name`=? and `phone`=? and `address`=? and `url`=?";
 	$sth = $db->prepare($sql);
@@ -14,15 +15,19 @@ function find_store_id($db,$name,$phone,$address,$url){
 }
 if($s_name){
 	//create new store
-	$sql = "INSERT INTO `jangsc27_cs_project`.`store` (name,phone,address,url) VALUES(?,?,?,?)";
+	$sql = "INSERT INTO `jangsc27_cs_project`.`store` (name,phone,address,url,location,place_id) VALUES(?,?,?,?,?,?)";
 	$sth = $db->prepare($sql);
-	$sth->execute(array($s_name,$s_phone,$s_address,$s_url));
+	$sth->execute(array($s_name,$s_phone,$s_address,$s_url,$location,$place_id));
 }
 $store_id=find_store_id($db,$s_name,$s_phone,$s_address,$s_url);
-if($_FILES["files"]["name"]!=NULL){
+$Iname = implode(' ', $_FILES["files"]["name"]);
+if($Iname!=NULL){
+
+	$Isize = implode(' ', $_FILES["files"]["size"]);
+	$Itmp_name = implode(' ', $_FILES["files"]["tmp_name"]);
 	//add image 
 	$target_dir = "uploads/store/";
-	$target_file = $target_dir . basename($_FILES["files"]["name"]);
+	$target_file = $target_dir . basename($Iname);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -36,13 +41,13 @@ if($_FILES["files"]["name"]!=NULL){
 		}
 	}
 	// Check if file already exists
-	if (file_exists($target_file)) {
+	if (file_exists($root_dir.$target_file)) {
 		date_default_timezone_set("Asia/Taipei");
 		$target_file=str_replace(".".$imageFileType,"-".date(ymdhis)."-".rand(0,9).".".$imageFileType,$target_file);
 		$uploadOk = 1;
 	}
 	// Check file size
-	if ($_FILES["files"]["size"] > 5000000) {
+	if ($Isize > 5000000) {
 		$data->error=$data->error."Sorry, your file is too large.";
 		$uploadOk = 0;
 	}
@@ -55,9 +60,9 @@ if($_FILES["files"]["name"]!=NULL){
 	}
 	//url to DB
 	if($uploadOk==1){
-		$size = getimagesize($_FILES['files']['tmp_name']);
+		$size = getimagesize($Itmp_name);
 		$size = $size[3];
-		$name = $_FILES['files']['name'];
+		$name = $Iname;
 		$imgfp = $target_file;
 		
 		
@@ -77,9 +82,9 @@ if($_FILES["files"]["name"]!=NULL){
 		$data->error=$data->error."Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
-		if (move_uploaded_file($_FILES["files"]["tmp_name"],$root_dir.$target_file)) {
+		if (move_uploaded_file($Itmp_name,$root_dir.$target_file)) {
 			chmod($root_dir.$target_file,0755); 
-			$data->message="The file ". basename( $_FILES["files"]["name"]). " has been uploaded.";
+			$data->message="The file ". basename($Iname). " has been uploaded.";
 		} else {
 			$data->error=$data->error."Sorry, there was an error uploading your file.";
 		}

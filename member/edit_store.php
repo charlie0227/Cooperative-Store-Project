@@ -26,7 +26,8 @@ $result_img = $sth2->fetchObject();
 </head>
 	<body>
 	<!--show original store-->
-	<form  action="member/edit_store_confirm.php" method="POST" enctype="multipart/form-data" id="edit_store_form">
+	<form id="edit_store_form">
+	<!--<form  action="member/edit_store_confirm.php" method="POST" enctype="multipart/form-data" id="edit_store_form">-->
 	<table>
 	<tr>
 	<td>

@@ -191,8 +191,8 @@ function show_store_near(map_id,type){//not in database
 				  google.maps.event.addListener(marker, 'click', function() {
 					//infowindow.setContent(place.name+'<br>'+place.formatted_address+'<br>'+place.formatted_phone_number);
 					service.getDetails(place,setinfo);
-					infowindow.open(map, this);
-
+					//setTimeout(function(){infowindow.open(map, this);},500);
+          infowindow.open(map, this);
 				  });
 
 
@@ -208,7 +208,7 @@ function show_store_near(map_id,type){//not in database
 				img_url=photos[0].getUrl({'maxWidth': 600, 'maxHeight': 600});
 				infowindow.setContent('<img src='+photos[0].getUrl({'maxWidth': 150, 'maxHeight': 150})+'><br>'+place.name+'<br>'+place.formatted_address+'<br>'+place.formatted_phone_number+'<br>');
 			}
-
+      console.log(infowindow.content);
 //"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+place.photos[0].photo_reference+"&key=AIzaSyDDhjNzjNq5S_wfT6FkGqhfqyThsXCrGKA"
 			//alert(infowindow.getPosition());
 			var jsonlocation={
@@ -227,7 +227,13 @@ function show_store_near(map_id,type){//not in database
 				image:img_url,
 				location:JSON.stringify(jsonlocation),
 			},
-			function(data){;
+			function(data){
+        var obj = JSON.parse(data);
+        infowindow.close();
+        var s = "'store_map'";
+        infowindow.setContent(infowindow.content+'<br><a href="#" onclick="view_store('+obj.store_id+','+s+')">前往了解更多...</a>');
+        console.log(infowindow.content);
+        infowindow.open(map);
 			}
 			);
 		}

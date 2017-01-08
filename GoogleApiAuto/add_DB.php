@@ -24,8 +24,16 @@ if($way=='place_id_check'){
 	else
 		$data->message='new';
 }
-
-if($way=="add_new_store"){
+function find_store_id($db,$name,$phone,$address,$url){
+	$sql = "SELECT * FROM `jangsc27_cs_project`.`store` where `name`=? and `phone`=? and `address`=? and `url`=?";
+	$sth = $db->prepare($sql);
+	$sth->execute(array($name,$phone,$address,$url));
+	if($result=$sth->fetchObject())
+	return $result->id;
+	else return 0;
+}
+$data->store_id = find_store_id($db,$name,$phone,$address,$url);
+if($way=="add_new_store"&&!$data->store_id){
 	//create new store
 	$sql = "INSERT INTO `jangsc27_cs_project`.`store` (name,phone,address,url,location,place_id) VALUES(?,?,?,?,?,?)";
 	$sth = $db->prepare($sql);
@@ -36,11 +44,13 @@ if($way=="add_new_store"){
 		$sth = $db->prepare($sql);
 		$sth->execute(array($place_id));
 		$result=$sth->fetchObject();
-		
+
 		$sql_img = "INSERT INTO `jangsc27_cs_project`.`store_image` (store_id,image_url) VALUES(?,?)";
 		$sth_img = $db->prepare($sql_img);
 		$sth_img->execute(array($result->id,$image));
 	}
+
+	$data->store_id = find_store_id($db,$name,$phone,$address,$url);
 }
 
 echo json_encode($data);

@@ -217,7 +217,7 @@ function add_store_ready(){
 		}
 	});
 }
-
+/*
 function store_submit(){
 	$('#store_ajaxForm').submit(function() {
 		$(this).ajaxSubmit(function(data){
@@ -229,6 +229,56 @@ function store_submit(){
 		});
 		 return false;
 	});
+}
+*/
+function store_submit(){
+	$('#store_ajaxForm').click(function() {
+		var $name = $('#store_ajaxForm').find('input[name="name"]');
+		var $phone = $('#store_ajaxForm').find('input[name="phone"]');
+		var $address = $('#store_ajaxForm').find('input[name="address"]');
+		var $url = $('#store_ajaxForm').find('input[name="url"]');
+		$name.val(escapeHtml($name.val()));
+		$phone.val(escapeHtml($phone.val()));
+		$address.val(escapeHtml($address.val()));
+		$url.val(escapeHtml($url.val()));
+		var data = new FormData();
+		data.append('name',$name.val());
+		data.append('phone',$phone.val());
+		data.append('address',$address.val());
+		data.append('url',$url.val());
+		data.append('files[]',$('#files')[0].files[0]);
+		$.ajax({
+		    url: 'store/add.php',
+		    type: 'POST',
+		    cache: false,
+		    data: data,
+		    processData: false,
+		    contentType: false
+		}).done(function(res) {
+			alert(res);
+			var obj = JSON.parse(res);
+			view_store(obj.p,'store_map');
+			return false;
+	}).fail(function(res) {alert(res);return false;});
+		event.preventDefault();
+	});
+	/*$.ajax({
+		type:'POST',
+		url:'store/add.php',
+		data:$('#store_ajaxForm').serialize(),
+		dataType:'json',
+		success:function(data){
+			var obj=JSON.parse(data);
+			if(obj.error)
+				alert(obj.error);
+			view_store(obj.p,'store_map');
+			return false;
+		},
+		error:function(){
+			alert("BITCH");
+			return false;
+		}
+	});*/
 }
 //preview image http://jsnwork.kiiuo.com/archives/2258/jquery-javascript-%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E8%A3%BD%E4%BD%9C%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3%E5%89%8D%E7%9A%84%E9%A0%90%E8%A6%BD%E5%9C%96
 (function (){
@@ -298,7 +348,7 @@ function belong_list_search(order,store_id){
 		store_id:store_id
 	},
 	function(data){
-		alert(data);
+		//alert(data);
 		var obj=JSON.parse(data);
 		for(var i=0; i<obj.length; i++){
 			//discount calculate
@@ -327,7 +377,7 @@ function belong_list_search(order,store_id){
 				<tr><p>'+obj[i].store_name+'</p></tr>\
 				<tr><p>'+discount+'折</p></tr>\
 				<tr><p>'+discount_intro+'</p></tr>\
-				<tr><input class="k-button" type="button" value="打卡" onclick="population_add('+obj[i].company_id+','+store_id+')"></tr>\
+				<tr><input class="k-button" style="font-size: 100px;"type="button" value="打卡" onclick="population_add('+obj[i].company_id+','+store_id+')"></tr>\
 				</table>');
 
 		}

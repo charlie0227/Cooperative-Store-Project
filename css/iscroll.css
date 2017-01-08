@@ -147,8 +147,8 @@
 	}
 	#scroller tr{
 		height:100px;
-		line-height:30px;
-		font-size:180%;
+		line-height:40px;
+		font-size:120%;
 	}
 	.pullDown, .pullUp {
 		height:100px;

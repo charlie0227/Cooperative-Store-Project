@@ -432,6 +432,7 @@ function owner_store_edit(){
 	xhttp.open("GET", "member/edit_store.php?edit_id="+store_id, true);
 	xhttp.send();
 }
+/*
 function edit_store_submit(){
 	$('#edit_store_form').submit(function() {
 		$(this).ajaxSubmit(function(data){
@@ -443,7 +444,25 @@ function edit_store_submit(){
 		 return false;
 	});
 }
-
+*/
+function  edit_store_submit(){
+	$.ajax({
+		type:'POST',
+		url:'member/edit_store_confirm.php',
+		data:$('#edit_store_form').serialize(),
+		dataType:'json',
+		success:function(data){
+			var obj=JSON.parse(data);
+			if(obj.error)
+				alert(obj.error);
+			show_own_store_content(obj.p,'store_map');
+			return false;
+		},
+		error:function(){
+			return false;
+		}
+	});
+}
 //edit company
 function show_own_company_content(id){
 	var xhttp;
@@ -469,7 +488,26 @@ function owner_company_edit(id){
 	xhttp.open("GET", "member/edit_company.php?edit_id="+id, true);
 	xhttp.send();
 }
-
+function  edit_company_submit(){
+	$.ajax({
+		type:'POST',
+		url:'member/edit_company_confirm.php',
+		data:$('#edit_company_form').serialize(),
+		dataType:'json',
+		success:function(data){
+			alert(data);
+			var obj=JSON.parse(data);
+			if(obj.error)
+				alert(obj.error);
+			show_own_company_content(obj.p);
+			return false;
+		},
+		error:function(data){
+			alert(data);
+			return false;
+		}
+	});
+}
 function show_application(id){ //id for company
 	var xhttp;
 	xhttp = new XMLHttpRequest();
