@@ -19,9 +19,30 @@ $store_id = $_GET['store_id'];
 <head>
 
 <style>
-
+@media screen and (max-device-width: 480px) {
+	#store_content{
+		font-size : 50px;
+	}
+	#store_map{
+		width: 400px;
+		height: 400px;
+		display: inline-block;
+		left: 410px;
+		top: 100px;
+		position: absolute;
+		overflow: hidden;
+		background-color: rgb(229, 227, 223);
+	}
+	#store_img{
+		position: relative;
+		width: 400px;
+		height: 400px;
+	}
+}
 </style>
 	</head>	
+	<body>
+	<div id="store_content">
 		<?php
 		if($result) 
 		{?>
@@ -48,5 +69,6 @@ $store_id = $_GET['store_id'];
 	
 	
 	<input type="button" class="k-button" style="width:auto;" value="返回" onclick="back_to_store_list()">
-
+	</div>
+	</body>
 </html>
