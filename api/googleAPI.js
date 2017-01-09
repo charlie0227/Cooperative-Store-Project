@@ -11,7 +11,7 @@ function initMap(map_id) {
 
   map = new google.maps.Map(document.getElementById(map_id), {
     center: {lat: 23.397, lng: 120.644},
-    zoom: 17
+    zoom: 20
   });
   geocoder = new google.maps.Geocoder();
 

@@ -14,6 +14,12 @@ $sth2 = $db->prepare($sql);
 $sth2->execute(array($_GET['store_id']));
 $result_img = $sth2->fetchObject();
 
+$sql = "SELECT * FROM `jangsc27_cs_project`.`member` WHERE `name` = ?";
+$sth3 = $db->prepare($sql);
+$sth3->execute(array($_POST['username']));
+$info = $sth3->fetchObject();
+
+$_SESSION['id']=$info->id;
 $_SESSION['name']=$_POST['username'];
 ?>	
 
@@ -51,5 +57,6 @@ $_SESSION['name']=$_POST['username'];
 	<input type="button" style="width:auto; font-size: 50px;" value="點擊查看享有優惠項目" onclick="window.location = '<?echo $sth?>';">
 	</div>
 	<p><?echo $_POST['username'];?></p>
+	<p><?echo $_SESSION['id'];?></p>
 	
 </html>

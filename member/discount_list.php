@@ -23,6 +23,7 @@ JOIN `jangsc27_cs_project`.`contract` d
 ON a.member_id = ?
 AND a.company_id = b.id
 AND b.id = d.company_id
+AND d.status = 2
 AND c.id = ?
 AND d.store_id = c.id".$order;
 $sth = $db->prepare($sql);

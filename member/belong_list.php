@@ -16,7 +16,6 @@ AND b.id = d.company_id
 AND d.store_id = c.id".$order;
 $sth = $db->prepare($sql);
 $sth->execute(array($_SESSION['id']));
-
 $result = $sth->fetchAll();
 echo json_encode($result);
 ?>

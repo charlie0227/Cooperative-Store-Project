@@ -72,6 +72,7 @@ write_log('Visit','');
 			<li class="menu_bar"><input type="image" style="width:130px;height:60px" src="images/black_mark.png" onclick="location.reload()"></li>
 
 			<li class="menu_bar">
+			<?if(isset($_SESSION['name'])){?>
 			<div class="dropdown" id="dropdown">
 			<a href="#" id="dropbtn"><div class="title">Notice</div></a>
 
@@ -84,6 +85,7 @@ write_log('Visit','');
 					</a>
 				  </div>
 				</div>
+				<?}?>
 			</li>
 
 			<li class="menu_bar_search" ><input id="search_bar" style="width:100%;"type="text" name="search_bar" placeholder="Search for store and company"></li>

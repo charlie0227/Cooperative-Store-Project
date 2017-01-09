@@ -160,6 +160,7 @@ function belong_list_search(order){
 		q:order
 	},
 	function(data){
+		//console.log(data);
 		var obj=JSON.parse(data);
 		for(var i=0; i<obj.length; i++){
 			//discount calculate
@@ -322,7 +323,6 @@ function owner_verify_company(id){
 		function(data){
 			var obj=JSON.parse(data);
 			show_box_close();
-			if(obj.p=="ok")
 				my_store_company_list();
 		});
 }

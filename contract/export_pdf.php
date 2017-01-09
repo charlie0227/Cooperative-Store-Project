@@ -6,10 +6,13 @@ $company_name=$_POST['company_name'];
 $store_name=$_POST['store_name'];
 $filename = $store_name."_".$company_name.".pdf";
 $string = "Content-Disposition: attachment; filename=\"".$filename."\"";
+$html = '<html><head><meta charset="utf-8" /></head>'.$html.'</html>';
+
+
 try
 {
     // create an API client instance
-    $client = new Pdfcrowd("123xu3u4tp6", "d72254a67a35e6c99cbd534237636cab");
+    $client = new Pdfcrowd("charlie27", "4185490badb3e53cfac035be97a2e480");
     $client->setPageWidth("210mm");
     $client->setPageHeight("297mm");
     // convert a web page and store the generated PDF into a $pdf variable

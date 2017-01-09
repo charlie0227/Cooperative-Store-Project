@@ -72,8 +72,8 @@ function show_store_list(){
 		document.getElementById("search_for").setAttribute("hidden",true);
 		document.getElementById("search_word").setAttribute("value","台北車站");
 		show_store('show_search_store');
-		document.getElementById('show_search_store').setAttribute("style","height:750px");
-	}
+		document.getElementById('show_search_store').setAttribute("style","height:750px; position: relative;");
+		}
 }
 
 function my_switch(){
@@ -169,8 +169,8 @@ function view_store(id,map_id){
 			$("#store_bar").hide();
 			$("#into_store").hide();
 			document.getElementById("into_store").innerHTML = xhttp.responseText;
-			initMap(map_id);//set google map
-			find_address(id);//geocodeAddress(address)
+			//initMap(map_id);//set google map
+			//find_address(id);//geocodeAddress(address)
 			$("#into_store").fadeIn(500);
 			$("#qrcode").kendoQRCode({
 				value: "https://www.charlie27.me/~xu3u4tp6/store/m_store.php?store_id="+id,

@@ -1,7 +1,5 @@
 #  Cooperative Store Project
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
 This web application is main for signing contract of cooperative store online.
 ### If you are a Store Owner or a Company owner 
   - Signing cooperative store online and export contract in PDF document  
@@ -30,8 +28,6 @@ This web application is main for signing contract of cooperative store online.
 * [mysql] -  mysqlnd 5.0.12-dev
 * [Apache2] - Apache/2.4.18
 
-# Usage
-[https://www.charlie27.me/~xu3u4tp6/](https://www.charlie27.me/~xu3u4tp6/)
 
 # Tutorial
 #### Steps for sign contract

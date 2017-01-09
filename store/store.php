@@ -14,7 +14,7 @@ $sth2 = $db->prepare($sql);
 $sth2->execute(array($_GET['store_id']));
 $result_img = $sth2->fetchObject();
 $store_id = $_GET['store_id'];
-?>	
+?>
 <html>
 <head>
 
@@ -40,11 +40,11 @@ $store_id = $_GET['store_id'];
 	}
 }
 </style>
-	</head>	
+	</head>
 	<body>
 	<div id="store_content">
 		<?php
-		if($result) 
+		if($result)
 		{?>
 			<p>店名 <?echo $result->name?></p>
 			<?if($result_img){?>
@@ -52,7 +52,7 @@ $store_id = $_GET['store_id'];
 			<?}?>
 			<p>電話 <?echo $result->phone?></p>
 			<p>地址 <?echo $result->address?></p>
-			<div id="store_map" ></div>
+			<!--<div id="store_map" ></div>-->
 			<p>網站 <?echo $result->url?></p>
 			<p>合作企業 <?
 				while($result_company = $sth1->fetchObject()){
@@ -60,14 +60,14 @@ $store_id = $_GET['store_id'];
 				}?>
 			</p>
 			<p>QRCODE<div id="qrcode"></div></p>
-			
+
 		<?}
 	if(isset($_SESSION['id'])){?>
 		<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我想簽約" onclick="select_company(<?echo $result->id?>)"/></a>
 		<a href="#" class="big-link" data-reveal-id="show_box"><input type="button" class="k-button" style="width:auto;" value="我是店長" onclick="owner_show_store(<?echo $result->id?>)"></a>
 	<?}?>
-	
-	
+
+
 	<input type="button" class="k-button" style="width:auto;" value="返回" onclick="back_to_store_list()">
 	</div>
 	</body>

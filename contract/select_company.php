@@ -13,27 +13,27 @@ while($result=$sth->fetchObject()){?>
 	$sth2 = $db->prepare($sql);
 	$sth2->execute(array($result->company_id));
 	$result_img = $sth2->fetchObject();
-	
+
 	$situation = 0;#new
 	$sql = "SELECT * FROM `jangsc27_cs_project`.`contract_application` WHERE `company_id`= ? AND `store_id`= ?";
-	$sth = $db->prepare($sql);
-	$sth->execute(array($result->company_id,$_GET['store_id']));
-	if($sth->fetchObject())
+	$sth3 = $db->prepare($sql);
+	$sth3->execute(array($result->company_id,$_GET['store_id']));
+	if($sth3->fetchObject())
 	$situation= 1;#applied
-	
+
 	$sql = "SELECT * FROM `jangsc27_cs_project`.`contract` WHERE `member_id`= ? AND `company_id`= ?";
-	$sth = $db->prepare($sql);
-	$sth->execute(array($_SESSION['id'],$result->company_id));
-	if($result_con=$sth->fetchObject() && $result->status==1)
+	$sth4 = $db->prepare($sql);
+	$sth4->execute(array($_SESSION['id'],$result->company_id));
+	if($result_con=$sth4->fetchObject() && $result->status==1)
 	$situation= 2;#belong
 
-	
+
 	?>
 	<tr>
 	<td>
 	<?if($result_img){?>
 		<img style="width:100px; height:100px;" id="store_img" src="<?echo $result_img->image_url?>"/>
-	<?}?>		
+	<?}?>
 	</td>
 	<td><?echo $result->name?></td>
 	<td style="width:200px;"><?echo $result->address?></td>
@@ -50,7 +50,7 @@ while($result=$sth->fetchObject()){?>
 	<?}?>
 	</td>
 	<!--<td><input type="button" value="<?echo $result->name?>" onclick="contract_make(<?echo $_GET['store_id']?>,<?echo $result->company_id?>,'company');"/></td>-->
-	
+
 	</tr>
 <?}
 echo '</table>';
